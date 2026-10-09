@@ -1,0 +1,214 @@
+<!-- ============ TARIX · 6-BOB: UNIX VA C ============ -->
+  <div class="panel" id="panel-u" data-lesson="u" role="tabpanel" aria-labelledby="tab-u" hidden>
+    <div class="story">
+
+      <section class="hero-card">
+        <img src="media/history/6-bob/rasm-01.jpg" alt="Dennis Ritchi">
+        <div>
+          <p class="eyebrow">6-bob · Unix va C tili: kichik vositalar, katta g'oya</p>
+          <h2>Salom, men Dennis Ritchi</h2>
+          <p>Mening ismimni ko'pchilik bilmaydi. Lekin siz hozir ishlatayotgan telefon, brauzer va bu sahifani yetkazib bergan server ichida men va do'stim Ken Tompson 1969–1973-yillarda yozgan ikki narsaning avlodlari ishlayapti: <strong>Unix</strong> operatsion tizimi va <strong>C</strong> dasturlash tili. Bu bobda ular qanday tug'ilganini aytib beraman.</p>
+        </div>
+      </section>
+      <p class="disclaimer">Bu bob Dennis Ritchi tilidan tasavvur qilib yozilgan. Sanalar, ismlar va texnik tafsilotlar haqiqiy, lekin gaplar uning o'z so'zlari emas.</p>
+
+      <nav class="tl-chips" aria-label="Bob bo'limlari">
+        <button type="button" data-jump="u-bell">Bell Labs</button>
+        <button type="button" data-jump="u-os">Operatsion tizim nima</button>
+        <button type="button" data-jump="u-multics">Muammo</button>
+        <button type="button" data-jump="u-1969">1969-yil yozi</button>
+        <button type="button" data-jump="u-quvur">Quvurlar</button>
+        <button type="button" data-jump="u-lab">Terminal laboratoriyasi</button>
+        <button type="button" data-jump="u-c">C tili</button>
+        <button type="button" data-jump="u-tarqalish">Tarqalish</button>
+        <button type="button" data-jump="u-bugun">Bugun</button>
+        <button type="button" data-jump="u-kopruk">Keyingi bobga</button>
+      </nav>
+
+      <!-- BELL LABS -->
+      <section class="chapter" id="u-bell">
+        <p class="year">1941–1967 · Nyu-York va Nyu-Jersi</p>
+        <h3>G'oyalar fabrikasi</h3>
+        <p>Men 1941-yilda Nyu-York yaqinida tug'ilganman. Otam <strong>Bell Labs</strong>'da ishlardi — AT&T telefon kompaniyasining tadqiqot laboratoriyasida. Garvardda fizika va amaliy matematikani o'qidim. Lekin tez orada tushundim: menga hisoblash mashinalari fizikadan ko'ra qiziqroq. 1967-yilda men ham otamning yo'lidan borib, Bell Labs'ga ishga kirdim.</p>
+        <p>Bell Labs o'sha paytda dunyodagi eng kuchli tadqiqot markazlaridan biri edi. Tranzistor, lazer, quyosh batareyasi — bularning hammasi shu yerda ixtiro qilingan. U yerda olimlarga ko'p narsa buyurilmasdi: qiziq muammo topsangiz, ustida ishlayverasiz. Unix aynan shunday "hech kim buyurmagan" loyiha bo'lib tug'ildi.</p>
+        <figure class="photo"><img src="media/history/6-bob/rasm-02.jpg" alt="Bell Labs majmuasi, Murray Hill, Nyu-Jersi"><figcaption>Bell Labs, Murray Hill. Unix shu yerda tug'ilgan.</figcaption></figure>
+      </section>
+
+      <!-- OPERATSION TIZIM -->
+      <section class="chapter" id="u-os">
+        <p class="year">Tushuncha · Operatsion tizim</p>
+        <h3>Dasturlar va temir orasidagi boshqaruvchi</h3>
+        <p><strong>Operatsion tizim</strong> (operating system, OS) — kompyuter yoqilganda birinchi ishga tushadigan va o'chguncha ishlaydigan asosiy dastur. Windows, macOS, Android, iOS va Linux — bularning hammasi operatsion tizimlar.</p>
+        <div class="os-stack" aria-label="Kompyuter qatlamlari: ilovalar, operatsion tizim yadrosi va temir">
+          <div class="os-l os-app"><b>Ilovalar</b><span>Brauzer, Telegram, VS Code, o'yinlar</span></div>
+          <div class="os-l os-kern"><b>Yadro (kernel)</b><span>Xotirani taqsimlaydi, protsessor vaqtini bo'ladi, fayllar va qurilmalarni boshqaradi</span></div>
+          <div class="os-l os-hw"><b>Temir (hardware)</b><span>Protsessor, xotira, disk, ekran, klaviatura, tarmoq kartasi</span></div>
+        </div>
+        <p>Operatsion tizimning yuragi — <strong>yadro</strong> (kernel). U restoran boshqaruvchisiga o'xshaydi. Oshpazlar (protsessor), stollar (xotira) va ombor (disk) bor. Mijozlar (ilovalar) bir vaqtda kelib, buyurtma berishadi. Boshqaruvchi hammaga navbat bilan joy va vaqt ajratadi va hech kim birovning stoliga o'tirib olmasligini kuzatadi.</p>
+        <p>Brauzer "faylni saqla" desa, u diskka o'zi yozmaydi — yadrodan so'raydi. Yadro esa qaysi diskka, qaysi joyga yozishni hal qiladi. Siz 1-darsda fayl va papkalar bilan ishlaganingizda ham orqada aynan yadro ishlagan.</p>
+      </section>
+
+      <!-- MULTICS -->
+      <section class="chapter" id="u-multics">
+        <p class="year">1964–1969 · Muammo</p>
+        <h3>Juda katta orzu: Multics</h3>
+        <p>1960-yillarda kompyuterlar juda qimmat edi. Bitta mashinadan ko'p odam bir vaqtda foydalanishi kerak edi. Kompyuter har bir foydalanuvchiga soniyaning kichik bo'laklarini navbat bilan berib, hammaga "faqat men bilan ishlayapti" degan taassurot qoldirardi. Buni <strong>vaqtni bo'lish</strong> (time-sharing) deyishadi.</p>
+        <p>1964-yilda MIT, General Electric va Bell Labs birgalikda ulkan loyiha boshlashdi — <strong>Multics</strong>. U kompyuterni elektr yoki suv kabi kommunal xizmatga aylantirishi kerak edi: minglab odam bitta katta tizimga ulanadi. G'oya ajoyib edi, lekin tizim haddan tashqari murakkab bo'lib ketdi. Yillar o'tdi, Multics hamon tayyor emas edi.</p>
+        <p>1969-yilda Bell Labs loyihadan chiqdi. Ken Tompson va men qo'limizda birdaniga hech narsa qolmaganini his qildik. Biz Multics'da ishlashga, terminal oldida o'tirib, kompyuter bilan "suhbatlashishga" o'rganib qolgandik. Endi bu imkoniyat yo'q edi.</p>
+        <div class="mentor"><img class="im im-l" data-im="brain" alt=""><div><b>Dennis o'ylaydi</b>Multics bizga eng muhim saboqni berdi: hamma narsani qila oladigan katta tizim ko'pincha hech narsani yaxshi qila olmaydi. Kichik, sodda va tushunarli narsa qurish ancha qiyinroq — lekin u yashab qoladi.</div></div>
+      </section>
+
+      <!-- 1969 -->
+      <section class="chapter" id="u-1969">
+        <p class="year">1969-yil yozi · PDP-7</p>
+        <h3>Uch hafta, eski kompyuter va bitta o'yin</h3>
+        <p>Ken laboratoriyada hech kim ishlatmaydigan eski <strong>PDP-7</strong> kompyuterini topdi. Avval u unda o'zi yozgan "Kosmik sayohat" (Space Travel) degan o'yinni ishlatmoqchi edi — Quyosh tizimi bo'ylab kema uchiradigan o'yin. Lekin buning uchun fayllar va dasturlarni boshqaradigan tizim kerak edi.</p>
+        <p>1969-yil yozida Kenning rafiqasi yosh o'g'li bilan bir oyga qarindoshlarinikiga ketdi. Ken shu bir oyni ishga bag'ishladi. Aytishicha, har bir haftaga bitta qismni rejaladi: operatsion tizim yadrosi, buyruq qatori (shell), matn muharriri va assembler. Oy oxirida yangi tizim ishlay boshladi.</p>
+        <p>Hamkasbimiz <strong>Brayan Kernigan</strong> unga hazil nom qo'ydi. "Multics" — "multi", ya'ni "ko'p", bizniki esa sodda, "uni" — "bitta". Avval "Unics", keyin <strong>Unix</strong>.</p>
+        <div class="photo-row">
+          <figure class="photo"><img src="media/history/6-bob/rasm-03.jpg" alt="DEC PDP-7 kompyuteri"><figcaption>PDP-7. Unix'ning birinchi versiyasi shunday mashinada tug'ilgan.</figcaption></figure>
+          <figure class="photo"><img src="media/history/6-bob/rasm-04.jpg" alt="Ken Tompson (o'tirgan) va Dennis Ritchi PDP-11 oldida"><figcaption>Ken (o'tirgan) va men PDP-11 oldida, 1970-yillarning boshi.</figcaption></figure>
+        </div>
+        <p>Keyingi yili biz yangi, kuchliroq <strong>PDP-11</strong> kompyuterini olmoqchi bo'ldik. Rahbariyat "operatsion tizim" uchun pul bermasdi. Shunda biz va'da berdik: Bell Labs'ning patent bo'limi uchun hujjat yozadigan dastur qilamiz. Pul ajratildi, patent bo'limi Unix'ning birinchi "mijozi" bo'ldi, biz esa tizimni rivojlantirishda davom etdik.</p>
+        <div class="mentor"><img class="im im-l" data-im="rocket" alt=""><div><b>Startup ustozi aytadi</b>Bu klassik startap hikoyasi: haqiqiy foydalanuvchi (patent bo'limi), uning aniq muammosi (hujjatlar) va uni yechadigan kichik mahsulot. Katta g'oyani kichik, foydali qadamdan boshlang.</div></div>
+      </section>
+
+      <!-- QUVURLAR -->
+      <section class="chapter" id="u-quvur">
+        <p class="year">1973 · Unix falsafasi</p>
+        <h3>Har bir dastur bitta ishni yaxshi qilsin</h3>
+        <p>Bizning bo'limimiz boshlig'i <strong>Dag Makilroy</strong> uzoq vaqtdan beri bir g'oyani aytib yurardi: dasturlarni bog' shlangi kabi bir-biriga ulash mumkin bo'lishi kerak. Bir dasturning natijasi to'g'ridan-to'g'ri keyingisining kirishiga oqib o'tsin. 1973-yilda Ken buni bir kechada yozdi va Unix'da <strong>quvur</strong> (pipe) paydo bo'ldi. U <code class="inline">|</code> belgisi bilan yoziladi.</p>
+        <p>Shu bilan Unix'ning falsafasi shakllandi:</p>
+        <ul class="plain">
+          <li>Har bir dastur <strong>bitta ishni</strong> qilsin va uni a'lo qilsin.</li>
+          <li>Dasturlar bir-biri bilan <strong>birga ishlay olsin</strong>.</li>
+          <li>Ular oddiy <strong>matn</strong> bilan gaplashsin, chunki matn — hamma tushunadigan til.</li>
+        </ul>
+<pre class="code">cat mevalar.txt | grep olma | wc -l</pre>
+        <p>Bu qatorni chapdan o'ngga o'qing: <code class="inline">cat</code> faylni o'qiydi, <code class="inline">grep</code> undan "olma" so'zi bor qatorlarni ajratadi, <code class="inline">wc -l</code> esa ularni sanaydi. Uchta kichik dastur, bitta quvur — va natija tayyor. Har biri o'z-o'zidan juda sodda, lekin ularni lego kabi ulab, cheksiz ko'p ish qilish mumkin.</p>
+      </section>
+
+      <!-- LAB -->
+      <section class="chapter" id="u-lab">
+        <p class="year">Laboratoriya · Terminal</p>
+        <h3>Unix'da o'zingiz ishlab ko'ring</h3>
+        <p>Pastda kichik Unix terminali bor. Unda bir nechta fayl va eng mashhur buyruqlar ishlaydi. <code class="inline">help</code> deb yozing va boshlang.</p>
+        <div class="unix-lab" id="u-term">
+          <div class="cli-term unix-term" data-no-i18n><div class="cli-out" id="u-term-out"></div><label class="cli-line"><span>$</span><input type="text" id="u-term-in" spellcheck="false" autocomplete="off" autocapitalize="off" aria-label="Buyruq yozing"></label></div>
+          <div class="unix-tasks" id="u-tasks">
+            <p class="cpu-h">Vazifalar</p>
+            <label><input type="checkbox" disabled data-task="ls"> <code class="inline">ls</code> bilan fayllarni ko'ring</label>
+            <label><input type="checkbox" disabled data-task="cat"> <code class="inline">cat</code> bilan <code class="inline">mevalar.txt</code> ni o'qing</label>
+            <label><input type="checkbox" disabled data-task="pipe"> Quvur bilan "olma" necha marta uchrashini sanang</label>
+            <label><input type="checkbox" disabled data-task="sort"> Mevalarni alifbo tartibida, takrorlarsiz chiqaring</label>
+          </div>
+        </div>
+        <p class="cpu-log" id="u-term-log" aria-live="polite">Buyruq yozing va Enter'ni bosing.</p>
+        <details class="reveal"><summary>Javoblarni ko'rish</summary>
+          <p class="a"><code class="inline">cat mevalar.txt | grep olma | wc -l</code> — olmalarni sanaydi. <code class="inline">cat mevalar.txt | sort | uniq</code> — tartiblaydi va takrorlarni olib tashlaydi. <code class="inline">uniq</code> faqat yonma-yon turgan takrorlarni ko'radi, shuning uchun undan oldin <code class="inline">sort</code> kerak.</p>
+        </details>
+        <p>Bugun ham Mac'dagi <strong>Terminal</strong> ilovasini ochsangiz, aynan shu buyruqlar ishlaydi. Dasturchilar ularni har kuni ishlatadi. 50 yildan oshgan buyruqlar!</p>
+      </section>
+
+      <!-- C TILI -->
+      <section class="chapter" id="u-c">
+        <p class="year">1972–1973 · C tili</p>
+        <h3>Assemblerdan qutulish</h3>
+        <p>Birinchi Unix assemblerda yozilgan edi. 2-bobni eslang: assembler dasturi faqat bitta turdagi protsessorda ishlaydi. PDP-7'dan PDP-11'ga o'tganimizda hammasini qaytadan yozishga to'g'ri keldi. Keyingi kompyuterda yana shunday bo'lardi.</p>
+        <p>Ken avval <strong>B</strong> degan sodda til yaratgan edi. Men uni rivojlantirdim: ma'lumot turlarini qo'shdim — butun son, belgi, ko'rsatkich. 1972-yilda yangi tilni alifbodagi keyingi harf bilan atadim — <strong>C</strong>. U yetarlicha "baland" edi — odam o'qiy oladi, kompilyator tarjima qiladi. Lekin yetarlicha "past" ham edi — xotira va qurilmalar bilan to'g'ridan-to'g'ri ishlay oladi.</p>
+        <p>1973-yilda biz Unix yadrosini C tilida qaytadan yozdik. Operatsion tizimni yuqori darajali tilda yozish o'sha paytda telbalik hisoblanardi. Lekin natija hammasini o'zgartirdi: Unix'ni yangi kompyuterga ko'chirish uchun endi faqat o'sha kompyuter uchun <strong>C kompilyatori</strong> yozish kifoya edi. 3-bobda Greys Hopper orzu qilgan "bir marta yoz, hamma joyda ishlat" g'oyasi butun operatsion tizim darajasiga chiqdi.</p>
+<pre class="code">#include &lt;stdio.h&gt;
+
+int main(void) {
+    printf("Salom, dunyo!\n");
+    return 0;
+}</pre>
+        <p>1978-yilda Brayan Kernigan bilan birga <strong>"The C Programming Language"</strong> kitobini yozdik. U yerdagi birinchi misol ekranga "hello, world" chiqarardi. O'shandan beri deyarli har bir dasturlash kitobi aynan shu bilan boshlanadi — siz ham 2-darsda birinchi sahifangizga "Salom, dunyo!" deb yozgansiz.</p>
+        <figure class="photo"><img src="media/history/6-bob/rasm-05.jpg" alt=""The C Programming Language" kitobining muqovasi"><figcaption>Dasturchilar uni mualliflarning bosh harflari bilan "K&amp;R" deb atashadi.</figcaption></figure>
+        <div class="mentor"><img class="im im-l" data-im="light_bulb" alt=""><div><b>5-dars bilan bog'liqlik</b>CSS'dagi jingalak qavslar <code class="inline">{ }</code>, qator oxiridagi <code class="inline">;</code> va <code class="inline">/* izoh */</code> qayerdan kelgan deb o'ylaysiz? To'g'ri — C tilidan. JavaScript, Java, C++, C# va boshqa o'nlab tillar ham C'ning yozilish uslubini meros qilib olgan. C'ni bilmasangiz ham, uning "imlosi" bilan har kuni uchrashasiz.</div></div>
+      </section>
+
+      <!-- TARQALISH -->
+      <section class="chapter" id="u-tarqalish">
+        <p class="year">1974–1990 · Tarqalish</p>
+        <h3>Universitetlar orqali butun dunyoga</h3>
+        <p>1974-yilda Ken bilan Unix haqida ilmiy maqola chop etdik. Darhol ko'plab universitetlar undan nusxa so'ray boshladi. AT&T o'sha paytda hukumat bilan kelishuv tufayli kompyuter biznesiga kira olmasdi. Shuning uchun Unix universitetlarga juda arzon, eng muhimi — <strong>manba kodi bilan</strong> berildi.</p>
+        <p>Talabalar va professorlar Unix'ni o'qib, o'rganib, yaxshilay boshlashdi. Kaliforniyadagi Berkli universitetida o'z versiyasi paydo bo'ldi — <strong>BSD</strong>. 1983-yilda BSD Unix'ga 4-bobda Vint Serf aytib bergan <strong>TCP/IP</strong> qo'shildi. Shu tufayli internetdagi kompyuterlarning katta qismi Unix'da ishlay boshladi.</p>
+        <ul class="tl-facts">
+          <li><strong>1974</strong> — "The UNIX Time-Sharing System" maqolasi.</li>
+          <li><strong>1978</strong> — "The C Programming Language" kitobi.</li>
+          <li><strong>1983</strong> — BSD Unix'ga TCP/IP qo'shildi. O'sha yili Ken va men Tyuring mukofotini oldik.</li>
+          <li><strong>1991</strong> — Finlyandiyalik talaba Linus Torvalds Unix'ga o'xshash bepul tizim — <strong>Linux</strong>'ni yozishni boshladi.</li>
+        </ul>
+        <figure class="photo"><img src="media/history/6-bob/rasm-06.jpg" alt="Teletype Model 33 terminali"><figcaption>Teletype Model 33. Biz Unix bilan shunday terminallarda ishlardik — ekran o'rniga qog'oz. Unix buyruqlari shuning uchun shunchalik qisqa: <code class="inline">ls</code>, <code class="inline">cp</code>, <code class="inline">mv</code>. Har bir harfni urish qiyin edi!</figcaption></figure>
+      </section>
+
+      <!-- BUGUN -->
+      <section class="chapter" id="u-bugun">
+        <p class="year">Bugun</p>
+        <h3>Unix oilasi — hamma joyda</h3>
+        <p>Unix'ning bevosita avlodlari va unga o'xshatib qurilgan tizimlar bugun deyarli hamma joyda ishlaydi:</p>
+        <ul class="tl-facts">
+          <li><strong>Mac va iPhone</strong> — macOS va iOS Unix ildizlariga ega. Mac'dagi Terminal'da yuqoridagi buyruqlar ishlaydi.</li>
+          <li><strong>Android</strong> — Unix'ga o'xshash Linux yadrosida ishlaydi.</li>
+          <li><strong>Internet</strong> — Google, Amazon va Meta serverlarining katta qismi Linux'da.</li>
+          <li><strong>Superkompyuterlar</strong> — dunyodagi eng kuchli 500 ta superkompyuterning hammasi Linux'da.</li>
+          <li><strong>Vaqt</strong> — ko'p kompyuterlar vaqtni hamon "Unix davri" bilan hisoblaydi: 1970-yil 1-yanvardan beri o'tgan soniyalar soni.</li>
+        </ul>
+        <p>C tili ham tirik: Linux va Windows yadrolari, Python tilining o'zi, ma'lumotlar bazalari va kir yuvish mashinasidagi mitti protsessorlar dasturlari asosan C'da yozilgan.</p>
+        <p>Men 2011-yil oktabrda vafot etdim. Bir hafta oldin Stiv Jobs vafot etgan edi va butun dunyo u haqida yozardi. Meni kam odam esladi. Lekin men bunga qarshi emasman: men hech qachon mashhur bo'lishni xohlamaganman. Men faqat yaxshi vositalar yasashni xohlardim — boshqalar ular bilan ajoyib narsalar qursin deb.</p>
+        <div class="stats">
+          <div class="stat"><b>1969</b><span>Unix: bir oyda, eski PDP-7 da</span></div>
+          <div class="stat"><b>1972</b><span>C tili</span></div>
+          <div class="stat"><b>1983</b><span>Tyuring mukofoti</span></div>
+        </div>
+      </section>
+
+      <!-- KO'PRIK -->
+      <section class="chapter" id="u-kopruk">
+        <p class="year">Keyingi bobga ko'prik</p>
+        <h3>Unix kompyuterdagi birinchi sayt</h3>
+        <p>1980-yillarning oxirida Stiv Jobs Apple'dan ketib, yangi kompaniya ochdi — <strong>NeXT</strong>. Uning kompyuterlari Unix asosidagi tizimda ishlardi va dasturchilar uchun juda qulay edi.</p>
+        <p>1990-yilda Shveytsariyadagi CERN laboratoriyasida bir ingliz olimi aynan shunday NeXT kompyuterida ishlardi. U internet ustiga hujjatlarni bir-biri bilan bog'laydigan havolalar to'rini qurayotgan edi. Dunyodagi birinchi veb-server va birinchi brauzer o'sha Unix kompyuterida ishga tushdi. Uning ismi Tim Berners-Li edi.</p>
+        <p class="big-idea">Keyingi bob: <strong>HTML va veb</strong> — internet yo'llari bo'ylab qurilgan dunyo kutubxonasi.</p>
+        <div><button type="button" class="btn btn-primary" data-goto="h">HTML tarixini o'qish</button></div>
+      </section>
+
+      <section class="quote">
+        <p class="quote-text">"Biz katta tizim qurmoqchi emas edik. Biz faqat o'zimiz ishlashni yoqtiradigan sodda va qulay muhit yaratmoqchi edik. Ma'lum bo'lishicha, boshqalarga ham aynan shu kerak ekan."</p>
+      </section>
+
+      <section class="chapter">
+        <p class="year">Mashq</p>
+        <h3>10 ta yangi so'z</h3>
+        <p>Kartani bosing — so'z ovoz chiqarib o'qiladi.</p>
+        <div class="word-grid" data-words="unix"></div>
+      </section>
+
+      <section class="chapter">
+        <p class="year">Tekshiruv</p>
+        <h3>Bobni qanchalik tushundingiz?</h3>
+        <div class="quiz" data-pass="5">
+          <div class="qitem"><p class="q">Operatsion tizimning yadrosi (kernel) nima qiladi?</p><div class="opts" data-correct="1"><button type="button">Saytlarni chiroyli qiladi</button><button type="button">Xotira, protsessor vaqti, fayllar va qurilmalarni ilovalar orasida taqsimlaydi</button><button type="button">Faqat internetga ulaydi</button></div><p class="explain" hidden>Yadro — restoran boshqaruvchisi: hammaga navbat bilan joy va vaqt ajratadi.</p></div>
+          <div class="qitem"><p class="q">Unix qanday tug'ildi?</p><div class="opts" data-correct="0"><button type="button">Katta Multics loyihasidan keyin, eski PDP-7 kompyuterida, sodda tizim sifatida</button><button type="button">Davlat buyurtmasi bilan</button><button type="button">Apple garajida</button></div><p class="explain" hidden>Ken Tompson uni 1969-yil yozida bir oy ichida yozgan.</p></div>
+          <div class="qitem"><p class="q">cat mevalar.txt | grep olma | wc -l — bu qatordagi | belgisi nima?</p><div class="opts" data-correct="2"><button type="button">Bo'lish belgisi</button><button type="button">Izoh</button><button type="button">Quvur: bir dasturning natijasini keyingisiga uzatadi</button></div><p class="explain" hidden>Pipe — Dag Makilroy g'oyasi, 1973-yil.</p></div>
+          <div class="qitem"><p class="q">Nega Unix C tilida qayta yozildi?</p><div class="opts" data-correct="1"><button type="button">C chiroyliroq bo'lgani uchun</button><button type="button">Boshqa kompyuterlarga ko'chirish oson bo'lishi uchun</button><button type="button">Assembler taqiqlangani uchun</button></div><p class="explain" hidden>Yangi kompyuter uchun C kompilyatori bo'lsa, tizimni qaytadan yozish shart emas edi.</p></div>
+          <div class="qitem"><p class="q">CSS'dagi { }, ; va /* */ qaysi tildan meros?</p><div class="opts" data-correct="0"><button type="button">C</button><button type="button">FORTRAN</button><button type="button">Assembler</button></div><p class="explain" hidden>C'ning "imlosi" JavaScript, Java, C++ va CSS'ga ham o'tgan.</p></div>
+          <div class="qitem"><p class="q">Unix universitetlarga qanday tarqaldi?</p><div class="opts" data-correct="2"><button type="button">Juda qimmat narxda, kodsiz</button><button type="button">Faqat AQSh armiyasi orqali</button><button type="button">Arzon narxda va manba kodi bilan — talabalar uni o'qib, yaxshilay olardi</button></div><p class="explain" hidden>Shu tufayli Berklida BSD paydo bo'ldi va unga TCP/IP qo'shildi.</p></div>
+          <div class="quiz-foot"><span class="quiz-score"></span><button type="button" class="btn quiz-reset">Qaytadan</button></div>
+        </div>
+      </section>
+
+      <!-- RASMLAR RO'YXATI -->
+      <section class="chapter wanted">
+        <p class="year">Muallif uchun</p>
+        <h3>📸 Kitob uchun kerakli rasmlar ro'yxati</h3>
+        <p>Bob ichida kulrang ramkali joylar rasm kutyapti. Har biriga inglizcha qidiruv iborasi berilgan — uni bosib nusxa oling va Wikimedia Commons yoki Google Images'da qidiring. Topilgan rasmni raqami bilan nomlang (masalan, <code class="inline">U1.jpg</code>).</p>
+        <ul class="wanted-list"></ul>
+        <p class="save-hint">Mualliflik huquqi uchun: iloji bo'lsa Wikimedia Commons yoki Nokia Bell Labs arxividagi erkin rasmlarni tanlang.</p>
+      </section>
+
+    </div>
+  </div>
+
+  

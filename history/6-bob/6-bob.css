@@ -1,0 +1,14 @@
+/* history/6-bob.html uchun uslublar */
+.os-stack{display:flex;flex-direction:column;gap:6px;}
+.os-l{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;align-items:center;border-radius:12px;padding:12px 14px;font-size:calc(var(--fs) - 3px);line-height:1.5;color:var(--text);}
+.os-l b{font-family:'JetBrains Mono',monospace;font-size:14.6px;}
+.os-app{background:var(--surface-2);}
+.os-kern{background:var(--accent-soft);border:2px solid var(--accent-fill);}
+.os-kern b{color:var(--accent);}
+.os-hw{background:var(--good-soft);}
+.os-hw b{color:var(--good);}
+.unix-lab{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:14px;align-items:start;}
+@media (max-width:640px){
+  .unix-lab{grid-template-columns:1fr;}
+  .os-l{grid-template-columns:1fr;gap:4px;}
+}

@@ -1,0 +1,220 @@
+<!-- ============ TARIX · 3-BOB: KOMPILYATOR ============ -->
+  <div class="panel" id="panel-c" data-lesson="c" role="tabpanel" aria-labelledby="tab-c" hidden>
+    <div class="story">
+
+      <section class="hero-card">
+        <img src="media/history/3-bob/rasm-01.jpg" alt="Greys Hopper harbiy-dengiz formasida">
+        <div>
+          <p class="eyebrow">3-bob · Kompilyator va dasturlash tillari</p>
+          <h2>Salom, men Greys Hopper</h2>
+          <p>Men kompyuterga inglizcha gapirishni o'rgataman deganimda, hamma kulgan edi: "Kompyuter faqat arifmetikani biladi!" Men esa unga dastur yozishni o'rgatdim. Bu bobda odam tilidagi bir qatorni mashinaning o'nlab buyrug'iga aylantiradigan tarjimon — <strong>kompilyator</strong> qanday tug'ilganini aytib beraman.</p>
+        </div>
+      </section>
+      <p class="disclaimer">Bu bob Greys Hopper tilidan tasavvur qilib yozilgan. Sanalar, ismlar va texnik tafsilotlar haqiqiy, lekin gaplar uning o'z so'zlari emas.</p>
+
+      <nav class="tl-chips" aria-label="Bob bo'limlari">
+        <button type="button" data-jump="c-mark">Mark I</button>
+        <button type="button" data-jump="c-bug">Birinchi "bug"</button>
+        <button type="button" data-jump="c-a0">A-0</button>
+        <button type="button" data-jump="c-ichida">Kompilyator ichida</button>
+        <button type="button" data-jump="c-cobol">FORTRAN va COBOL</button>
+        <button type="button" data-jump="c-interp">Interpretator</button>
+        <button type="button" data-jump="c-oila">Tillar oilasi</button>
+        <button type="button" data-jump="c-kopruk">Keyingi bobga</button>
+      </nav>
+
+      <!-- MONOLOG -->
+      <section class="chapter" id="c-mark">
+        <p class="year">1944-yil, iyul · Garvard universiteti</p>
+        <h3>"Qayerda yuribsiz?" — Mark I bilan tanishuv</h3>
+        <p>Men 1906-yilda Nyu-Yorkda tug'ilganman. Yetti yoshimda uydagi budilnik qanday ishlashini bilmoqchi bo'lib, uni qismlarga ajratdim. Qaytib yig'olmadim. Keyin ikkinchisini ochdim... Onam uydagi yettita budilnikning hammasi ochib tashlanganini ko'rganda, juda hayron bo'lgan. Narsalarning ichini bilish istagi butun umrim davomida men bilan qoldi.</p>
+        <p>1934-yilda Yel universitetida matematika bo'yicha doktorlik darajasini oldim va Vassar kollejida dars berdim. Urush boshlanganda AQSh harbiy-dengiz flotiga yozildim. Meni Garvard universitetiga, <strong>Govard Ayken</strong> qurgan <strong>Mark I</strong> mashinasiga yuborishdi. Birinchi kuni Ayken menga qarab: "Qayerda yuribsiz?" — dedi va qo'limga kitobcha tutqazdi: "Keyingi payshanbagacha shu qatorning koeffitsientlarini hisoblab bering."</p>
+        <div class="stats">
+          <div class="stat"><b>~15 metr</b><span>mashinaning uzunligi</span></div>
+          <div class="stat"><b>~750 000</b><span>detal</span></div>
+          <div class="stat"><b>~800 km</b><span>sim ichida</span></div>
+          <div class="stat"><b>3</b><span>qo'shish soniyasiga</span></div>
+        </div>
+        <p>Mark I elektromexanik edi: ichida relelar va aylanadigan vallar "chiq-chiq" qilib ishlardi. Men uning uchinchi dasturchisi bo'ldim va unga 500 betdan ortiq qo'llanma yozdim. 1944-yilda mashinamizda Jon fon Neymanning Los-Alamos uchun hisob-kitoblari ham bajarilgan — 1-bobdagi o'sha fon Neyman!</p>
+        <div class="photo-row">
+          <figure class="photo"><img src="media/history/3-bob/rasm-02.jpg" alt="Harvard Mark I kompyuteri"><figcaption>Harvard Mark I (IBM ASCC), 1944-yil.</figcaption></figure>
+          <figure class="photo"><img src="media/history/3-bob/rasm-03.jpg" alt="Greys Hopper Mark I jamoasi bilan"><figcaption>Mark I jamoasi. Men — o'rtada, harbiy-dengiz formasida.</figcaption></figure>
+        </div>
+      </section>
+
+      <!-- BUG -->
+      <section class="chapter" id="c-bug">
+        <p class="year">1947-yil 9-sentabr · Mark II</p>
+        <h3>Birinchi haqiqiy "bug"</h3>
+        <p>Mark I'dan keyin Mark II qurildi. 1947-yilning sentabr kunlaridan birida u xato ishlay boshladi. Jamoamiz mashinaning ichini tekshirib, F panelidagi 70-relening kontaktlari orasida qisilib qolgan <strong>kuya</strong>ni (kapalakni) topdi. Uni ehtiyotkorlik bilan olib, ish daftariga yelim lenta bilan yopishtirishdi va yonidan yozib qo'yishdi: <em>"First actual case of bug being found"</em> — "Haqiqiy 'bug' topilgan birinchi holat".</p>
+        <figure class="photo"><img src="media/history/3-bob/rasm-04.jpg" alt="Kuya yopishtirilgan ish daftari sahifasi, 1947"><figcaption>O'sha sahifa. Bugun u Vashingtondagi Smitson institutining Amerika tarixi milliy muzeyida saqlanadi.</figcaption></figure>
+        <p>Hazilning sababi bor edi: muhandislar texnikadagi nosozlikni ancha oldindan, hatto Edison davridan beri <strong>bug</strong> ("hasharot") deb atashardi. Biz esa birinchi marta haqiqiy hasharotni topgan edik! O'shandan beri bu voqeani ko'p aytib berdim va dasturdagi xato — <strong>bug</strong>, uni topib tuzatish esa <strong>debugging</strong> ("hasharotdan tozalash") degan so'zlar hamma joyga tarqaldi.</p>
+        <div class="mentor"><img class="im im-l" data-im="magnifying_glass_tilted_left" alt=""><div><b>Siz ham debugging qilgansiz</b>2-va 3-darslardagi "Xatoni toping" mashqlari — haqiqiy debugging edi. Dasturchi vaqtining katta qismini yangi kod yozishga emas, aynan shunga sarflaydi. Bu uyalarli emas, bu kasbning o'zi.</div></div>
+      </section>
+
+      <!-- MUAMMO + A-0 -->
+      <section class="chapter" id="c-a0">
+        <p class="year">1949 → 1952 · Muammo va yechim</p>
+        <h3>"Kompyuter faqat arifmetikani biladi"</h3>
+        <p>1949-yilda men Filadelfiyaga, <strong>Ekert va Mokli</strong>ning kompaniyasiga ishga o'tdim — ENIAC'ni qurgan o'sha ikki muhandis. Ular dunyodagi birinchi tijoriy kompyuterlardan biri — <strong>UNIVAC</strong> ustida ishlashardi.</p>
+        <p>Men bir narsani payqadim: dasturchilar bir xil bo'laklarni qayta-qayta yozardi. Sinus hisoblash, sonlarni saralash, natijani chop etish... Har bir yangi dasturda ular kod daftaridan bu bo'laklarni <strong>qo'lda ko'chirib</strong>, manzillarini to'g'rilab chiqishardi. Ko'chirgan joyda — xato. Manzilni to'g'rilagan joyda — yana xato.</p>
+        <p>Men shunday o'yladim: kompyuter ko'chirishda adashmaydi, charchamaydi. Nega bu ishni unga bermaslik kerak? Kichik dasturlarni magnit lentaga yozib, har biriga <strong>raqam</strong> beramiz. Dasturchi faqat "12-dasturni shu sonlar bilan chaqir" deb yozadi. Qolganini — kerakli bo'lakni topish, ko'chirish, manzillarni to'g'rilash va hammasini yagona dasturga birlashtirishni — kompyuter o'zi bajaradi.</p>
+        <p class="big-idea">Dasturni yozadigan dastur. Kompyuter faqat sonlarni emas, <strong>buyruqlarni ham</strong> qayta ishlay oladi.</p>
+        <p>1952-yilda bu tizim ishladi va men uni <strong>A-0</strong> deb atadim. Uni <strong>kompilyator</strong> (compiler) deb nomladim: xuddi turli mualliflarning she'rlaridan to'plam tuzadigan (compile) muharrir kabi, u ham tayyor bo'laklardan bitta dastur tuzardi. O'sha yili "Kompyuterni o'qitish" (The Education of a Computer) degan maqola yozib, g'oyamni olimlarga tushuntirdim.</p>
+        <p>Rahbarlar ishonmadi. "Kompyuter dastur yoza olmaydi, u faqat arifmetika qiladi", deyishdi. Menda ishlaydigan kompilyator bor edi, lekin uzoq vaqt hech kim unga tegishni xohlamadi. Shunda men eng yaxshi dalilni tanladim: <strong>ko'rsatish</strong>. Mijozlarga A-2 versiyasini kodi bilan birga berdik va ulardan yaxshilanishlarni qaytarib yuborishni so'radik. Bu bugungi ochiq kodli dasturlarning ilk ko'rinishlaridan biri edi.</p>
+        <div class="photo-row">
+          <figure class="photo"><img src="media/history/3-bob/rasm-05.jpg" alt="UNIVAC I boshqaruv pulti"><figcaption>UNIVAC I — 1951-yilda chiqqan, AQShdagi birinchi tijoriy kompyuterlardan biri.</figcaption></figure>
+          <figure class="photo"><img src="media/history/3-bob/rasm-06.jpg" alt="Greys Hopper hamkasblari bilan UNIVAC pulti oldida"><figcaption>UNIVAC boshqaruv pulti oldida, 1950-yillar.</figcaption></figure>
+        </div>
+        <p class="save-hint">Adolat uchun: "birinchi kompilyator" unvoni haqida tarixchilar bahslashadi. O'sha 1952-yilda Manchesterda Alik Glenni o'zining "Autocode" tizimini yozgan, Italiyada esa Korrado Byom 1951-yilgi dissertatsiyasida kompilyatorni qog'ozda tasvirlagan edi. G'oya havoda edi.</p>
+      </section>
+
+      <!-- ICHIDA + LAB -->
+      <section class="chapter" id="c-ichida">
+        <p class="year">Kompilyator ichida</p>
+        <h3>Bir qator — o'nta buyruq: tarjima to'rt bosqichda</h3>
+        <p>2-bobdagi assembler bir qatorni bitta buyruqqa o'girardi. Kompilyator esa <strong>yuqori darajali til</strong>da (high-level language) yozilgan, odamga tushunarli qatorni o'qiydi va undan kerakli barcha buyruqlarni o'zi tuzadi. Bugungi kompilyatorlar juda murakkab, lekin har biri taxminan shu bosqichlardan o'tadi:</p>
+        <ol class="howto">
+          <li><strong>Leksik tahlil</strong> (lexer). Matn so'zlarga — <strong>tokenlarga</strong> bo'linadi: <code class="inline">NATIJA</code>, <code class="inline">=</code>, <code class="inline">A</code>, <code class="inline">+</code>... Xuddi siz gapni so'zlarga ajratib o'qiganingiz kabi.</li>
+          <li><strong>Sintaktik tahlil</strong> (parser). Tokenlardan grammatika qoidalari bo'yicha <strong>daraxt</strong> quriladi: nima nimaga qo'shiladi, nima avval hisoblanadi. Qoidaga to'g'ri kelmasa — "sintaksis xatosi".</li>
+          <li><strong>Kod generatsiyasi.</strong> Daraxt bo'ylab yurib, har bir tugun uchun assembler buyruqlari yoziladi.</li>
+          <li><strong>Mashina kodi.</strong> 2-bobdagi assembler buyruqlarni sonlarga o'giradi.</li>
+        </ol>
+        <p><strong>O'zingiz sinab ko'ring.</strong> Formulani o'zgartiring — to'rt bosqich darhol qayta hisoblanadi. Kompilyatorimiz faqat <code class="inline">+</code>, <code class="inline">-</code>, qavslar, nomlar va sonlarni biladi, chunki 1-bobdagi mashinamizda ko'paytirish yo'q:</p>
+        <div class="kmp-lab" id="kmp-lab">
+          <div class="tl-chips" role="group" aria-label="Tayyor misollar">
+            <button type="button" data-kmp-ex="NATIJA = A + B - C">A + B − C</button>
+            <button type="button" data-kmp-ex="NATIJA = A - (B + C)">Qavslar bilan</button>
+            <button type="button" data-kmp-ex="NARX = SON + 10 - CHEGIRMA">Son bilan</button>
+            <button type="button" data-kmp-ex="NATIJA = A * B">Xato bilan</button>
+          </div>
+          <div class="check-row"><input id="kmp-src" type="text" spellcheck="false" autocomplete="off" aria-label="Formula" value="NATIJA = A + B - C"></div>
+          <div class="kmp-vals" id="kmp-vals"></div>
+          <div class="kmp-stages">
+            <div class="kmp-stage"><p class="cpu-h">1 · Tokenlar</p><div class="kmp-tokens" id="kmp-tokens"></div></div>
+            <div class="kmp-stage"><p class="cpu-h">2 · Daraxt</p><div class="kmp-tree" id="kmp-tree"></div></div>
+            <div class="kmp-stage"><p class="cpu-h">3 · Assembler</p><pre class="code" id="kmp-asm"></pre></div>
+            <div class="kmp-stage"><p class="cpu-h">4 · Mashina kodi</p><pre class="code" id="kmp-bin"></pre></div>
+          </div>
+          <p class="cpu-log" id="kmp-log" aria-live="polite"></p>
+        </div>
+        <p>"Qavslar bilan" misoliga qarang: kompilyator avval qavs ichini hisoblab, natijani vaqtinchalik <code class="inline">T1</code> katagiga yashirdi. Siz buni so'ramadingiz — u o'zi o'ylab topdi. Assembler buni hech qachon qilmasdi. Kompilyatorning qadri ana shunda.</p>
+        <div class="mentor"><img class="im im-l" data-im="globe_with_meridians" alt=""><div><b>Brauzer ham shunday qiladi</b>Siz HTML yozganingizda, brauzer ham birinchi ikki bosqichni bajaradi: matnni teglarga ajratadi (tokenlar) va ulardan daraxt quradi. 3-darsdagi Inspect oynasida ko'rgan ichma-ich teglar — aynan shu daraxt. U <strong>DOM</strong> (Document Object Model) deb ataladi va keyingi darslarda JavaScript bilan u bilan ko'p ishlaymiz.</div></div>
+      </section>
+
+      <!-- FORTRAN va COBOL -->
+      <section class="chapter" id="c-cobol">
+        <p class="year">1957 → 1960 · FORTRAN, FLOW-MATIC va COBOL</p>
+        <h3>Matematiklar uchun formulalar, buxgalterlar uchun so'zlar</h3>
+        <p>1957-yilda IBM'da <strong>Jon Bekus</strong> jamoasi <strong>FORTRAN</strong> (FORmula TRANslation — "formula tarjimasi") tilini chiqardi. Ko'p dasturchilar shubhalanardi: "Mashina yozgan kod qo'lda yozilganidan sekin bo'ladi." Lekin FORTRAN kompilyatori tuzgan dasturlar qo'lda yozilganidan deyarli qolishmasdi. Olimlar va muhandislar ommaviy ravishda unga o'tishdi. FORTRAN bugun ham ob-havo bashorati kabi og'ir hisob-kitoblarda ishlatiladi.</p>
+        <p>Men esa boshqa odamlar haqida o'ylardim — biznes. Bank, zavod, sug'urta kompaniyasidagi xodimlar matematik emas edi. Ular formulalarni emas, <strong>so'zlarni</strong> yaxshi ko'rardi. Men 1955-yildan inglizchaga o'xshash <strong>FLOW-MATIC</strong> tili ustida ishladim. Unda dastur taxminan shunday yozilardi:</p>
+<pre class="code">INPUT INVENTORY FILE-A PRICE FILE-B ;
+OUTPUT PRICED-INV FILE-C .
+COMPARE PRODUCT-NO (A) WITH PRODUCT-NO (B) ;
+IF GREATER GO TO OPERATION 10 .</pre>
+        <p>Menga yana aytishdi: "Kompyuter inglizchani tushunmaydi." Men javob berdim: kompyuter uchun inglizcha so'z ham, matematik belgi ham baribir bitlar ketma-ketligi. Tarjimani to'g'ri qilsangiz bo'ldi.</p>
+        <p><strong>1959-yil may</strong> oyida Pentagonda kompaniyalar va hukumat vakillari to'planib, biznes uchun <strong>umumiy</strong> til yaratishga kelishdi. FLOW-MATIC unga asos bo'ldi va yangi til <strong>COBOL</strong> (COmmon Business-Oriented Language) deb nomlandi. Men uning maslahatchilaridan biri edim — shuning uchun meni ba'zan "COBOL'ning buvisi" deyishadi.</p>
+        <p><strong>1960-yil dekabr</strong> — tarixiy kun. Bir xil COBOL dasturi ikki xil kompaniyaning ikki xil kompyuterida — RCA 501 va UNIVAC II'da — ishga tushdi va bir xil natija berdi. 2-bob oxiridagi muammo hal bo'ldi: endi dastur mashinaga bog'lanmagan edi. Har bir mashina uchun faqat o'z kompilyatori kerak edi.</p>
+        <figure class="fig">
+          <div class="port-demo" aria-label="Bitta dastur, ikki kompilyator, ikki xil mashina">
+            <div class="pd-src"><code>COBOL dasturi</code><span>bitta manba kod</span></div>
+            <div class="pd-mid"><span>RCA kompilyatori →</span><span>UNIVAC kompilyatori →</span></div>
+            <div class="pd-dst"><code>RCA 501 mashina kodi</code><code>UNIVAC II mashina kodi</code></div>
+          </div>
+          <figcaption>Ko'chirib bo'lishlik (portability): bir marta yoz — istalgan mashinada kompilyatsiya qil.</figcaption>
+        </figure>
+        <div class="mentor"><img class="im im-l" data-im="money_bag" alt=""><div><b>Qiziq fakt</b>COBOL'ni ko'pchilik "eski til" deb hisoblaydi, lekin u hali ham dunyodagi ko'plab bank va davlat tizimlarida ishlaydi. Bankomatdan pul yechganingizda, sahna ortida 60 yoshdan oshgan tilda yozilgan dastur ishlayotgan bo'lishi mumkin.</div></div>
+        <figure class="photo"><img src="media/history/3-bob/rasm-07.jpg" alt="80 ustunli perfokarta"><figcaption>Perfokarta: har bir karta — dasturning bitta qatori. Dasturchilar dasturlarini karta qutilarida olib yurishardi.</figcaption></figure>
+      </section>
+
+      <!-- INTERPRETATOR -->
+      <section class="chapter" id="c-interp">
+        <p class="year">Kompilyator va interpretator</p>
+        <h3>Kitob tarjimoni va sinxron tarjimon</h3>
+        <p>Odam tilidan mashina tiliga o'girishning ikki yo'li bor:</p>
+        <div class="versus">
+          <div><span class="vt">Kompilyator</span><span>Kitob tarjimoni kabi: avval <strong>butun</strong> kitobni tarjima qiladi, keyin o'quvchi tayyor tarjimani o'qiydi.</span><span class="vs">Bir marta tarjima — ko'p marta tez ishga tushirish. C, Go, Rust.</span></div>
+          <div class="hl"><span class="vt">Interpretator</span><span>Sinxron tarjimon kabi: har bir gapni eshitib, <strong>darhol</strong> tarjima qilib aytadi.</span><span class="vs">Tez boshlanadi, o'zgartirish oson. Python, JavaScript.</span></div>
+        </div>
+        <p>Siz keyingi darslarda o'rganadigan <strong>JavaScript</strong> brauzer ichida ishlaydi. Zamonaviy brauzerlar ikkala usulni birlashtiradi: kodni avval interpretator bilan tez ishga tushiradi, tez-tez ishlatiladigan qismlarini esa ish davomida kompilyatsiya qilib, tezlashtiradi. Bu <strong>JIT</strong> (Just-In-Time — "aynan vaqtida") kompilyatsiya deyiladi.</p>
+      </section>
+
+      <!-- TILLAR OILASI -->
+      <section class="chapter" id="c-oila">
+        <p class="year">1957 → bugun</p>
+        <h3>Tillar oilasi</h3>
+        <p>Kompilyator g'oyasi ishlagach, dasturlash tillari xuddi daraxt shoxlaridek ko'payib ketdi. Bugun mingdan ortiq til bor. Ularning eng mashhurlari:</p>
+        <div class="inv lang-tree">
+          <div><b>1957</b><span>FORTRAN</span><em>Jon Bekus, IBM · ilm-fan</em></div>
+          <div><b>1958</b><span>LISP</span><em>Jon Makkarti · sun'iy intellekt</em></div>
+          <div><b>1959</b><span>COBOL</span><em>Greys Hopper va hamkasblar · biznes</em></div>
+          <div><b>1964</b><span>BASIC</span><em>Kemeni va Kurts · talabalar uchun</em></div>
+          <div><b>1972</b><span>C</span><em>Dennis Ritchi · operatsion tizimlar</em></div>
+          <div><b>1985</b><span>C++</span><em>Byarne Straustrup · o'yinlar, brauzerlar</em></div>
+          <div><b>1991</b><span>Python</span><em>Gvido van Rossum · sun'iy intellekt, ma'lumotlar</em></div>
+          <div><b>1995</b><span>Java</span><em>Jeyms Gosling · Android, banklar</em></div>
+          <div><b>1995</b><span>JavaScript</span><em>Brendan Ayk · veb — sizning yo'lingiz!</em></div>
+          <div><b>2012</b><span>TypeScript</span><em>Microsoft · katta veb-loyihalar</em></div>
+        </div>
+        <p>Siz yozayotgan HTML esa dasturlash tili emas, <strong>belgilash tili</strong> (markup language): u buyruq bermaydi, matnni belgilaydi. Lekin keyingi darslardagi JavaScript — haqiqiy dasturlash tili va u shu oilaning a'zosi.</p>
+      </section>
+
+      <!-- KEYINGI HAYOT -->
+      <section class="chapter">
+        <p class="year">1960-yillar → 1992</p>
+        <h3>Nanosekund simi va eng keksa ofitser</h3>
+        <p>Harbiylar meni bir necha marta nafaqaga chiqarib, yana qaytarib chaqirishdi — flotning dasturlari tartibsiz edi va COBOL'ni standartlashtirish kerak edi. 1986-yilda, 79 yoshimda, kontr-admiral unvoni bilan xizmatni tugatdim. O'sha paytda men AQSh flotidagi eng keksa xizmatdagi ofitser edim.</p>
+        <p>Ma'ruzalarimda tinglovchilarga taxminan 30 santimetrlik sim bo'laklarini tarqatardim. Bu — yorug'lik bir <strong>nanosekundda</strong> (soniyaning milliarddan bir qismida) bosib o'tadigan masofa. Generallar so'rardi: "Nega xabar sun'iy yo'ldoshga bunchalik uzoq boradi?" Men simni ko'rsatardim: "Chunki bir nanosekundda yorug'lik atigi shuncha yo'l bosadi, sun'iy yo'ldosh esa minglab kilometr narida."</p>
+        <figure class="photo"><img src="media/history/3-bob/rasm-08.jpg" alt="Greys Hopper ma'ruzada nanosekund simlari bilan"><figcaption>Ma'ruzalarimda nanosekund simini ko'rsatib, tezlik qanchalik qimmat ekanini tushuntirardim.</figcaption></figure>
+        <div class="mentor"><img class="im im-l" data-im="rocket" alt=""><div><b>Startup ustozi</b>Greys Hopperning mashhur maslahati: "Ruxsat so'ragandan ko'ra, keyin kechirim so'rash osonroq." U uzoq vaqt "kompyuter dastur yoza olmaydi" degan gaplarni eshitdi, lekin to'xtamadi — ishlaydigan kompilyatorni ko'rsatib isbotladi. 3-darsdagi Mark Andrissen kabi: gapdan ko'ra ishlaydigan narsa kuchliroq. (Faqat qonun va boshqalarning xavfsizligi bilan bog'liq joyda bu maslahat ishlamaydi.)</div></div>
+        <p>Men 1992-yilgacha yashadim. Bugun mening nomim bilan harbiy kema (USS Hopper) atalgan, har yili esa dunyodagi eng katta ayol-dasturchilar anjumani — <strong>Grace Hopper Celebration</strong> o'tkaziladi. 2016-yilda esa, vafotimdan keyin, AQShning eng yuqori fuqarolik mukofoti — Prezident Ozodlik medaliga sazovor bo'ldim.</p>
+      </section>
+
+      <!-- KO'PRIK -->
+      <section class="chapter" id="c-kopruk">
+        <p class="year">Keyingi bobga ko'prik</p>
+        <h3>Uchta terminal, uchta parol</h3>
+        <p>1960-yillarning o'rtasida dastur yozish ancha oson bo'lib qolgan edi. Lekin yangi muammo paydo bo'ldi: har bir kompyuter <strong>o'z orolida</strong> yashardi. Universitetlar qimmatbaho kompyuterlar sotib olardi, lekin bir universitetdagi olim boshqasidagi kompyuterdan, uning dasturlari va ma'lumotlaridan foydalana olmasdi.</p>
+        <p>1966-yilda AQSh Mudofaa vazirligining ARPA agentligida ishlaydigan <strong>Bob Teylor</strong>ning xonasida uchta terminal turardi. Har biri boshqa shahardagi boshqa kompyuterga ulangan, har birining o'z kirish tartibi va buyruqlari bor edi. Teylor o'yladi: "Nega uchta? Bitta terminaldan hammasiga kirsa bo'lmaydimi?" U rahbariyatdan tarmoq qurish uchun pul so'radi. Aytishlaricha, bir million dollarlik loyihaga ruxsat olish uchun unga 20 daqiqa yetgan.</p>
+        <p class="big-idea">Keyingi bob: <strong>Internet</strong> — kompyuterlarni bir-biri bilan gaplashtirgan tarmoqlar tarmog'i.</p>
+        <div><button type="button" class="btn btn-primary" data-goto="i">4-bobni o'qish: Internet</button></div>
+      </section>
+
+      <section class="quote">
+        <p class="quote-text">"Hamma 'kompyuter faqat arifmetikani biladi' derdi. Men esa unga til o'rgatdim. Bugun siz yozgan har bir qator kod kimningdir tarjimoni orqali mashinaga yetib boradi."</p>
+      </section>
+
+      <section class="chapter">
+        <p class="year">Mashq</p>
+        <h3>10 ta yangi so'z</h3>
+        <p>Kartani bosing — so'z ovoz chiqarib o'qiladi.</p>
+        <div class="word-grid" data-words="compiler"></div>
+      </section>
+
+      <section class="chapter">
+        <p class="year">Tekshiruv</p>
+        <h3>Bobni qanchalik tushundingiz?</h3>
+        <div class="quiz" data-pass="5">
+          <div class="qitem"><p class="q">1. Kompilyator assemblerdan nimasi bilan farq qiladi?</p><div class="opts" data-correct="2"><button type="button">Hech narsasi bilan</button><button type="button">Kompilyator faqat sonlarni tarjima qiladi</button><button type="button">Bir qatordan ko'p buyruq tuzadi va o'zi qaror qiladi</button></div><p class="explain" hidden>Assembler: bir qator — bir buyruq. Kompilyator: bir qator — kerakli barcha buyruqlar.</p></div>
+          <div class="qitem"><p class="q">2. "Bug" so'zi kompyuter tarixiga qanday kirgan voqea bilan bog'liq?</p><div class="opts" data-correct="0"><button type="button">Mark II relesida kuya topilgan</button><button type="button">Virus kompyuterni buzgan</button><button type="button">ENIAC simida sichqon yashagan</button></div><p class="explain" hidden>1947-yil, Mark II. Lekin muhandislar nosozlikni undan oldin ham "bug" deyishardi.</p></div>
+          <div class="qitem"><p class="q">3. Kompilyatorning ikkinchi bosqichi — parser nima quradi?</p><div class="opts" data-correct="1"><button type="button">Mashina kodini</button><button type="button">Grammatika qoidalari bo'yicha daraxt</button><button type="button">Tokenlar ro'yxatini</button></div><p class="explain" hidden>Lexer — tokenlar, parser — daraxt, keyin kod generatsiyasi.</p></div>
+          <div class="qitem"><p class="q">4. 1960-yil dekabridagi COBOL tajribasi nimani isbotladi?</p><div class="opts" data-correct="0"><button type="button">Bitta dastur turli mashinalarda ishlay oladi</button><button type="button">COBOL eng tez til ekanini</button><button type="button">Kompyuter inglizchani tushunishini</button></div><p class="explain" hidden>Har bir mashina uchun o'z kompilyatori bo'lsa, dasturni qayta yozish shart emas.</p></div>
+          <div class="qitem"><p class="q">5. Interpretator nimaga o'xshaydi?</p><div class="opts" data-correct="1"><button type="button">Butun kitobni oldindan tarjima qiladigan tarjimonga</button><button type="button">Har bir gapni darhol tarjima qiladigan sinxron tarjimonga</button><button type="button">Lug'atga</button></div><p class="explain" hidden>Kompilyator — kitob tarjimoni, interpretator — sinxron tarjimon.</p></div>
+          <div class="qitem"><p class="q">6. Brauzer HTML'dan quradigan daraxt qanday ataladi?</p><div class="opts" data-correct="2"><button type="button">FORTRAN</button><button type="button">CPU</button><button type="button">DOM</button></div><p class="explain" hidden>Document Object Model. Uni Inspect oynasida ko'rgansiz.</p></div>
+          <div class="quiz-foot"><span class="quiz-score"></span><button type="button" class="btn quiz-reset">Qaytadan</button></div>
+        </div>
+      </section>
+
+      <!-- RASMLAR RO'YXATI -->
+      <section class="chapter wanted">
+        <p class="year">Muallif uchun</p>
+        <h3>📸 Kitob uchun kerakli rasmlar ro'yxati</h3>
+        <p>Bob ichida kulrang ramkali joylar rasm kutyapti. Har biriga inglizcha qidiruv iborasi berilgan — uni bosib nusxa oling va Wikimedia Commons yoki Google Images'da qidiring. Topilgan rasmni raqami bilan nomlang (masalan, <code class="inline">C1.jpg</code>).</p>
+        <ol class="wanted-list"></ol>
+        <p class="save-hint">Mualliflik huquqi uchun: iloji bo'lsa Wikimedia Commons, Computer History Museum yoki universitet arxivlaridagi erkin rasmlarni tanlang.</p>
+      </section>
+
+    </div>
+  </div>
+
+  

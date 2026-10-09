@@ -1,0 +1,261 @@
+<!-- ============ TARIX · 2-BOB: ASSEMBLER ============ -->
+  <div class="panel" id="panel-a" data-lesson="a" role="tabpanel" aria-labelledby="tab-a" hidden>
+    <div class="story">
+
+      <section class="hero-card">
+        <img src="media/history/2-bob/rasm-01.jpg" alt="Ketlin But">
+        <div>
+          <p class="eyebrow">2-bob · Assembler: mashinaga so'zlar bilan gapirish</p>
+          <h2>Salom, men Ketlin But</h2>
+          <p>Fon Neyman sizga mashina sonlar bilan o'ylashini aytdi. Men esa o'sha sonlarni kun bo'yi qo'lda yozgan odamman. Bu bobda odamlar mashinaga birinchi marta <strong>so'zlar</strong> bilan qanday gapira boshlaganini aytib beraman. Bu so'zlarning birinchi lug'atini men 1947-yilda yozganman.</p>
+        </div>
+      </section>
+      <p class="disclaimer">Bu bob Ketlin But tilidan tasavvur qilib yozilgan. Sanalar, ismlar va texnik tafsilotlar haqiqiy, lekin gaplar uning o'z so'zlari emas.</p>
+
+      <nav class="tl-chips" aria-label="Bob bo'limlari">
+        <button type="button" data-jump="a-muammo">Muammo</button>
+        <button type="button" data-jump="a-yechim">Yechim</button>
+        <button type="button" data-jump="a-edsac">EDSAC</button>
+        <button type="button" data-jump="a-lab">Assembler laboratoriyasi</button>
+        <button type="button" data-jump="a-sikl">Sakrash va sikl</button>
+        <button type="button" data-jump="a-bugun">Bugun</button>
+        <button type="button" data-jump="a-kopruk">Keyingi bobga</button>
+      </nav>
+
+      <!-- MONOLOG -->
+      <section class="chapter">
+        <p class="year">1946-yil · Angliya</p>
+        <h3>Kristallar, hisob-kitob va o'zimiz quradigan mashina</h3>
+        <p>Men 1922-yilda Angliyaning Stourbrij shaharchasida tug'ilganman. Londondagi Royal Xollouey kollejida matematika o'qidim. Urush yillarida esa Farnborodagi qirollik aviatsiya muassasasida ishladim — u yerda ham ish asosan hisob-kitob edi.</p>
+        <p>1946-yilda men Velvin-Garden-Siti shahridagi kauchuk tadqiqotlari institutiga ishga kirdim. U yerda <strong>Endryu But</strong> degan yosh olim kristallarning tuzilishini rentgen nurlari bilan o'rganardi. Bitta kristallni "o'qish" uchun minglab zerikarli hisob kerak edi. Endryu oddiy yechimni tanladi: <strong>hisoblash mashinasini o'zimiz quramiz</strong>.</p>
+        <p>Keyin biz Londondagi <strong>Birkbek kollejiga</strong> o'tdik. Endryu mashinalarning temir qismini qurardi, men esa ularga dastur yozardim. Mashinaning birinchisi relelardan yasalgan <strong>ARC</strong> (Automatic Relay Calculator) edi. Keyinroq elektron mashinalar — SEC va APE(X)C — keldi. 1950-yilda biz turmush qurdik.</p>
+        <p>1947-yilda Endryu bilan Amerikaga bordik va Prinstonda Jon fon Neymanning jamoasi bilan uchrashdik. Siz 1-bobda o'qigan "xotirada saqlanadigan dastur" g'oyasini to'g'ridan-to'g'ri ularning o'zidan eshitdik. Qaytib kelgach, ARC'ni shu g'oya asosida qayta loyihaladik.</p>
+        <div class="photo-row">
+          <figure class="photo"><img src="media/history/2-bob/rasm-02.jpg" alt="Endryu But portreti"><figcaption>Endryu But (1918–2009) — mening turmush o'rtog'im. ARC va APE(X)C mashinalarini u qurgan, men esa ularga dastur yozganman.</figcaption></figure>
+          <figure class="photo"><img src="media/history/2-bob/rasm-03.jpg" alt="Birkbek kolleji binosi, London"><figcaption>Birkbek kolleji — Britaniyadagi ilk kompyuter laboratoriyalaridan biri shu yerda edi.</figcaption></figure>
+        </div>
+      </section>
+
+      <!-- MUAMMO -->
+      <section class="chapter" id="a-muammo">
+        <p class="year">1947 · Muammo</p>
+        <h3>Nollar va birlar bilan yozish — qog'oz, qalam va xatolar</h3>
+        <p>Mashina faqat sonni tushunadi. Demak, dastur ham son ko'rinishida yozilishi kerak. 1-bobdagi o'quv mashinamizda "13-katakdagi sonni ol" degan buyruq <code class="inline">0001 1101</code> edi. Endi tasavvur qiling: sizning dasturingiz shunday 500 qatordan iborat.</p>
+        <div class="versus">
+          <div><span class="vt">Dasturchi o'ylaydi</span><span>"13-katakdagi sonni olaman, unga 14-katakdagini qo'shaman, natijani 15-ga yozaman."</span><span class="vs">So'zlar bilan.</span></div>
+          <div class="hl"><span class="vt">Mashinaga yozishi kerak</span><pre class="code">0001 1101
+0010 1110
+0100 1111</pre><span class="vs">Sonlar bilan. Har bir qatorni jadvaldan qarab, qo'lda tarjima qilish kerak.</span></div>
+        </div>
+        <p>O'sha yillarda dasturchi avval dasturni qog'ozga so'zlar bilan rejalashtirar, keyin har bir buyruqni maxsus jadvaldan qarab sonlarga o'girar, so'ng ularni perfolentaga teshik qilib urardi. Uch xil joyda xato qilish mumkin edi:</p>
+        <ul class="plain">
+          <li><strong>Tarjimada:</strong> <code class="inline">0010</code> o'rniga <code class="inline">0011</code> yozildi — "qo'sh" "ayir"ga aylandi.</li>
+          <li><strong>Manzilda:</strong> bitta qator qo'shilsa, undan keyingi barcha buyruqlarning manzili siljiydi va hammasini qayta hisoblash kerak.</li>
+          <li><strong>O'qishda:</strong> bir haftadan keyin o'z dasturingizga qarab, uning nima qilishini tushunmaysiz.</li>
+        </ul>
+        <div class="mentor"><img class="im im-l" data-im="brain" alt=""><div><b>Ketlin o'ylaydi</b>Telefon raqamlarini eslang. Siz do'stingizga raqam terib qo'ng'iroq qilmaysiz — kontaktlardan "Ali" ni tanlaysiz, raqamni telefon o'zi topadi. Odam nomni eslaydi, mashina esa raqamni. Ular orasida kimdir <strong>lug'at</strong> tutib turishi kerak.</div></div>
+      </section>
+
+      <!-- YECHIM -->
+      <section class="chapter" id="a-yechim">
+        <p class="year">1947 · "Coding for A.R.C."</p>
+        <h3>Har bir buyruqqa qisqa nom</h3>
+        <p>1947-yilda men ARC uchun dastur yozish qoidalarini hisobot qilib yozdim: <strong>"Coding for A.R.C."</strong>. Unda buyruqlarni sonlar bilan emas, qisqa, eslab qolish oson belgilar bilan yozish tizimini taklif qildim. Tarixchilar buni birinchi <strong>assembler tili</strong> (assembly language) deb hisoblashadi.</p>
+        <p class="big-idea">Har bir mashina buyrug'iga eslab qolish oson qisqa nom beramiz. Nomni songa o'girishni esa — mashinaning o'ziga topshiramiz.</p>
+        <p>Bunday qisqa nom <strong>mnemonika</strong> (mnemonic) deyiladi — yunoncha "xotiraga oid" so'zidan. Bizning o'quv mashinamiz uchun lug'at shunday:</p>
+        <div class="isa">
+          <div><code>0001</code><b>LOAD n</b><span>n-katakdagini ACC ga ol</span></div>
+          <div><code>0010</code><b>ADD n</b><span>ACC ga qo'sh</span></div>
+          <div><code>0011</code><b>SUB n</b><span>ACC dan ayir</span></div>
+          <div><code>0100</code><b>STORE n</b><span>ACC ni n-katakka yoz</span></div>
+          <div><code>0101</code><b>JMP n</b><span>n-katakka sakra</span></div>
+          <div><code>0110</code><b>JZ n</b><span>ACC = 0 bo'lsa, sakra</span></div>
+          <div><code>1111</code><b>HALT</b><span>to'xta</span></div>
+        </div>
+        <p class="save-hint">LOAD, ADD, SUB, STORE va HALT ni 1-bobdagi protsessor simulyatoridan taniysiz. JMP va JZ — bugungi yangi buyruqlar, ular haqida pastda gaplashamiz.</p>
+        <p>Endi ikki tushunchani farqlab oling:</p>
+        <div class="versus">
+          <div><span class="vt">Assembler tili</span><span>So'zlar bilan yozilgan dastur: <code class="inline">ADD 14</code>.</span><span class="vs">Odam uchun.</span></div>
+          <div class="hl"><span class="vt">Assembler (dastur)</span><span>Shu so'zlarni sonlarga o'giradigan <strong>tarjimon-dastur</strong>.</span><span class="vs">Mashinada ishlaydi. Natijasi — mashina kodi.</span></div>
+        </div>
+        <p>Asosiy qoida: assemblerda <strong>bitta qator = bitta mashina buyrug'i</strong>. U hech narsani o'zidan qo'shmaydi, shunchaki lug'atdan qarab tarjima qiladi. Shuning uchun assembler tili <strong>quyi darajali til</strong> (low-level language) deyiladi — u mashinaga juda yaqin.</p>
+        <figure class="photo"><img src="media/history/2-bob/rasm-04.jpg" alt="Ketlin But Birkbekdagi mashina paneli yonida"><figcaption>Men Birkbekdagi mashinalarimizdan biri yonida. Har bir lampa va ulagichni qo'l bilan tekshirardik.</figcaption></figure>
+      </section>
+
+      <!-- EDSAC -->
+      <section class="chapter" id="a-edsac">
+        <p class="year">1949 · Kembrij, EDSAC</p>
+        <h3>Harf — bu ham buyruq: Devid Uilerning "boshlang'ich buyruqlari"</h3>
+        <p>Kembrij universitetida Moris Uilks qurgan <strong>EDSAC</strong> 1949-yil mayida ishga tushdi. Uning jamoasidagi yosh talaba <strong>Devid Uiler</strong> juda chiroyli hiyla o'ylab topdi.</p>
+        <p>EDSAC'da har bir buyruq <strong>bitta harf</strong> bilan yozilardi: <code class="inline">A</code> — qo'shish (Add), <code class="inline">S</code> — ayirish (Subtract), <code class="inline">T</code> — xotiraga yozish (Transfer). Dasturchi perfolentaga, masalan, <code class="inline">A 13 F</code> deb yozardi — "13-katakdagi sonni qo'sh". Hiyla shunda ediki, teleprinter har bir harfni 5 bitli kod bilan urardi va harflar shunday tanlanganki, <strong>harfning kodi buyruqning kodiga teng</strong> edi.</p>
+        <p>Uiler mashinaning boshlang'ich xotirasiga kichik dastur joyladi — <strong>"initial orders"</strong> (boshlang'ich buyruqlar). Mashina yoqilganda, u lentadagi harflar va o'nlik sonlarni o'qib, ularni o'zi ikkilik koddagi buyruqlarga aylantirib, xotiraga joylardi. Ya'ni bu tarjimon ham dastur edi — 1-bobdagi "dastur ham son" g'oyasining ajoyib isboti.</p>
+        <div class="photo-row">
+          <figure class="photo"><img src="media/history/2-bob/rasm-05.jpg" alt="EDSAC kompyuteri, Kembrij"><figcaption>EDSAC — Kembrij universiteti, 1949. Uning dasturlari teshikli lentalardan yuklanardi.</figcaption></figure>
+          <figure class="photo"><img src="media/history/2-bob/rasm-06.jpg" alt="EDSAC'ning simobli xotira trubkalari"><figcaption>EDSAC xotirasi — simob to'ldirilgan uzun trubkalar. Ularning yonida loyiha rahbari Moris Uilks.</figcaption></figure>
+        </div>
+        <p>Uiler yana bir muhim narsa qildi: <strong>kichik dasturlar kutubxonasi</strong> (subroutine library). Sinus hisoblash, sonni ekranga chiqarish kabi tez-tez kerak bo'ladigan bo'laklar alohida lentalarga yozilib, shkafda saqlanardi. Dasturchi har safar ularni noldan yozmasdan, kerakli lentani olib, o'z dasturiga ulardi. Kichik dasturni chaqirib, keyin to'g'ri joyga qaytish usuli hanuzgacha <strong>"Uiler sakrashi"</strong> (Wheeler jump) deb eslanadi.</p>
+        <p>1951-yilda Uilks, Uiler va Stenli Gill dasturlash bo'yicha dunyodagi birinchi kitoblardan birini chiqardi. Unda bosh dastur va kichik dasturlarni bitta butun dasturga <strong>yig'adigan</strong> (assemble) dastur haqida gap boradi. "Assembler" so'zi shundan tarqaldi: inglizcha <em>to assemble</em> — "yig'moq, terib chiqmoq".</p>
+        <div class="mentor"><img class="im im-l" data-im="light_bulb" alt=""><div><b>3-dars bilan bog'liqlik</b>Kutubxona g'oyasi bugun ham har qadamda. Siz yozgan <code class="inline">&lt;img&gt;</code> ning orqasida brauzer ichidagi rasmni o'qiydigan tayyor "kichik dastur" turibdi. Dasturchilar hech qachon hamma narsani noldan yozmaydi.</div></div>
+      </section>
+
+      <!-- BELGILAR + LAB -->
+      <section class="chapter" id="a-lab">
+        <p class="year">Belgilar (Labels) · Laboratoriya</p>
+        <h3>Raqam o'rniga nom: belgilar va ikki marta o'qish</h3>
+        <p>Mnemonikalar buyruqni songa o'girish muammosini hal qildi. Lekin manzillar muammosi qoldi: <code class="inline">ADD 14</code> dagi 14 — bu nima? Dastur o'rtasiga bitta qator qo'shsangiz, 14-katak 15-ga aylanadi va hamma manzillarni qayta hisoblash kerak.</p>
+        <p>Yechim — <strong>belgi</strong> (label): xotira katagiga nom berish. Biz <code class="inline">ADD 14</code> emas, <code class="inline">ADD B</code> deb yozamiz. <code class="inline">B</code> ning qaysi katakda turishini assembler o'zi hisoblaydi. Buning uchun u dasturni <strong>ikki marta</strong> o'qiydi:</p>
+        <ol class="howto">
+          <li><strong>1-o'qish:</strong> qatorlarni sanab chiqadi va har bir belgining manzilini yozib oladi: "A — 4-katak, B — 5-katak".</li>
+          <li><strong>2-o'qish:</strong> har bir qatorni tarjima qiladi: mnemonikani lug'atdan, belgini esa 1-o'qishdagi ro'yxatdan oladi.</li>
+        </ol>
+        <p><code class="inline">DAT 5</code> — buyruq emas, shunchaki <strong>ma'lumot</strong>: "bu katakka 5 sonini qo'y". <code class="inline">;</code> belgisidan keyingi hamma narsa — izoh, xuddi HTML'dagi <code class="inline">&lt;!-- --&gt;</code> kabi.</p>
+        <p><strong>Endi o'zingiz assembler bo'ling.</strong> Chapdagi kodni o'zgartiring va "Yig'ish" ni bosing — assembler uni mashina kodiga o'giradi. "Ishga tushirish" esa natijani 1-bobdagi mashinada hisoblaydi:</p>
+        <div class="asm-lab" id="asm-lab">
+          <div class="tl-chips asm-ex" role="group" aria-label="Tayyor misollar">
+            <button type="button" data-asm-ex="add">5 + 7</button>
+            <button type="button" data-asm-ex="loop">Sikl: 4 × 3</button>
+            <button type="button" data-asm-ex="bug">Xatoli dastur</button>
+          </div>
+          <div class="asm-grid">
+            <div class="asm-col">
+              <p class="cpu-h">Assembler tili</p>
+              <textarea id="asm-src" spellcheck="false" aria-label="Assembler kodi"></textarea>
+            </div>
+            <div class="asm-col">
+              <p class="cpu-h">Mashina kodi</p>
+              <div class="asm-out" id="asm-out"></div>
+            </div>
+          </div>
+          <div class="cpu-ctl">
+            <button type="button" class="btn btn-primary" id="asm-build">Yig'ish</button>
+            <button type="button" class="btn" id="asm-run">Ishga tushirish</button>
+          </div>
+          <p class="cpu-log" id="asm-log" aria-live="polite">"Yig'ish" ni bosing.</p>
+        </div>
+        <p><strong>Uchta tajriba:</strong></p>
+        <ol class="howto">
+          <li><code class="inline">A:</code> qatoridagi 5 ni boshqa songa o'zgartiring va qayta ishga tushiring.</li>
+          <li>Dastur boshiga yangi qator qo'shing: <code class="inline">LOAD B</code>. Manzillar qanday siljiganiga, lekin dastur baribir to'g'ri yig'ilganiga qarang. Belgilarning kuchi shunda.</li>
+          <li>"Xatoli dastur" ni oching. Assembler qaysi xatolarni topdi?</li>
+        </ol>
+      </section>
+
+      <!-- SIKL -->
+      <section class="chapter" id="a-sikl">
+        <p class="year">Sakrash (Jump) va sikl (Loop)</p>
+        <h3>Mashina qanday qilib "agar" va "takrorla" deydi</h3>
+        <p>1-bobda protsessor buyruqlarni ketma-ket bajarardi: PC har safar bittaga oshardi. Lekin dasturda "agar ... bo'lsa" va "... marta takrorla" kerak. Buning uchun ikkita maxsus buyruq bor:</p>
+        <ul class="plain">
+          <li><code class="inline">JMP n</code> (jump — sakra) — PC ga n ni yozadi. Keyingi buyruq ketma-ket emas, n-katakdan olinadi.</li>
+          <li><code class="inline">JZ n</code> (jump if zero) — faqat ACC <strong>nol</strong> bo'lsa sakraydi. Aks holda oddiy davom etadi. Bu — mashinadagi "agar".</li>
+        </ul>
+        <p>Bizning mashinamiz ko'paytirishni bilmaydi. Lekin ko'paytirish — bu takroriy qo'shish: 4 × 3 = 4 + 4 + 4. Laboratoriyadagi "Sikl: 4 × 3" misolini oching va o'qing:</p>
+<pre class="code">SIKL:   LOAD  SANOQ   <span class="t">; necha marta qoldi?</span>
+        JZ    TAMOM   <span class="t">; nol bo'lsa — tamom</span>
+        SUB   BIR     <span class="t">; sanoqni bittaga kamaytir</span>
+        STORE SANOQ
+        LOAD  NATIJA  <span class="t">; natijaga yana 4 qo'sh</span>
+        ADD   SON
+        STORE NATIJA
+        JMP   SIKL    <span class="t">; boshiga qayt</span>
+TAMOM:  HALT</pre>
+        <p>1-darsdagi algoritmni eslang: choy damlash qadamlarida ham "suv qaynamaguncha kut" degan qadam bor edi. Barcha dasturlash tillaridagi <code class="inline">if</code>, <code class="inline">while</code>, <code class="inline">for</code> — oxir-oqibat shu ikki buyruqqa aylanadi.</p>
+        <div class="mentor"><img class="im im-l" data-im="warning" alt=""><div><b>Ehtiyot bo'ling</b><code class="inline">JZ TAMOM</code> qatorini o'chirib ko'ring. Sikl hech qachon to'xtamaydi — bu <strong>cheksiz sikl</strong> (infinite loop). Telefoningizdagi ilova "qotib qolsa", ko'pincha ichida aynan shunday sikl aylanayotgan bo'ladi. Laboratoriyamiz 500 qadamdan keyin mashinani o'zi to'xtatadi.</div></div>
+      </section>
+
+      <!-- MENING MASHINALARIM -->
+      <section class="chapter">
+        <p class="year">1950-yillar · APE(X)C va birinchi kitob</p>
+        <h3>Kichik mashina, katta ta'sir</h3>
+        <p>Bizning mashinalarimiz katta va qimmat emas edi. Endryu xotira uchun aylanadigan <strong>magnit baraban</strong> (magnetic drum) ixtiro qildi — tez va arzon xotira. 1950-yillarning boshida qurilgan <strong>APE(X)C</strong> mashinamizning chizmalari asosida Britaniyaning BTM kompaniyasi <strong>HEC</strong> kompyuterlarini ishlab chiqardi. Ular o'z davrida Britaniyada eng ko'p sotilgan kompyuterlardan biriga aylandi.</p>
+        <p>1958-yilda men <strong>"Programming for an Automatic Digital Calculator"</strong> kitobini chiqardim. O'sha paytda dasturlashni o'rgatadigan kitoblar barmoq bilan sanarli edi. 1950-yillarning oxirida neyron tarmoqlar — mashina qanday qilib shakllarni taniy olishi mumkinligi ustida ham izlanishlar olib bordim. Bugun bu sun'iy intellektning asosiy yo'nalishlaridan biri.</p>
+        <p>1962-yilda oilamiz bilan Kanadaga ko'chib o'tdik va men u yerda universitetda dars berdim. Men 100 yil umr ko'rdim va kompyuterlar xonani to'ldiradigan relelardan cho'ntakdagi telefongacha o'sganini o'z ko'zim bilan ko'rdim.</p>
+        <div class="stats">
+          <div class="stat"><b>1947</b><span>"Coding for A.R.C." — birinchi assembler tili</span></div>
+          <div class="stat"><b>1958</b><span>dasturlash bo'yicha ilk kitoblardan biri</span></div>
+          <div class="stat"><b>100 yil</b><span>umr ko'rdi (1922–2022)</span></div>
+        </div>
+      </section>
+
+      <!-- BUGUN -->
+      <section class="chapter" id="a-bugun">
+        <p class="year">Bugun</p>
+        <h3>Assembler hali ham tirikmi?</h3>
+        <p>Ha. Bugun dasturlarning juda kichik qismi assemblerda yoziladi, lekin u eng nozik joylarda ishlaydi: kompyuter yoqilganda birinchi ishga tushadigan kod, qurilmalarni boshqaradigan drayverlar, kir yuvish mashinasi yoki pult ichidagi mitti protsessorlar va har bir soniya muhim bo'lgan video va o'yin dvigatellari.</p>
+        <div class="photo-row">
+          <figure class="photo"><img src="media/history/2-bob/rasm-07.jpg" alt="Chop etilgan dastur kodi sahifalari"><figcaption>Margaret Hemilton va uning jamoasi yozgan Apollon dasturi chop etilgan qog'ozlar. Odamni Oyga olib borgan bu dastur assembler tilida yozilgan.</figcaption></figure>
+          <figure class="photo"><img src="media/history/2-bob/rasm-08.jpg" alt="Apollon boshqaruv kompyuterining DSKY pulti"><figcaption>Apollon boshqaruv kompyuterining DSKY pulti (bugungi nusxasi). Kosmonavtlar kompyuterga buyruqni shu tugmalar orqali berishgan. Kompyuter xotirasi bugungi oddiy telefonnikidan millionlab marta kichik edi.</figcaption></figure>
+        </div>
+        <ul class="tl-facts">
+          <li><strong>1969</strong> — Apollon 11 Oyga qo'ndi. Uni boshqargan kompyuterning dasturini MIT'da Margaret Hemilton boshchiligidagi jamoa yozgan.</li>
+          <li><strong>1999</strong> — mashhur "RollerCoaster Tycoon" o'yinini Kris Soyer deyarli yolg'iz, deyarli butunlay assemblerda yozgan.</li>
+          <li><strong>Bugun</strong> — har bir protsessor oilasining o'z assembler tili bor: kompyuterlardagi x86 va telefonlardagi ARM bir-birini tushunmaydi.</li>
+        </ul>
+        <p>Oxirgi nuqta juda muhim. Bitta ishni ikki xil protsessor uchun yozib ko'ramiz:</p>
+        <div class="versus">
+          <div><span class="vt">Kompyuter (x86)</span><pre class="code">mov eax, 5
+add eax, 7</pre><span class="vs">Intel va AMD protsessorlari.</span></div>
+          <div class="hl"><span class="vt">Telefon (ARM)</span><pre class="code">mov w0, #5
+add w0, w0, #7</pre><span class="vs">Telefonlar va yangi Mac kompyuterlar.</span></div>
+        </div>
+        <p>Ikkalasi ham 5 + 7 ni hisoblaydi, lekin so'zlari va qoidalari boshqa. Bitta protsessor uchun yozilgan assembler dasturi boshqasida ishlamaydi.</p>
+      </section>
+
+      <!-- KO'PRIK -->
+      <section class="chapter" id="a-kopruk">
+        <p class="year">Keyingi bobga ko'prik</p>
+        <h3>Assemblerning ikki katta kamchiligi</h3>
+        <p>Assembler dasturchilarni sonlardan qutqardi. Lekin 1950-yillarning boshida ikki muammo tobora og'irlashdi:</p>
+        <ol class="howto">
+          <li><strong>Juda uzun.</strong> Matematik <code class="inline">NATIJA = A + B - C</code> deb yozishni xohlaydi. Assemblerda esa bu beshta qator. Murakkabroq formula — yuzlab qator.</li>
+          <li><strong>Mashinaga bog'langan.</strong> Har bir mashinaning o'z assembleri bor. Yangi kompyuter sotib olsangiz, barcha dasturlarni qaytadan yozasiz.</li>
+        </ol>
+        <p>Odamlar savol berishdi: tarjimon-dastur faqat so'zni songa emas, butun <strong>formulani</strong> buyruqlarga o'gira olmaydimi? Bir qator — o'nta buyruq?</p>
+        <ul class="tl-facts">
+          <li><strong>1952</strong> — AQSh: <strong>Greys Hopper</strong> o'zining A-0 tizimini yaratdi va uni <strong>kompilyator</strong> deb atadi.</li>
+          <li><strong>1952</strong> — Manchester: Alik Glenni "Autocode" ni yozdi.</li>
+          <li><strong>1957</strong> — IBM: Jon Bekus jamoasi FORTRAN tilini chiqardi.</li>
+        </ul>
+        <p class="big-idea">Keyingi bob: <strong>Kompilyator</strong> — bir qator o'rniga o'nlab buyruq yozadigan tarjimon.</p>
+        <div><button type="button" class="btn btn-primary" data-goto="c">3-bobni o'qish: Kompilyator</button></div>
+      </section>
+
+      <section class="quote">
+        <p class="quote-text">"Mashina sonlarda o'ylaydi, odam esa so'zlarda. Men shunchaki ular orasiga lug'at qo'ydim. Siz yozgan har bir teg ham shunday lug'atlar zanjiridan o'tib, mashinaga yetib boradi."</p>
+      </section>
+
+      <section class="chapter">
+        <p class="year">Mashq</p>
+        <h3>10 ta yangi so'z</h3>
+        <p>Kartani bosing — so'z ovoz chiqarib o'qiladi.</p>
+        <div class="word-grid" data-words="assembler"></div>
+      </section>
+
+      <section class="chapter">
+        <p class="year">Tekshiruv</p>
+        <h3>Bobni qanchalik tushundingiz?</h3>
+        <div class="quiz" data-pass="5">
+          <div class="qitem"><p class="q">1. Mnemonika nima?</p><div class="opts" data-correct="1"><button type="button">Xotira katagi</button><button type="button">Buyruqning eslab qolish oson qisqa nomi, masalan ADD</button><button type="button">Protsessorning bir turi</button></div><p class="explain" hidden>ADD — "qo'sh", LOAD — "ol". Odam nomni, mashina sonni eslaydi.</p></div>
+          <div class="qitem"><p class="q">2. Assemblerda bitta qator nechta mashina buyrug'iga aylanadi?</p><div class="opts" data-correct="0"><button type="button">Bittaga</button><button type="button">O'ntaga</button><button type="button">Mashinaga qarab har xil, yuztagacha</button></div><p class="explain" hidden>Assembler shunchaki lug'atdan qarab tarjima qiladi: bir qator — bir buyruq.</p></div>
+          <div class="qitem"><p class="q">3. Belgi (label) nima uchun kerak?</p><div class="opts" data-correct="2"><button type="button">Dasturni chiroyli qilish uchun</button><button type="button">Mashinani tezlashtirish uchun</button><button type="button">Manzillarni raqam o'rniga nom bilan yozish uchun — manzilni assembler o'zi hisoblaydi</button></div><p class="explain" hidden>Qator qo'shilsa ham, belgilar tufayli hech narsani qo'lda qayta hisoblash kerak emas.</p></div>
+          <div class="qitem"><p class="q">4. Nega assembler dasturni ikki marta o'qiydi?</p><div class="opts" data-correct="0"><button type="button">Avval belgilarning manzilini yozib oladi, keyin tarjima qiladi</button><button type="button">Xatolarni ikki marta tekshirish uchun</button><button type="button">Mashina sekin bo'lgani uchun</button></div><p class="explain" hidden>Dastur pastda e'lon qilingan belgini yuqorida ishlatishi mumkin. Uning manzilini bilish uchun avval oxirigacha o'qib chiqish kerak.</p></div>
+          <div class="qitem"><p class="q">5. JZ buyrug'i qachon sakraydi?</p><div class="opts" data-correct="1"><button type="button">Har doim</button><button type="button">ACC nol bo'lganda</button><button type="button">Hech qachon</button></div><p class="explain" hidden>JZ — jump if zero. Bu mashinadagi "agar". Har doim sakraydigani — JMP.</p></div>
+          <div class="qitem"><p class="q">6. "Assembler" so'zi nimani bildiradi?</p><div class="opts" data-correct="2"><button type="button">Hisoblovchi</button><button type="button">Tarjimon</button><button type="button">Yig'uvchi — bo'laklarni bitta dasturga yig'adigan</button></div><p class="explain" hidden>Inglizcha "to assemble" — yig'moq. 1951-yilgi Kembrij kitobidan tarqalgan.</p></div>
+          <div class="qitem"><p class="q">7. Nega x86 uchun yozilgan assembler dasturi telefonda (ARM) ishlamaydi?</p><div class="opts" data-correct="0"><button type="button">Har bir protsessor oilasining o'z buyruqlari va o'z assembler tili bor</button><button type="button">Telefonda xotira yo'q</button><button type="button">Telefon assemblerni taqiqlaydi</button></div><p class="explain" hidden>Shu muammo kompilyatorlarning paydo bo'lishiga sabab bo'ldi.</p></div>
+          <div class="quiz-foot"><span class="quiz-score"></span><button type="button" class="btn quiz-reset">Qaytadan</button></div>
+        </div>
+      </section>
+
+      <!-- RASMLAR RO'YXATI -->
+      <section class="chapter wanted">
+        <p class="year">Muallif uchun</p>
+        <h3>📸 Kitob uchun kerakli rasmlar ro'yxati</h3>
+        <p>Bob ichida kulrang ramkali joylar rasm kutyapti. Har biriga inglizcha qidiruv iborasi berilgan — uni bosib nusxa oling va Wikimedia Commons yoki Google Images'da qidiring. Topilgan rasmni raqami bilan nomlang (masalan, <code class="inline">A1.jpg</code>).</p>
+        <ol class="wanted-list"></ol>
+        <p class="save-hint">Mualliflik huquqi uchun: iloji bo'lsa Wikimedia Commons, Computer History Museum yoki universitet arxivlaridagi erkin rasmlarni tanlang.</p>
+      </section>
+
+    </div>
+  </div>
+
+  

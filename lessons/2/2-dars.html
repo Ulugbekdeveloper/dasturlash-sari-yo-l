@@ -1,0 +1,255 @@
+<!-- ============ 2-DARS ============ -->
+  <div class="panel" id="panel-2" data-lesson="2" role="tabpanel" aria-labelledby="tab-2" hidden>
+
+    <section class="lesson">
+      <div class="lesson-head">
+        <p class="eyebrow">2-dars</p>
+        <h2>HTML bilan tanishuv va birinchi sahifangiz</h2>
+        <div class="meta">
+          <span class="chip">9 qadam</span>
+          <span class="chip">8 ta yangi tushuncha</span>
+          <span class="chip">10 ta rasmli so'z</span>
+        </div>
+        <div class="progress-track"><div class="progress-bar" id="l2-bar"></div></div>
+        <p class="progress-label" id="l2-label">0 / 9 qadam bajarildi</p>
+      </div>
+
+      <!-- 1 -->
+      <div class="step">
+        <label class="step-head">
+          <input type="checkbox" id="l2-step1">
+          <span class="step-title"><span class="step-num">01</span> Kechagini eslaylik</span>
+        </label>
+        <div class="step-body">
+          <p>Yangi narsaga o'tishdan oldin 1-darsni bir eslab olamiz. Takrorlangan narsa yodda qoladi. Avval o'zingiz javob bering, keyin tekshiring.</p>
+          <div class="review-list">
+            <div class="review">
+              <p class="q">Temir qism (hardware) va dastur (software) farqi nima?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Temir qismni qo'l bilan ushlasa bo'ladi: ekran, klaviatura. Dastur esa temir qismga nima qilishni aytadi. Oshxona va retsept misolini eslang.</p></details>
+            </div>
+            <div class="review">
+              <p class="q">Papka nima?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Fayllarni solib qo'yadigan quti. Uning ichida boshqa papka ham bo'lishi mumkin.</p></details>
+            </div>
+            <div class="review">
+              <p class="q">Algoritm nima?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Qadam-baqadam ko'rsatmalar ketma-ketligi. Masalan, choy damlash.</p></details>
+            </div>
+            <div class="review">
+              <p class="q">"save" so'zi nimani bildiradi?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Saqlash. Bugun bu so'z sizga amalda kerak bo'ladi.</p></details>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="step">
+        <label class="step-head">
+          <input type="checkbox" id="l2-step2">
+          <span class="step-title"><span class="step-num">02</span> Veb-sahifa aslida nima?</span>
+        </label>
+        <div class="step-body">
+          <p>Siz ochadigan har bir sayt aslida <strong>fayl</strong>. Xuddi rasm yoki video kabi. Faqat uning ichida sahifa qanday ko'rinishi yozilgan.</p>
+          <p>Bu faylni o'qib, ekranda chiroyli qilib ko'rsatadigan dastur — <strong>brauzer</strong> (Chrome, Safari). Brauzerni o'quvchi deb tasavvur qiling, faylni esa xat deb. O'quvchi xatni o'qiydi va sizga ko'rsatadi.</p>
+          <p>Fayl nomida nuqtadan keyingi qism <strong>kengaytma</strong> deyiladi: <code class="inline">rasm.jpg</code>, <code class="inline">kino.mp4</code>, <code class="inline">salom.html</code>. Kengaytma banka ustidagi yozuvga o'xshaydi: "tuz", "shakar", "murabbo". Kompyuter shu yozuvga qarab faylni qaysi dasturda ochishni biladi. <code class="inline">.html</code> esa "bu veb-sahifa, brauzerda och" degani.</p>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="step">
+        <label class="step-head">
+          <input type="checkbox" id="l2-step3">
+          <span class="step-title"><span class="step-num">03</span> Bugungi 10 ta yangi so'z</span>
+        </label>
+        <div class="step-body">
+          <p>Bu so'zlarning ba'zilari bugun kodning ichida uchraydi. 1-darsdagi so'zlarga ham bir qarab chiqing.</p>
+          <div class="word-grid" data-words="web"></div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="step">
+        <label class="step-head">
+          <input type="checkbox" id="l2-step4">
+          <span class="step-title"><span class="step-num">04</span> HTML va teglar</span>
+        </label>
+        <div class="step-body">
+          <p><strong>HTML</strong> — sahifaning skeleti. U brauzerga qayerda sarlavha, qayerda oddiy matn turishini aytadi.</p>
+          <p>HTML <strong>teglar</strong> bilan yoziladi. Teg — matnga yopishtirilgan yorliq. Brauzer yorliqqa qarab matnni qanday ko'rsatishni biladi.</p>
+          <p>Teg ikki marta yoziladi: boshida <strong>ochiladi</strong>, oxirida <strong>yopiladi</strong>. Yopilganda oldiga <code class="inline">/</code> belgisi qo'yiladi. Xuddi quti kabi: ochasiz, ichiga narsa solasiz, yopasiz.</p>
+          <div class="anatomy" aria-label="Teg qanday tuzilgan">
+            <div class="seg edge"><code>&lt;h1&gt;</code><span>ochildi</span></div>
+            <div class="seg"><code>Salom, dunyo!</code><span>ichidagi matn</span></div>
+            <div class="seg edge"><code>&lt;/h1&gt;</code><span>yopildi</span></div>
+          </div>
+          <p>Bugun ikkita teg o'rganamiz:</p>
+          <ul class="plain">
+            <li><code class="inline">&lt;h1&gt;</code> — katta sarlavha. <strong>h</strong> harfi "heading" so'zidan olingan.</li>
+            <li><code class="inline">&lt;p&gt;</code> — oddiy matn. <strong>p</strong> harfi "paragraph" so'zidan olingan.</li>
+          </ul>
+          <p>Payqadingizmi? Teglar nomi ingliz so'zlaridan olingan. Ingliz tilini o'rgangan sari kod ham o'z-o'zidan tushunarli bo'lib boradi.</p>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="step">
+        <label class="step-head">
+          <input type="checkbox" id="l2-step5">
+          <span class="step-title"><span class="step-num">05</span> Mashq maydoni: o'zingiz sinab ko'ring</span>
+        </label>
+        <div class="step-body">
+          <p>Chapdagi oynaga kod yozing, natija darhol yonida chiqadi. Bu yerda hech narsani buzib qo'ymaysiz, bemalol sinab ko'ring.</p>
+          <div class="play">
+            <textarea id="l2-play" spellcheck="false" aria-label="HTML kod yozish joyi"></textarea>
+            <div class="browser" aria-label="Natija">
+              <div class="browser-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="address">salom.html</span></div>
+              <div class="preview-page" id="l2-preview"></div>
+            </div>
+          </div>
+          <div class="play-actions"><button class="btn" type="button" id="l2-reset">Boshidan boshlash</button></div>
+          <p><strong>Uchta tajriba qilib ko'ring:</strong></p>
+          <ol class="howto">
+            <li>"Salom, dunyo!" o'rniga o'z ismingizni yozing.</li>
+            <li>Ikkala joydagi <code class="inline">h1</code> ni <code class="inline">h2</code> ga, keyin <code class="inline">h3</code> ga almashtiring. Nima o'zgardi?</li>
+            <li><code class="inline">&lt;/h1&gt;</code> ni butunlay o'chirib ko'ring. Nima bo'ldi? Nima uchun deb o'ylaysiz?</li>
+          </ol>
+          <details class="reveal"><summary>Nima bo'lganini tushuntirish</summary>
+            <p class="a">h1, h2, h3 — sarlavhaning kattaligi. 1 eng katta, 6 eng kichik. Buni hech kim aytmasdan o'zingiz topdingiz.</p>
+            <p class="a"><code class="inline">&lt;/h1&gt;</code> o'chirilsa, brauzer sarlavha qayerda tugashini bilmaydi va keyingi matnni ham sarlavha deb o'ylaydi. Quti yopilmasa, hamma narsa uning ichiga tushib ketadi.</p>
+          </details>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="step">
+        <label class="step-head">
+          <input type="checkbox" id="l2-step6">
+          <span class="step-title"><span class="step-num">06</span> Kompyuteringizda birinchi haqiqiy sahifa</span>
+        </label>
+        <div class="step-body">
+          <p>Endi mashq emas, haqiqiy fayl yasaymiz. Buning uchun Mac'dagi oddiy <strong>TextEdit</strong> dasturi yetadi.</p>
+          <div class="tips">
+            <p class="tips-title">Klaviatura sirlari (bugun kerak bo'ladi)</p>
+            <div class="tips-grid">
+              <span><kbd>Cmd</kbd> + <kbd>Space</kbd> — dastur qidirish</span>
+              <span><kbd>Cmd</kbd> + <kbd>S</kbd> — saqlash</span>
+              <span><kbd>Cmd</kbd> + <kbd>Tab</kbd> — dasturlar orasida o'tish</span>
+              <span><kbd>Cmd</kbd> + <kbd>R</kbd> — brauzerda sahifani yangilash</span>
+            </div>
+          </div>
+          <ol class="howto">
+            <li><strong>Papka yarating.</strong> Finder'ni oching, "Documents" papkasiga kiring. Tepadagi menyudan File → New Folder ni bosing va nomini <code class="inline">frontend</code> deb qo'ying.</li>
+            <li><strong>TextEdit'ni oching.</strong> <kbd>Cmd</kbd> + <kbd>Space</kbd> bosing, "TextEdit" deb yozing, Enter bosing. Keyin "New Document" tugmasini bosing.</li>
+            <li><strong>Oddiy matn rejimiga o'ting.</strong> Tepadagi menyudan Format → Make Plain Text ni tanlang. Keyin Edit → Substitutions → Smart Quotes belgisini olib tashlang. Mac ba'zi belgilarni o'zicha chiroyliroq belgiga almashtiradi, kod esa buni yoqtirmaydi.</li>
+            <li><strong>Kodni qo'lda yozing.</strong> Nusxa olmang, harfma-harf o'zingiz yozing: qo'l bilan yozilgan narsa yodda yaxshiroq qoladi. <code class="inline">...</code> o'rniga ismingizni yozing.
+<pre class="code"><span class="t">&lt;h1&gt;</span>Mening ismim ...<span class="t">&lt;/h1&gt;</span>
+<span class="t">&lt;p&gt;</span>Men 27 yoshdaman.<span class="t">&lt;/p&gt;</span>
+<span class="t">&lt;p&gt;</span>Men frontend dasturchi bo'lmoqchiman.<span class="t">&lt;/p&gt;</span></pre>
+            </li>
+            <li><strong>Saqlang.</strong> <kbd>Cmd</kbd> + <kbd>S</kbd> bosing. Nomiga <code class="inline">salom.html</code> deb yozing, joyini <code class="inline">frontend</code> papkasi qilib tanlang. Agar ".html ishlatilsinmi?" deb so'rasa, "Use .html" ni bosing.</li>
+            <li><strong>Brauzerda oching.</strong> Finder'da <code class="inline">frontend</code> papkasiga kiring va <code class="inline">salom.html</code> ni ikki marta bosing.</li>
+          </ol>
+          <p class="win">Ekraningizdagi sahifani siz o'zingiz yasadingiz. Hech kim yordam bermadi, siz yasadingiz.</p>
+          <p><strong>Dasturchilarning asosiy odati.</strong> TextEdit'ga qayting (<kbd>Cmd</kbd> + <kbd>Tab</kbd>), bitta so'zni o'zgartiring, <kbd>Cmd</kbd> + <kbd>S</kbd> bosing. Brauzerga qayting va <kbd>Cmd</kbd> + <kbd>R</kbd> bosing. O'zgarish ko'rindimi? O'zgartir → saqla → yangila. Dasturchilar kuniga yuzlab marta shunday qiladi.</p>
+          <details class="os">
+            <summary>Kompyuteringiz Windows bo'lsa</summary>
+            <ol>
+              <li>Start tugmasini bosing, "Notepad" deb yozing va oching.</li>
+              <li>Kodni yozing (yuqoridagi kodning o'zi).</li>
+              <li>File → Save As ni bosing. Documents ichida <code class="inline">frontend</code> papkasini yarating va tanlang.</li>
+              <li>Nomiga <code class="inline">salom.html</code> yozing, "Save as type" qatorida "All files" ni tanlang, Save bosing.</li>
+              <li>Faylni ikki marta bosing. Windows'da <kbd>Cmd</kbd> o'rniga <kbd>Ctrl</kbd> ishlatiladi.</li>
+            </ol>
+          </details>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="step">
+        <label class="step-head">
+          <input type="checkbox" id="l2-step7">
+          <span class="step-title"><span class="step-num">07</span> Aqlli fikrlash: xatoni toping</span>
+        </label>
+        <div class="step-body">
+          <p>Dasturchi vaqtining ko'p qismini yangi kod yozishga emas, xato qidirishga sarflaydi. Shuning uchun xato topish eng foydali mashqlardan biri. Har birini o'ylab ko'ring, keyin javobni oching.</p>
+          <div class="review-list">
+            <div class="review">
+              <p class="q">1. Bu kodda nima xato?</p>
+<pre class="code"><span class="t">&lt;h1&gt;</span>Mening sahifam<span class="t">&lt;h1&gt;</span></pre>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Ikkinchi tegda <code class="inline">/</code> belgisi yo'q. U quti yopish o'rniga yana yangi sarlavha ochib qo'yadi. To'g'risi: <code class="inline">&lt;/h1&gt;</code>.</p></details>
+            </div>
+            <div class="review">
+              <p class="q">2. Bunda-chi?</p>
+<pre class="code"><span class="t">&lt;p&gt;</span>Men dasturchi bo'lyapman<span class="t">&lt;/h1&gt;</span></pre>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Quti <code class="inline">p</code> bilan ochilgan, lekin <code class="inline">h1</code> bilan yopilgan. Qaysi teg bilan ochsangiz, o'sha teg bilan yopish kerak: <code class="inline">&lt;/p&gt;</code>.</p></details>
+            </div>
+            <div class="review">
+              <p class="q">3. Do'stingiz sahifa yasab, uni <code class="inline">salom.txt</code> deb saqladi. Ikki marta bosganda brauzer emas, oddiy matn dasturi ochildi va ichida teglar shundayligicha turibdi. Nima uchun?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Bankadagi yozuvni eslang. <code class="inline">.txt</code> — "oddiy matn" degan yozuv. Kompyuter yozuvga ishonadi va faylni oddiy matn sifatida ochadi. Nomini <code class="inline">salom.html</code> qilish kerak.</p></details>
+            </div>
+          </div>
+          <p>Har bir xatoni topish uchun qoidani eslashingiz kerak bo'ldi. Aqlli fikrlash degani shu: qoidani yodlab olish emas, uni tushunib, yangi joyda ishlata olish.</p>
+        </div>
+      </div>
+
+      <!-- ===== STARTUP USTOZI ===== -->
+      <div class="part-head su">
+        <p class="eyebrow">Startup ustozi</p>
+        <h3>Mijoz bilan qanday gaplashish kerak</h3>
+        <p>Startupchi eng ko'p qiladigan ish kod yozish emas, odamlar bilan gaplashish. Lekin buning ham to'g'ri yo'li bor.</p>
+      </div>
+
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l2-step8"><span class="step-title"><span class="step-num">08</span> Yaxshi savol va yomon savol</span></label>
+        <div class="step-body">
+          <p>Asosiy qoida: odamdan g'oyangiz haqida so'ramang. U sizni xafa qilmaslik uchun "zo'r" deydi. Uning hayoti haqida, o'tgan safar nima bo'lgani haqida so'rang.</p>
+          <div class="versus">
+            <div><img class="im im-l" src="media/emoji/speech_balloon.png" alt=""><span class="vt">Yomon savol</span><span>"Shunday ilova bo'lsa, ishlatarmidingiz?"</span><span class="vs">Javob — taxmin. Odam deyarli har doim "ha" deydi.</span></div>
+            <div class="hl"><img class="im im-l" src="media/emoji/speech_balloon.png" alt=""><span class="vt">Yaxshi savol</span><span>"Oxirgi marta bu muammo qachon bo'ldi? O'shanda nima qildingiz?"</span><span class="vs">Javob — haqiqiy voqea. Yolg'on gapirish qiyin.</span></div>
+          </div>
+          <div class="mentor"><img class="im im-l" src="media/emoji/busts_in_silhouette.png" alt=""><div><b>Ustoz maslahati</b>Bu usulni Rob Fitzpatrick "The Mom Test" kitobida tushuntirgan: savolni shunday beringki, hatto onangiz ham sizga yolg'on gapira olmasin. Ingliz tilini o'rgangach, bu kitobni albatta o'qing.</div></div>
+          <p><strong>Mashq.</strong> Qaysi savol yaxshiroq?</p>
+          <div class="quiz" data-step="l2-step8" data-pass="3">
+            <div class="qitem"><p class="q">Do'kondor bilan gaplashyapsiz:</p><div class="opts" data-correct="1"><button type="button">Mening ilovam sizga yoqadimi?</button><button type="button">Hozir nasiyalarni qanday yozib borasiz?</button></div><p class="explain" hidden>Ikkinchi savol uning haqiqiy hayoti haqida. Birinchisiga u sizni xafa qilmaslik uchun "ha" deydi.</p></div>
+            <div class="qitem"><p class="q">Pul haqida so'ramoqchisiz:</p><div class="opts" data-correct="1"><button type="button">Bu muammo uchun qancha pul to'lagan bo'lardingiz?</button><button type="button">Oxirgi marta bu muammoni hal qilish uchun nimaga pul sarfladingiz?</button></div><p class="explain" hidden>Kelajak haqidagi javob — taxmin. O'tmish haqidagi javob — fakt.</p></div>
+            <div class="qitem"><p class="q">Suhbatni chuqurlashtirmoqchisiz:</p><div class="opts" data-correct="0"><button type="button">Bu muammoning eng yoqimsiz joyi nima?</button><button type="button">Bu zo'r g'oya, to'g'rimi?</button></div><p class="explain" hidden>Birinchi savol yangi narsa o'rgatadi. Ikkinchisi faqat maqtov so'raydi.</p></div>
+            <div class="quiz-foot"><span class="quiz-score"></span><button type="button" class="btn quiz-reset">Qaytadan</button></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l2-step9"><span class="step-title"><span class="step-num">09</span> Mashq: 3 ta suhbat</span></label>
+        <div class="step-body">
+          <p>1-darsdagi muammo daftaringizdan bitta muammoni tanlang. Shu muammo bor deb o'ylagan 3 kishi bilan (qarindosh, do'st, do'kondor) 5-10 daqiqa gaplashing.</p>
+          <p><strong>Shu 3 savolni bering:</strong></p>
+          <ol class="howto">
+            <li>Oxirgi marta bu muammo qachon bo'ldi?</li>
+            <li>O'shanda nima qildingiz?</li>
+            <li>Bu muammoning eng yoqimsiz joyi nima?</li>
+          </ol>
+          <textarea id="l2-interviews" placeholder="1-suhbat: kim bilan, nima dedi...&#10;2-suhbat: ...&#10;3-suhbat: ..." aria-label="Suhbatlar natijasi"></textarea>
+          <ul class="checklist" data-step="l2-step9">
+            <li><label><input type="checkbox" id="l2-i1" data-sub="i1"><span>1-suhbatni o'tkazdim va yozib qo'ydim.</span></label></li>
+            <li><label><input type="checkbox" id="l2-i2" data-sub="i2"><span>2-suhbatni o'tkazdim va yozib qo'ydim.</span></label></li>
+            <li><label><input type="checkbox" id="l2-i3" data-sub="i3"><span>3-suhbatni o'tkazdim va yozib qo'ydim.</span></label></li>
+          </ul>
+          <div class="mentor"><img class="im im-l" src="media/emoji/direct_hit.png" alt=""><div><b>Ustoz maslahati</b>Suhbatda ko'proq tinglang, kamroq gapiring. Hech narsa sotmang, faqat o'rganing. Eng qimmatli javoblar ko'pincha siz kutmagan joydan chiqadi.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote">
+      <p class="quote-text">"O'zingizni boshqalar bilan emas, kechagi o'zingiz bilan solishtiring. Kecha siz HTML nimaligini bilmas edingiz. Bugun esa o'z sahifangizni yasadingiz."</p>
+    </section>
+
+    <section class="next-up">
+      <p class="eyebrow">Keyingi dars</p>
+      <p class="desc">Haqiqiy dasturchilar ishlatadigan dastur — VS Code'ni o'rnatamiz. Sahifangizga ro'yxat, rasm va boshqa saytga havola qo'shamiz. Startup ustozi bilan suhbatlardan xulosa chiqarishni o'rganamiz.</p>
+      <button class="btn btn-primary" type="button" data-goto="3">3-darsga o'tish</button>
+    </section>
+  </div>
+
+
+  

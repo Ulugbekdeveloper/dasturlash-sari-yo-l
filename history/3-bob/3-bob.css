@@ -1,0 +1,28 @@
+/* history/3-bob.html uchun uslublar */
+.kmp-vals{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:15.1px;color:var(--text-muted);}
+.kmp-vals label{display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--text);}
+.kmp-vals input{width:72px;font-family:'JetBrains Mono',monospace;font-size:15.7px;padding:6px 8px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--text);}
+.kmp-stages{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;}
+.kmp-tokens{display:flex;flex-wrap:wrap;gap:5px;}
+.kmp-tokens span{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;padding:3px 8px;border-radius:7px;background:var(--surface);border:1px solid var(--border);color:var(--text);}
+.kmp-tokens span.op{color:var(--accent);}
+.kmp-tokens span.num{color:var(--good);}
+.kmp-tokens span small{display:block;font-family:'Manrope',sans-serif;font-size:10.6px;font-weight:600;color:var(--text-muted);}
+.kmp-tree{font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--text);overflow-x:auto;}
+.kmp-tree ul{list-style:none;margin:0;padding-left:18px;border-left:2px solid var(--border);}
+.kmp-tree > ul{padding-left:0;border-left:0;}
+.kmp-tree li{position:relative;padding:3px 0 3px 6px;}
+.kmp-tree li > span{display:inline-block;padding:2px 8px;border-radius:7px;background:var(--surface);border:1px solid var(--border);}
+.kmp-tree li > span.op{background:var(--accent-soft);border-color:var(--accent);color:var(--accent);font-weight:700;}
+.port-demo{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;background:var(--surface-2);border-radius:14px;padding:14px;}
+.port-demo code{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;padding:8px 10px;border-radius:9px;background:var(--surface);border:1px solid var(--border);color:var(--text);text-align:center;}
+.pd-src{display:flex;flex-direction:column;gap:4px;align-items:center;}
+.pd-src code{background:var(--accent-soft);border-color:var(--accent);}
+.pd-src span{font-size:13.4px;color:var(--text-muted);}
+.pd-mid,.pd-dst{display:flex;flex-direction:column;gap:18px;}
+.pd-mid span{font-size:13.4px;font-weight:700;color:var(--accent);white-space:nowrap;}
+@media (max-width:560px){
+  .port-demo{grid-template-columns:1fr;}
+  .pd-mid{flex-direction:row;justify-content:space-around;gap:8px;}
+  .pd-mid span{white-space:normal;text-align:center;}
+}

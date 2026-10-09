@@ -1,0 +1,8 @@
+/* history/2-bob.html uchun uslublar */
+.asm-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:12px;}
+@media (max-width:700px){
+  .asm-grid{grid-template-columns:1fr;}
+}
+.asm-col{background:var(--surface-2);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:8px;min-width:0;}
+.asm-col textarea{font-family:'JetBrains Mono',monospace;font-size:14.6px;line-height:1.55;min-height:300px;white-space:pre;overflow-x:auto;}
+.asm-out{display:flex;flex-direction:column;gap:3px;}

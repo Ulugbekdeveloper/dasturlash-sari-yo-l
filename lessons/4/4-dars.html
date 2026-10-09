@@ -1,0 +1,474 @@
+<!-- ============ 4-DARS ============ -->
+  <div class="panel" id="panel-4" data-lesson="4" role="tabpanel" aria-labelledby="tab-4" hidden>
+
+    <section class="lesson">
+      <div class="lesson-head">
+        <p class="eyebrow">4-dars</p>
+        <h2>Jadvallar va formalar</h2>
+        <div class="meta">
+          <span class="chip">16 qadam</span>
+          <span class="chip">15 ta teg</span>
+          <span class="chip">7 ta teg tarixi</span>
+          <span class="chip">10 ta rasmli so'z</span>
+        </div>
+        <p class="lesson-note">Shu paytgacha sahifangiz faqat gapirardi: o'quvchi uni o'qirdi, xolos. Bugun sahifangiz ma'lumotni tartib bilan ko'rsatishni (jadval) va odamlardan javob olishni (forma) o'rganadi.</p>
+        <div class="progress-track"><div class="progress-bar" id="l4-bar"></div></div>
+        <p class="progress-label" id="l4-label">0 / 16 qadam bajarildi</p>
+      </div>
+
+      <p class="disclaimer">"Teg tarixi" bloklari Tim Berners-Li tilidan tasavvur qilib yozilgan. Sanalar, ismlar va voqealar haqiqiy, lekin gaplar Timning o'z so'zlari emas.</p>
+
+      <!-- ===== 1-QISM ===== -->
+      <div class="part-head">
+        <p class="eyebrow">1-qism</p>
+        <h3>Kechagidan bugunga</h3>
+        <p>Avval 3-darsni eslaymiz, keyin jadval nima uchun kerakligini tushunamiz.</p>
+      </div>
+
+      <!-- 1 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l4-step1"><span class="step-title"><span class="step-num">01</span> Kechagini eslaylik</span></label>
+        <div class="step-body">
+          <p>Avval o'zingiz javob bering, keyin tekshiring.</p>
+          <div class="review-list">
+            <div class="review">
+              <p class="q"><code class="inline">&lt;ul&gt;</code> va <code class="inline">&lt;ol&gt;</code> farqi nima?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a"><code class="inline">ul</code> — nuqtali ro'yxat, tartib muhim emas. <code class="inline">ol</code> — raqamli ro'yxat, tartib muhim. Ikkalasining bandlari <code class="inline">&lt;li&gt;</code> ichida yoziladi.</p></details>
+            </div>
+            <div class="review">
+              <p class="q">Atribut nima? Bitta misol keltiring.</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Tegga beriladigan qo'shimcha ma'lumot. Ochuvchi teg ichida <code class="inline">nom="qiymat"</code> ko'rinishida yoziladi. Masalan: <code class="inline">href="about.html"</code> yoki <code class="inline">alt="Mushuk"</code>.</p></details>
+            </div>
+            <div class="review">
+              <p class="q">Nega <code class="inline">&lt;img&gt;</code> ga doim <code class="inline">alt</code> yoziladi?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Rasm yuklanmasa yoki uni ko'ra olmaydigan odam sahifani o'qisa, rasm o'rniga shu matn ishlatiladi.</p></details>
+            </div>
+            <div class="review">
+              <p class="q"><code class="inline">&lt;img&gt;</code> tegini kim, qaysi brauzer uchun taklif qilgan?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Mark Andrissen, 1993-yilda, Mosaic brauzeri uchun. Bugun ham Mosaic jamoasi qo'shgan yana bir muhim narsa — formalar haqida gaplashamiz.</p></details>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l4-step2"><span class="step-title"><span class="step-num">02</span> Jadval nima uchun kerak?</span></label>
+        <div class="step-body">
+          <p>Ba'zi ma'lumotlarni oddiy matn bilan yozsangiz, o'qish juda qiyin bo'ladi. Mana bir misol:</p>
+          <div class="versus">
+            <div><span class="vt">Matn bilan</span><span>Dushanba kuni 9:00 da matematika, 10:00 da ingliz tili. Seshanba kuni 9:00 da HTML, 10:00 da matematika. Chorshanba kuni...</span><span class="vs">Seshanba soat 10 da nima bor? Qidirib topish kerak.</span></div>
+            <div class="hl"><span class="vt">Jadval bilan</span><span>Qatorlar — kunlar, ustunlar — soatlar. Kerakli katak bir qarashda topiladi.</span><span class="vs">Ko'z qator va ustun kesishgan joyga o'zi boradi.</span></div>
+          </div>
+          <p><strong>Jadval</strong> (table) — ma'lumotni <strong>qator</strong> (row) va <strong>ustun</strong> (column) bo'yicha joylashtirish. Qator va ustun kesishgan joy — <strong>katak</strong> (cell). Excel yoki Google Sheets'ni ko'rgan bo'lsangiz, aynan shu narsa.</p>
+          <p>Jadval qachon kerak? Ma'lumotni ikki tomondan solishtirish kerak bo'lganda: dars jadvali, narxlar, o'yin natijalari, valyuta kurslari, mahsulot xususiyatlari.</p>
+          <div class="mentor"><img class="im im-l" data-im="light_bulb" alt=""><div><b>Ustoz maslahati</b>Oddiy savol bilan tekshiring: "Bu ma'lumotni Excel'ga yozsam bo'ladimi?" Bo'lsa — jadval. Bo'lmasa (masalan, maqola yoki menyu), jadval kerak emas.</div></div>
+        </div>
+      </div>
+
+      <!-- ===== 2-QISM ===== -->
+      <div class="part-head">
+        <p class="eyebrow">2-qism</p>
+        <h3>Jadvallar</h3>
+        <p>Qator, katak, sarlavha va jadvalning qismlari.</p>
+      </div>
+
+      <!-- 3 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l4-step3"><span class="step-title"><span class="step-num">03</span> Birinchi jadval: &lt;table&gt;, &lt;tr&gt;, &lt;td&gt;</span></label>
+        <div class="step-body">
+          <p>Jadval uchta teg bilan quriladi. Ular xuddi matryoshka kabi bir-birining ichida turadi:</p>
+          <ul class="plain">
+            <li><code class="inline">&lt;table&gt;</code> — butun jadval, eng katta quti.</li>
+            <li><code class="inline">&lt;tr&gt;</code> — <em>table row</em>, bitta <strong>qator</strong>.</li>
+            <li><code class="inline">&lt;td&gt;</code> — <em>table data</em>, bitta <strong>katak</strong>. U doim <code class="inline">tr</code> ichida turadi.</li>
+          </ul>
+<pre class="code"><span class="t">&lt;table</span> border="1"<span class="t">&gt;</span>
+  <span class="t">&lt;tr&gt;</span>
+    <span class="t">&lt;td&gt;</span>Olma<span class="t">&lt;/td&gt;</span>
+    <span class="t">&lt;td&gt;</span>12 000 so'm<span class="t">&lt;/td&gt;</span>
+  <span class="t">&lt;/tr&gt;</span>
+  <span class="t">&lt;tr&gt;</span>
+    <span class="t">&lt;td&gt;</span>Nok<span class="t">&lt;/td&gt;</span>
+    <span class="t">&lt;td&gt;</span>15 000 so'm<span class="t">&lt;/td&gt;</span>
+  <span class="t">&lt;/tr&gt;</span>
+<span class="t">&lt;/table&gt;</span></pre>
+          <figure class="fig">
+            <div class="tbl-anat" aria-label="Jadval qanday tuzilgan: ikki qator, har birida ikki katak">
+              <div class="ta-table"><span class="ta-tag">table</span>
+                <div class="ta-row"><span class="ta-tag">tr</span><span class="ta-cell"><i>td</i>Olma</span><span class="ta-cell"><i>td</i>12 000 so'm</span></div>
+                <div class="ta-row"><span class="ta-tag">tr</span><span class="ta-cell"><i>td</i>Nok</span><span class="ta-cell"><i>td</i>15 000 so'm</span></div>
+              </div>
+            </div>
+            <figcaption>Jadval qatorlardan, qator esa kataklardan iborat. Ustun uchun alohida teg yo'q: har bir qatordagi birinchi kataklar birinchi ustunni hosil qiladi.</figcaption>
+          </figure>
+          <p><strong>Muhim qoida:</strong> har bir qatorda kataklar soni bir xil bo'lsin. Bir qatorda 2 ta, boshqasida 3 ta katak bo'lsa, jadval qiyshiq chiqadi.</p>
+          <p><code class="inline">border="1"</code> — kataklar atrofiga chiziq chizadigan eski atribut. Busiz jadval chiziqsiz chiqadi va uni ko'rish qiyin. Hozircha shu bilan ishlaymiz, keyingi darsda esa jadvalni CSS bilan chiroyli qilamiz.</p>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>Teg tarixi · Tim hikoya qiladi</b>Mening birinchi HTML'imda jadval umuman yo'q edi. Fiziklar esa jadvalsiz yashay olmaydi — o'lchov natijalari doim qator va ustunda bo'ladi. Ular jadvalni probel va nuqtalar bilan "chizishga" urinishardi va hammasi qiyshayib ketardi. 1993-yilda hamkasbim <strong>Deyv Reggett</strong> o'zining kengaytirilgan <strong>HTML+</strong> loyihasida <code class="inline">table</code>, <code class="inline">tr</code> va <code class="inline">td</code> ni taklif qildi. Lekin standart sekin yozilardi. 1995-yilda <strong>Netscape</strong> brauzeri jadvallarni kutmasdan o'zi qo'shib yubordi va hamma ishlata boshladi. Rasmiy standartga esa jadval faqat 1997-yilda, <strong>HTML 3.2</strong> bilan kirdi.</div></div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l4-step4"><span class="step-title"><span class="step-num">04</span> Sarlavha kataklari: &lt;th&gt; va &lt;caption&gt;</span></label>
+        <div class="step-body">
+          <p>Jadvalning birinchi qatori odatda ustunlarning <strong>nomi</strong> bo'ladi: "Mahsulot", "Narx". Bunday kataklar uchun <code class="inline">&lt;td&gt;</code> emas, <code class="inline">&lt;th&gt;</code> ishlatiladi — <em>table header</em>, "jadval sarlavhasi". Brauzer uni qalin va o'rtada ko'rsatadi.</p>
+          <p><code class="inline">&lt;caption&gt;</code> — butun jadvalning nomi. U <code class="inline">&lt;table&gt;</code> ochilgandan keyin <strong>birinchi</strong> bo'lib yoziladi.</p>
+<pre class="code"><span class="t">&lt;table</span> border="1"<span class="t">&gt;</span>
+  <span class="t">&lt;caption&gt;</span>Bozor narxlari<span class="t">&lt;/caption&gt;</span>
+  <span class="t">&lt;tr&gt;</span>
+    <span class="t">&lt;th&gt;</span>Mahsulot<span class="t">&lt;/th&gt;</span>
+    <span class="t">&lt;th&gt;</span>Narx (1 kg)<span class="t">&lt;/th&gt;</span>
+  <span class="t">&lt;/tr&gt;</span>
+  <span class="t">&lt;tr&gt;</span>
+    <span class="t">&lt;td&gt;</span>Olma<span class="t">&lt;/td&gt;</span>
+    <span class="t">&lt;td&gt;</span>12 000 so'm<span class="t">&lt;/td&gt;</span>
+  <span class="t">&lt;/tr&gt;</span>
+<span class="t">&lt;/table&gt;</span></pre>
+          <div class="versus">
+            <div><span class="vt">&lt;th&gt;</span><span class="vs">Bu katak — <strong>nom</strong>. Ustun yoki qator nimani bildirishini aytadi.</span></div>
+            <div class="hl"><span class="vt">&lt;td&gt;</span><span class="vs">Bu katak — <strong>qiymat</strong>. Haqiqiy ma'lumot shu yerda.</span></div>
+          </div>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>Teg tarixi · Tim hikoya qiladi</b>3-darsdagi tamoyilimni eslaysizmi: HTML ko'rinishni emas, <strong>ma'noni</strong> aytsin. <code class="inline">th</code> ning eng katta foydasi qalin harfda emas. Ko'zi ojiz odam jadvalni ovoz chiqarib o'qiydigan dastur bilan "eshitganda", dastur har bir katakdan oldin uning sarlavhasini aytadi: "Narx — 12 000 so'm". <code class="inline">th</code> bo'lmasa, u faqat sonlarni eshitadi va qaysi son nima ekanini bilolmaydi.</div></div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l4-step5"><span class="step-title"><span class="step-num">05</span> Jadval qismlari va kataklarni birlashtirish</span></label>
+        <div class="step-body">
+          <p>Katta jadvalni uch qismga bo'lish mumkin. Xuddi kitob kabi: muqova, ichki sahifalar va oxirgi sahifa.</p>
+          <ul class="plain">
+            <li><code class="inline">&lt;thead&gt;</code> — "bosh": sarlavha qatori.</li>
+            <li><code class="inline">&lt;tbody&gt;</code> — "tana": asosiy ma'lumotlar.</li>
+            <li><code class="inline">&lt;tfoot&gt;</code> — "oyoq": jami yoki xulosa qatori.</li>
+          </ul>
+          <p>Ba'zan bitta katak ikki ustunni egallashi kerak. Buning uchun <code class="inline">colspan</code> atributi bor: <code class="inline">colspan="2"</code> — "ikki ustunga yoyil". Qatorlar uchun esa <code class="inline">rowspan</code> ishlatiladi.</p>
+<pre class="code"><span class="t">&lt;table</span> border="1"<span class="t">&gt;</span>
+  <span class="t">&lt;thead&gt;</span>
+    <span class="t">&lt;tr&gt;&lt;th&gt;</span>Mahsulot<span class="t">&lt;/th&gt;&lt;th&gt;</span>Narx<span class="t">&lt;/th&gt;&lt;/tr&gt;</span>
+  <span class="t">&lt;/thead&gt;</span>
+  <span class="t">&lt;tbody&gt;</span>
+    <span class="t">&lt;tr&gt;&lt;td&gt;</span>Olma<span class="t">&lt;/td&gt;&lt;td&gt;</span>12 000<span class="t">&lt;/td&gt;&lt;/tr&gt;</span>
+    <span class="t">&lt;tr&gt;&lt;td&gt;</span>Nok<span class="t">&lt;/td&gt;&lt;td&gt;</span>15 000<span class="t">&lt;/td&gt;&lt;/tr&gt;</span>
+  <span class="t">&lt;/tbody&gt;</span>
+  <span class="t">&lt;tfoot&gt;</span>
+    <span class="t">&lt;tr&gt;&lt;td</span> colspan="2"<span class="t">&gt;</span>Narxlar 1 kg uchun<span class="t">&lt;/td&gt;&lt;/tr&gt;</span>
+  <span class="t">&lt;/tfoot&gt;</span>
+<span class="t">&lt;/table&gt;</span></pre>
+          <p class="save-hint">Kalta teglarni bitta qatorga yozish ham mumkin: <code class="inline">&lt;tr&gt;&lt;td&gt;...&lt;/td&gt;&lt;/tr&gt;</code>. Brauzer uchun farqi yo'q, siz uchun qaysi biri o'qishga qulay bo'lsa, shuni tanlang.</p>
+          <div class="mentor"><img class="im im-l" data-im="brain" alt=""><div><b>Qiziq fakt</b><code class="inline">&lt;tbody&gt;</code> ni yozmasangiz ham, brauzer uni <strong>o'zi qo'shib qo'yadi</strong>. Ishonmasangiz, istalgan jadvalli saytda o'ng tugma → Inspect ni bosing: kodda yo'q <code class="inline">tbody</code> u yerda paydo bo'lgan bo'ladi. 2-darsda brauzer <code class="inline">html</code> va <code class="inline">body</code> ni o'zi to'ldirganini eslang.</div></div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l4-step6"><span class="step-title"><span class="step-num">06</span> Jadval dizayn uchun emas</span></label>
+        <div class="step-body">
+          <p>Jadval faqat <strong>jadvalli ma'lumot</strong> uchun. Sahifani bo'laklarga bo'lish, menyuni chapga, matnni o'ngga qo'yish — bu jadvalning ishi emas. Buning uchun CSS bor.</p>
+          <div class="versus">
+            <div class="hl"><span class="vt">To'g'ri</span><span>Dars jadvali, narxlar ro'yxati, imtihon natijalari.</span><span class="vs">Ma'lumot tabiatan qator va ustunlardan iborat.</span></div>
+            <div><span class="vt">Noto'g'ri</span><span>Sahifani ikki ustunga bo'lish, rasmni matn yoniga qo'yish.</span><span class="vs">Bu ko'rinish masalasi — uni CSS hal qiladi.</span></div>
+          </div>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>Teg tarixi · Tim hikoya qiladi</b>Bu qoida tarixdan kelib chiqqan. Jadvallar paydo bo'lgach, dizaynerlar bir "hiyla" topishdi: butun sahifani bitta katta ko'rinmas jadvalga solib, kataklarga menyu, matn va rasmlarni joylashtirish. 1996-yilda dizayner <strong>Devid Sigel</strong> bu usulni kitobida o'rgatdi va 2000-yillarning boshigacha deyarli butun veb shunday qurildi. Natija? Kod tushunarsiz bo'lib ketdi, telefonda sahifalar sig'masdi, ovozli o'qish dasturlari esa adashib qolardi. 2003-yilda <strong>CSS Zen Garden</strong> sayti bitta HTML faylni faqat CSS'ni almashtirib, yuzlab xil dizaynda ko'rsatdi. Shundan keyin dasturchilar jadvalni o'z joyiga — ma'lumotga qaytarishdi.</div></div>
+        </div>
+      </div>
+
+      <!-- ===== 3-QISM ===== -->
+      <div class="part-head">
+        <p class="eyebrow">3-qism</p>
+        <h3>Formalar</h3>
+        <p>Sahifangiz endi odamlardan javob oladi: ism, xabar, tanlov.</p>
+      </div>
+
+      <!-- 7 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l4-step7"><span class="step-title"><span class="step-num">07</span> Forma nima? &lt;form&gt; va &lt;button&gt;</span></label>
+        <div class="step-body">
+          <p>Siz har kuni formalarni ishlatasiz: Google'dagi qidiruv qatori, Telegram'ga kirishdagi telefon raqami maydoni, internet-do'kondagi buyurtma sahifasi. <strong>Forma</strong> (form) — foydalanuvchi to'ldiradigan va yuboradigan maydonlar to'plami.</p>
+          <ul class="plain">
+            <li><code class="inline">&lt;form&gt;</code> — hamma maydonlarni o'rab turadigan quti. Uning ichidagi narsalar birga yuboriladi.</li>
+            <li><code class="inline">&lt;button&gt;</code> — tugma. Forma ichidagi tugma bosilsa, forma <strong>yuboriladi</strong> (submit).</li>
+          </ul>
+<pre class="code"><span class="t">&lt;form&gt;</span>
+  <span class="t">&lt;input</span> type="text"<span class="t">&gt;</span>
+  <span class="t">&lt;button&gt;</span>Qidirish<span class="t">&lt;/button&gt;</span>
+<span class="t">&lt;/form&gt;</span></pre>
+          <p><strong>Ma'lumot qayerga ketadi?</strong> Haqiqiy saytda forma ma'lumotni <strong>serverga</strong> — boshqa joydagi kompyuterga yuboradi. U yerda dastur uni o'qiydi va saqlaydi. Server tomonini (backend) keyinroq o'rganamiz. Bugun forma yasashni, uni nima yuborishini ko'rishni o'rganamiz.</p>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>Teg tarixi · Tim hikoya qiladi</b>Men vebni ikki tomonlama — o'qish va yozish uchun — tasavvur qilgandim. Mening birinchi brauzerimda sahifani to'g'ridan-to'g'ri tahrirlash ham mumkin edi. Lekin keyingi brauzerlar faqat o'qishga moslashdi. Boshida foydalanuvchi sahifaga faqat bitta narsa yoza olardi: qidiruv so'zi. Buning uchun <code class="inline">&lt;isindex&gt;</code> degan teg bor edi — u sahifaga bitta qidiruv qatori qo'yardi, xolos. Haqiqiy formalarni 1993-yilda <strong>Mosaic 2.0</strong> brauzeri olib keldi — yana o'sha NCSA jamoasi! 1995-yilda formalar <strong>HTML 2.0</strong> standartiga kirdi. Shu kundan veb kitob emas, suhbatga aylandi: internet-do'konlar, ro'yxatdan o'tish, qidiruv tizimlari aynan shundan keyin tug'ildi.</div></div>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l4-step8"><span class="step-title"><span class="step-num">08</span> Maydonlar: &lt;input&gt; va &lt;label&gt;</span></label>
+        <div class="step-body">
+          <p><code class="inline">&lt;input&gt;</code> — foydalanuvchi narsa kiritadigan maydon. U bo'sh teg (yopuvchisi yo'q). Uning qanday maydon ekanini <code class="inline">type</code> atributi aytadi:</p>
+          <div class="inp-grid">
+            <div class="inp-card"><code>type="text"</code><input type="text" placeholder="Ismingiz" aria-label="Matn maydoni namunasi"><span>Oddiy matn</span></div>
+            <div class="inp-card"><code>type="email"</code><input type="email" placeholder="ali@mail.uz" aria-label="Email maydoni namunasi"><span>Elektron pochta</span></div>
+            <div class="inp-card"><code>type="password"</code><input type="password" value="sirli123" aria-label="Parol maydoni namunasi"><span>Parol: harflar yashiriladi</span></div>
+            <div class="inp-card"><code>type="number"</code><input type="number" value="18" min="0" max="120" aria-label="Son maydoni namunasi"><span>Faqat son</span></div>
+          </div>
+          <p><code class="inline">&lt;label&gt;</code> — maydonning <strong>nomi</strong> (yorlig'i). U maydon bilan <strong>ulanishi</strong> kerak: labelning <code class="inline">for</code> atributi va inputning <code class="inline">id</code> atributi bir xil bo'ladi.</p>
+<pre class="code"><span class="t">&lt;label</span> for="ism"<span class="t">&gt;</span>Ismingiz:<span class="t">&lt;/label&gt;</span>
+<span class="t">&lt;input</span> type="text" id="ism" placeholder="Masalan, Ali"<span class="t">&gt;</span></pre>
+          <ul class="plain">
+            <li><code class="inline">id</code> — elementning sahifadagi <strong>yagona</strong> nomi. Bir sahifada ikkita bir xil <code class="inline">id</code> bo'lmasligi kerak, xuddi ikki odamning pasport raqami bir xil bo'lmagani kabi.</li>
+            <li><code class="inline">placeholder</code> — maydon bo'sh turganda ko'rinadigan kulrang maslahat. Yozishni boshlasangiz, yo'qoladi.</li>
+          </ul>
+          <p><strong>Ulanishni sinab ko'ring:</strong> pastdagi "Ismingiz" so'zini bosing — kursor o'zi maydonga tushadi.</p>
+          <div class="form-demo"><label for="l4-try-name">Ismingiz:</label><input type="text" id="l4-try-name" placeholder="Masalan, Ali" autocomplete="off"></div>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>Teg tarixi · Tim hikoya qiladi</b><code class="inline">&lt;label&gt;</code> 1997-yilda, <strong>HTML 4.0</strong> bilan keldi. Bu kichik teg millionlab odamga yordam beradi. Birinchidan, kichkina katakchani bosish qiyin — label tufayli uning yonidagi so'zni bossangiz ham bo'ladi. Telefonda bu ayniqsa muhim. Ikkinchidan, ovozli o'qish dasturi maydonga kelganda uning nomini aytadi: "Ismingiz, matn maydoni". Labelsiz esa u faqat "matn maydoni" deydi — nima yozish kerakligini taxmin qilasiz.</div></div>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l4-step9"><span class="step-title"><span class="step-num">09</span> Tanlash: checkbox, radio va &lt;select&gt;</span></label>
+        <div class="step-body">
+          <p>Ba'zan foydalanuvchi yozmaydi, balki <strong>tanlaydi</strong>. Buning uchun uch xil maydon bor:</p>
+          <div class="inp-grid">
+            <div class="inp-card"><code>type="checkbox"</code><span class="inp-row"><label><input type="checkbox" checked> HTML</label><label><input type="checkbox"> CSS</label></span><span>Bir nechtasini tanlash mumkin</span></div>
+            <div class="inp-card"><code>type="radio"</code><span class="inp-row"><label><input type="radio" name="l4-demo-radio" checked> Ha</label><label><input type="radio" name="l4-demo-radio"> Yo'q</label></span><span>Faqat bittasini tanlash mumkin</span></div>
+            <div class="inp-card"><code>&lt;select&gt;</code><select aria-label="Ochiladigan ro'yxat namunasi"><option>Toshkent</option><option>Samarqand</option><option>Buxoro</option></select><span>Ochiladigan ro'yxat</span></div>
+          </div>
+<pre class="code"><span class="t">&lt;label&gt;&lt;input</span> type="checkbox"<span class="t">&gt;</span> Yangiliklarni yuboring<span class="t">&lt;/label&gt;</span>
+
+<span class="t">&lt;label&gt;&lt;input</span> type="radio" name="kurs" value="frontend"<span class="t">&gt;</span> Frontend<span class="t">&lt;/label&gt;</span>
+<span class="t">&lt;label&gt;&lt;input</span> type="radio" name="kurs" value="backend"<span class="t">&gt;</span> Backend<span class="t">&lt;/label&gt;</span>
+
+<span class="t">&lt;select</span> name="shahar"<span class="t">&gt;</span>
+  <span class="t">&lt;option&gt;</span>Toshkent<span class="t">&lt;/option&gt;</span>
+  <span class="t">&lt;option&gt;</span>Samarqand<span class="t">&lt;/option&gt;</span>
+<span class="t">&lt;/select&gt;</span></pre>
+          <p><strong>E'tibor bering:</strong> ikkala radio tugmaning <code class="inline">name</code> i bir xil — <code class="inline">"kurs"</code>. Aynan shu ularni bitta guruhga birlashtiradi: biri tanlansa, ikkinchisi o'chadi. <code class="inline">name</code> har xil bo'lsa, ikkalasini birga tanlash mumkin bo'lib qoladi.</p>
+          <p class="save-hint">Bu yerda label maydonni <strong>o'rab</strong> turibdi. Bu ham ulanishning bir usuli — bunda <code class="inline">for</code> va <code class="inline">id</code> kerak emas.</p>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>Teg tarixi · Tim hikoya qiladi</b>Nega "radio"? Bu nom eski <strong>avtomobil radiolaridan</strong> kelgan. Ularda radiostansiyani tanlash uchun bir qator mexanik tugma bo'lardi. Birini bossangiz, oldin bosilgan tugma "chirt" etib o'zi chiqib ketardi — ikkitasini birga bosib bo'lmasdi. Dasturchilar aynan shu xususiyatni o'xshatib, "faqat bittasini tanlash" maydonini <em>radio button</em> deb atashdi.</div></div>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l4-step10"><span class="step-title"><span class="step-num">10</span> &lt;textarea&gt;, required va eng muhim atribut — name</span></label>
+        <div class="step-body">
+          <ul class="plain">
+            <li><code class="inline">&lt;textarea&gt;</code> — ko'p qatorli matn maydoni: xabar, izoh, fikr. <code class="inline">input</code> dan farqli, uning yopuvchi tegi bor.</li>
+            <li><code class="inline">required</code> — "majburiy". Bunday maydon bo'sh qolsa, brauzer formani yubormaydi va ogohlantiradi. Uning qiymati yo'q, o'zi yoziladi, xolos.</li>
+            <li><code class="inline">name</code> — maydonning <strong>serverdagi nomi</strong>. Forma yuborilganda har bir maydon <code class="inline">name=qiymat</code> juftligi bo'lib ketadi.</li>
+          </ul>
+          <p><strong>Formani o'zingiz yuboring</strong> va serverga aynan nima borishini ko'ring. Avval bo'sh holda "Yuborish"ni bosib ko'ring:</p>
+          <form class="form-demo send-demo" id="l4-demo-form">
+            <label for="l4-f-ism">Ismingiz:</label>
+            <input type="text" id="l4-f-ism" name="ism" required placeholder="Masalan, Ali" autocomplete="off">
+            <label for="l4-f-email">Email:</label>
+            <input type="email" id="l4-f-email" name="email" placeholder="ali@mail.uz" autocomplete="off">
+            <label for="l4-f-shahar">Shahar:</label>
+            <select id="l4-f-shahar" name="shahar"><option>Toshkent</option><option>Samarqand</option><option>Buxoro</option><option>Farg'ona</option></select>
+            <label for="l4-f-izoh">Izoh:</label>
+            <textarea id="l4-f-izoh" name="izoh" placeholder="Fikringizni yozing..."></textarea>
+            <label for="l4-f-yashirin">Bu maydonda <code class="inline">name</code> yo'q:</label>
+            <input type="text" id="l4-f-yashirin" placeholder="Nima yozsangiz ham ketmaydi" autocomplete="off">
+            <div><button type="submit" class="btn btn-primary">Yuborish</button></div>
+          </form>
+          <div class="sent-box" id="l4-demo-out" aria-live="polite"><p class="sent-h">Serverga ketadigan ma'lumot</p><p class="sent-empty">Hali hech narsa yuborilmadi.</p></div>
+          <p>Ko'rdingizmi? <code class="inline">name</code> i yo'q maydon umuman yuborilmadi. <code class="inline">name</code> — maydonning "pochta qutisidagi nomi": usiz ma'lumot egasini topolmaydi.</p>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>Teg tarixi · Tim hikoya qiladi</b><code class="inline">required</code> va <code class="inline">placeholder</code> juda yosh — ular 2014-yilda <strong>HTML5</strong> bilan keldi. Undan oldin "maydon bo'sh qolmadimi?" degan tekshiruvni har bir sayt JavaScript'da o'zi yozardi. HTML5 shu bilan birga <code class="inline">type="email"</code>, <code class="inline">"date"</code>, <code class="inline">"color"</code>, <code class="inline">"range"</code> kabi yangi turlarni ham olib keldi — ularni HTML tarixi bobida sinab ko'rgansiz. Qoidam o'zgarmadi: brauzer o'zi qila oladigan ishni HTML'ga bering.</div></div>
+          <div class="mentor"><img class="im im-l" data-im="locked_with_key" alt=""><div><b>Xavfsizlik</b>Bu yerda va mashq maydonida haqiqiy parol yoki karta raqamingizni yozmang. Umuman olganda: parolni faqat manzili <code class="inline">https://</code> bilan boshlanadigan va o'zingiz bilgan saytga kiriting.</div></div>
+        </div>
+      </div>
+
+      <!-- ===== 4-QISM ===== -->
+      <div class="part-head">
+        <p class="eyebrow">4-qism</p>
+        <h3>Amaliyot</h3>
+        <p>Jadval va formani birga ishlatamiz.</p>
+      </div>
+
+      <!-- 11 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l4-step11"><span class="step-title"><span class="step-num">11</span> Mashq maydoni</span></label>
+        <div class="step-body">
+          <p>Chapga kod yozing, natija darhol o'ngda chiqadi. Jadval ham, forma ham shu yerda ishlaydi. Formani yuborsangiz, pastda nima ketishi ko'rinadi.</p>
+          <div class="play">
+            <textarea id="l4-play" spellcheck="false" aria-label="HTML kod yozish joyi"></textarea>
+            <div class="browser" aria-label="Natija">
+              <div class="browser-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="address">aloqa.html</span></div>
+              <div class="preview-page" id="l4-preview"></div>
+            </div>
+          </div>
+          <div class="sent-box" id="l4-sent" aria-live="polite"><p class="sent-h">Serverga ketadigan ma'lumot</p><p class="sent-empty">Formadagi tugmani bosing.</p></div>
+          <div class="play-actions"><button class="btn" type="button" id="l4-reset">Boshidan boshlash</button></div>
+          <p><strong>To'rtta tajriba:</strong></p>
+          <ol class="howto">
+            <li>Jadvalga uchinchi qator qo'shing: <code class="inline">&lt;tr&gt;</code> ichida ikkita <code class="inline">&lt;td&gt;</code>.</li>
+            <li><code class="inline">border="1"</code> ni o'chirib ko'ring. Nima o'zgardi?</li>
+            <li>Formani bo'sh holda yuboring, keyin to'ldirib yuboring. Pastdagi qutini kuzating.</li>
+            <li>Ikkinchi radio tugmaning <code class="inline">name</code> ini boshqa so'zga o'zgartiring va ikkalasini tanlab ko'ring.</li>
+          </ol>
+          <details class="reveal"><summary>Nima bo'lganini tushuntirish</summary>
+            <p class="a"><code class="inline">border</code> siz jadval chiziqsiz chiqadi — ma'lumot joyida, lekin ko'rinishi yo'qoldi. Bu HTML ma'noni, CSS esa ko'rinishni boshqarishining yana bir isboti. Radio tugmalarning <code class="inline">name</code> i har xil bo'lsa, brauzer ularni ikki alohida guruh deb o'ylaydi, shuning uchun ikkalasi birga tanlanadi.</p>
+          </details>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l4-step12"><span class="step-title"><span class="step-num">12</span> Loyiha: "Bog'lanish" sahifasi</span></label>
+        <div class="step-body">
+          <p>VS Code'da <code class="inline">frontend</code> papkasida yangi fayl — <code class="inline">aloqa.html</code> yarating. Unda o'zingizning haftalik o'qish jadvalingiz va bog'lanish formasi bo'lsin. Namuna:</p>
+<pre class="code"><span class="t">&lt;!DOCTYPE html&gt;</span>
+<span class="t">&lt;html</span> lang="uz"<span class="t">&gt;</span>
+<span class="t">&lt;head&gt;</span>
+  <span class="t">&lt;meta</span> charset="UTF-8"<span class="t">&gt;</span>
+  <span class="t">&lt;title&gt;</span>Bog'lanish<span class="t">&lt;/title&gt;</span>
+<span class="t">&lt;/head&gt;</span>
+<span class="t">&lt;body&gt;</span>
+  <span class="t">&lt;h1&gt;</span>Men bilan bog'laning<span class="t">&lt;/h1&gt;</span>
+  <span class="t">&lt;p&gt;&lt;a</span> href="index.html"<span class="t">&gt;</span>Bosh sahifaga qaytish<span class="t">&lt;/a&gt;&lt;/p&gt;</span>
+
+  <span class="t">&lt;h2&gt;</span>O'qish jadvalim<span class="t">&lt;/h2&gt;</span>
+  <span class="t">&lt;table</span> border="1"<span class="t">&gt;</span>
+    <span class="t">&lt;caption&gt;</span>Haftalik reja<span class="t">&lt;/caption&gt;</span>
+    <span class="t">&lt;thead&gt;</span>
+      <span class="t">&lt;tr&gt;&lt;th&gt;</span>Kun<span class="t">&lt;/th&gt;&lt;th&gt;</span>Mavzu<span class="t">&lt;/th&gt;&lt;th&gt;</span>Vaqt<span class="t">&lt;/th&gt;&lt;/tr&gt;</span>
+    <span class="t">&lt;/thead&gt;</span>
+    <span class="t">&lt;tbody&gt;</span>
+      <span class="t">&lt;tr&gt;&lt;td&gt;</span>Dushanba<span class="t">&lt;/td&gt;&lt;td&gt;</span>HTML<span class="t">&lt;/td&gt;&lt;td&gt;</span>1 soat<span class="t">&lt;/td&gt;&lt;/tr&gt;</span>
+      <span class="t">&lt;tr&gt;&lt;td&gt;</span>Chorshanba<span class="t">&lt;/td&gt;&lt;td&gt;</span>Ingliz tili<span class="t">&lt;/td&gt;&lt;td&gt;</span>40 daqiqa<span class="t">&lt;/td&gt;&lt;/tr&gt;</span>
+    <span class="t">&lt;/tbody&gt;</span>
+  <span class="t">&lt;/table&gt;</span>
+
+  <span class="t">&lt;h2&gt;</span>Xabar yozing<span class="t">&lt;/h2&gt;</span>
+  <span class="t">&lt;form&gt;</span>
+    <span class="t">&lt;p&gt;</span>
+      <span class="t">&lt;label</span> for="ism"<span class="t">&gt;</span>Ismingiz:<span class="t">&lt;/label&gt;&lt;br&gt;</span>
+      <span class="t">&lt;input</span> type="text" id="ism" name="ism" required<span class="t">&gt;</span>
+    <span class="t">&lt;/p&gt;</span>
+    <span class="t">&lt;p&gt;</span>
+      <span class="t">&lt;label</span> for="email"<span class="t">&gt;</span>Email:<span class="t">&lt;/label&gt;&lt;br&gt;</span>
+      <span class="t">&lt;input</span> type="email" id="email" name="email"<span class="t">&gt;</span>
+    <span class="t">&lt;/p&gt;</span>
+    <span class="t">&lt;p&gt;</span>
+      <span class="t">&lt;label</span> for="xabar"<span class="t">&gt;</span>Xabar:<span class="t">&lt;/label&gt;&lt;br&gt;</span>
+      <span class="t">&lt;textarea</span> id="xabar" name="xabar"<span class="t">&gt;&lt;/textarea&gt;</span>
+    <span class="t">&lt;/p&gt;</span>
+    <span class="t">&lt;button&gt;</span>Yuborish<span class="t">&lt;/button&gt;</span>
+  <span class="t">&lt;/form&gt;</span>
+<span class="t">&lt;/body&gt;</span>
+<span class="t">&lt;/html&gt;</span></pre>
+          <p class="save-hint">Formani yuborsangiz, sahifa qayta yuklanadi va manzil qatorining oxirida <code class="inline">?ism=...&amp;email=...</code> paydo bo'ladi. Ha, bu siz yuborgan ma'lumot! Server bo'lmagani uchun uni hozircha hech kim qabul qilmaydi.</p>
+          <ul class="checklist" data-step="l4-step12">
+            <li><label><input type="checkbox" id="l4-p1" data-sub="p1"><span><code class="inline">aloqa.html</code> yaratdim va unga <code class="inline">index.html</code> dan havola qo'ydim.</span></label></li>
+            <li><label><input type="checkbox" id="l4-p2" data-sub="p2"><span>Jadvalda <code class="inline">caption</code>, <code class="inline">th</code> li sarlavha qatori va kamida 3 qator ma'lumot bor.</span></label></li>
+            <li><label><input type="checkbox" id="l4-p3" data-sub="p3"><span>Formada kamida 3 maydon bor, har biri <code class="inline">label</code> bilan ulangan va <code class="inline">name</code> ga ega.</span></label></li>
+            <li><label><input type="checkbox" id="l4-p4" data-sub="p4"><span>Bitta maydonni <code class="inline">required</code> qildim va uni bo'sh qoldirib yuborib ko'rdim.</span></label></li>
+            <li><label><input type="checkbox" id="l4-p5" data-sub="p5"><span>Formani to'ldirib yubordim va manzil qatorida <code class="inline">?ism=</code> ni topdim.</span></label></li>
+          </ul>
+          <p class="win">Sahifangiz endi ikki tomonlama: u ma'lumotni ko'rsatadi va odamlardan javob oladi. 1993-yilgacha veb buni qila olmasdi.</p>
+        </div>
+      </div>
+
+      <!-- 13 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l4-step13"><span class="step-title"><span class="step-num">13</span> Bugungi 10 ta yangi so'z</span></label>
+        <div class="step-body">
+          <p>Kartani bosing — so'z ovoz chiqarib o'qiladi. Bularning hammasi bugungi teglar va atributlarning ichida yashiringan.</p>
+          <div class="word-grid" data-words="lesson4"></div>
+        </div>
+      </div>
+
+      <!-- 14 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l4-step14"><span class="step-title"><span class="step-num">14</span> Xatoni toping va test</span></label>
+        <div class="step-body">
+          <div class="review-list">
+            <div class="review">
+              <p class="q">1. Bu jadvalda nima noto'g'ri?</p>
+<pre class="code"><span class="t">&lt;table&gt;</span>
+  <span class="t">&lt;td&gt;</span>Olma<span class="t">&lt;/td&gt;</span>
+  <span class="t">&lt;td&gt;</span>12 000<span class="t">&lt;/td&gt;</span>
+<span class="t">&lt;/table&gt;</span></pre>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Kataklar qatorsiz turibdi. <code class="inline">td</code> doim <code class="inline">tr</code> ichida bo'lishi kerak: <code class="inline">&lt;tr&gt;&lt;td&gt;Olma&lt;/td&gt;&lt;td&gt;12 000&lt;/td&gt;&lt;/tr&gt;</code>.</p></details>
+            </div>
+            <div class="review">
+              <p class="q">2. "Email" so'zini bossam, kursor maydonga tushmayapti. Nega?</p>
+<pre class="code"><span class="t">&lt;label</span> for="pochta"<span class="t">&gt;</span>Email:<span class="t">&lt;/label&gt;</span>
+<span class="t">&lt;input</span> type="email" id="email" name="email"<span class="t">&gt;</span></pre>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a"><code class="inline">for</code> va <code class="inline">id</code> har xil: <code class="inline">"pochta"</code> va <code class="inline">"email"</code>. Ular bir xil bo'lishi kerak: <code class="inline">for="email"</code>.</p></details>
+            </div>
+            <div class="review">
+              <p class="q">3. Forma yuborildi, lekin serverga telefon raqami kelmadi. Nima yetishmaydi?</p>
+<pre class="code"><span class="t">&lt;input</span> type="tel" id="tel"<span class="t">&gt;</span></pre>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a"><code class="inline">name</code> atributi. Usiz maydon yuborilmaydi: <code class="inline">&lt;input type="tel" id="tel" name="tel"&gt;</code>.</p></details>
+            </div>
+          </div>
+          <div class="quiz" data-step="l4-step14" data-pass="5">
+            <div class="qitem"><p class="q">1. Jadvalning bitta qatori qaysi teg bilan yoziladi?</p><div class="opts" data-correct="1"><button type="button">&lt;td&gt;</button><button type="button">&lt;tr&gt;</button><button type="button">&lt;row&gt;</button></div><p class="explain" hidden>tr — table row, qator. td esa qator ichidagi katak.</p></div>
+            <div class="qitem"><p class="q">2. Ustun nomi yozilgan katak uchun qaysi teg to'g'ri?</p><div class="opts" data-correct="2"><button type="button">&lt;td&gt;</button><button type="button">&lt;caption&gt;</button><button type="button">&lt;th&gt;</button></div><p class="explain" hidden>th — table header. caption esa butun jadvalning nomi.</p></div>
+            <div class="qitem"><p class="q">3. Sahifani ikki ustunga bo'lish uchun jadval ishlatish kerakmi?</p><div class="opts" data-correct="0"><button type="button">Yo'q — jadval faqat jadvalli ma'lumot uchun, ko'rinishni CSS boshqaradi</button><button type="button">Ha, eng to'g'ri usul shu</button><button type="button">Faqat telefonda</button></div><p class="explain" hidden>Jadval bilan dizayn qilish 1990-yillarning odati edi. Bugun bu ishni CSS qiladi.</p></div>
+            <div class="qitem"><p class="q">4. Label va input qanday ulanadi?</p><div class="opts" data-correct="1"><button type="button">Bir xil name orqali</button><button type="button">Labelning for va inputning id atributi bir xil bo'ladi</button><button type="button">Ular avtomatik ulanadi</button></div><p class="explain" hidden>Yoki label inputni o'rab turishi kerak.</p></div>
+            <div class="qitem"><p class="q">5. Bir guruhdagi radio tugmalarning qaysi atributi bir xil bo'lishi kerak?</p><div class="opts" data-correct="2"><button type="button">id</button><button type="button">value</button><button type="button">name</button></div><p class="explain" hidden>Bir xil name — bitta guruh, faqat bittasi tanlanadi.</p></div>
+            <div class="qitem"><p class="q">6. Qaysi atributsiz maydon serverga yuborilmaydi?</p><div class="opts" data-correct="0"><button type="button">name</button><button type="button">placeholder</button><button type="button">required</button></div><p class="explain" hidden>Har bir maydon name=qiymat juftligi bo'lib ketadi. Nom bo'lmasa, juftlik ham yo'q.</p></div>
+            <div class="quiz-foot"><span class="quiz-score"></span><button type="button" class="btn quiz-reset">Qaytadan</button></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== STARTUP USTOZI ===== -->
+      <div class="part-head su">
+        <p class="eyebrow">Startup ustozi</p>
+        <h3>Qiziqishni o'lchash: kutish ro'yxati</h3>
+        <p>3-darsda signal va shovqinni ajratdingiz. Endi eng kuchli signalni o'lchaymiz: odam o'z vaqtini yoki ma'lumotini beradimi?</p>
+      </div>
+
+      <!-- 15 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l4-step15"><span class="step-title"><span class="step-num">15</span> Mahsulot hali yo'q, lekin forma bor</span></label>
+        <div class="step-body">
+          <p>"Bo'lsa, albatta ishlatardim" — bu shovqin. Odam o'z <strong>emailini</strong> yoki telefon raqamini qoldirsa — bu signal. U sizga ozgina bo'lsa ham ishondi va "chiqsa, menga ayting" dedi.</p>
+          <p>Shuning uchun startaplar ko'pincha mahsulotni qurishdan <strong>oldin</strong> bitta sahifa yasaydi: muammo, yechim va "Kutish ro'yxatiga yoziling" formasi. Bu <strong>kutish ro'yxati</strong> (waitlist) deyiladi. Uni bugungi bilimingiz bilan bir kechada yasay olasiz.</p>
+          <div class="mentor"><img class="im im-l" data-im="rocket" alt=""><div><b>Haqiqiy voqea</b>Erik Raysning "The Lean Startup" kitobida yozilishicha, <strong>Dropbox</strong> asoschisi Dryu Xyuston mahsulot hali tayyor bo'lmaganida uning qanday ishlashini ko'rsatadigan 3 daqiqalik video joylagan. Bir kechada kutish ro'yxatidagi odamlar soni 5 mingdan 75 mingga oshgan. Video yasash dasturni qurishdan ancha oson edi — lekin talab borligini isbotladi.</div></div>
+          <p><strong>Kutish ro'yxati sahifasining rejasi:</strong></p>
+          <ol class="howto">
+            <li><strong>Sarlavha:</strong> muammoni mijoz tilida, bitta gapda. "Uydagi xarajatlarni daftarga yozishdan charchadingizmi?"</li>
+            <li><strong>Yechim:</strong> nima qilishingizni 2–3 gapda. Hali yo'qligini yashirmang: "Tez orada ishga tushadi".</li>
+            <li><strong>Forma:</strong> ism va email (yoki Telegram). Bitta savol qo'shsangiz bo'ladi: "Hozir bu muammoni qanday hal qilasiz?"</li>
+            <li><strong>Maqsad:</strong> oldindan raqam qo'ying. Masalan: "Ko'rsatgan 20 kishimdan kamida 5 tasi yozilsa, davom etaman."</li>
+          </ol>
+          <textarea id="l4-waitlist" placeholder="Muammo (bitta gap): ...&#10;Yechim (2–3 gap): ...&#10;Kimga ko'rsataman: ...&#10;Maqsad: ... kishidan ... tasi yozilsa, davom etaman" aria-label="Kutish ro'yxati rejasi"></textarea>
+          <ul class="checklist" data-step="l4-step15">
+            <li><label><input type="checkbox" id="l4-s1" data-sub="s1"><span>3-darsdagi xulosamdan kelib chiqib, muammoni bitta gapga sig'dirdim.</span></label></li>
+            <li><label><input type="checkbox" id="l4-s2" data-sub="s2"><span>Yuqoridagi 4 qatorni to'ldirdim va maqsadga aniq raqam qo'ydim.</span></label></li>
+          </ul>
+          <div class="mentor"><img class="im im-l" data-im="light_bulb" alt=""><div><b>Ustoz maslahati</b>Bizning formamiz hali ma'lumotni hech qayerga saqlamaydi — buning uchun server kerak. Hozircha formani <strong>Google Forms</strong> da yasab, havolasini sahifangizga qo'ying. Muhimi texnologiya emas, odamlarning javobi.</div></div>
+        </div>
+      </div>
+
+      <!-- 16 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l4-step16"><span class="step-title"><span class="step-num">16</span> Uyga vazifa</span></label>
+        <div class="step-body">
+          <ul class="checklist" data-step="l4-step16">
+            <li><label><input type="checkbox" id="l4-h1" data-sub="h1"><span><code class="inline">frontend</code> papkasida <code class="inline">kutish.html</code> yaratdim: sarlavha, yechim va forma bilan.</span></label></li>
+            <li><label><input type="checkbox" id="l4-h2" data-sub="h2"><span>Google Forms'da xuddi shunday forma yasadim va uning havolasini sahifamga qo'ydim.</span></label></li>
+            <li><label><input type="checkbox" id="l4-h3" data-sub="h3"><span>Sahifani 5 kishiga ko'rsatdim va nechtasi yozilganini sanadim.</span></label></li>
+            <li><label><input type="checkbox" id="l4-h4" data-sub="h4"><span>Sevimli saytimda Inspect orqali bitta forma topdim va undagi <code class="inline">name</code> atributlarini o'qidim.</span></label></li>
+            <li><label><input type="checkbox" id="l4-h5" data-sub="h5"><span>Bugungi 10 ta so'zdan eng qiyin 3 tasini daftarga yozib, 3 marta ovoz chiqarib aytdim.</span></label></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote">
+      <p class="quote-text">"Jadval ma'lumotni ko'rsatadi, forma esa uni yig'adi. Bugundan boshlab sahifangiz nafaqat gapiradi, balki tinglaydi ham."</p>
+    </section>
+
+    <section class="next-up">
+      <p class="eyebrow">Keyingi dars</p>
+      <p class="desc">CSS bilan tanishamiz: sahifangizga rang, shrift va shakl beramiz. Tarix qismida esa odamlar mashinaga birinchi marta nollar o'rniga so'zlar bilan qanday gapira boshlaganini Ketlin Butning o'zidan eshiting.</p>
+      <button class="btn btn-primary" type="button" data-goto="5">5-darsni boshlash</button>
+    </section>
+  </div>
+
+  

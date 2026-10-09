@@ -1,0 +1,430 @@
+<!-- ============ 3-DARS ============ -->
+  <div class="panel" id="panel-3" data-lesson="3" role="tabpanel" aria-labelledby="tab-3" hidden>
+
+    <section class="lesson">
+      <div class="lesson-head">
+        <p class="eyebrow">3-dars</p>
+        <h2>Eng ko'p ishlatiladigan teglar va ularning tarixi</h2>
+        <div class="meta">
+          <span class="chip">16 qadam</span>
+          <span class="chip">14 ta teg</span>
+          <span class="chip">8 ta teg tarixi</span>
+          <span class="chip">10 ta rasmli so'z</span>
+        </div>
+        <p class="lesson-note">Bugun haqiqiy dasturchi dasturini o'rnatamiz va sahifangizga ro'yxat, havola va rasm qo'shamiz. Har bir tegning yonida uning qanday paydo bo'lganini Tim Berners-Lining o'zi aytib beradi.</p>
+        <div class="progress-track"><div class="progress-bar" id="l3-bar"></div></div>
+        <p class="progress-label" id="l3-label">0 / 16 qadam bajarildi</p>
+      </div>
+
+      <p class="disclaimer">"Teg tarixi" bloklari Tim Berners-Li tilidan tasavvur qilib yozilgan. Sanalar, ismlar va voqealar haqiqiy, lekin gaplar Timning o'z so'zlari emas.</p>
+
+      <!-- ===== 1-QISM ===== -->
+      <div class="part-head">
+        <p class="eyebrow">1-qism</p>
+        <h3>Ustaxonani tayyorlaymiz</h3>
+        <p>TextEdit bilan ishlash mumkin, lekin dasturchilar maxsus dastur ishlatadi. Bugun uni o'rnatamiz.</p>
+      </div>
+
+      <!-- 1 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l3-step1"><span class="step-title"><span class="step-num">01</span> Kechagini eslaylik</span></label>
+        <div class="step-body">
+          <p>Avval o'zingiz javob bering, keyin tekshiring.</p>
+          <div class="review-list">
+            <div class="review">
+              <p class="q">Teg nima va u necha marta yoziladi?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Teg — matnga yopishtirilgan yorliq. Ko'pincha ikki marta yoziladi: boshida ochiladi (<code class="inline">&lt;p&gt;</code>), oxirida yopiladi (<code class="inline">&lt;/p&gt;</code>).</p></details>
+            </div>
+            <div class="review">
+              <p class="q"><code class="inline">&lt;h1&gt;</code> va <code class="inline">&lt;p&gt;</code> farqi nima?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a"><code class="inline">h1</code> — katta sarlavha (heading), <code class="inline">p</code> — oddiy matn bo'lagi (paragraph).</p></details>
+            </div>
+            <div class="review">
+              <p class="q">Veb-sahifa fayli qanday kengaytma bilan saqlanadi?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a"><code class="inline">.html</code> — "bu veb-sahifa, brauzerda och" degani.</p></details>
+            </div>
+            <div class="review">
+              <p class="q">HTMLni kim, qayerda yaratgan?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Tim Berners-Li, 1990-yilda, Shveytsariyadagi CERN laboratoriyasida. Bugun u sizga har bir teg haqida alohida hikoya qiladi.</p></details>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l3-step2"><span class="step-title"><span class="step-num">02</span> VS Code — dasturchining ustaxonasi</span></label>
+        <div class="step-body">
+          <p><strong>VS Code</strong> (Visual Studio Code) — kod yozish uchun maxsus dastur. Uni <strong>muharrir</strong> (editor) deyishadi. Microsoft uni tekin tarqatadi va dunyodagi dasturchilarning ko'pchiligi aynan shuni ishlatadi.</p>
+          <p>TextEdit bilan farqi: VS Code teglarni rangli qilib ko'rsatadi, xatoni topishga yordam beradi va kodning yarmini siz uchun o'zi yozib beradi.</p>
+          <ol class="howto">
+            <li><strong>Yuklab oling.</strong> Brauzerda <code class="inline">code.visualstudio.com</code> saytini oching va katta ko'k "Download" tugmasini bosing.</li>
+            <li><strong>O'rnating.</strong> Yuklangan faylni (Downloads papkasida) ikki marta bosing. Paydo bo'lgan "Visual Studio Code" ilovasini sudrab, Finder'dagi <strong>Applications</strong> papkasiga tashlang.</li>
+            <li><strong>Oching.</strong> <kbd>Cmd</kbd> + <kbd>Space</kbd> bosing, "Visual Studio Code" deb yozing, Enter. Birinchi marta "Internetdan yuklangan, ochilsinmi?" deb so'rasa, "Open" ni bosing.</li>
+            <li><strong>Papkangizni oching.</strong> Tepadagi menyudan File → Open Folder... ni tanlang va 2-darsda yaratgan <code class="inline">frontend</code> papkasini tanlang. Chap tomonda papkadagi fayllar chiqadi, jumladan <code class="inline">salom.html</code>.</li>
+            <li><strong>Avto-saqlashni yoqing.</strong> File → Auto Save ni bosing. Endi har bir o'zgarish o'zi saqlanadi.</li>
+          </ol>
+          <details class="os">
+            <summary>Kompyuteringiz Windows bo'lsa</summary>
+            <ol>
+              <li>Xuddi shu saytdan "Download for Windows" ni bosing.</li>
+              <li>Yuklangan faylni ochib, "Next" tugmalarini bosib o'rnating. "Add to PATH" belgisini qoldiring.</li>
+              <li>Qolgan qadamlar bir xil. Faqat <kbd>Cmd</kbd> o'rniga <kbd>Ctrl</kbd> ishlatiladi.</li>
+            </ol>
+          </details>
+          <div class="mentor"><img class="im im-l" data-im="light_bulb" alt=""><div><b>Ustoz maslahati</b>VS Code ingliz tilida. Bu yaxshi: menyudagi har bir so'z (File, Open, Save, New) — bepul ingliz tili darsi. Tarjima qiladigan kengaytma o'rnatmang.</div></div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l3-step3"><span class="step-title"><span class="step-num">03</span> Sahifaning to'liq skeleti</span></label>
+        <div class="step-body">
+          <p>2-darsda biz faqat <code class="inline">h1</code> va <code class="inline">p</code> yozdik — brauzer qolganini o'zi to'ldirib qo'ydi. Haqiqiy sahifa esa quyidagi skelet ichida yoziladi.</p>
+          <p><strong>VS Code'dagi sehr:</strong> chap paneldagi "New File" belgisini bosing, faylga <code class="inline">index.html</code> deb nom bering. Ichiga faqat undov belgisini <code class="inline">!</code> yozing va <kbd>Tab</kbd> (yoki <kbd>return</kbd>) ni bosing. VS Code butun skeletni o'zi yozib beradi:</p>
+<pre class="code"><span class="t">&lt;!DOCTYPE html&gt;</span>
+<span class="t">&lt;html</span> lang="uz"<span class="t">&gt;</span>
+<span class="t">&lt;head&gt;</span>
+  <span class="t">&lt;meta</span> charset="UTF-8"<span class="t">&gt;</span>
+  <span class="t">&lt;title&gt;</span>Mening sahifam<span class="t">&lt;/title&gt;</span>
+<span class="t">&lt;/head&gt;</span>
+<span class="t">&lt;body&gt;</span>
+  <span class="t">&lt;h1&gt;</span>Salom!<span class="t">&lt;/h1&gt;</span>
+<span class="t">&lt;/body&gt;</span>
+<span class="t">&lt;/html&gt;</span></pre>
+          <ul class="plain">
+            <li><code class="inline">&lt;!DOCTYPE html&gt;</code> — brauzerga "bu zamonaviy HTML sahifa" degan xabar.</li>
+            <li><code class="inline">&lt;html&gt;</code> — hamma narsani o'rab turadigan eng katta quti. <code class="inline">lang="en"</code> ni <code class="inline">lang="uz"</code> ga almashtiring: sahifa o'zbekcha ekanini bildiradi.</li>
+            <li><code class="inline">&lt;head&gt;</code> — "bosh". Ekranda ko'rinmaydigan, sahifa haqidagi ma'lumot shu yerda.</li>
+            <li><code class="inline">&lt;meta charset="UTF-8"&gt;</code> — o', g', sh kabi harflar to'g'ri chiqishi uchun kerak. Buni hech qachon o'chirmang.</li>
+            <li><code class="inline">&lt;title&gt;</code> — brauzer tabida ko'rinadigan nom.</li>
+            <li><code class="inline">&lt;body&gt;</code> — "tana". Ekranda ko'rinadigan hamma narsa shu ichida yoziladi.</li>
+          </ul>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>Teg tarixi · Tim hikoya qiladi</b>Bu teglarning ko'pini men noldan o'ylab topmaganman. CERN'da olimlar hujjat yozish uchun <strong>SGML</strong> oilasiga mansub SGMLguid degan tildan foydalanishardi. Burchakli qavslarni ham, ochib-yopiladigan teglarni ham men o'shandan oldim — odamlarga tanish narsa tezroq qabul qilinadi. <code class="inline">&lt;title&gt;</code> esa 1991-yildagi birinchi teglar ro'yxatimda bor edi: har bir hujjatning nomi bo'lishi kerak, deb hisoblardim. <code class="inline">&lt;!DOCTYPE&gt;</code> ham SGML'dan qolgan meros.</div></div>
+        </div>
+      </div>
+
+      <!-- ===== 2-QISM ===== -->
+      <div class="part-head">
+        <p class="eyebrow">2-qism</p>
+        <h3>Matn teglari</h3>
+        <p>Sarlavha, matn bo'lagi, qator tashlash va muhim so'zlarni ajratish.</p>
+      </div>
+
+      <!-- 4 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l3-step4"><span class="step-title"><span class="step-num">04</span> Sarlavhalar: &lt;h1&gt; dan &lt;h6&gt; gacha</span></label>
+        <div class="step-body">
+          <p>Sarlavhaning 6 ta darajasi bor. Kitobni tasavvur qiling: <code class="inline">h1</code> — kitob nomi, <code class="inline">h2</code> — bob, <code class="inline">h3</code> — bobning bo'limi va hokazo.</p>
+<pre class="code"><span class="t">&lt;h1&gt;</span>Mening saytim<span class="t">&lt;/h1&gt;</span>
+<span class="t">&lt;h2&gt;</span>Men haqimda<span class="t">&lt;/h2&gt;</span>
+<span class="t">&lt;h3&gt;</span>Qiziqishlarim<span class="t">&lt;/h3&gt;</span></pre>
+          <p><strong>Qoida:</strong> sahifada bitta <code class="inline">h1</code> bo'lgani yaxshi. Sarlavhani matnni kattalashtirish uchun emas, <strong>tuzilish</strong> uchun ishlating. Harf kattaligini keyinchalik CSS bilan o'zgartiramiz.</p>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>Teg tarixi · Tim hikoya qiladi</b>Sarlavhalarni ham men ixtiro qilmadim — ular SGMLguid'dan tayyor holda keldi. Fiziklarning ilmiy hujjatlarida bob, bo'lim, kichik bo'lim bor edi, shuning uchun oltita daraja kerak bo'lgan. Men raqamni o'zgartirmadim. O'ttiz yildan oshdi, lekin <code class="inline">h1</code>–<code class="inline">h6</code> deyarli o'sha holicha qoldi. Yaxshi o'ylangan narsa uzoq yashaydi.</div></div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l3-step5"><span class="step-title"><span class="step-num">05</span> &lt;p&gt;, &lt;br&gt; va &lt;hr&gt;</span></label>
+        <div class="step-body">
+          <p>Brauzer siz bosgan <kbd>return</kbd> larni <strong>e'tiborsiz qoldiradi</strong>. Kodda matnni o'nta qatorga yozsangiz ham, ekranda u bitta qatorga yopishib chiqadi. Shuning uchun maxsus teglar kerak:</p>
+          <ul class="plain">
+            <li><code class="inline">&lt;p&gt;</code> — yangi matn bo'lagi (abzats). Oldidan va keyin bo'sh joy qo'yiladi.</li>
+            <li><code class="inline">&lt;br&gt;</code> — "break": shu yerda qatorni uz. Manzil yoki she'r yozishda qulay.</li>
+            <li><code class="inline">&lt;hr&gt;</code> — "horizontal rule": gorizontal chiziq, mavzularni ajratadi.</li>
+          </ul>
+<pre class="code"><span class="t">&lt;p&gt;</span>
+  Toshkent shahri,<span class="t">&lt;br&gt;</span>
+  Amir Temur ko'chasi, 1-uy
+<span class="t">&lt;/p&gt;</span>
+<span class="t">&lt;hr&gt;</span></pre>
+          <p><strong>Diqqat:</strong> <code class="inline">&lt;br&gt;</code> va <code class="inline">&lt;hr&gt;</code> ning <strong>yopuvchi tegi yo'q</strong>. Ularning ichiga hech narsa solinmaydi — ular bo'sh qutilar. Bunday teglar "bo'sh teglar" (void elements) deyiladi.</p>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>Teg tarixi · Tim hikoya qiladi</b><code class="inline">&lt;p&gt;</code> ning qiziq tarixi bor. Birinchi HTML'da u matnni <strong>o'rab turmasdi</strong> — ikki abzats orasiga qo'yiladigan <strong>ajratuvchi belgi</strong> edi, yopuvchi tegi ham yo'q edi. Keyinchalik HTML rivojlangan sari <code class="inline">&lt;p&gt;</code> matnni boshidan oxirigacha o'rab turadigan qutiga aylandi. <code class="inline">&lt;br&gt;</code> va <code class="inline">&lt;hr&gt;</code> esa birinchi ro'yxatimda yo'q edi — ular sal keyinroq, odamlar she'r va manzillarni yozishga uringanda qo'shildi.</div></div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l3-step6"><span class="step-title"><span class="step-num">06</span> Muhim so'zlar: &lt;strong&gt; va &lt;em&gt;</span></label>
+        <div class="step-body">
+          <p>Matnning ichidagi bir so'zni ajratib ko'rsatish uchun:</p>
+          <ul class="plain">
+            <li><code class="inline">&lt;strong&gt;</code> — <strong>juda muhim</strong>. Odatda qalin harf bilan chiqadi.</li>
+            <li><code class="inline">&lt;em&gt;</code> — <em>urg'u</em> (emphasis). Odatda qiya harf bilan chiqadi.</li>
+          </ul>
+<pre class="code"><span class="t">&lt;p&gt;</span>Bu <span class="t">&lt;strong&gt;</span>juda muhim<span class="t">&lt;/strong&gt;</span> ma'lumot.<span class="t">&lt;/p&gt;</span>
+<span class="t">&lt;p&gt;</span>Men buni <span class="t">&lt;em&gt;</span>albatta<span class="t">&lt;/em&gt;</span> qilaman.<span class="t">&lt;/p&gt;</span></pre>
+          <p>Yana <code class="inline">&lt;b&gt;</code> (bold — qalin) va <code class="inline">&lt;i&gt;</code> (italic — qiya) teglari ham bor. Ekranda ular bir xil ko'rinadi. Farqi nimada? Tim o'zi tushuntiradi.</p>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>Teg tarixi · Tim hikoya qiladi</b>Menda doim bitta tamoyil bor edi: <strong>HTML matnning ma'nosini aytsin, ko'rinishini esa brauzer hal qilsin.</strong> <code class="inline">&lt;b&gt;</code> faqat "qalin qil" deydi. <code class="inline">&lt;strong&gt;</code> esa "bu muhim" deydi. Ko'zi ojiz odamlar uchun sahifani ovoz chiqarib o'qiydigan dasturlar ekranni ko'rmaydi, lekin <code class="inline">&lt;strong&gt;</code> ni "tushunadi" va so'zni urg'u bilan o'qiydi. Veb hamma uchun — shuning uchun ma'no bildiradigan tegni tanlang.</div></div>
+        </div>
+      </div>
+
+      <!-- ===== 3-QISM ===== -->
+      <div class="part-head">
+        <p class="eyebrow">3-qism</p>
+        <h3>Ro'yxat, havola va rasm</h3>
+        <p>Vebni veb qiladigan uchta narsa.</p>
+      </div>
+
+      <!-- 7 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l3-step7"><span class="step-title"><span class="step-num">07</span> Ro'yxatlar: &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</span></label>
+        <div class="step-body">
+          <div class="versus">
+            <div><span class="vt">Nuqtali ro'yxat</span><code class="inline">&lt;ul&gt;</code><span class="vs">unordered list — tartib muhim emas: xarid ro'yxati, qiziqishlar.</span></div>
+            <div class="hl"><span class="vt">Raqamli ro'yxat</span><code class="inline">&lt;ol&gt;</code><span class="vs">ordered list — tartib muhim: retsept, yo'riqnoma.</span></div>
+          </div>
+          <p>Ro'yxatning har bir bandi <code class="inline">&lt;li&gt;</code> (list item) ichida yoziladi:</p>
+<pre class="code"><span class="t">&lt;ul&gt;</span>
+  <span class="t">&lt;li&gt;</span>Olma<span class="t">&lt;/li&gt;</span>
+  <span class="t">&lt;li&gt;</span>Nok<span class="t">&lt;/li&gt;</span>
+<span class="t">&lt;/ul&gt;</span>
+
+<span class="t">&lt;ol&gt;</span>
+  <span class="t">&lt;li&gt;</span>Kompyuterni yoqing<span class="t">&lt;/li&gt;</span>
+  <span class="t">&lt;li&gt;</span>Brauzerni oching<span class="t">&lt;/li&gt;</span>
+<span class="t">&lt;/ol&gt;</span></pre>
+          <p>Payqadingizmi? <code class="inline">li</code> lar <code class="inline">ul</code> ning <strong>ichida</strong> va sal o'ngga surilgan. Bu surilish brauzer uchun emas, <strong>odam uchun</strong>: qaysi quti qaysi qutining ichida ekani bir qarashda ko'rinadi. VS Code buni <kbd>Tab</kbd> bilan qiladi.</p>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>Teg tarixi · Tim hikoya qiladi</b>Olimlar ro'yxatlarni juda yaxshi ko'radi: tajriba bosqichlari, asboblar, xulosalar. Shuning uchun nuqtali ro'yxat (<code class="inline">ul</code> va <code class="inline">li</code>) 1991-yildagi birinchi teglarim orasida bor edi — u ham SGMLguid'dan kelgan. Raqamli ro'yxat <code class="inline">&lt;ol&gt;</code> esa sal keyinroq qo'shildi: odamlar "1, 2, 3" ni qo'lda yozishdan charchashdi va brauzer o'zi sanashini xohlashdi.</div></div>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l3-step8"><span class="step-title"><span class="step-num">08</span> Havola &lt;a&gt; va atribut tushunchasi</span></label>
+        <div class="step-body">
+          <p>Havola — bossangiz boshqa sahifaga olib boradigan matn. U <code class="inline">&lt;a&gt;</code> tegi bilan yoziladi. Lekin teg qayerga olib borishni qayerdan biladi? Buning uchun <strong>atribut</strong> kerak.</p>
+          <div class="anatomy" aria-label="Havola qanday tuzilgan">
+            <div class="seg edge"><code>&lt;a</code><span>teg</span></div>
+            <div class="seg"><code>href="about.html"</code><span>atribut = qiymat</span></div>
+            <div class="seg edge"><code>&gt;</code><span></span></div>
+            <div class="seg"><code>Men haqimda</code><span>bosiladigan matn</span></div>
+            <div class="seg edge"><code>&lt;/a&gt;</code><span>yopildi</span></div>
+          </div>
+          <p><strong>Atribut</strong> — tegga beriladigan qo'shimcha ma'lumot. Teg "nima" ekanini aytadi, atribut esa "qanday" yoki "qayerga" ekanini. Atribut doim <strong>ochuvchi teg ichida</strong>, <code class="inline">nom="qiymat"</code> ko'rinishida yoziladi.</p>
+<pre class="code"><span class="t">&lt;!-- Boshqa saytga: to'liq manzil --&gt;</span>
+<span class="t">&lt;a</span> href="https://info.cern.ch"<span class="t">&gt;</span>Birinchi veb-sayt<span class="t">&lt;/a&gt;</span>
+
+<span class="t">&lt;!-- O'z papkangizdagi faylga: nisbiy manzil --&gt;</span>
+<span class="t">&lt;a</span> href="about.html"<span class="t">&gt;</span>Men haqimda<span class="t">&lt;/a&gt;</span>
+
+<span class="t">&lt;!-- Yangi tabda ochish --&gt;</span>
+<span class="t">&lt;a</span> href="https://info.cern.ch" target="_blank"<span class="t">&gt;</span>Yangi tabda<span class="t">&lt;/a&gt;</span></pre>
+          <div class="versus">
+            <div><span class="vt">To'liq manzil</span><code class="inline">https://...</code><span class="vs">Internetning istalgan joyiga. Xuddi to'liq pochta manzili: davlat, shahar, ko'cha, uy.</span></div>
+            <div class="hl"><span class="vt">Nisbiy manzil</span><code class="inline">about.html</code><span class="vs">"Men turgan papkadagi about.html". Xuddi "qo'shni xonada" deyish kabi.</span></div>
+          </div>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>Teg tarixi · Tim hikoya qiladi</b>Mana, eng sevimli tegim! Boshqa teglarni ko'pincha tayyor olganman, lekin <code class="inline">&lt;a&gt;</code> — vebning yuragi, men butun tizimni aynan shu uchun qurganman. <strong>a</strong> harfi <em>anchor</em> — "langar" so'zidan: havola sizni boshqa hujjatga langardek bog'laydi. <code class="inline">href</code> esa <em>hypertext reference</em> — "gipermatn manzili". "Gipermatn" so'zini 1960-yillarda Ted Nelson o'ylab topgan edi. Men esa bitta muhim qaror qildim: havolalar <strong>bir tomonlama</strong> bo'lsin. Siz istalgan sahifaga havola qo'ya olasiz va buning uchun uning egasidan ruxsat so'ramaysiz. Boshqa tizimlar ikki tomonlama havolalarni sinagan, lekin ular juda murakkab bo'lib ketardi. Aynan shu soddalik tufayli veb shunchalik tez o'sdi.</div></div>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l3-step9"><span class="step-title"><span class="step-num">09</span> Rasm: &lt;img&gt;</span></label>
+        <div class="step-body">
+          <p>Rasm qo'yish uchun <code class="inline">&lt;img&gt;</code> tegi ishlatiladi. U ham bo'sh teg — yopuvchisi yo'q. Hamma ma'lumot atributlarda:</p>
+<pre class="code"><span class="t">&lt;img</span> src="mushuk.jpg" alt="Deraza oldida uxlayotgan kulrang mushuk" width="300"<span class="t">&gt;</span></pre>
+          <ul class="plain">
+            <li><code class="inline">src</code> — source, "manba": rasm fayli qayerda. Rasm <code class="inline">index.html</code> bilan bir papkada bo'lsa, faqat nomini yozasiz.</li>
+            <li><code class="inline">alt</code> — rasmning so'z bilan tavsifi. Rasm yuklanmasa yoki uni ko'ra olmaydigan odam sahifani o'qisa, shu matn ishlatiladi. <strong>Har doim yozing.</strong></li>
+            <li><code class="inline">width</code> — kengligi, pikselda.</li>
+          </ul>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>Teg tarixi · Tim hikoya qiladi</b>Bu tegni men yaratmaganman — va bu vebning eng mashhur hikoyalaridan biri. <strong>1993-yil 25-fevral.</strong> AQShdagi NCSA markazida ishlaydigan yosh talaba <strong>Mark Andrissen</strong> veb-dasturchilarning pochta ro'yxatiga xat yozib, matn ichida rasm ko'rsatadigan yangi <code class="inline">IMG</code> tegini taklif qildi. Boshqalar muhokama qila boshladi: kimdir boshqa nom taklif qildi, kimdir umumiyroq yechim o'ylashni maslahat berdi. Lekin Mark kutib o'tirmadi — tegni o'zining <strong>Mosaic</strong> brauzeriga qo'shib, chiqarib yubordi. Sahifalar birdan rangli va jonli bo'lib qoldi, oddiy odamlar ham vebni sevib qoldi. Shunday qilib <code class="inline">&lt;img&gt;</code> standartga kirdi. <code class="inline">alt</code> atributi esa keyinroq qo'shildi — vebni hamma, jumladan ko'zi ojizlar ham ishlata olishi uchun.</div></div>
+          <div class="mentor"><img class="im im-l" data-im="rocket" alt=""><div><b>Startup ustozi</b>Mark Andrissenni eslab qoling: u "hamma rozi bo'lguncha" kutmadi, ishlaydigan narsani odamlar qo'liga berdi. Bir yildan keyin u Netscape'ni ochdi. Startupda ham shunday: mukammal rejadan ko'ra ishlaydigan birinchi versiya muhimroq.</div></div>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l3-step10"><span class="step-title"><span class="step-num">10</span> Izohlar: &lt;!-- --&gt;</span></label>
+        <div class="step-body">
+          <p><code class="inline">&lt;!--</code> va <code class="inline">--&gt;</code> orasidagi hamma narsani brauzer <strong>ko'rsatmaydi</strong>. Bu — dasturchining o'ziga yoki hamkasbiga qoldirgan eslatmasi.</p>
+<pre class="code"><span class="t">&lt;!-- Bu yerdan menyu boshlanadi --&gt;</span>
+<span class="t">&lt;!-- TODO: rasmni keyinroq almashtirish kerak --&gt;</span></pre>
+          <p>VS Code'da tez yo'l: qatorni tanlang va <kbd>Cmd</kbd> + <kbd>/</kbd> bosing — qator izohga aylanadi. Yana bossangiz, qaytadi.</p>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>Teg tarixi · Tim hikoya qiladi</b>Bu yozuv ham SGML'dan meros. Endi bir kulgili voqea: hamma teglar ham uzoq yashamagan. 1994-yilda <strong>Netscape</strong> brauzeri <code class="inline">&lt;blink&gt;</code> tegini qo'shdi — u matnni <strong>miltillatib</strong> turardi. Netscape dasturchisi Lu Montullining aytishicha, bu g'oya do'stlar bilan hazillashib o'tirganda tug'ilgan, kimdir esa uni haqiqatan dasturlab qo'ygan. Natija? Butun veb miltillovchi yozuvlarga to'lib ketdi va hamma bezor bo'ldi. Teg hech qachon rasmiy standartga kirmadi, 2013-yilda esa Firefox ham uni qo'llashni to'xtatdi. Xulosa: teg qo'shish oson, foydali teg qo'shish qiyin.</div></div>
+        </div>
+      </div>
+
+      <!-- ===== 4-QISM ===== -->
+      <div class="part-head">
+        <p class="eyebrow">4-qism</p>
+        <h3>Amaliyot</h3>
+        <p>Endi hammasini birga ishlatamiz.</p>
+      </div>
+
+      <!-- 11 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l3-step11"><span class="step-title"><span class="step-num">11</span> Mashq maydoni</span></label>
+        <div class="step-body">
+          <p>Chapga kod yozing, natija darhol o'ngda chiqadi. Bugungi hamma teglar shu yerda ishlaydi.</p>
+          <div class="play">
+            <textarea id="l3-play" spellcheck="false" aria-label="HTML kod yozish joyi"></textarea>
+            <div class="browser" aria-label="Natija">
+              <div class="browser-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="address">index.html</span></div>
+              <div class="preview-page" id="l3-preview"></div>
+            </div>
+          </div>
+          <div class="play-actions"><button class="btn" type="button" id="l3-reset">Boshidan boshlash</button></div>
+          <p><strong>To'rtta tajriba:</strong></p>
+          <ol class="howto">
+            <li><code class="inline">ul</code> ni <code class="inline">ol</code> ga almashtiring (ochuvchi va yopuvchi ikkalasini ham). Nima o'zgardi?</li>
+            <li>Ro'yxatga uchinchi <code class="inline">&lt;li&gt;</code> qo'shing.</li>
+            <li>Havoladagi <code class="inline">https://</code> ni o'chirib ko'ring va o'ylang: endi brauzer uni qayerdan qidiradi?</li>
+            <li><code class="inline">alt</code> matnini o'zgartiring. Rasm manzili ataylab noto'g'ri yozilgan — shuning uchun o'rniga <code class="inline">alt</code> matni ko'rinyapti.</li>
+          </ol>
+          <details class="reveal"><summary>Nima bo'lganini tushuntirish</summary>
+            <p class="a"><code class="inline">https://</code> siz <code class="inline">info.cern.ch</code> nisbiy manzilga aylanadi: brauzer uni internetdan emas, sizning papkangizdan <code class="inline">info.cern.ch</code> degan fayl sifatida qidiradi va topolmaydi. Boshqa saytga havola doim <code class="inline">https://</code> bilan boshlanadi.</p>
+          </details>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l3-step12"><span class="step-title"><span class="step-num">12</span> Loyiha: "Mening sahifam"</span></label>
+        <div class="step-body">
+          <p>VS Code'da <code class="inline">frontend</code> papkasidagi <code class="inline">index.html</code> faylida o'zingiz haqingizda sahifa yasang. Namuna:</p>
+<pre class="code"><span class="t">&lt;!DOCTYPE html&gt;</span>
+<span class="t">&lt;html</span> lang="uz"<span class="t">&gt;</span>
+<span class="t">&lt;head&gt;</span>
+  <span class="t">&lt;meta</span> charset="UTF-8"<span class="t">&gt;</span>
+  <span class="t">&lt;title&gt;</span>Ali Valiyev<span class="t">&lt;/title&gt;</span>
+<span class="t">&lt;/head&gt;</span>
+<span class="t">&lt;body&gt;</span>
+  <span class="t">&lt;!-- Sarlavha va rasm --&gt;</span>
+  <span class="t">&lt;h1&gt;</span>Ali Valiyev<span class="t">&lt;/h1&gt;</span>
+  <span class="t">&lt;img</span> src="men.jpg" alt="Ali Valiyevning surati" width="200"<span class="t">&gt;</span>
+
+  <span class="t">&lt;h2&gt;</span>Men haqimda<span class="t">&lt;/h2&gt;</span>
+  <span class="t">&lt;p&gt;</span>Men <span class="t">&lt;strong&gt;</span>frontend<span class="t">&lt;/strong&gt;</span> dasturchi bo'lyapman va bu menga <span class="t">&lt;em&gt;</span>juda<span class="t">&lt;/em&gt;</span> yoqadi.<span class="t">&lt;/p&gt;</span>
+  <span class="t">&lt;hr&gt;</span>
+
+  <span class="t">&lt;h2&gt;</span>Qiziqishlarim<span class="t">&lt;/h2&gt;</span>
+  <span class="t">&lt;ul&gt;</span>
+    <span class="t">&lt;li&gt;</span>Dasturlash<span class="t">&lt;/li&gt;</span>
+    <span class="t">&lt;li&gt;</span>Kitob<span class="t">&lt;/li&gt;</span>
+  <span class="t">&lt;/ul&gt;</span>
+
+  <span class="t">&lt;h2&gt;</span>Kun tartibim<span class="t">&lt;/h2&gt;</span>
+  <span class="t">&lt;ol&gt;</span>
+    <span class="t">&lt;li&gt;</span>Ertalab badantarbiya<span class="t">&lt;/li&gt;</span>
+    <span class="t">&lt;li&gt;</span>Dars<span class="t">&lt;/li&gt;</span>
+  <span class="t">&lt;/ol&gt;</span>
+
+  <span class="t">&lt;p&gt;</span>Birinchi veb-sayt: <span class="t">&lt;a</span> href="https://info.cern.ch" target="_blank"<span class="t">&gt;</span>info.cern.ch<span class="t">&lt;/a&gt;</span><span class="t">&lt;/p&gt;</span>
+<span class="t">&lt;/body&gt;</span>
+<span class="t">&lt;/html&gt;</span></pre>
+          <p class="save-hint">Rasm uchun: o'zingizning suratingizni <code class="inline">frontend</code> papkasiga tashlang va nomini <code class="inline">men.jpg</code> qiling.</p>
+          <ul class="checklist" data-step="l3-step12">
+            <li><label><input type="checkbox" id="l3-p1" data-sub="p1"><span>VS Code'da <code class="inline">index.html</code> yaratdim va <code class="inline">!</code> + <kbd>Tab</kbd> bilan skelet oldim.</span></label></li>
+            <li><label><input type="checkbox" id="l3-p2" data-sub="p2"><span><code class="inline">h1</code>, <code class="inline">h2</code>, <code class="inline">p</code>, <code class="inline">strong</code>, <code class="inline">em</code>, <code class="inline">hr</code> ishlatdim.</span></label></li>
+            <li><label><input type="checkbox" id="l3-p3" data-sub="p3"><span>Bitta <code class="inline">ul</code> va bitta <code class="inline">ol</code> ro'yxat qo'shdim.</span></label></li>
+            <li><label><input type="checkbox" id="l3-p4" data-sub="p4"><span>O'z suratimni <code class="inline">alt</code> bilan qo'ydim va u brauzerda ko'rindi.</span></label></li>
+            <li><label><input type="checkbox" id="l3-p5" data-sub="p5"><span>Boshqa saytga havola qo'shdim va u yangi tabda ochildi.</span></label></li>
+          </ul>
+          <p class="win">Endi sizda haqiqiy veb-sahifa bor: sarlavha, matn, ro'yxat, rasm va havola bilan. 1993-yilda bunday sahifa internetdagi eng zamonaviylaridan bo'lardi.</p>
+        </div>
+      </div>
+
+      <!-- 13 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l3-step13"><span class="step-title"><span class="step-num">13</span> Bugungi 10 ta yangi so'z</span></label>
+        <div class="step-body">
+          <p>Kartani bosing — so'z ovoz chiqarib o'qiladi. Bularning ko'pini bugun VS Code menyusida va kodda ko'rdingiz.</p>
+          <div class="word-grid" data-words="lesson3"></div>
+        </div>
+      </div>
+
+      <!-- 14 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l3-step14"><span class="step-title"><span class="step-num">14</span> Xatoni toping va test</span></label>
+        <div class="step-body">
+          <div class="review-list">
+            <div class="review">
+              <p class="q">1. Bu havola nega ishlamaydi?</p>
+<pre class="code"><span class="t">&lt;a</span> href="google.com"<span class="t">&gt;</span>Google<span class="t">&lt;/a&gt;</span></pre>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a"><code class="inline">https://</code> yo'q, shuning uchun brauzer uni sizning papkangizdagi fayl deb o'ylaydi. To'g'risi: <code class="inline">href="https://google.com"</code>.</p></details>
+            </div>
+            <div class="review">
+              <p class="q">2. Bu ro'yxatda nima noto'g'ri?</p>
+<pre class="code"><span class="t">&lt;ul&gt;</span>
+  <span class="t">&lt;p&gt;</span>Olma<span class="t">&lt;/p&gt;</span>
+<span class="t">&lt;/ul&gt;</span></pre>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a"><code class="inline">ul</code> ichida faqat <code class="inline">li</code> bo'lishi kerak: <code class="inline">&lt;li&gt;Olma&lt;/li&gt;</code>.</p></details>
+            </div>
+            <div class="review">
+              <p class="q">3. Rasm chiqyapti. Lekin nima yetishmaydi?</p>
+<pre class="code"><span class="t">&lt;img</span> src="mushuk.jpg"<span class="t">&gt;</span></pre>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a"><code class="inline">alt</code> atributi. Busiz rasm yuklanmasa, bo'sh joy qoladi, ko'zi ojiz odam esa rasmda nima borligini bilolmaydi.</p></details>
+            </div>
+          </div>
+          <div class="quiz" data-step="l3-step14" data-pass="5">
+            <div class="qitem"><p class="q">1. Boshqa sahifaga olib boradigan teg qaysi?</p><div class="opts" data-correct="2"><button type="button">&lt;link&gt;</button><button type="button">&lt;img&gt;</button><button type="button">&lt;a&gt;</button></div><p class="explain" hidden>&lt;a&gt; — anchor, "langar". Manzil href atributiga yoziladi.</p></div>
+            <div class="qitem"><p class="q">2. Raqamlangan ro'yxat qaysi teg bilan boshlanadi?</p><div class="opts" data-correct="1"><button type="button">&lt;ul&gt;</button><button type="button">&lt;ol&gt;</button><button type="button">&lt;li&gt;</button></div><p class="explain" hidden>ol — ordered list. ul — nuqtali, li — ro'yxat bandi.</p></div>
+            <div class="qitem"><p class="q">3. Rasmning so'z bilan tavsifi qaysi atributga yoziladi?</p><div class="opts" data-correct="0"><button type="button">alt</button><button type="button">src</button><button type="button">href</button></div><p class="explain" hidden>alt — rasm ko'rinmasa ishlatiladigan matn. src — rasm fayli qayerda.</p></div>
+            <div class="qitem"><p class="q">4. Qaysi tegning yopuvchisi yo'q?</p><div class="opts" data-correct="1"><button type="button">&lt;p&gt;</button><button type="button">&lt;br&gt;</button><button type="button">&lt;strong&gt;</button></div><p class="explain" hidden>&lt;br&gt;, &lt;hr&gt;, &lt;img&gt; — bo'sh teglar, ichiga hech narsa solinmaydi.</p></div>
+            <div class="qitem"><p class="q">5. &lt;img&gt; tegini kim taklif qilgan?</p><div class="opts" data-correct="2"><button type="button">Tim Berners-Li</button><button type="button">Bill Geyts</button><button type="button">Mark Andrissen</button></div><p class="explain" hidden>1993-yilda, Mosaic brauzeri uchun.</p></div>
+            <div class="qitem"><p class="q">6. Nega Tim havolalarni bir tomonlama qildi?</p><div class="opts" data-correct="0"><button type="button">Hech kimdan ruxsat so'ramasdan havola qo'yish mumkin bo'lishi uchun</button><button type="button">Kompyuterlar sekin bo'lgani uchun</button><button type="button">Tasodifan shunday bo'lib qolgan</button></div><p class="explain" hidden>Soddalik vebning tez o'sishiga yordam berdi.</p></div>
+            <div class="quiz-foot"><span class="quiz-score"></span><button type="button" class="btn quiz-reset">Qaytadan</button></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== STARTUP USTOZI ===== -->
+      <div class="part-head su">
+        <p class="eyebrow">Startup ustozi</p>
+        <h3>Suhbatlardan xulosa chiqarish</h3>
+        <p>2-darsda 3 kishi bilan gaplashdingiz. Endi o'sha javoblardan foydali xulosa chiqaramiz.</p>
+      </div>
+
+      <!-- 15 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l3-step15"><span class="step-title"><span class="step-num">15</span> Signal va shovqin</span></label>
+        <div class="step-body">
+          <p>Suhbatdagi har bir gap bir xil qimmatli emas. Ba'zilari <strong>signal</strong> — haqiqiy muammo borligini ko'rsatadi. Ba'zilari <strong>shovqin</strong> — chiroyli, lekin hech narsani isbotlamaydi.</p>
+          <div class="versus">
+            <div class="hl"><span class="vt">Signal</span><span>"O'tgan hafta yana shunday bo'ldi, 2 soat yo'qotdim."</span><span>"Buning uchun Excel'da jadval qilganman."</span><span class="vs">Aniq voqea, sarflangan vaqt yoki pul, o'zi yasagan yechim.</span></div>
+            <div><span class="vt">Shovqin</span><span>"Ha, zo'r g'oya!"</span><span>"Bo'lsa, albatta ishlatardim."</span><span class="vs">Maqtov va kelajak haqidagi va'dalar. Ular hech narsaga majbur qilmaydi.</span></div>
+          </div>
+          <p><strong>Uchta savol bilan tekshiring:</strong></p>
+          <ol class="howto">
+            <li><strong>Takrorlandimi?</strong> 3 kishidan kamida 2 tasi, siz so'ramasdan, bir xil muammoni aytdimi?</li>
+            <li><strong>Hal qilishga urinishganmi?</strong> Odam muammoni hal qilish uchun hech narsa qilmagan bo'lsa, demak u uni unchalik qiynamayapti.</li>
+            <li><strong>Qanchalik qimmat?</strong> Muammo ularga vaqt, pul yoki asab bo'lib qanchaga tushyapti?</li>
+          </ol>
+          <textarea id="l3-insights" placeholder="Takrorlangan muammo: ...&#10;Hozir qanday hal qilishadi: ...&#10;Ularga qanchaga tushyapti: ...&#10;Mening xulosam: ..." aria-label="Suhbatlardan xulosa"></textarea>
+          <ul class="checklist" data-step="l3-step15">
+            <li><label><input type="checkbox" id="l3-s1" data-sub="s1"><span>3 ta suhbatni qayta o'qib, signallarning tagiga chizdim.</span></label></li>
+            <li><label><input type="checkbox" id="l3-s2" data-sub="s2"><span>Yuqoridagi 4 qatorni to'ldirdim.</span></label></li>
+          </ul>
+          <div class="mentor"><img class="im im-l" data-im="light_bulb" alt=""><div><b>Ustoz maslahati</b>Agar signal chiqmasa — bu mag'lubiyat emas, bu tejalgan oylar. Bir oy kod yozib, keyin muammo yo'qligini bilishdan ko'ra, uch kun gaplashib bilgan yaxshi. Muammo daftaringizdan keyingisini oling.</div></div>
+        </div>
+      </div>
+
+      <!-- 16 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l3-step16"><span class="step-title"><span class="step-num">16</span> Uyga vazifa</span></label>
+        <div class="step-body">
+          <ul class="checklist" data-step="l3-step16">
+            <li><label><input type="checkbox" id="l3-h1" data-sub="h1"><span><code class="inline">frontend</code> papkasida ikkinchi sahifa — <code class="inline">about.html</code> yaratdim va unda o'zim haqimda batafsil yozdim.</span></label></li>
+            <li><label><input type="checkbox" id="l3-h2" data-sub="h2"><span>Ikkala sahifani bir-biriga <strong>nisbiy havola</strong> bilan bog'ladim: <code class="inline">index.html</code> → <code class="inline">about.html</code> va orqaga.</span></label></li>
+            <li><label><input type="checkbox" id="l3-h3" data-sub="h3"><span>Sevimli saytimda o'ng tugma → <strong>Inspect</strong> (Tekshirish) ni bosdim va u yerda bugungi teglardan 5 tasini topdim.</span></label></li>
+            <li><label><input type="checkbox" id="l3-h4" data-sub="h4"><span>Bugungi 10 ta so'zdan eng qiyin 3 tasini daftarga yozib, 3 marta ovoz chiqarib aytdim.</span></label></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote">
+      <p class="quote-text">"Tim 1991-yilda 18 ta teg bilan boshlagan. Siz bugun 14 tasini bilasiz. Butun veb shu kichik g'ishtlardan qurilgan."</p>
+    </section>
+
+    <section class="next-up">
+      <p class="eyebrow">Keyingi dars</p>
+      <p class="desc">Jadvallar va formalar: sahifangizga ma'lumot jadvali va foydalanuvchi yozadigan maydonlar qo'shamiz. Tarix qismida esa kompyuter qanday ishlashini uni loyihalagan odamning o'zidan eshiting.</p>
+      <button class="btn btn-primary" type="button" data-goto="k">Kompyuter tarixini o'qish</button>
+    </section>
+  </div>
+
+  

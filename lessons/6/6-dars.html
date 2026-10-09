@@ -1,0 +1,500 @@
+<!-- ============ 6-DARS ============ -->
+  <div class="panel" id="panel-6" data-lesson="6" role="tabpanel" aria-labelledby="tab-6" hidden>
+
+    <section class="lesson">
+      <div class="lesson-head">
+        <p class="eyebrow">6-dars</p>
+        <h2>Joylashuv: Flexbox va telefonga moslash</h2>
+        <div class="meta">
+          <span class="chip">16 qadam</span>
+          <span class="chip">5 ta yangi teg</span>
+          <span class="chip">4 ta CSS tarixi</span>
+          <span class="chip">10 ta rasmli so'z</span>
+        </div>
+        <p class="lesson-note">5-darsda har bir elementga rang va shakl berdingiz. Lekin ular hali ham bir-birining ostida, ustma-ust turibdi. Bugun ularni xohlagan joyga qo'yamiz: yonma-yon, o'rtaga, ustunlarga — va sahifani telefonda ham chiroyli qilamiz.</p>
+        <div class="progress-track"><div class="progress-bar" id="l6-bar"></div></div>
+        <p class="progress-label" id="l6-label">0 / 16 qadam bajarildi</p>
+      </div>
+
+      <p class="disclaimer">"CSS tarixi" bloklari Hokon Vium Li tilidan tasavvur qilib yozilgan. Sanalar, ismlar va voqealar haqiqiy, lekin gaplar Hokonning o'z so'zlari emas.</p>
+
+      <!-- ===== 1-QISM ===== -->
+      <div class="part-head">
+        <p class="eyebrow">1-qism</p>
+        <h3>Kechagidan bugunga</h3>
+        <p>CSS'ni eslaymiz va elementlar nega ustma-ust turishini tushunamiz.</p>
+      </div>
+
+      <!-- 1 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l6-step1"><span class="step-title"><span class="step-num">01</span> Kechagini eslaylik</span></label>
+        <div class="step-body">
+          <p>Avval o'zingiz javob bering, keyin tekshiring.</p>
+          <div class="review-list">
+            <div class="review">
+              <p class="q">CSS qoidasining uch qismi qanday ataladi?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Selektor (kimga), xususiyat (nimani) va qiymat (qanday). Masalan: <code class="inline">h1 { color: orange; }</code>.</p></details>
+            </div>
+            <div class="review">
+              <p class="q"><code class="inline">.karta</code> va <code class="inline">#karta</code> farqi nima?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Nuqta — class: ko'p elementga berish mumkin. Panjara — id: sahifada faqat bitta.</p></details>
+            </div>
+            <div class="review">
+              <p class="q">padding va margin farqi nima?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">padding — ichki bo'shliq (mazmun va chegara orasida), margin — tashqi bo'shliq (qo'shni elementlargacha).</p></details>
+            </div>
+            <div class="review">
+              <p class="q">CSS'ni sahifaga ulashning eng yaxshi usuli qaysi?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Alohida <code class="inline">style.css</code> fayli va <code class="inline">&lt;link rel="stylesheet" href="style.css"&gt;</code>.</p></details>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l6-step2"><span class="step-title"><span class="step-num">02</span> Nega hammasi ustma-ust turadi?</span></label>
+        <div class="step-body">
+          <p>Brauzer elementlarni ikki xil joylashtiradi:</p>
+          <div class="flow-demo" aria-hidden="true">
+            <div class="fd-col"><p class="cpu-h">Blok elementlar</p><div class="fd-block">&lt;h1&gt;</div><div class="fd-block">&lt;p&gt;</div><div class="fd-block">&lt;div&gt;</div></div>
+            <div class="fd-col"><p class="cpu-h">Qator ichidagi elementlar</p><div class="fd-line">Matn <span class="fd-inline">&lt;a&gt;</span> va <span class="fd-inline">&lt;strong&gt;</span> hamda <span class="fd-inline">&lt;span&gt;</span> davom etadi...</div></div>
+          </div>
+          <ul class="plain">
+            <li><strong>Blok elementlar</strong> (block) — <code class="inline">h1</code>, <code class="inline">p</code>, <code class="inline">div</code>, <code class="inline">ul</code>, <code class="inline">table</code>, <code class="inline">form</code>. Har biri <strong>yangi qatordan</strong> boshlanadi va butun enni egallaydi. Xuddi g'ishtlar kabi bir-birining ustiga teriladi.</li>
+            <li><strong>Qator ichidagi elementlar</strong> (inline) — <code class="inline">a</code>, <code class="inline">strong</code>, <code class="inline">em</code>, <code class="inline">span</code>, <code class="inline">img</code>. Ular matn ichida, so'zlar kabi yonma-yon turadi.</li>
+          </ul>
+          <p>Shuning uchun uchta <code class="inline">div</code> kartochkani yonma-yon qo'ysangiz ham, ular bir-birining ostiga tushadi. Ularni yonma-yon qilish — bugungi darsning asosiy vazifasi.</p>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>CSS tarixi · Hokon hikoya qiladi</b>Elementlarni yonma-yon qo'yish CSS'ning eng uzoq va og'riqli hikoyasi. 4-darsda Tim aytganidek, 1990-yillarda dizaynerlar butun sahifani ko'rinmas jadvallar ichiga solishardi. 2000-yillarda ular boshqa "hiyla"ga o'tishdi: <code class="inline">float</code> — aslida rasmni matn bilan aylanib o'tish uchun yaratilgan xususiyat. Butun saytlarni u bilan qurishardi va har safar nimadir "qochib" ketardi. O'n yildan ortiq vaqt davomida CSS'da sahifa joylashuvi uchun haqiqiy vosita yo'q edi.</div></div>
+        </div>
+      </div>
+
+      <!-- ===== 2-QISM ===== -->
+      <div class="part-head">
+        <p class="eyebrow">2-qism</p>
+        <h3>Sahifaning tuzilishi</h3>
+        <p>Sahifani ma'noli bo'laklarga bo'lamiz va o'rtaga joylashtiramiz.</p>
+      </div>
+
+      <!-- 3 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l6-step3"><span class="step-title"><span class="step-num">03</span> Sahifa bo'limlari: header, nav, main, section, footer</span></label>
+        <div class="step-body">
+          <p>Deyarli har bir sayt bir xil tuzilishga ega. Tepada nom va menyu, o'rtada asosiy mazmun, pastda aloqa ma'lumotlari. HTML'da bu qismlar uchun maxsus teglar bor:</p>
+          <div class="page-map" aria-label="Sahifa bo'limlari sxemasi">
+            <div class="pm-header"><code>&lt;header&gt;</code> logotip va nom<div class="pm-nav"><code>&lt;nav&gt;</code> menyu</div></div>
+            <div class="pm-main"><code>&lt;main&gt;</code> asosiy mazmun
+              <div class="pm-sections"><div><code>&lt;section&gt;</code></div><div><code>&lt;section&gt;</code></div></div>
+            </div>
+            <div class="pm-footer"><code>&lt;footer&gt;</code> aloqa, mualliflik</div>
+          </div>
+          <ul class="plain">
+            <li><code class="inline">&lt;header&gt;</code> — sahifa yoki bo'limning "boshi": logotip, sarlavha.</li>
+            <li><code class="inline">&lt;nav&gt;</code> — navigatsiya: asosiy menyu havolalari.</li>
+            <li><code class="inline">&lt;main&gt;</code> — sahifaning asosiy mazmuni. Sahifada faqat bitta bo'ladi.</li>
+            <li><code class="inline">&lt;section&gt;</code> — mazmunning mavzuli bo'limi, odatda o'z sarlavhasi bilan.</li>
+            <li><code class="inline">&lt;footer&gt;</code> — "oyoq": aloqa, havolalar, mualliflik.</li>
+          </ul>
+          <p>Ular <code class="inline">div</code> kabi ishlaydi, lekin <strong>ma'noga</strong> ega. 3-darsdagi qoidani eslang: HTML ko'rinishni emas, ma'noni aytadi. Ovozli o'qish dasturi "menyuga o'tish" tugmasini aynan <code class="inline">nav</code> orqali topadi, Google esa asosiy mazmunni <code class="inline">main</code> dan qidiradi.</p>
+<pre class="code"><span class="t">&lt;header&gt;</span>
+  <span class="t">&lt;h1&gt;</span>Ali Valiyev<span class="t">&lt;/h1&gt;</span>
+  <span class="t">&lt;nav&gt;</span>
+    <span class="t">&lt;a</span> href="index.html"<span class="t">&gt;</span>Bosh sahifa<span class="t">&lt;/a&gt;</span>
+    <span class="t">&lt;a</span> href="aloqa.html"<span class="t">&gt;</span>Aloqa<span class="t">&lt;/a&gt;</span>
+  <span class="t">&lt;/nav&gt;</span>
+<span class="t">&lt;/header&gt;</span>
+<span class="t">&lt;main&gt;</span>
+  <span class="t">&lt;section&gt;</span>
+    <span class="t">&lt;h2&gt;</span>Loyihalarim<span class="t">&lt;/h2&gt;</span>
+  <span class="t">&lt;/section&gt;</span>
+<span class="t">&lt;/main&gt;</span>
+<span class="t">&lt;footer&gt;</span>
+  <span class="t">&lt;p&gt;</span>© 2026 Ali Valiyev<span class="t">&lt;/p&gt;</span>
+<span class="t">&lt;/footer&gt;</span></pre>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>CSS tarixi · Hokon hikoya qiladi</b>Bu teglar yosh — ular 2014-yilda <strong>HTML5</strong> bilan rasmiy standartga kirdi. Undan oldin hamma narsa <code class="inline">div</code> edi: <code class="inline">&lt;div id="header"&gt;</code>, <code class="inline">&lt;div id="menu"&gt;</code>. Yangi teglarning nomlarini tanlashdan oldin, Google millionlab sahifani tahlil qilib, dasturchilar <code class="inline">div</code> larga eng ko'p qanday nom berishini o'rgangan. Eng ko'p uchragan nomlar — "header", "nav", "footer" — yangi teglarga aylandi.</div></div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l6-step4"><span class="step-title"><span class="step-num">04</span> display: element qanday "turadi"</span></label>
+        <div class="step-body">
+          <p>Element blokmi yoki qator ichidami — buni <code class="inline">display</code> xususiyati hal qiladi. Uni o'zgartirish mumkin:</p>
+          <ul class="plain">
+            <li><code class="inline">display: block;</code> — yangi qatordan, butun enni egallaydi.</li>
+            <li><code class="inline">display: inline;</code> — matn ichida, yonma-yon. Unga <code class="inline">width</code> va yuqori-pastki margin ta'sir qilmaydi.</li>
+            <li><code class="inline">display: inline-block;</code> — yonma-yon turadi, lekin o'lcham va bo'shliqlarni qabul qiladi. Tugmalar uchun qulay.</li>
+            <li><code class="inline">display: none;</code> — element butunlay yo'qoladi, joyi ham qolmaydi.</li>
+            <li><code class="inline">display: flex;</code> — bugungi asosiy qahramon. Bir oz kutib turing.</li>
+          </ul>
+<pre class="code">/* Menyu havolalarini tugmaga o'xshatamiz */
+<span class="t">nav a</span> {
+  display: inline-block;
+  padding: 8px 14px;
+  background-color: #FCEBC8;
+  border-radius: 8px;
+}</pre>
+          <p class="save-hint"><code class="inline">nav a</code> — probel bilan yozilgan selektor: "<code class="inline">nav</code> ichidagi barcha <code class="inline">a</code> lar". Sahifadagi boshqa havolalarga ta'sir qilmaydi.</p>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l6-step5"><span class="step-title"><span class="step-num">05</span> Eni va markazlash: max-width va margin: auto</span></label>
+        <div class="step-body">
+          <p>Katta monitorda matn butun ekran bo'ylab cho'zilib ketsa, o'qish juda qiyin: ko'z qator oxiridan keyingi qator boshigacha "sakrab" charchaydi. Shuning uchun mazmunni cheklangan enli ustunga solib, o'rtaga qo'yamiz:</p>
+<pre class="code"><span class="t">main</span> {
+  max-width: 720px;
+  margin: 0 auto;
+}</pre>
+          <ul class="plain">
+            <li><code class="inline">max-width: 720px</code> — "eng ko'pi bilan 720 piksel". Ekran kichik bo'lsa, element torayadi, katta bo'lsa — 720 dan oshmaydi.</li>
+            <li><code class="inline">margin: 0 auto</code> — yuqori va pastdan 0, chap va o'ngdan <code class="inline">auto</code>. Brauzer bo'sh joyni ikki tomonga teng bo'lib beradi va element o'rtada turadi.</li>
+          </ul>
+          <p>Yana bitta muhim qator, ko'pchilik dasturchilar uni har bir loyihaning boshiga yozadi:</p>
+<pre class="code"><span class="t">*</span> {
+  box-sizing: border-box;
+}</pre>
+          <p>Odatda brauzer <code class="inline">width</code> ga padding va border'ni <strong>qo'shib</strong> hisoblaydi: 300px enli qutiga 20px padding bersangiz, u aslida 340px bo'lib ketadi. <code class="inline">border-box</code> esa aytadi: "300px — bu hammasi bilan birga". Hisob-kitob ancha osonlashadi. <code class="inline">*</code> — "hamma elementlar" degan selektor.</p>
+          <div class="mentor"><img class="im im-l" data-im="light_bulb" alt=""><div><b>Qiziq fakt</b>Siz hozir o'qiyotgan kitob ham aynan shunday qurilgan: mazmun eni 720 pikseldan oshmaydi va ekran o'rtasida turadi. Inspect bilan <code class="inline">.page</code> elementini tekshirib ko'ring.</div></div>
+        </div>
+      </div>
+
+      <!-- ===== 3-QISM ===== -->
+      <div class="part-head">
+        <p class="eyebrow">3-qism</p>
+        <h3>Flexbox</h3>
+        <p>Elementlarni qatorga terish, o'rtaga qo'yish va bo'shliqlarni taqsimlash.</p>
+      </div>
+
+      <!-- 6 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l6-step6"><span class="step-title"><span class="step-num">06</span> display: flex — bitta qatorda hammasi yonma-yon</span></label>
+        <div class="step-body">
+          <p><strong>Flexbox</strong> (flexible box — "egiluvchan quti") ota elementga yoziladi. Shundan keyin uning <strong>bevosita bolalari</strong> bir qatorga teriladi.</p>
+<pre class="code"><span class="t">.kartalar</span> {
+  display: flex;
+  gap: 16px;
+}
+
+<span class="t">&lt;div</span> class="kartalar"<span class="t">&gt;</span>
+  <span class="t">&lt;div</span> class="karta"<span class="t">&gt;</span>HTML<span class="t">&lt;/div&gt;</span>
+  <span class="t">&lt;div</span> class="karta"<span class="t">&gt;</span>CSS<span class="t">&lt;/div&gt;</span>
+  <span class="t">&lt;div</span> class="karta"<span class="t">&gt;</span>Flexbox<span class="t">&lt;/div&gt;</span>
+<span class="t">&lt;/div&gt;</span></pre>
+          <div class="versus">
+            <div><span class="vt">Flex konteyner</span><span>Ota element: <code class="inline">display: flex</code> shunga yoziladi.</span><span class="vs">"Qanday terilasizlar" deb boshqaradi.</span></div>
+            <div class="hl"><span class="vt">Flex elementlar</span><span>Uning bevosita bolalari.</span><span class="vs">Avtomatik ravishda qatorga turadi.</span></div>
+          </div>
+          <p><code class="inline">gap</code> — elementlar orasidagi bo'shliq. Endi har bir kartaga margin berib, chetidagisini alohida tuzatish shart emas.</p>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>CSS tarixi · Hokon hikoya qiladi</b>Flexbox'ning birinchi loyihasi 2009-yilda e'lon qilindi. Keyin u bir necha marta tubdan o'zgardi — brauzerlar bitta versiyani o'rnatib ulgurganda, standart yangisiga o'tib ketardi. Faqat 2012–2015-yillarda barcha asosiy brauzerlar bir xil, yakuniy Flexbox'ni qo'llab-quvvatlay boshladi. Dizaynerlar 15 yildan beri so'rab kelgan narsa — "shu uchta qutini yonma-yon, o'rtada, teng bo'shliq bilan qo'y" — nihoyat bir necha qatorda yoziladigan bo'ldi.</div></div>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l6-step7"><span class="step-title"><span class="step-num">07</span> Flexbox laboratoriyasi</span></label>
+        <div class="step-body">
+          <p>Konteynerga yoziladigan asosiy xususiyatlar:</p>
+          <ul class="plain">
+            <li><code class="inline">flex-direction</code> — yo'nalish: <code class="inline">row</code> (qator, chapdan o'ngga) yoki <code class="inline">column</code> (ustun, yuqoridan pastga).</li>
+            <li><code class="inline">justify-content</code> — <strong>asosiy</strong> yo'nalish bo'yicha joylashuv: boshida, o'rtada, oxirida yoki teng taqsimlangan.</li>
+            <li><code class="inline">align-items</code> — <strong>ko'ndalang</strong> yo'nalish bo'yicha: yuqorida, o'rtada, pastda yoki cho'zilgan.</li>
+            <li><code class="inline">flex-wrap</code> — joy yetmasa, keyingi qatorga o'tsinmi: <code class="inline">wrap</code>.</li>
+            <li><code class="inline">gap</code> — elementlar orasidagi bo'shliq.</li>
+          </ul>
+          <p>Tugmalarni bosing va qutilar qanday harakat qilishini kuzating. Keyin pastdagi uchta topshiriqni bajaring:</p>
+          <div class="flex-lab" id="l6-flex">
+            <div class="fl-ctl">
+              <div class="fl-row"><span>flex-direction</span><div class="seg-btns" data-prop="flex-direction"><button type="button" data-v="row" aria-pressed="true">row</button><button type="button" data-v="column" aria-pressed="false">column</button></div></div>
+              <div class="fl-row"><span>justify-content</span><div class="seg-btns" data-prop="justify-content"><button type="button" data-v="flex-start" aria-pressed="true">flex-start</button><button type="button" data-v="center" aria-pressed="false">center</button><button type="button" data-v="flex-end" aria-pressed="false">flex-end</button><button type="button" data-v="space-between" aria-pressed="false">space-between</button></div></div>
+              <div class="fl-row"><span>align-items</span><div class="seg-btns" data-prop="align-items"><button type="button" data-v="stretch" aria-pressed="true">stretch</button><button type="button" data-v="flex-start" aria-pressed="false">flex-start</button><button type="button" data-v="center" aria-pressed="false">center</button><button type="button" data-v="flex-end" aria-pressed="false">flex-end</button></div></div>
+              <div class="fl-row"><span>flex-wrap</span><div class="seg-btns" data-prop="flex-wrap"><button type="button" data-v="nowrap" aria-pressed="true">nowrap</button><button type="button" data-v="wrap" aria-pressed="false">wrap</button></div></div>
+              <div class="fl-row"><span>gap</span><input type="range" min="0" max="32" value="8" id="l6-flex-gap" aria-label="gap"><b id="l6-flex-gapv">8px</b></div>
+            </div>
+            <div class="fl-stage" id="l6-flex-stage" aria-hidden="true">
+              <div class="fl-item">1</div><div class="fl-item fl-tall">2</div><div class="fl-item">3</div><div class="fl-item">4</div>
+            </div>
+            <pre class="code" id="l6-flex-code" data-no-i18n></pre>
+            <div class="fl-tasks" id="l6-flex-tasks">
+              <p class="cpu-h">Topshiriqlar</p>
+              <label><input type="checkbox" disabled data-task="center"> Qutilarni konteynerning qoq o'rtasiga qo'ying (gorizontal va vertikal).</label>
+              <label><input type="checkbox" disabled data-task="between"> Qutilarni qatorda teng taqsimlang: birinchisi chap chetda, oxirgisi o'ng chetda.</label>
+              <label><input type="checkbox" disabled data-task="column"> Qutilarni ustun qilib, o'ng tomonga taqab qo'ying.</label>
+            </div>
+          </div>
+          <div class="mentor"><img class="im im-l" data-im="brain" alt=""><div><b>Eng ko'p ishlatiladigan uch qator</b>Bir narsani qoq o'rtaga qo'yish — veb tarixidagi eng mashhur "qiyin savol" edi. Endi bu uch qator: <code class="inline">display: flex; justify-content: center; align-items: center;</code></div></div>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l6-step8"><span class="step-title"><span class="step-num">08</span> flex: 1 va kartochkalar to'ri</span></label>
+        <div class="step-body">
+          <p>Ba'zan elementlar bo'sh joyni o'zaro <strong>teng bo'lib olishi</strong> kerak. Buning uchun flex elementning o'ziga yoziladi:</p>
+<pre class="code"><span class="t">.karta</span> {
+  flex: 1;
+}</pre>
+          <p><code class="inline">flex: 1</code> — "qolgan joydan 1 ulush ol". Uchta kartaga ham <code class="inline">flex: 1</code> bersangiz, ular teng enli bo'ladi. Bittasiga <code class="inline">flex: 2</code> bersangiz, u qolganlardan ikki baravar keng bo'ladi.</p>
+          <p>Kartalar ko'p bo'lsa-chi? Masalan, 9 ta loyiha. Ularni qatorlarga bo'lib terish uchun:</p>
+<pre class="code"><span class="t">.kartalar</span> {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+<span class="t">.karta</span> {
+  flex: 1 1 200px;
+}</pre>
+          <p><code class="inline">flex: 1 1 200px</code> — "eng kamida 200px bo'l, joy bo'lsa kengay, kerak bo'lsa toray". Natijada katta ekranda qatorda 3–4 ta karta turadi, telefonda esa har biri o'z qatorida. Bitta ham <code class="inline">@media</code> yozmasdan!</p>
+          <div class="mentor"><img class="im im-l" data-im="light_bulb" alt=""><div><b>Keyingi qadam</b>Ikki o'lchovli to'r — ham qatorlar, ham ustunlar aniq bo'lishi kerak bo'lsa — CSS'da yana bir vosita bor: <strong>Grid</strong>. U 2017-yilda barcha brauzerlarga yetib keldi. Flexbox'ni yaxshi o'zlashtirsangiz, Grid'ni ham tez o'rganasiz.</div></div>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l6-step9"><span class="step-title"><span class="step-num">09</span> Telefon uchun: viewport va @media</span></label>
+        <div class="step-body">
+          <p>Bugun saytlarga kiradiganlarning yarmidan ko'pi telefondan foydalanadi. Telefonga moslashish uchun ikki narsa kerak.</p>
+          <p><strong>Birinchisi — viewport meta tegi.</strong> Uni har bir sahifaning <code class="inline">&lt;head&gt;</code> qismiga yozing:</p>
+<pre class="code"><span class="t">&lt;meta</span> name="viewport" content="width=device-width, initial-scale=1"<span class="t">&gt;</span></pre>
+          <p>Usiz telefon brauzeri sahifani "kompyuter sayti" deb o'ylaydi, uni 980 piksel kenglikda chizadi va butunlay kichraytirib ko'rsatadi. Harflar mayda bo'lib, kattalashtirish kerak bo'ladi.</p>
+          <p><strong>Ikkinchisi — @media so'rovi.</strong> U "ekran shunday bo'lsa, mana bu qoidalarni ishlat" deydi:</p>
+<pre class="code"><span class="t">.kartalar</span> {
+  display: flex;
+  gap: 16px;
+}
+
+/* Ekran eni 600px yoki undan kichik bo'lsa */
+<span class="t">@media</span> (max-width: 600px) {
+  <span class="t">.kartalar</span> {
+    flex-direction: column;
+  }
+}</pre>
+          <p>Kompyuterda kartalar yonma-yon, telefonda esa bir-birining ostida. Bu yondashuv <strong>moslashuvchan dizayn</strong> (responsive design) deyiladi: bitta sayt, har qanday ekran.</p>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>CSS tarixi · Hokon hikoya qiladi</b>2007-yil yanvarida Apple <strong>iPhone</strong>'ni taqdim etdi. Uning brauzeri kompyuter saytlarini kichraytirib ko'rsatardi, Apple esa saytlarga "men telefonga mos tushaman" deyish uchun <code class="inline">viewport</code> meta tegini o'ylab topdi. Saytlar avval telefon uchun alohida versiya qila boshladi — <code class="inline">m.sayt.uz</code> kabi. 2010-yilda dizayner <strong>Itan Markott</strong> "Responsive Web Design" degan maqola yozdi: alohida sayt emas, bitta sayt ekranga moslashsin. Media so'rovlar 2012-yilda rasmiy standart bo'ldi va bugun bu har bir saytning odatiy qismi.</div></div>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l6-step10"><span class="step-title"><span class="step-num">10</span> Inspect: telefon rejimi va flex nishoni</span></label>
+        <div class="step-body">
+          <p>Saytingiz telefonda qanday ko'rinishini tekshirish uchun telefon shart emas. Chrome'da:</p>
+          <ul class="plain">
+            <li>Sahifada o'ng tugma → <strong>Inspect</strong>.</li>
+            <li>Inspect oynasining yuqori chap burchagidagi telefon va planshet belgisini bosing (yoki <code class="inline">cmd + shift + M</code>).</li>
+            <li>Yuqorida qurilmani tanlang: iPhone, Samsung Galaxy, iPad. Sahifa o'sha ekran o'lchamida ko'rinadi.</li>
+            <li>Elementlar ro'yxatida <code class="inline">display: flex</code> bo'lgan elementlar yonida kichik <strong>flex</strong> nishoni turadi. Uni bossangiz, brauzer konteyner va bo'shliqlarni rangli chiziqlar bilan ko'rsatadi.</li>
+          </ul>
+          <p class="save-hint">Bu kitobni ham telefon rejimida ochib ko'ring: mundarija, tugmalar va laboratoriyalar qanday o'zgarishini kuzating.</p>
+        </div>
+      </div>
+
+      <!-- ===== 4-QISM ===== -->
+      <div class="part-head">
+        <p class="eyebrow">4-qism</p>
+        <h3>Amaliyot</h3>
+        <p>Sahifangizga haqiqiy sayt tuzilishini beramiz.</p>
+      </div>
+
+      <!-- 11 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l6-step11"><span class="step-title"><span class="step-num">11</span> Mashq maydoni: kompyuter va telefon</span></label>
+        <div class="step-body">
+          <p>Kodni yozing va natijani uch xil ekranda ko'ring. Ekran tugmalari "brauzer oynasi"ning enini o'zgartiradi — <code class="inline">@media</code> qoidasi qachon ishga tushishini kuzating.</p>
+          <div class="seg-btns l6-sizes" id="l6-sizes" role="group" aria-label="Ekran o'lchami"><button type="button" data-w="375" aria-pressed="true">Telefon · 375px</button><button type="button" data-w="768" aria-pressed="false">Planshet · 768px</button><button type="button" data-w="1100" aria-pressed="false">Kompyuter · 1100px</button></div>
+          <div class="play play-stack">
+            <textarea id="l6-play" spellcheck="false" aria-label="HTML va CSS kod yozish joyi"></textarea>
+            <div class="browser" aria-label="Natija">
+              <div class="browser-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="address" id="l6-addr">index.html · 375px</span></div>
+              <div class="frame-fit" id="l6-fit"><iframe class="css-frame" id="l6-frame" sandbox="" title="Natija"></iframe></div>
+            </div>
+          </div>
+          <div class="play-actions"><button class="btn" type="button" id="l6-reset">Boshidan boshlash</button></div>
+          <p><strong>To'rtta tajriba:</strong></p>
+          <ul class="plain">
+            <li>Telefon va kompyuter tugmalarini almashtirib, kartalar qanday qayta terilishini kuzating.</li>
+            <li><code class="inline">@media</code> dagi <code class="inline">600px</code> ni <code class="inline">900px</code> ga o'zgartiring. Endi planshetda nima bo'ladi?</li>
+            <li><code class="inline">nav</code> ga <code class="inline">justify-content: center;</code> qo'shing.</li>
+            <li>To'rtinchi karta qo'shing va u qayerga tushishini ko'ring.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l6-step12"><span class="step-title"><span class="step-num">12</span> Loyiha: "Mening sahifam" — haqiqiy sayt tuzilishi</span></label>
+        <div class="step-body">
+          <p><code class="inline">index.html</code> ni sahifa bo'limlari bilan qayta tuzing va <code class="inline">style.css</code> ga joylashuv qoidalarini qo'shing. Avval <code class="inline">&lt;head&gt;</code> ga viewport tegini yozishni unutmang.</p>
+<pre class="code"><span class="t">&lt;body&gt;</span>
+  <span class="t">&lt;header</span> class="sarlavha"<span class="t">&gt;</span>
+    <span class="t">&lt;h1&gt;</span>Ali Valiyev<span class="t">&lt;/h1&gt;</span>
+    <span class="t">&lt;nav&gt;</span>
+      <span class="t">&lt;a</span> href="index.html"<span class="t">&gt;</span>Bosh sahifa<span class="t">&lt;/a&gt;</span>
+      <span class="t">&lt;a</span> href="aloqa.html"<span class="t">&gt;</span>Aloqa<span class="t">&lt;/a&gt;</span>
+    <span class="t">&lt;/nav&gt;</span>
+  <span class="t">&lt;/header&gt;</span>
+
+  <span class="t">&lt;main&gt;</span>
+    <span class="t">&lt;h2&gt;</span>Nimalarni o'rgandim<span class="t">&lt;/h2&gt;</span>
+    <span class="t">&lt;div</span> class="kartalar"<span class="t">&gt;</span>
+      <span class="t">&lt;div</span> class="karta"<span class="t">&gt;&lt;h3&gt;</span>HTML<span class="t">&lt;/h3&gt;&lt;p&gt;</span>Teglar, havolalar, jadvallar<span class="t">&lt;/p&gt;&lt;/div&gt;</span>
+      <span class="t">&lt;div</span> class="karta"<span class="t">&gt;&lt;h3&gt;</span>CSS<span class="t">&lt;/h3&gt;&lt;p&gt;</span>Ranglar, shriftlar, qutilar<span class="t">&lt;/p&gt;&lt;/div&gt;</span>
+      <span class="t">&lt;div</span> class="karta"<span class="t">&gt;&lt;h3&gt;</span>Flexbox<span class="t">&lt;/h3&gt;&lt;p&gt;</span>Joylashuv va telefon<span class="t">&lt;/p&gt;&lt;/div&gt;</span>
+    <span class="t">&lt;/div&gt;</span>
+  <span class="t">&lt;/main&gt;</span>
+
+  <span class="t">&lt;footer&gt;</span>
+    <span class="t">&lt;p&gt;</span>© 2026 Ali Valiyev<span class="t">&lt;/p&gt;</span>
+  <span class="t">&lt;/footer&gt;</span>
+<span class="t">&lt;/body&gt;</span></pre>
+<pre class="code"><span class="t">*</span> { box-sizing: border-box; }
+
+<span class="t">main</span>, <span class="t">.sarlavha</span>, <span class="t">footer</span> {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+<span class="t">.sarlavha</span> {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+<span class="t">nav</span> {
+  display: flex;
+  gap: 12px;
+}
+
+<span class="t">.kartalar</span> {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+<span class="t">.karta</span> {
+  flex: 1 1 220px;
+}
+
+<span class="t">@media</span> (max-width: 600px) {
+  <span class="t">.sarlavha</span> {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}</pre>
+          <ul class="checklist" data-step="l6-step12">
+            <li><label><input type="checkbox" id="l6-p1" data-sub="p1"><span>Sahifalarimga viewport meta tegini qo'shdim.</span></label></li>
+            <li><label><input type="checkbox" id="l6-p2" data-sub="p2"><span><code class="inline">header</code>, <code class="inline">nav</code>, <code class="inline">main</code> va <code class="inline">footer</code> bilan sahifani bo'laklarga ajratdim.</span></label></li>
+            <li><label><input type="checkbox" id="l6-p3" data-sub="p3"><span>Sarlavha va menyu bir qatorda: chapda nom, o'ngda havolalar.</span></label></li>
+            <li><label><input type="checkbox" id="l6-p4" data-sub="p4"><span>Kamida 3 ta karta yonma-yon turadi va telefonda bir-birining ostiga tushadi.</span></label></li>
+            <li><label><input type="checkbox" id="l6-p5" data-sub="p5"><span>Inspect'ning telefon rejimida sahifamni iPhone o'lchamida tekshirdim.</span></label></li>
+          </ul>
+          <p class="win">Sahifangiz endi haqiqiy saytga o'xshaydi: tepada menyu, o'rtada kartochkalar, pastda footer. Va u telefonda ham chiroyli.</p>
+        </div>
+      </div>
+
+      <!-- 13 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l6-step13"><span class="step-title"><span class="step-num">13</span> Bugungi 10 ta yangi so'z</span></label>
+        <div class="step-body">
+          <p>Kartani bosing — so'z ovoz chiqarib o'qiladi. Bularning ko'pi bugungi CSS xususiyatlari va teglarning nomida yashiringan.</p>
+          <div class="word-grid" data-words="lesson6"></div>
+        </div>
+      </div>
+
+      <!-- 14 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l6-step14"><span class="step-title"><span class="step-num">14</span> Xatoni toping va test</span></label>
+        <div class="step-body">
+          <div class="review-list">
+            <div class="review">
+              <p class="q">Kartalar hali ham bir-birining ostida turibdi. Nega?</p>
+<pre class="code"><span class="t">.karta</span> { display: flex; }
+
+<span class="t">&lt;div</span> class="kartalar"<span class="t">&gt;</span>
+  <span class="t">&lt;div</span> class="karta"<span class="t">&gt;</span>...<span class="t">&lt;/div&gt;</span>
+  <span class="t">&lt;div</span> class="karta"<span class="t">&gt;</span>...<span class="t">&lt;/div&gt;</span>
+<span class="t">&lt;/div&gt;</span></pre>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a"><code class="inline">display: flex</code> ota elementga — <code class="inline">.kartalar</code> ga yoziladi. U <strong>bolalarini</strong> qatorga teradi, o'zini emas.</p></details>
+            </div>
+            <div class="review">
+              <p class="q">Telefonda sahifa juda mayda ko'rinyapti, @media qoidalari ishlamayapti.</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Viewport meta tegi yo'q. Usiz telefon sahifani 980px enli deb hisoblaydi va <code class="inline">max-width: 600px</code> sharti hech qachon bajarilmaydi.</p></details>
+            </div>
+            <div class="review">
+              <p class="q">Mazmun katta monitorda o'rtada turishi kerak edi, lekin chapga yopishib qoldi.</p>
+<pre class="code"><span class="t">main</span> {
+  max-width: 720px;
+  margin: 0;
+}</pre>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Chap va o'ng margin <code class="inline">auto</code> bo'lishi kerak: <code class="inline">margin: 0 auto;</code>.</p></details>
+            </div>
+          </div>
+          <div class="quiz" data-step="l6-step14" data-pass="5">
+            <div class="qitem"><p class="q">Qaysi teg blok element emas?</p><div class="opts" data-correct="2"><button type="button">&lt;p&gt;</button><button type="button">&lt;div&gt;</button><button type="button">&lt;a&gt;</button></div><p class="explain" hidden>a — qator ichidagi element: matn ichida so'zlar kabi turadi.</p></div>
+            <div class="qitem"><p class="q">display: flex qayerga yoziladi?</p><div class="opts" data-correct="0"><button type="button">Ota elementga — konteynerga</button><button type="button">Har bir bolaga</button><button type="button">Faqat body ga</button></div><p class="explain" hidden>Konteyner o'z bolalarini teradi.</p></div>
+            <div class="qitem"><p class="q">Qatordagi elementlarni gorizontal o'rtaga qaysi xususiyat qo'yadi?</p><div class="opts" data-correct="1"><button type="button">align-items: center</button><button type="button">justify-content: center</button><button type="button">text-align: center</button></div><p class="explain" hidden>justify-content — asosiy yo'nalish (row'da gorizontal), align-items — ko'ndalang yo'nalish.</p></div>
+            <div class="qitem"><p class="q">margin: 0 auto nima qiladi?</p><div class="opts" data-correct="2"><button type="button">Elementni yashiradi</button><button type="button">Hamma bo'shliqlarni o'chiradi</button><button type="button">Eni cheklangan elementni gorizontal o'rtaga qo'yadi</button></div><p class="explain" hidden>Chap va o'ng bo'shliqni brauzer teng bo'lib beradi.</p></div>
+            <div class="qitem"><p class="q">Sahifaning asosiy menyusi uchun qaysi teg to'g'ri?</p><div class="opts" data-correct="0"><button type="button">&lt;nav&gt;</button><button type="button">&lt;menu-bar&gt;</button><button type="button">&lt;footer&gt;</button></div><p class="explain" hidden>nav — navigatsiya. Ovozli o'qish dasturlari menyuni shu orqali topadi.</p></div>
+            <div class="qitem"><p class="q">"@media (max-width: 600px)" ichidagi qoidalar qachon ishlaydi?</p><div class="opts" data-correct="1"><button type="button">Ekran 600px dan katta bo'lsa</button><button type="button">Ekran eni 600px yoki undan kichik bo'lsa</button><button type="button">Har doim</button></div><p class="explain" hidden>max-width — "eng ko'pi bilan". Bu odatda telefonlar.</p></div>
+            <div class="quiz-foot"><span class="quiz-score"></span><button type="button" class="btn quiz-reset">Qaytadan</button></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== STARTUP USTOZI ===== -->
+      <div class="part-head su">
+        <p class="eyebrow">Startup ustozi</p>
+        <h3>Bitta sahifa, bitta harakat</h3>
+        <p>Kutish ro'yxati sahifangiz endi chiroyli. Uni odamlar telefonda ham tushunadigan va bitta aniq ishga undaydigan qilamiz.</p>
+      </div>
+
+      <!-- 15 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l6-step15"><span class="step-title"><span class="step-num">15</span> Landing sahifaning tuzilishi</span></label>
+        <div class="step-body">
+          <p>Mahsulotni tanishtiradigan bitta sahifa <strong>landing page</strong> ("qo'nish sahifasi") deyiladi: reklama yoki havoladan kelgan odam shu yerga "qo'nadi". Yaxshi landing sahifaning tuzilishi deyarli har doim bir xil:</p>
+          <ul class="plain">
+            <li><strong>Bosh qism</strong> (hero): katta sarlavha — qanday muammoni hal qilasiz, bitta gap tushuntirish va bitta katta tugma.</li>
+            <li><strong>Uchta foyda</strong>: uchta karta yonma-yon (telefonda ustma-ust) — bugungi Flexbox!</li>
+            <li><strong>Ishonch</strong>: kutish ro'yxatidagi odamlar soni yoki bitta haqiqiy fikr.</li>
+            <li><strong>Yana o'sha tugma</strong> pastda va oddiy footer.</li>
+          </ul>
+          <div class="mentor"><img class="im im-l" data-im="rocket" alt=""><div><b>Bitta harakat qoidasi</b>Sahifada asosiy tugma faqat <strong>bitta</strong> bo'lsin: "Kutish ro'yxatiga yozilish". "Biz haqimizda", "Blog", "Narxlar", "Telegram" — hammasi birdaniga bo'lsa, odam hech birini bosmaydi. Tanlov qancha ko'p bo'lsa, qaror shuncha qiyin.</div></div>
+          <p><strong>Telefon birinchi.</strong> Sizning mijozlaringiz katta ehtimol bilan sahifani telefonda ochadi. Shuning uchun sahifani avval telefonda tekshiring, keyin kompyuterda.</p>
+          <textarea id="l6-landing" placeholder="Sarlavha (muammo): ...&#10;Bitta gap tushuntirish: ...&#10;Uchta foyda: ...; ...; ...&#10;Tugma matni: ...&#10;Telefonda kimga ko'rsatdim va u nima dedi: ..." aria-label="Landing sahifa rejasi"></textarea>
+          <ul class="checklist" data-step="l6-step15">
+            <li><label><input type="checkbox" id="l6-s1" data-sub="s1"><span>Kutish ro'yxati sahifamni shu tuzilishda qayta qurdim: hero, uchta foyda kartasi, bitta tugma.</span></label></li>
+            <li><label><input type="checkbox" id="l6-s2" data-sub="s2"><span>Sahifani 3 kishiga <strong>telefonda</strong> ko'rsatdim va ular tugmani qanchalik tez topganini kuzatdim.</span></label></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 16 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l6-step16"><span class="step-title"><span class="step-num">16</span> Uyga vazifa</span></label>
+        <div class="step-body">
+          <ul class="checklist" data-step="l6-step16">
+            <li><label><input type="checkbox" id="l6-h1" data-sub="h1"><span><code class="inline">aloqa.html</code> ni ham header, nav, main va footer bilan qayta tuzdim.</span></label></li>
+            <li><label><input type="checkbox" id="l6-h2" data-sub="h2"><span>"Flexbox Froggy" o'yinining (flexboxfroggy.com) kamida 12 bosqichini o'tdim.</span></label></li>
+            <li><label><input type="checkbox" id="l6-h3" data-sub="h3"><span>Sevimli saytimni Inspect'ning telefon rejimida ochib, unda <code class="inline">display: flex</code> bo'lgan 3 ta elementni topdim.</span></label></li>
+            <li><label><input type="checkbox" id="l6-h4" data-sub="h4"><span>Sahifamni o'z telefonimda ochib ko'rdim va mayda yoki sig'may qolgan joylarni tuzatdim.</span></label></li>
+            <li><label><input type="checkbox" id="l6-h5" data-sub="h5"><span>Bugungi 10 ta so'zdan eng qiyin 3 tasini daftarga yozib, 3 marta ovoz chiqarib aytdim.</span></label></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote">
+      <p class="quote-text">"Yaxshi joylashuvni foydalanuvchi sezmaydi — u shunchaki kerakli narsani darhol topadi. Bugundan sahifangiz har qanday ekranda o'z joyini topadi."</p>
+    </section>
+
+    <section class="next-up">
+      <p class="eyebrow">Keyingi qadam</p>
+      <p class="desc">HTML va CSS asoslarini o'zlashtirdingiz. Tarix qismida esa bugungi telefon va serverlarning ichida ishlayotgan Unix tizimi va C tili qanday tug'ilganini Dennis Ritchining o'zidan eshiting.</p>
+      <button class="btn btn-primary" type="button" data-goto="u">Unix tarixini o'qish</button>
+    </section>
+  </div>
+
+  

@@ -1,0 +1,413 @@
+<!-- ============ TARIX · 1-BOB: KOMPYUTER ============ -->
+  <div class="panel" id="panel-k" data-lesson="k" role="tabpanel" aria-labelledby="tab-k" hidden>
+    <div class="story">
+
+      <section class="hero-card">
+        <img src="media/history/1-bob/rasm-01.jpg" alt="Jon fon Neyman portreti">
+        <div>
+          <p class="eyebrow">1-bob · Hisoblash mashinalari va kompyuter me'morchiligi</p>
+          <h2>Salom, men Jon fon Neyman</h2>
+          <p>Siz hozir qo'lingizda ushlab turgan telefon, bu sahifani ko'rsatayotgan kompyuter — ularning barchasi ichida men 1945-yilda qog'ozga tushirgan sxema ishlaydi. Keling, u qanday tug'ilganini, qaysi muammodan boshlanganini va bugun ham nega o'zgarmay kelayotganini boshidan aytib beraman.</p>
+        </div>
+      </section>
+      <p class="disclaimer">Bu bob Jon fon Neyman tilidan tasavvur qilib yozilgan. Sanalar, raqamlar va texnik tafsilotlar haqiqiy, lekin gaplar uning o'z so'zlari emas.</p>
+
+      <nav class="tl-chips" aria-label="Bob bo'limlari">
+        <button type="button" data-jump="k-muammo">Muammo</button>
+        <button type="button" data-jump="k-yechim">Yechim</button>
+        <button type="button" data-jump="k-mantiq">Mantiq va darvozalar</button>
+        <button type="button" data-jump="k-ikkilik">Ikkilik sanoq</button>
+        <button type="button" data-jump="k-memor">Me'morchilik</button>
+        <button type="button" data-jump="k-cpu">Protsessor ichida</button>
+        <button type="button" data-jump="k-sikl">Buyruqlar sikli</button>
+        <button type="button" data-jump="k-kopruk">Keyingi bobga</button>
+      </nav>
+
+      <!-- MONOLOG -->
+      <section class="chapter">
+        <p class="year">1944-yil, yoz · Aberdin temir yo'l bekati, AQSh</p>
+        <h3>Bekatdagi suhbat</h3>
+        <p>Men 1903-yilda Budapeshtda tug'ilganman. Oilamizda aytishlaricha, olti yoshimda sakkiz xonali sonlarni xayolan bo'lib, mehmonlarni hayratga solar ekanman. Keyinchalik matematika mening tilimga aylandi. 1933-yildan Prinstondagi Ilg'or tadqiqotlar institutida ishladim — Albert Eynshteyn bilan bir binoda.</p>
+        <p>Ikkinchi jahon urushi boshlanganda men harbiy loyihalarga, jumladan Los-Alamosdagi atom loyihasiga maslahatchi bo'ldim. U yerda bir haqiqatni juda aniq tushundim: bizning eng katta dushmanimiz — <strong>hisob-kitob</strong>. Portlash to'lqini qanday tarqalishini bilish uchun millionlab arifmetik amal kerak edi. Ularni esa odamlar qog'oz va mexanik kalkulyator bilan, qo'lda bajarardi. Haftalab.</p>
+        <p>1944-yilning yozida Aberdindagi temir yo'l bekatida poyezd kutib turgandim. Yonimga yosh harbiy matematik <strong>Herman Goldstayn</strong> keldi. Gap orasida u Filadelfiyada soniyasiga 300 dan ortiq ko'paytirish bajaradigan <strong>elektron</strong> mashina qurilayotganini aytdi. Soniyasiga uch yuz! Men uni savolga ko'mib tashladim — keyinchalik u o'sha suhbat doktorlik imtihoniga o'xshab ketganini kulib eslardi. O'sha kuni hayotimning yangi bobi boshlandi. Hisoblash mashinasining ham.</p>
+      </section>
+
+      <!-- MUAMMO -->
+      <section class="chapter" id="k-muammo">
+        <p class="year">1940-yillar · Muammo va tarixiy zamin</p>
+        <h3>"Kompyuter" — mashina emas, kasb edi</h3>
+        <p>Bugun "kompyuter" desangiz, ko'z oldingizga qurilma keladi. 1940-yillarda esa bu so'z <strong>kasbni</strong> bildirardi: <em>computer</em> — "hisoblovchi", ya'ni kun bo'yi hisob-kitob qiladigan odam. Ularning ko'pchiligi yosh ayol-matematiklar edi.</p>
+        <p>Armiyaga <strong>otish jadvallari</strong> kerak edi: har bir to'p uchun, har xil burchak, shamol va havo zichligida snaryad qayerga tushishini ko'rsatadigan jadvallar. Bitta jadval uchun minglab traektoriya hisoblanardi. Bitta traektoriyaning o'zi esa yuzlab ketma-ket amaldan iborat differensial tenglama edi.</p>
+        <figure class="photo"><img src="media/history/1-bob/rasm-02.jpg" alt="NACA Langley markazidagi inson-kompyuterlar hisoblash mashinalari yonida, 1947"><figcaption>"Inson-kompyuterlar" NACA (keyinchalik NASA) Langley tadqiqot markazida, 1947-yil 28-yanvar. Suratda: NASA arxivi.</figcaption></figure>
+        <div class="stats">
+          <div class="stat"><b>~20 soat</b><span>bitta traektoriya — odam, stol kalkulyatori bilan</span></div>
+          <div class="stat"><b>~15 daqiqa</b><span>o'sha traektoriya — mexanik differensial analizator</span></div>
+          <div class="stat"><b>~30 soniya</b><span>o'sha traektoriya — elektron ENIAC</span></div>
+        </div>
+        <p>Odamning muammosi faqat sekinlikda emas edi. Charchagan odam <strong>xato qiladi</strong>. Bitta raqam noto'g'ri ko'chirilsa, undan keyingi hamma hisob buziladi — va buni hech kim sezmaydi. Shuning uchun har bir hisobni ikki kishi alohida bajarib, natijalarni solishtirishardi. Ish ikki barobar ko'payardi.</p>
+
+        <h3>ENIAC: tez, lekin "qo'lda o'rgatiladigan" gigant</h3>
+        <p>Bu muammoni hal qilish uchun Pensilvaniya universitetida <strong>Jon Mokli</strong> va <strong>Presper Ekert</strong> 1943-yildan <strong>ENIAC</strong> (Electronic Numerical Integrator and Computer) ni qurishni boshladi. 1946-yil fevralida u dunyoga namoyish qilindi.</p>
+        <div class="stats">
+          <div class="stat"><b>~18 000</b><span>elektron lampa (vakuum lampa)</span></div>
+          <div class="stat"><b>~27 tonna</b><span>og'irligi, katta zalni to'ldirardi</span></div>
+          <div class="stat"><b>~150 kVt</b><span>elektr quvvati iste'moli</span></div>
+          <div class="stat"><b>5 000</b><span>qo'shish amali soniyasiga</span></div>
+        </div>
+        <figure class="photo"><img src="media/history/1-bob/rasm-03.jpg" alt="ENIAC zali: panellar, lampalar va kabellar"><figcaption>ENIAC 1946-yilda: panellar, minglab lampalar va kabellar bilan to'la zal. O'ngdagi g'ildirakli javonlar — funksiya jadvallari: ular ham o'chirgichlar bilan qo'lda sozlanardi.</figcaption></figure>
+        <p>ENIAC hisoblashda odamdan ming barobar tez edi. Lekin uning bitta katta kamchiligi bor edi: <strong>dastur mashinaning ichida saqlanmasdi</strong>. ENIAC'ga yangi masalani "o'rgatish" uchun odamlar yuzlab <strong>kabellarni</strong> panellar orasida qo'lda qayta ulab, minglab <strong>o'chirgichlarni</strong> (switch) birma-bir burab chiqishi kerak edi. Bu bir necha kundan bir necha haftagacha davom etardi. Hisobning o'zi esa soniyalar olardi.</p>
+        <p>Bu ishni birinchi bo'lib olti ayol bajargan: <strong>Kay Maknalti, Jin Jennings (Bartik), Betti Snayder (Holberton), Marlin Veskoff, Frensis Bilas va Rut Lixterman</strong>. Ularga hech kim qo'llanma bermagan — ular mashinani uning elektr sxemalarini o'qib o'rganishgan. Aslida ular dunyodagi birinchi dasturchilar edi.</p>
+        <div class="photo-row"><figure class="photo"><img src="media/history/1-bob/rasm-04.jpg" alt="Ikki ENIAC dasturchisi kabellarni ulamoqda"><figcaption>Kabel ulash — ENIAC'da dastur yozish shu edi. (Rasmning chap tomoniga keyinroq tenglamalar qo'shib bezalgan.)</figcaption></figure><figure class="photo"><img src="media/history/1-bob/rasm-05.jpg" alt="ENIAC panellari oldida ishlayotgan ikki dasturchi"><figcaption>Bir kishi o'chirgichlarni buraydi, ikkinchisi qog'ozdagi rejaga qarab tekshiradi.</figcaption></figure></div>
+        <p>Yana bir muammo: ENIAC'ning xotirasi juda kichik edi — atigi <strong>20 ta akkumulyator</strong>, har biri bitta 10 xonali o'nlik sonni saqlardi. Bunga dasturni sig'dirishning iloji yo'q edi.</p>
+        <div class="mentor"><img class="im im-l" data-im="light_bulb" alt=""><div><b>Fon Neyman o'ylaydi</b>Tasavvur qiling: dunyodagi eng tez oshpaz bor, lekin har yangi taom uchun unga oshxonani qaytadan qurib berish kerak. Pishirish bir daqiqa, oshxonani qurish esa bir hafta. Muammo oshpazda emas — muammo <strong>retseptni saqlaydigan joy yo'qligida</strong>.</div></div>
+      </section>
+
+      <!-- YECHIM -->
+      <section class="chapter" id="k-yechim">
+        <p class="year">1945-yil 30-iyun · Tub yechim</p>
+        <h3>Dastur ham son — uni xotiraga solamiz</h3>
+        <p>1944–1945-yillar davomida men ENIAC jamoasi bilan uning vorisi — <strong>EDVAC</strong> ustida bahslashdim. Ekert, Mokli, Goldstayn va men soatlab muhokama qilardik. Oxiri men 1945-yil 30-iyunda 101 betlik hujjat yozdim: <strong>"EDVAC haqida hisobotning birinchi qoralamasi"</strong> (First Draft of a Report on the EDVAC).</p>
+        <p>Undagi asosiy g'oya oddiy, lekin inqilobiy edi:</p>
+        <p class="big-idea">Buyruq ham — son. Demak, dasturni ma'lumot bilan birga, <strong>bitta xotirada</strong> saqlash mumkin.</p>
+        <p>Bu <strong>"xotirada saqlanadigan dastur"</strong> (stored-program concept) g'oyasi deb ataladi. Mashina buyruqlarni xotiradan birma-bir o'qiydi va bajaradi. Dasturni o'zgartirish uchun endi sim ulash kerak emas — xotiradagi sonlarni o'zgartirasiz, xolos. Soniyalar ichida.</p>
+        <div class="versus">
+          <div><span class="vt">ENIAC usuli</span><span>Dastur = kabellar va o'chirgichlar.</span><span class="vs">Yangi masala → kunlab qo'l mehnati. Mashina o'z dasturini "bilmaydi".</span></div>
+          <div class="hl"><span class="vt">EDVAC g'oyasi</span><span>Dastur = xotiradagi sonlar.</span><span class="vs">Yangi masala → yangi sonlarni yuklash. Dastur hatto o'zini o'zi o'zgartira oladi.</span></div>
+        </div>
+        <p>Buning oqibati juda chuqur edi. Agar dastur — shunchaki ma'lumot bo'lsa, unda <strong>boshqa dasturni yozadigan dastur</strong> ham bo'lishi mumkin. Bugungi har bir kompilyator, brauzer va operatsion tizim shu g'oya ustida turadi. Siz 3-darsda VS Code'ga yozgan HTML ham — xotiradagi sonlar.</p>
+        <figure class="photo"><img src="media/history/1-bob/rasm-06.jpg" alt="First Draft of a Report on the EDVAC hisobotining muqovasi"><figcaption>1945-yil 30-iyungi hisobotning muqovasi. Tepadagi qo'lyozmaga qaraganda, bu nusxa ENIAC jamoasi a'zosi Artur Burksga tegishli bo'lgan.</figcaption></figure>
+        <p><strong>Adolat uchun.</strong> Hisobot faqat mening ismim bilan tarqaldi: Goldstayn uni ko'paytirib, olimlarga yubordi. Ekert va Mokli bundan qattiq xafa bo'lishdi — g'oyaning shakllanishida ularning hissasi katta edi va hisobot tarqalgani ularning patent olishiga to'sqinlik qildi. Tarixchilar hanuzgacha bahslashadi. Men shuni aytaman: bu jamoaviy ish edi. Bundan tashqari, 1936-yilda yosh ingliz matematigi <strong>Alan Tyuring</strong> qog'ozda <strong>"universal mashina"</strong>ni tasvirlagan edi: lentadan buyruqlarni o'qib, istalgan hisobni bajara oladigan nazariy mashina. Men uning ishini bilardim va juda qadrlardim. Mening sxemam — o'sha g'oyaning muhandislik shakli.</p>
+        <p>Qizig'i, g'oyani birinchi bo'lib amalda ishlatganlar biz emas, inglizlar bo'ldi:</p>
+        <ul class="tl-facts">
+          <li><strong>1948-yil 21-iyun</strong> — Manchesterdagi kichik "Baby" mashinasi xotirada saqlangan dasturni bajargan birinchi elektron kompyuter bo'ldi.</li>
+          <li><strong>1949-yil may</strong> — Kembrijda Moris Uilks qurgan <strong>EDSAC</strong> muntazam ishlay boshladi.</li>
+          <li><strong>1951-yil</strong> — EDVAC'ning o'zi ishga tushdi.</li>
+          <li><strong>1952-yil</strong> — Prinstonda mening jamoam qurgan <strong>IAS mashinasi</strong> to'liq ishga tushdi. Uning chizmalari atayin tekin tarqatildi va dunyo bo'ylab o'nlab "egizaklari" qurildi.</li>
+        </ul>
+        <div class="photo-row">
+          <figure class="photo"><img src="media/history/1-bob/rasm-07.jpg" alt="Manchester Baby mashinasining qayta tiklangan nusxasi"><figcaption>Manchester "Baby" — muzeydagi qayta tiklangan nusxasi. Asl mashina 1948-yil 21-iyunda birinchi dasturini bajargan.</figcaption></figure>
+          <figure class="photo"><img src="media/history/1-bob/rasm-08.jpg" alt="EDSAC kompyuteri, Kembrij"><figcaption>EDSAC, Kembrij universiteti, 1949-yil.</figcaption></figure>
+        </div>
+      </section>
+
+      <!-- MANTIQ -->
+      <section class="chapter" id="k-mantiq">
+        <p class="year">1854 → 1937 · Bul algebrasi va mantiqiy darvozalar</p>
+        <h3>Poyabzalchining o'g'li va 21 yoshli talaba</h3>
+        <p>Xotirada saqlanadigan dastur — bu "nima qilish kerak" degan g'oya. Lekin mashina "qanday" o'ylaydi? Buning javobi mendan ancha oldin topilgan edi.</p>
+        <p><strong>Jorj Bul</strong> — Angliyadagi oddiy poyabzalchining o'g'li, matematikani o'zi mustaqil o'rgangan. 1854-yilda u <em>"Tafakkur qonunlari"</em> (The Laws of Thought) kitobini chiqardi. Unda u mantiqni algebraga aylantirdi: "rost"ni <strong>1</strong>, "yolg'on"ni <strong>0</strong> deb belgilab, fikrlarni sonlar kabi hisoblash mumkinligini ko'rsatdi. Bu <strong>Bul algebrasi</strong> deb ataladi. Deyarli 80 yil davomida uni sof falsafa deb hisoblashdi — hech kim amaliy foydasini ko'rmadi.</p>
+        <p>1937-yilda MIT'ning 21 yoshli talabasi <strong>Klod Shennon</strong> magistrlik dissertatsiyasida hayratlanarli narsani ko'rsatdi: <strong>elektr kalitlari (rele) zanjiri Bul algebrasiga aynan bo'ysunadi</strong>. Ikki kalit <strong>ketma-ket</strong> ulansa — "VA" (AND), <strong>parallel</strong> ulansa — "YOKI" (OR). Kalit yopiq — tok bor — <strong>1</strong>. Kalit ochiq — tok yo'q — <strong>0</strong>. Shu bilan mantiq elektrga aylandi. Bu, ehtimol, tarixdagi eng foydali magistrlik ishlaridan biri bo'lgan.</p>
+        <div class="photo-row">
+          <figure class="photo"><img src="media/history/1-bob/rasm-09.jpg" alt="Jorj Bul portreti"><figcaption>Jorj Bul (1815–1864).</figcaption></figure>
+          <figure class="photo"><img src="media/history/1-bob/rasm-10.jpg" alt="Klod Shennon ish stolida"><figcaption>Klod Shennon (1916–2001).</figcaption></figure>
+        </div>
+        <p><strong>Shennonning g'oyasini o'zingiz sinab ko'ring.</strong> A va B kalitlarini bosing — ketma-ket va parallel zanjirda chiroq qachon yonishini kuzating:</p>
+        <div class="gate-lab" id="gate-lab">
+          <div class="gate-inputs">
+            <button type="button" class="sw-btn" id="g-a" aria-pressed="false">A = 0</button>
+            <button type="button" class="sw-btn" id="g-b" aria-pressed="false">B = 0</button>
+          </div>
+          <div class="circuits">
+            <figure class="circuit">
+              <svg viewBox="0 0 300 120" class="circ" aria-hidden="true">
+                <path class="wire" d="M20 60 H70 M130 60 H160 M220 60 H240"/>
+                <path class="wire" d="M20 60 V100 H280 V60"/>
+                <rect x="8" y="46" width="24" height="28" rx="4" class="batt"/><text x="20" y="65" class="ctx mid">+</text>
+                <circle cx="70" cy="60" r="4" class="pin"/><circle cx="130" cy="60" r="4" class="pin"/>
+                <line x1="70" y1="60" x2="130" y2="60" class="knife" data-sw="a"/>
+                <circle cx="160" cy="60" r="4" class="pin"/><circle cx="220" cy="60" r="4" class="pin"/>
+                <line x1="160" y1="60" x2="220" y2="60" class="knife" data-sw="b"/>
+                <circle cx="260" cy="60" r="18" class="bulb" id="bulb-and"/><path d="M240 60 H242 M278 60 H280" class="wire"/>
+                <text x="100" y="35" class="ctx mid">A</text><text x="190" y="35" class="ctx mid">B</text>
+              </svg >
+              <figcaption><b>Ketma-ket = AND (VA)</b><span>Tok ikkala kalitdan o'tishi kerak.</span></figcaption>
+            </figure>
+            <figure class="circuit">
+              <svg viewBox="0 0 300 140" class="circ" aria-hidden="true">
+                <path class="wire" d="M20 60 H50 V30 H80 M140 30 H170 V60 H240 M50 60 V90 H80 M140 90 H170 V60"/>
+                <path class="wire" d="M20 60 V125 H280 V60"/>
+                <rect x="8" y="46" width="24" height="28" rx="4" class="batt"/><text x="20" y="65" class="ctx mid">+</text>
+                <circle cx="80" cy="30" r="4" class="pin"/><circle cx="140" cy="30" r="4" class="pin"/>
+                <line x1="80" y1="30" x2="140" y2="30" class="knife" data-sw="a"/>
+                <circle cx="80" cy="90" r="4" class="pin"/><circle cx="140" cy="90" r="4" class="pin"/>
+                <line x1="80" y1="90" x2="140" y2="90" class="knife" data-sw="b"/>
+                <circle cx="260" cy="60" r="18" class="bulb" id="bulb-or"/><path d="M240 60 H242 M278 60 H280" class="wire"/>
+                <text x="110" y="14" class="ctx mid">A</text><text x="110" y="116" class="ctx mid">B</text>
+              </svg >
+              <figcaption><b>Parallel = OR (YOKI)</b><span>Tok ikki yo'ldan birini topsa yetadi.</span></figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <h3>Mantiqiy darvozalar (Logic Gates)</h3>
+        <p>Bugungi kompyuterda rele yo'q. Avval ularning o'rnini elektron lampalar (ENIAC), 1947-yildan keyin esa <strong>tranzistorlar</strong> egalladi. Tranzistor — tok bilan boshqariladigan mitti kalit: kirishiga kuchlanish berilsa, ochiladi. Zamonaviy protsessorda ular <strong>o'nlab milliard</strong>. Bir necha tranzistordan <strong>mantiqiy darvoza</strong> yasaladi — bir yoki ikki bitni olib, bitta bit qaytaradigan eng kichik "fikrlovchi" qurilma.</p>
+        <figure class="photo"><img src="media/history/1-bob/rasm-11.jpg" alt="Kaftda mikrosxema, tranzistor va vakuum lampa"><figcaption>Kaftdagi evolyutsiya: o'ngda — vakuum lampa, o'rtada — bitta tranzistor, chapda — ichida minglab tranzistor bo'lgan mikrosxema.</figcaption></figure>
+        <p>Yuqoridagi A va B kalitlari hozir quyidagi darvozalarga ham ulangan. <strong>Rostlik jadvali</strong> (truth table) — darvozaning barcha mumkin bo'lgan kirishlarda nima qaytarishini ko'rsatadigan to'liq ro'yxat. Hozirgi holat jadvalda ajratib ko'rsatiladi:</p>
+        <div class="gates" id="gates"></div>
+
+        <h3>Darvozalardan qo'shish yasaymiz</h3>
+        <p>Ikkilik sanoqda: 0+0=0, 0+1=1, 1+0=1, lekin <strong>1+1=10</strong> (ya'ni "ikki": yig'indi 0, keyingi xonaga 1 ko'chadi). Qarang: <strong>yig'indi</strong> (Sum) — bu aynan XOR, <strong>ko'chirish</strong> (Carry) esa — aynan AND. Ikkita darvoza — va mashina qo'shishni biladi! Bu sxema <strong>yarim qo'shuvchi</strong> (half adder) deyiladi. Undan 64 tasini zanjir qilib ulasangiz, protsessor 64 bitli sonlarni qo'sha oladi.</p>
+        <div class="adder" id="adder"></div>
+        <div class="mentor"><img class="im im-l" data-im="brain" alt=""><div><b>Qiziq fakt</b>Faqat bitta turdagi darvoza — <strong>NAND</strong> (AND + NOT) dan qolgan barcha darvozalarni yasash mumkin. Ya'ni butun kompyuterni, nazariy jihatdan, bir xil g'ishtdan qurish mumkin.</div></div>
+      </section>
+
+      <!-- IKKILIK -->
+      <section class="chapter" id="k-ikkilik">
+        <p class="year">Ikkilik sanoq sistemasi (Binary)</p>
+        <h3>Nega o'n emas, aynan ikki?</h3>
+        <p>ENIAC, aslida, <strong>o'nlik</strong> sistemada ishlardi: har bir raqamni saqlash uchun 10 ta lampadan iborat halqa ishlatilardi. Mashinaning shunchalik katta bo'lishining bir sababi ham shu. EDVAC hisobotida men <strong>ikkilik</strong> sistemani taklif qildim. Sababi — fizika.</p>
+        <p>Simdagi kuchlanish hech qachon mukammal barqaror bo'lmaydi: harorat, qo'shni simlar, eskirgan detallar uni doim ozgina "titratadi". Bu <strong>shovqin</strong> deyiladi. Agar 0–5 volt oralig'ini 10 ta darajaga bo'lsangiz, har bir raqamga atigi 0,5 volt tegadi — ozgina shovqin 6 ni 7 ga aylantirib qo'yadi. Agar faqat ikkita holat bo'lsa, ular orasida katta "xavfsizlik zonasi" qoladi:</p>
+        <figure class="fig">
+          <div class="scroll-x"><svg viewBox="0 0 640 250" class="scene volt" role="img" aria-label="O'nlik va ikkilik signallarning shovqinga chidamliligi">
+            <text x="160" y="20" class="tx mid">10 daraja (o'nlik)</text>
+            <text x="480" y="20" class="tx mid">2 daraja (ikkilik)</text>
+            <rect x="40" y="35" width="240" height="190" class="sf"/>
+            <g class="lvl">
+              <line x1="40" y1="54" x2="280" y2="54"/><line x1="40" y1="73" x2="280" y2="73"/><line x1="40" y1="92" x2="280" y2="92"/><line x1="40" y1="111" x2="280" y2="111"/><line x1="40" y1="130" x2="280" y2="130"/><line x1="40" y1="149" x2="280" y2="149"/><line x1="40" y1="168" x2="280" y2="168"/><line x1="40" y1="187" x2="280" y2="187"/><line x1="40" y1="206" x2="280" y2="206"/>
+            </g>
+            <polyline class="sig bad" points="40,140 60,128 80,146 100,125 120,150 140,132 160,121 180,147 200,136 220,124 240,152 260,131 280,139"/>
+            <text x="160" y="244" class="txm mid">Shovqin 6 ni 5 yoki 7 ga aylantiradi</text>
+            <rect x="360" y="35" width="240" height="190" class="sf"/>
+            <rect x="360" y="35" width="240" height="114" class="zone1"/>
+            <rect x="360" y="187" width="240" height="38" class="zone0"/>
+            <text x="368" y="136" class="tx">1 (2–5 V)</text>
+            <text x="368" y="173" class="txm">noaniq zona</text>
+            <text x="368" y="212" class="tx">0 (0–0,8 V)</text>
+            <polyline class="sig good" points="360,70 380,62 400,78 420,58 440,74 460,66 480,210 500,203 520,214 540,200 560,68 580,76 600,60"/>
+            <text x="480" y="244" class="txm mid">Shovqin bo'lsa ham 1 va 0 adashmaydi</text>
+            <text x="30" y="40" class="txm" text-anchor="end">5V</text><text x="30" y="228" class="txm" text-anchor="end">0V</text>
+          </svg ></div>
+          <figcaption>Misol uchun klassik TTL mikrosxemalarida 0–0,8 volt "0" deb, 2–5 volt esa "1" deb o'qiladi. Orasidagi zona ataylab bo'sh qoldiriladi.</figcaption>
+        </figure>
+        <p>Ikkinchi sabab: lampa ham, tranzistor ham tabiatan <strong>ikki holatda</strong> eng ishonchli ishlaydi — to'liq ochiq yoki to'liq yopiq. Uchinchisi: ikkilik arifmetika Bul algebrasiga to'g'ridan-to'g'ri tushadi. Yuqorida ko'rdingiz — qo'shish bor-yo'g'i ikkita darvoza.</p>
+
+        <h3>Bit va bayt</h3>
+        <p>O'nlik sistemada har bir xona 10 barobar katta: birlar, o'nlar, yuzlar. Ikkilikda esa har bir xona <strong>2 barobar</strong> katta: 1, 2, 4, 8, 16, 32, 64, 128. Masalan, <code class="inline">1011</code> = 8 + 0 + 2 + 1 = <strong>11</strong>.</p>
+        <ul class="plain">
+          <li><strong>Bit</strong> (binary digit — ikkilik raqam) — eng kichik ma'lumot birligi: 0 yoki 1. So'zni statistik Jon Tyuki o'ylab topgan, 1948-yilda Klod Shennon uni mashhur maqolasida ishlatib, ommalashtirdi.</li>
+          <li><strong>Bayt</strong> — 8 bit. Atamani 1956-yilda IBM muhandisi Verner Buxholts kiritgan. 8 bitli bayt 1964-yilda IBM System/360 bilan standartga aylandi.</li>
+          <li>8 bit bilan <strong>2<sup>8</sup> = 256</strong> xil holatni ifodalash mumkin: <code class="inline">00000000</code> (0) dan <code class="inline">11111111</code> (255) gacha.</li>
+        </ul>
+
+        <h3>Harflar qanday son bo'ladi: ASCII</h3>
+        <p>Kompyuter faqat sonlarni biladi. Harfni saqlash uchun odamlar kelishib oldi: har bir harfga bitta son beriladi. 1963-yilda Amerikada <strong>ASCII</strong> jadvali qabul qilindi: 7 bit, 128 ta belgi. Unda <code class="inline">A</code> = 65, <code class="inline">B</code> = 66, <code class="inline">a</code> = 97, <code class="inline">0</code> raqami = 48, bo'sh joy = 32.</p>
+        <p><strong>Bitlarni o'zingiz yoqib-o'chiring</strong> — yoki pastga harf yozing va uning ikkilik ko'rinishini ko'ring:</p>
+        <div class="bin-lab" id="bin-lab">
+          <div class="bits" id="bits"></div>
+          <div class="bin-out">
+            <div><span>Ikkilik</span><b id="bin-bin">01000001</b></div>
+            <div><span>O'nlik</span><b id="bin-dec">65</b></div>
+            <div><span>ASCII belgi</span><b id="bin-chr">A</b></div>
+          </div>
+          <p class="bin-sum" id="bin-sum"></p>
+          <div class="check-row"><input id="bin-in" type="text" maxlength="1" autocomplete="off" spellcheck="false" placeholder="Harf yozing: masalan, Z" aria-label="Bitta harf yozing"></div>
+        </div>
+        <figure class="photo"><img src="media/history/1-bob/rasm-12.png" alt="ASCII jadvalidan parcha: A–Z va a–z harflari kodlari"><figcaption>ASCII jadvalidan parcha. Katta harflar 65 dan, kichiklari 97 dan boshlanadi. Ikkilikda A (0100 0001) va a (0110 0001) faqat bitta bit bilan farq qiladi.</figcaption></figure>
+        <div class="mentor"><img class="im im-l" data-im="globe_with_meridians" alt=""><div><b>3-dars bilan bog'liqlik</b>ASCII'da o'zbekcha <code class="inline">o'</code>, <code class="inline">g'</code>, rus yoki xitoy harflari yo'q edi. 1992-yilda Ken Tompson va Rob Payk <strong>UTF-8</strong> ni yaratdi: u ASCII'ni buzmasdan dunyodagi barcha yozuvlarni sig'diradi. 3-darsda yozgan <code class="inline">&lt;meta charset="UTF-8"&gt;</code> brauzerga aynan shuni aytadi.</div></div>
+      </section>
+
+      <!-- ME'MORCHILIK -->
+      <section class="chapter" id="k-memor">
+        <p class="year">Fon Neyman me'morchiligi (Von Neumann Architecture)</p>
+        <h3>To'rtta qism — va bugun ham o'zgarmagan</h3>
+        <p>1945-yilgi hisobotimda men mashinani inson asab tizimiga o'xshatib, bir nechta "organ"ga bo'lgan edim. Bugungi tilda ular to'rtta asosiy qismga birlashadi. Qismni bosing — u haqida o'qing:</p>
+        <div class="arch" id="arch">
+          <div class="scroll-x"><svg viewBox="0 0 640 400" class="arch-svg" role="group" aria-label="Fon Neyman me'morchiligi sxemasi">
+            <g class="bus-lines">
+              <line x1="30" y1="252" x2="610" y2="252" class="bus b-addr"/>
+              <line x1="30" y1="272" x2="610" y2="272" class="bus b-data"/>
+              <line x1="30" y1="292" x2="610" y2="292" class="bus b-ctrl"/>
+              <line x1="165" y1="210" x2="165" y2="292" class="bus"/>
+              <line x1="475" y1="210" x2="475" y2="292" class="bus"/>
+              <line x1="165" y1="252" x2="165" y2="330" class="bus"/>
+              <line x1="475" y1="252" x2="475" y2="330" class="bus"/>
+            </g>
+            <g class="arch-part" data-part="bus" tabindex="0" role="button" aria-label="Tizim shinasi">
+              <rect x="20" y="218" width="600" height="88" rx="10" class="hit"/>
+              <text x="320" y="236" class="alabel mid">Tizim shinasi</text>
+            </g>
+            <g class="arch-part" data-part="cpu" tabindex="0" role="button" aria-label="Protsessor">
+              <rect x="20" y="20" width="290" height="190" rx="14" class="box accent"/>
+              <text x="165" y="48" class="atitle mid">CPU — protsessor</text>
+              <rect x="40" y="64" width="115" height="62" rx="8" class="inner"/><text x="97" y="92" class="alabel mid">CU</text><text x="97" y="112" class="asub mid">boshqaruv</text>
+              <rect x="175" y="64" width="115" height="62" rx="8" class="inner"/><text x="232" y="92" class="alabel mid">ALU</text><text x="232" y="112" class="asub mid">hisoblash</text>
+              <rect x="40" y="140" width="250" height="54" rx="8" class="inner"/><text x="165" y="164" class="alabel mid">Registrlar</text><text x="165" y="184" class="asub mid">PC · IR · ACC · MAR · MDR</text>
+            </g>
+            <g class="arch-part" data-part="ram" tabindex="0" role="button" aria-label="Xotira">
+              <rect x="330" y="20" width="290" height="190" rx="14" class="box"/>
+              <text x="475" y="48" class="atitle mid">RAM — xotira</text>
+              <g class="cells">
+                <rect x="350" y="64" width="250" height="24" rx="4"/><rect x="350" y="92" width="250" height="24" rx="4"/><rect x="350" y="120" width="250" height="24" rx="4"/><rect x="350" y="148" width="250" height="24" rx="4"/>
+              </g>
+              <text x="362" y="81" class="acode">0: 0001 1101</text><text x="362" y="109" class="acode">1: 0010 1110</text><text x="362" y="137" class="acode">2: 0100 1111</text><text x="362" y="165" class="acode">…  dastur + ma'lumot</text>
+              <text x="475" y="196" class="asub mid">buyruqlar va ma'lumotlar birga</text>
+            </g>
+            <g class="arch-part" data-part="in" tabindex="0" role="button" aria-label="Kiritish qurilmalari">
+              <rect x="20" y="330" width="290" height="56" rx="12" class="box"/>
+              <text x="165" y="356" class="atitle mid">Kiritish (Input)</text><text x="165" y="376" class="asub mid">klaviatura · sichqoncha · mikrofon</text>
+            </g>
+            <g class="arch-part" data-part="out" tabindex="0" role="button" aria-label="Chiqarish qurilmalari">
+              <rect x="330" y="330" width="290" height="56" rx="12" class="box"/>
+              <text x="475" y="356" class="atitle mid">Chiqarish (Output)</text><text x="475" y="376" class="asub mid">ekran · karnay · printer</text>
+            </g>
+          </svg ></div>
+          <div class="arch-info" id="arch-info" aria-live="polite"><p class="kb-info-title">Sxemadagi qismni bosing</p><p>Har bir qism nima qilishi shu yerda chiqadi.</p></div>
+        </div>
+        <ul class="plain">
+          <li><strong>CPU (protsessor)</strong> — hisoblaydi va boshqaradi. Ichida boshqaruv qurilmasi (CU), arifmetik-mantiqiy qurilma (ALU) va registrlar bor.</li>
+          <li><strong>RAM (tezkor xotira)</strong> — raqamlangan kataklar qatori. Har bir katakning <strong>manzili</strong> bor. Unda <strong>buyruqlar ham, ma'lumotlar ham</strong> birga saqlanadi — bu mening sxemamning asosiy belgisi.</li>
+          <li><strong>Kiritish/chiqarish (I/O)</strong> — mashinaning tashqi dunyo bilan aloqasi. 1-darsdagi "kirish → ishlov → chiqish" ni eslang.</li>
+          <li><strong>Tizim shinasi (System Bus)</strong> — hammasini bog'laydigan simlar to'plami. Uchta qismdan iborat: <strong>manzil shinasi</strong> (qaysi katak kerak), <strong>ma'lumot shinasi</strong> (katakdagi son) va <strong>boshqaruv shinasi</strong> (o'qish yoki yozish).</li>
+        </ul>
+        <figure class="photo"><img src="media/history/1-bob/rasm-13.jpg" alt="Fon Neyman va Robert Oppengeymer IAS mashinasi oldida"><figcaption>Fon Neyman (chapda) va Robert Oppengeymer Prinstondagi IAS mashinasi oldida, 1952-yil.</figcaption></figure>
+
+        <h3>"Fon Neyman to'sig'i" (Von Neumann Bottleneck)</h3>
+        <p>Sxemamning kuchi — soddaligida. Uning zaif joyi ham shu yerda. Buyruq ham, ma'lumot ham xotiradan protsessorga <strong>bitta yo'l</strong> — shina orqali keladi. Protsessor qanchalik tez bo'lmasin, u har bir buyruq va har bir son uchun shu tor yo'ldan navbat kutadi. Protsessorlar yildan-yilga xotiradan ancha tezroq tezlashib bordi va bu farq kattalashaverdi.</p>
+        <p>Bu muammoga nom bergan — FORTRAN tilining muallifi <strong>Jon Bekus</strong>. 1977-yilda Tyuring mukofotini olayotganda u uni "fon Neyman to'sig'i" deb atadi. Yechimni esa EDSAC'ning yaratuvchisi Moris Uilks 1965-yilda taklif qildi: protsessor yoniga kichik, lekin juda tez <strong>"yordamchi xotira"</strong> qo'yish. Bugun u <strong>kesh</strong> (cache) deyiladi. Kesh bilan chiqqan birinchi tijoriy kompyuter — 1968-yildagi IBM System/360 Model 85.</p>
+        <div class="mentor"><img class="im im-l" data-im="cook" alt=""><div><b>Oshxona misoli</b>Protsessor — oshpaz. Registr — uning qo'lidagi pichoq. Kesh — plita yonidagi stol. RAM — boshqa xonadagi muzlatgich. Disk — shahar chetidagi ombor. Oshpaz qanchalik chaqqon bo'lmasin, har bir piyoz uchun muzlatgichga yugursa, taom kechikadi. Kesh — tez-tez kerak bo'ladigan narsalarni oldindan stolga olib qo'yish.</div></div>
+        <div class="hier">
+          <div class="hier-row"><b>Registr</b><span class="bar" style="--w:4%"></span><em>~0,3 ns</em><i>1 soniya</i></div>
+          <div class="hier-row"><b>L1 kesh</b><span class="bar" style="--w:8%"></span><em>~1 ns</em><i>~3 soniya</i></div>
+          <div class="hier-row"><b>L2 kesh</b><span class="bar" style="--w:16%"></span><em>~4 ns</em><i>~13 soniya</i></div>
+          <div class="hier-row"><b>L3 kesh</b><span class="bar" style="--w:30%"></span><em>~15 ns</em><i>~50 soniya</i></div>
+          <div class="hier-row"><b>RAM</b><span class="bar" style="--w:60%"></span><em>~100 ns</em><i>~5 daqiqa</i></div>
+          <div class="hier-row"><b>SSD disk</b><span class="bar" style="--w:100%"></span><em>~100 000 ns</em><i>~4 kun</i></div>
+          <p class="hier-note">Taxminiy qiymatlar. O'ng ustun: registrga murojaat 1 soniya bo'lganda, qolganlari qancha "kutish" bo'lardi.</p>
+        </div>
+        <figure class="photo"><img src="media/history/1-bob/rasm-14.png" alt="Xotira ierarxiyasi piramidasi"><figcaption>Xotira ierarxiyasi: yuqoriga chiqqan sari tezroq va qimmatroq, pastga tushgan sari kattaroq va sekinroq.</figcaption></figure>
+        <p><strong>Muqobil yo'l.</strong> Buyruqlar va ma'lumotlar uchun <strong>alohida</strong> xotira va alohida yo'l ishlatish ham mumkin — bu <strong>Garvard me'morchiligi</strong> deyiladi (1944-yildagi Harvard Mark I mashinasi nomidan). Bugungi protsessorlar ikkalasini birlashtiradi: umumiy RAM — mening sxemam bo'yicha, lekin protsessorga eng yaqin L1 kesh buyruqlar va ma'lumotlar uchun ikkiga bo'lingan.</p>
+      </section>
+
+      <!-- CPU ICHIDA -->
+      <section class="chapter" id="k-cpu">
+        <p class="year">Protsessorning ichki tuzilishi (CPU Internals)</p>
+        <h3>Dirijyor, kalkulyator va beshta cho'ntak</h3>
+        <p>Protsessorni orkestr deb tasavvur qiling. <strong>Boshqaruv qurilmasi (CU — Control Unit)</strong> — dirijyor: o'zi hech narsa hisoblamaydi, lekin kim qachon nima qilishini aytadi. <strong>ALU (Arithmetic Logic Unit)</strong> — musiqachi: haqiqiy ishni bajaradi. U yuqorida ko'rgan darvozalardan qurilgan va ikki xil ish qiladi:</p>
+        <ul class="plain">
+          <li><strong>Arifmetik amallar:</strong> qo'shish, ayirish, (ko'p protsessorlarda) ko'paytirish va bo'lish.</li>
+          <li><strong>Mantiqiy amallar:</strong> AND, OR, NOT, XOR, ikki sonni taqqoslash ("teng", "katta").</li>
+        </ul>
+        <p><strong>Registrlar</strong> — protsessor ichidagi eng tez, lekin juda kichik xotira kataklari. Ular protsessorning "cho'ntaklari": hozir kerak bo'lgan narsa shu yerda turadi. Mening sxemamdagi eng muhim beshtasi:</p>
+        <div class="regs-table">
+          <div class="rt-row"><b>PC</b><span><strong>Program Counter</strong> — dastur hisoblagichi</span><span>Keyingi bajariladigan buyruqning <strong>manzili</strong>. Kitobdagi xatcho'p kabi: qayerda to'xtaganingizni eslab turadi.</span></div>
+          <div class="rt-row"><b>IR</b><span><strong>Instruction Register</strong> — buyruq registri</span><span>Hozir bajarilayotgan <strong>buyruqning o'zi</strong>. CU uni shu yerdan o'qib, tahlil qiladi.</span></div>
+          <div class="rt-row"><b>ACC</b><span><strong>Accumulator</strong> — akkumulyator</span><span>Hisob natijasi yig'iladigan joy. Kalkulyator ekranidagi son kabi: har bir amal shu son ustida bajariladi.</span></div>
+          <div class="rt-row"><b>MAR</b><span><strong>Memory Address Register</strong> — xotira manzili registri</span><span>Xotiraning <strong>qaysi katagiga</strong> murojaat qilinayotgani. Manzil shinasiga ulangan.</span></div>
+          <div class="rt-row"><b>MDR</b><span><strong>Memory Data Register</strong> — xotira ma'lumoti registri</span><span>Xotiradan kelgan yoki xotiraga ketayotgan <strong>son</strong>. Ma'lumot shinasiga ulangan.</span></div>
+        </div>
+        <p>Hammasini bitta yurak urishi boshqaradi — <strong>takt generatori</strong> (clock). U har bir qadamni boshlash uchun signal beradi. "3 GHz protsessor" degani — soniyasiga 3 milliard takt.</p>
+      </section>
+
+      <!-- SIKL -->
+      <section class="chapter" id="k-sikl">
+        <p class="year">Buyruqlar sikli (Instruction Cycle)</p>
+        <h3>Olish → Tahlil → Bajarish → Saqlash. Va yana boshidan.</h3>
+        <p>Kompyuter yoqilgan paytdan o'chguncha bitta ishni qiladi: to'rt qadamli siklni cheksiz aylantiradi.</p>
+        <ol class="howto cycle-list">
+          <li><strong>Fetch (Olish).</strong> <code class="inline">MAR ← PC</code>: manzil xotiraga yuboriladi. <code class="inline">MDR ← RAM[MAR]</code>: katakdagi buyruq keladi. <code class="inline">IR ← MDR</code>: buyruq buyruq registriga tushadi. <code class="inline">PC ← PC + 1</code>: xatcho'p keyingi buyruqqa suriladi.</li>
+          <li><strong>Decode (Tahlil).</strong> CU buyruqni ikkiga bo'ladi: <strong>opkod</strong> (opcode — nima qilish kerak) va <strong>operand</strong> (qaysi manzil bilan).</li>
+          <li><strong>Execute (Bajarish).</strong> Kerakli son xotiradan olinadi va ALU amalni bajaradi.</li>
+          <li><strong>Writeback (Saqlash).</strong> Natija akkumulyatorga yoki xotiraga yoziladi. So'ng — yana 1-qadam.</li>
+        </ol>
+        <p>Bizning o'quv mashinamizda har bir buyruq 8 bit: chapdagi 4 bit — opkod, o'ngdagi 4 bit — xotira manzili (0 dan 15 gacha).</p>
+        <div class="isa">
+          <div><code>0001</code><b>LOAD n</b><span>ACC ← RAM[n]</span></div>
+          <div><code>0010</code><b>ADD n</b><span>ACC ← ACC + RAM[n]</span></div>
+          <div><code>0011</code><b>SUB n</b><span>ACC ← ACC − RAM[n]</span></div>
+          <div><code>0100</code><b>STORE n</b><span>RAM[n] ← ACC</span></div>
+          <div><code>1111</code><b>HALT</b><span>to'xta</span></div>
+        </div>
+        <p><strong>Mashinani o'zingiz yurgizing.</strong> Xotirada 4 ta buyruqdan iborat dastur bor: 13-katakdagi sonni olish, 14-katakdagini qo'shish, natijani 15-katakka yozish, to'xtash. "Keyingi qadam" ni bosib, har bir registrni kuzating:</p>
+        <div class="cpu-sim" id="cpu-sim">
+          <div class="phases" id="cpu-phases">
+            <span data-ph="fetch">1 · Fetch</span><span data-ph="decode">2 · Decode</span><span data-ph="execute">3 · Execute</span><span data-ph="writeback">4 · Writeback</span>
+          </div>
+          <div class="cpu-grid">
+            <div class="cpu-core">
+              <p class="cpu-h">CPU</p>
+              <div class="regs" id="cpu-regs"></div>
+              <div class="alu" id="cpu-alu"><b>ALU</b><span>kutmoqda</span></div>
+            </div>
+            <div class="cpu-mem">
+              <p class="cpu-h">RAM</p>
+              <div class="mem-rows" id="cpu-mem"></div>
+            </div>
+          </div>
+          <p class="cpu-log" id="cpu-log" aria-live="polite">Boshlash uchun "Keyingi qadam" ni bosing.</p>
+          <div class="cpu-ctl">
+            <label>13-katak: <input type="number" id="cpu-a" min="0" max="120" value="5"></label>
+            <label>14-katak: <input type="number" id="cpu-b" min="0" max="120" value="7"></label>
+            <button type="button" class="btn btn-primary" id="cpu-step">Keyingi qadam</button>
+            <button type="button" class="btn" id="cpu-run">Avtomatik</button>
+            <button type="button" class="btn" id="cpu-reset">Boshidan</button>
+          </div>
+        </div>
+        <figure class="photo"><img src="media/history/1-bob/rasm-15.jpg" alt="Fetch bosqichi diagrammasi: PC, MAR, manzil shinasi va xotira"><figcaption>Fetch bosqichi: PC dagi manzil MAR ga o'tadi va manzil shinasi orqali xotiraga boradi. Diagrammadagi BR — biz MDR deb atagan registr.</figcaption></figure>
+        <p>Siz hozir to'rtta buyruq va o'n beshta qadamda <strong>5 + 7</strong> ni hisobladingiz. Zamonaviy protsessor esa bunday sikllarni soniyasiga milliardlab marta aylantiradi. Buning ustiga u <strong>konveyer</strong> (pipeline) usulini ishlatadi: bitta buyruq bajarilayotganda keyingisi allaqachon tahlil qilinadi, undan keyingisi esa xotiradan olinadi — xuddi zavod konveyeridagi kabi.</p>
+      </section>
+
+      <!-- KO'PRIK -->
+      <section class="chapter" id="k-kopruk">
+        <p class="year">Keyingi bobga ko'prik</p>
+        <h3>Nollar va birlar dengizida</h3>
+        <p>Endi bir tasavvur qiling: har bir dastur — shunday nollar va birlardan iborat. Buni <strong>mashina kodi</strong> deyishadi. Yuzlab, minglab qatorlar. Bitta bit xato — va dastur butunlay boshqa narsa qiladi. Xatoni topish uchun esa minglab <code class="inline">0</code> va <code class="inline">1</code> ni ko'z bilan tekshirasiz.</p>
+        <div class="versus">
+          <div><span class="vt">Mashina kodi</span><pre class="code">0001 1101
+0010 1110
+0100 1111
+1111 0000</pre><span class="vs">Mashina tushunadi. Odam — qiynaladi.</span></div>
+          <div class="hl"><span class="vt">Xuddi shu dastur, so'zlar bilan</span><pre class="code">LOAD  13
+ADD   14
+STORE 15
+HALT</pre><span class="vs">Odam o'qiy oladi. Lekin mashina buni tushunmaydi — kimdir tarjima qilishi kerak.</span></div>
+        </div>
+        <p>Odamlar tezda shunday savol berishdi: nega buyruqlarni <strong>qisqa so'zlar</strong> bilan yozib, sonlarga tarjima qilishni mashinaning o'ziga topshirmaslik kerak? Axir, dastur ham ma'lumot-ku — demak, tarjimon ham dastur bo'la oladi!</p>
+        <ul class="tl-facts">
+          <li><strong>1947</strong> — London, Birkbek kolleji: <strong>Ketlin But</strong> ARC mashinasi uchun buyruqlarni qisqa belgilar bilan yozish tizimini yaratdi. U birinchi <strong>assembler tili</strong> muallifi hisoblanadi.</li>
+          <li><strong>1949</strong> — Kembrij, EDSAC: <strong>Devid Uiler</strong> yozgan "boshlang'ich buyruqlar" (initial orders) harfli buyruqlarni avtomatik ravishda mashina kodiga o'girardi.</li>
+        </ul>
+        <figure class="photo"><img src="media/history/1-bob/rasm-16.jpg" alt="Ketlin But kompyuter paneli oldida"><figcaption>Ketlin But (1922–2022) — birinchi assembler tilining muallifi. U 100 yil umr ko'rdi.</figcaption></figure>
+        <p>Tan olishim kerak: aytishlaricha, Prinstondagi bir talaba shunday tarjimon dastur yozganida, men norozi bo'lganman — qimmatbaho hisoblash mashinasini kotiblik ishiga sarflash isrof, degan ekanman. Bu voqea qanchalik aniq ekanini bilmayman. Lekin agar shunday degan bo'lsam — men xato qilganman. O'sha "kotiblik ishi" dasturlashni bir necha olimning san'atidan millionlab odamning kasbiga aylantirdi.</p>
+        <p class="big-idea">Keyingi bob: <strong>Assembler</strong> — odam tili bilan mashina tili orasidagi birinchi ko'prik.</p>
+        <button class="btn btn-primary" type="button" data-goto="a">Assembler tarixini o'qish</button>
+      </section>
+
+      <section class="quote">
+        <p class="quote-text">"Men mashinani odamning miyasiga o'xshatib chizganman. Endi siz o'sha mashinaga o'z tilingizda gapirishni o'rganyapsiz. Har bir yozgan tegingiz — bir necha milliard fetch–decode–execute sikli."</p>
+      </section>
+
+      <section class="chapter">
+        <p class="year">Mashq</p>
+        <h3>10 ta yangi so'z</h3>
+        <p>Kartani bosing — so'z ovoz chiqarib o'qiladi.</p>
+        <div class="word-grid" data-words="computer"></div>
+      </section>
+
+      <section class="chapter">
+        <p class="year">Tekshiruv</p>
+        <h3>Bobni qanchalik tushundingiz?</h3>
+        <div class="quiz" data-pass="6">
+          <div class="qitem"><p class="q">1. ENIAC'ga yangi masala qanday "o'rgatilardi"?</p><div class="opts" data-correct="1"><button type="button">Klaviaturadan dastur yozib</button><button type="button">Kabellar va o'chirgichlarni qo'lda qayta ulab</button><button type="button">Diskdan dastur yuklab</button></div><p class="explain" hidden>Dastur mashinaning xotirasida emas, simlarida edi. Bu kunlab davom etardi.</p></div>
+          <div class="qitem"><p class="q">2. "Stored-program" g'oyasining mohiyati nima?</p><div class="opts" data-correct="0"><button type="button">Dastur va ma'lumot bitta xotirada, sonlar ko'rinishida saqlanadi</button><button type="button">Dastur qog'ozda saqlanadi</button><button type="button">Har bir dastur uchun alohida mashina quriladi</button></div><p class="explain" hidden>Buyruq ham son. Demak, uni ma'lumot bilan birga saqlash va tez almashtirish mumkin.</p></div>
+          <div class="qitem"><p class="q">3. AND darvozasi qachon 1 qaytaradi?</p><div class="opts" data-correct="2"><button type="button">Kirishlardan biri 1 bo'lsa</button><button type="button">Ikkala kirish 0 bo'lsa</button><button type="button">Ikkala kirish ham 1 bo'lsa</button></div><p class="explain" hidden>Ketma-ket ulangan ikki kalit: tok ikkalasidan o'tishi kerak.</p></div>
+          <div class="qitem"><p class="q">4. Nega kompyuterlar ikkilik sistemani ishlatadi?</p><div class="opts" data-correct="1"><button type="button">Chunki 2 soni chiroyli</button><button type="button">Ikki holatni shovqinda ham ishonchli ajratish mumkin</button><button type="button">Chunki o'nlik sistema hali ixtiro qilinmagan edi</button></div><p class="explain" hidden>0 va 1 orasida katta xavfsizlik zonasi qoladi, kalitlar ham tabiatan ikki holatli.</p></div>
+          <div class="qitem"><p class="q">5. 1 bayt (8 bit) nechta xil holatni ifodalaydi?</p><div class="opts" data-correct="2"><button type="button">8</button><button type="button">16</button><button type="button">256</button></div><p class="explain" hidden>2⁸ = 256: 0 dan 255 gacha.</p></div>
+          <div class="qitem"><p class="q">6. PC (Program Counter) registrida nima saqlanadi?</p><div class="opts" data-correct="0"><button type="button">Keyingi buyruqning manzili</button><button type="button">Hisob natijasi</button><button type="button">Ekrandagi rasm</button></div><p class="explain" hidden>PC — xatcho'p. Natija esa ACC'da.</p></div>
+          <div class="qitem"><p class="q">7. "Fon Neyman to'sig'i" nima?</p><div class="opts" data-correct="1"><button type="button">Protsessorning qizib ketishi</button><button type="button">Tez protsessorning sekin xotira yo'lini kutib qolishi</button><button type="button">Kompyuterga parol qo'yish</button></div><p class="explain" hidden>Buyruq ham, ma'lumot ham bitta shinadan keladi. Yechim — kesh.</p></div>
+          <div class="quiz-foot"><span class="quiz-score"></span><button type="button" class="btn quiz-reset">Qaytadan</button></div>
+        </div>
+      </section>
+
+      <!-- RASMLAR RO'YXATI -->
+      <section class="chapter wanted">
+        <p class="year">Muallif uchun</p>
+        <h3>📸 Kitob uchun kerakli rasmlar va diagrammalar ro'yxati</h3>
+        <p>Bob ichida kulrang ramkali joylar rasm kutyapti. Har biriga inglizcha qidiruv iborasi berilgan — Google Images yoki Pinterest'ga nusxa olib qo'ying. Topilgan rasmlarni K-raqami bilan nomlab yuboring.</p>
+        <ol class="wanted-list" id="wanted-list"></ol>
+        <p class="save-hint">Mualliflik huquqi uchun: iloji bo'lsa Wikimedia Commons, Computer History Museum yoki universitet arxivlaridagi erkin rasmlarni tanlang.</p>
+      </section>
+
+    </div>
+  </div>
+
+  

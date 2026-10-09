@@ -1,0 +1,343 @@
+<!-- ============ TARIX · 4-BOB: INTERNET ============ -->
+  <div class="panel" id="panel-i" data-lesson="i" role="tabpanel" aria-labelledby="tab-i" hidden>
+    <div class="story">
+
+      <section class="hero-card">
+        <img src="media/history/4-bob/rasm-01.jpg" alt="Vint Serf doska oldida, 1970-yillar">
+        <div>
+          <p class="eyebrow">4-bob · Internet: tarmoqlar tarmog'i</p>
+          <h2>Salom, men Vint Serf</h2>
+          <p>Odamlar meni ba'zan "internetning otasi" deb atashadi. Men har safar tuzataman: internetning otalari va onalari ko'p, men ulardan biriman, xolos. Do'stim Bob Kan bilan birga biz turli tarmoqlarni bitta umumiy tilda gaplashtiradigan qoidalar — <strong>TCP/IP</strong>'ni yozganmiz. Siz bu sahifani aynan shu qoidalar tufayli o'qiyapsiz.</p>
+        </div>
+      </section>
+      <p class="disclaimer">Bu bob Vint Serf tilidan tasavvur qilib yozilgan. Sanalar, ismlar va texnik tafsilotlar haqiqiy, lekin gaplar uning o'z so'zlari emas.</p>
+
+      <nav class="tl-chips" aria-label="Bob bo'limlari">
+        <button type="button" data-jump="i-muammo">Muammo</button>
+        <button type="button" data-jump="i-paket">Paket g'oyasi</button>
+        <button type="button" data-jump="i-arpanet">ARPANET</button>
+        <button type="button" data-jump="i-tcp">TCP/IP</button>
+        <button type="button" data-jump="i-lab">Paket laboratoriyasi</button>
+        <button type="button" data-jump="i-ip">IP va DNS</button>
+        <button type="button" data-jump="i-qatlam">Qatlamlar</button>
+        <button type="button" data-jump="i-kopruk">Keyingi bobga</button>
+      </nav>
+
+      <!-- MONOLOG -->
+      <section class="chapter">
+        <p class="year">1943 → 1968 · Nyu-Xeyven → Los-Anjeles</p>
+        <h3>Yaxshi eshitmaydigan bola va aloqa haqidagi savol</h3>
+        <p>Men 1943-yilda AQShning Nyu-Xeyven shahrida tug'ilganman. Bolaligimdan qulog'im yaxshi eshitmasdi va 13 yoshimdan eshitish apparati taqib yuraman. Balki shuning uchun butun umrim davomida bir savol meni qiziqtirgan: odamlar bir-biri bilan <strong>qanday</strong> aloqa qiladi va bu aloqani qanday osonlashtirish mumkin?</p>
+        <p>Stenford universitetida matematika o'qidim, keyin IBM'da ishladim. So'ng Los-Anjelesdagi UCLA universitetiga aspiranturaga bordim va professor <strong>Leonard Kleynrok</strong>ning laboratoriyasiga tushdim. U yerda maktabdagi do'stim <strong>Stiv Kroker</strong> va yosh dasturchi <strong>Jon Postel</strong> bilan birga ishladim. Bizga qiziq vazifa berildi: hali yo'q tarmoqqa ulanadigan dasturlarni yozish.</p>
+      </section>
+
+      <!-- MUAMMO -->
+      <section class="chapter" id="i-muammo">
+        <p class="year">1960-yillar · Muammo</p>
+        <h3>Qimmat orollar va band telefon liniyasi</h3>
+        <p>3-bob oxirida Bob Teylorning uchta terminalini eslang. Kompyuterlar juda qimmat edi va har biri o'z orolida yashardi. ARPA agentligi pul bergan o'nlab universitetlar bir-birining kompyuteri, dasturi va ma'lumotidan foydalana olishini xohlardi. Buning uchun ularni <strong>ulash</strong> kerak edi.</p>
+        <p>Eng oddiy yo'l — telefon tarmog'i. Lekin telefon <strong>kanal kommutatsiyasi</strong> (circuit switching) usulida ishlaydi: qo'ng'iroq qilganingizda, ikki telefon orasida butun suhbat davomida faqat sizga tegishli yo'l band qilinadi. Gapirmasangiz ham, liniya band. Kompyuterlar esa "portlab" gaplashadi: bir soniya katta ma'lumot, keyin bir daqiqa jimlik. Ular uchun bu juda isrofgarchilik edi.</p>
+        <p>Ikkinchi muammo — <strong>ishonchlilik</strong>. RAND korporatsiyasida ishlagan muhandis <strong>Pol Baran</strong> 1960-yillarning boshida tarmoq qismlari ishdan chiqqanda ham aloqa qanday saqlanib qolishi mumkinligini o'rgandi. U uch xil tarmoqni solishtirdi:</p>
+        <figure class="fig">
+          <div class="scroll-x"><svg viewBox="0 0 640 225" class="scene" role="img" aria-label="Uch xil tarmoq: markazlashgan, markazlashmagan va taqsimlangan">
+<line x1="100" y1="90" x2="100" y2="28" class="ln"/>
+<line x1="100" y1="90" x2="144" y2="46" class="ln"/>
+<line x1="100" y1="90" x2="162" y2="90" class="ln"/>
+<line x1="100" y1="90" x2="144" y2="134" class="ln"/>
+<line x1="100" y1="90" x2="100" y2="152" class="ln"/>
+<line x1="100" y1="90" x2="56" y2="134" class="ln"/>
+<line x1="100" y1="90" x2="38" y2="90" class="ln"/>
+<line x1="100" y1="90" x2="56" y2="46" class="ln"/>
+<circle cx="100" cy="90" r="9" class="af"/>
+<circle cx="100" cy="28" r="6" class="sb"/>
+<circle cx="144" cy="46" r="6" class="sb"/>
+<circle cx="162" cy="90" r="6" class="sb"/>
+<circle cx="144" cy="134" r="6" class="sb"/>
+<circle cx="100" cy="152" r="6" class="sb"/>
+<circle cx="56" cy="134" r="6" class="sb"/>
+<circle cx="38" cy="90" r="6" class="sb"/>
+<circle cx="56" cy="46" r="6" class="sb"/>
+<text x="100" y="196" class="tx mid">Markazlashgan</text>
+<text x="100" y="216" class="txm mid">bitta markaz — bitta zaif nuqta</text>
+<line x1="270" y1="55" x2="360" y2="55" class="ln"/>
+<line x1="360" y1="55" x2="315" y2="135" class="ln"/>
+<line x1="270" y1="55" x2="315" y2="135" class="ln"/>
+<line x1="270" y1="55" x2="238" y2="67" class="ln"/>
+<line x1="270" y1="55" x2="241" y2="38" class="ln"/>
+<line x1="270" y1="55" x2="266" y2="21" class="ln"/>
+<line x1="360" y1="55" x2="364" y2="21" class="ln"/>
+<line x1="360" y1="55" x2="389" y2="38" class="ln"/>
+<line x1="360" y1="55" x2="392" y2="67" class="ln"/>
+<line x1="315" y1="135" x2="342" y2="156" class="ln"/>
+<line x1="315" y1="135" x2="315" y2="169" class="ln"/>
+<line x1="315" y1="135" x2="288" y2="156" class="ln"/>
+<circle cx="270" cy="55" r="9" class="af"/>
+<circle cx="360" cy="55" r="9" class="af"/>
+<circle cx="315" cy="135" r="9" class="af"/>
+<circle cx="238" cy="67" r="6" class="sb"/>
+<circle cx="241" cy="38" r="6" class="sb"/>
+<circle cx="266" cy="21" r="6" class="sb"/>
+<circle cx="364" cy="21" r="6" class="sb"/>
+<circle cx="389" cy="38" r="6" class="sb"/>
+<circle cx="392" cy="67" r="6" class="sb"/>
+<circle cx="342" cy="156" r="6" class="sb"/>
+<circle cx="315" cy="169" r="6" class="sb"/>
+<circle cx="288" cy="156" r="6" class="sb"/>
+<text x="315" y="196" class="tx mid">Markazlashmagan</text>
+<text x="315" y="216" class="txm mid">bir nechta markaz</text>
+<line x1="465" y1="28" x2="508" y2="28" class="ln"/>
+<line x1="465" y1="28" x2="475" y2="70" class="ln"/>
+<line x1="465" y1="28" x2="518" y2="70" class="ln"/>
+<line x1="508" y1="28" x2="551" y2="28" class="ln"/>
+<line x1="508" y1="28" x2="518" y2="70" class="ln"/>
+<line x1="551" y1="28" x2="594" y2="28" class="ln"/>
+<line x1="551" y1="28" x2="561" y2="70" class="ln"/>
+<line x1="551" y1="28" x2="604" y2="70" class="ln"/>
+<line x1="594" y1="28" x2="604" y2="70" class="ln"/>
+<line x1="475" y1="70" x2="518" y2="70" class="ln"/>
+<line x1="475" y1="70" x2="465" y2="112" class="ln"/>
+<line x1="518" y1="70" x2="561" y2="70" class="ln"/>
+<line x1="518" y1="70" x2="508" y2="112" class="ln"/>
+<line x1="518" y1="70" x2="551" y2="112" class="ln"/>
+<line x1="561" y1="70" x2="604" y2="70" class="ln"/>
+<line x1="561" y1="70" x2="551" y2="112" class="ln"/>
+<line x1="604" y1="70" x2="594" y2="112" class="ln"/>
+<line x1="465" y1="112" x2="508" y2="112" class="ln"/>
+<line x1="465" y1="112" x2="475" y2="154" class="ln"/>
+<line x1="465" y1="112" x2="518" y2="154" class="ln"/>
+<line x1="508" y1="112" x2="551" y2="112" class="ln"/>
+<line x1="508" y1="112" x2="518" y2="154" class="ln"/>
+<line x1="551" y1="112" x2="594" y2="112" class="ln"/>
+<line x1="551" y1="112" x2="561" y2="154" class="ln"/>
+<line x1="551" y1="112" x2="604" y2="154" class="ln"/>
+<line x1="594" y1="112" x2="604" y2="154" class="ln"/>
+<line x1="475" y1="154" x2="518" y2="154" class="ln"/>
+<line x1="518" y1="154" x2="561" y2="154" class="ln"/>
+<line x1="561" y1="154" x2="604" y2="154" class="ln"/>
+<circle cx="465" cy="28" r="6" class="sb"/>
+<circle cx="508" cy="28" r="6" class="sb"/>
+<circle cx="551" cy="28" r="6" class="sb"/>
+<circle cx="594" cy="28" r="6" class="sb"/>
+<circle cx="475" cy="70" r="6" class="sb"/>
+<circle cx="518" cy="70" r="6" class="sb"/>
+<circle cx="561" cy="70" r="6" class="sb"/>
+<circle cx="604" cy="70" r="6" class="sb"/>
+<circle cx="465" cy="112" r="6" class="sb"/>
+<circle cx="508" cy="112" r="6" class="sb"/>
+<circle cx="551" cy="112" r="6" class="sb"/>
+<circle cx="594" cy="112" r="6" class="sb"/>
+<circle cx="475" cy="154" r="6" class="sb"/>
+<circle cx="518" cy="154" r="6" class="sb"/>
+<circle cx="561" cy="154" r="6" class="sb"/>
+<circle cx="604" cy="154" r="6" class="sb"/>
+<text x="530" y="196" class="tx mid">Taqsimlangan</text>
+<text x="530" y="216" class="txm mid">har bir tugunga ko'p yo'l</text>
+</svg ></div>
+          <figcaption>Baranning g'oyasi: markazi bo'lmagan, har bir tugunga bir nechta yo'l olib boradigan taqsimlangan tarmoq. Bir nechta tugun ishdan chiqsa ham, xabar aylanib o'tadigan yo'l topadi.</figcaption>
+        </figure>
+        <div class="mentor"><img class="im im-l" data-im="warning" alt=""><div><b>Keng tarqalgan afsona</b>Ko'pchilik "Internet yadro urushiga chidash uchun qurilgan" deydi. Bu to'liq to'g'ri emas. Baranning tadqiqoti haqiqatan ham shu savol bilan bog'liq edi, lekin ARPANET'ni qurishdan asosiy maqsad — olimlarning kompyuterlarni <strong>birgalikda ishlatishi</strong> edi. Shunga qaramay, ishonchli tarmoq g'oyasi bizga juda foydali bo'ldi.</div></div>
+      </section>
+
+      <!-- PAKET -->
+      <section class="chapter" id="i-paket">
+        <p class="year">1960–1965 · Paket g'oyasi</p>
+        <h3>Kitobni otkritkalarda yuborish</h3>
+        <p>Yechimni bir-biridan mustaqil ravishda bir necha kishi topdi: Amerikada Pol Baran, Angliyada <strong>Donald Devis</strong>, nazariyasini esa ustozim Leonard Kleynrok matematik jihatdan asosladi. "Paket" so'zini Devis 1965-yilda tanlagan.</p>
+        <p>Tasavvur qiling, siz do'stingizga butun kitobni pochta orqali yubormoqchisiz, lekin pochta faqat otkritka qabul qiladi. Nima qilasiz? Kitobni sahifalarga bo'lasiz, har biriga <strong>raqam</strong> va <strong>manzil</strong> yozasiz va yuborasiz. Otkritkalar turli mashinalarda, turli yo'llardan ketishi mumkin. Do'stingiz ularni raqamiga qarab tartiblab, kitobni qayta yig'adi.</p>
+        <p class="big-idea">Xabarni kichik, raqamlangan bo'laklarga — <strong>paketlarga</strong> bo'lamiz. Har bir paket yo'lini o'zi topadi. Manzilda ular qaytadan yig'iladi.</p>
+        <div class="versus">
+          <div><span class="vt">Kanal kommutatsiyasi</span><span>Telefon: butun suhbat uchun bitta yo'l band qilinadi.</span><span class="vs">Jim tursangiz ham yo'l sizniki. Yo'l uzilsa — aloqa uziladi.</span></div>
+          <div class="hl"><span class="vt">Paket kommutatsiyasi</span><span>Internet: har bir paket bo'sh yo'ldan ketadi.</span><span class="vs">Bitta kabelni minglab odam birga ishlatadi. Yo'l uzilsa — paket boshqasidan aylanib o'tadi.</span></div>
+        </div>
+      </section>
+
+      <!-- ARPANET -->
+      <section class="chapter" id="i-arpanet">
+        <p class="year">1969 · ARPANET</p>
+        <h3>"LO" — tarmoqdagi birinchi so'z</h3>
+        <p>ARPA tarmoq qurishni boshladi va uni <strong>ARPANET</strong> deb atadi. Har bir universitetga muzlatgichdek keladigan maxsus kompyuter — <strong>IMP</strong> (Interface Message Processor) o'rnatildi. U paketlarni qabul qilib, keyingi IMP'ga uzatardi — bugungi <strong>marshrutizator</strong>ning (router) bobokaloni. IMP'larni Boston yaqinidagi BBN kompaniyasi qurdi.</p>
+        <ul class="tl-facts">
+          <li><strong>1969-yil 7-aprel</strong> — Stiv Kroker tarmoq qoidalari haqidagi birinchi hujjatni yozdi va uni kamtarona qilib <strong>"Request for Comments"</strong> — "Fikr so'rayman" (RFC) deb atadi. Biz o'zimizni boshliq emas, talabalar deb bilardik. Bu an'ana hali ham davom etyapti: internetning barcha qoidalari hanuz RFC deb ataladi.</li>
+          <li><strong>1969-yil 2-sentabr</strong> — birinchi IMP bizning UCLA laboratoriyamizga o'rnatildi.</li>
+          <li><strong>1969-yil 29-oktabr, kechqurun</strong> — laboratoriyamizdagi talaba Charli Klayn 500 kilometr naridagi Stenford tadqiqot institutidagi (SRI) kompyuterga kirmoqchi bo'ldi va <code class="inline">LOGIN</code> deb yoza boshladi. <code class="inline">L</code>... <code class="inline">O</code>... va tizim qotib qoldi. Shunday qilib, tarmoq orqali yuborilgan birinchi xabar <strong>"LO"</strong> bo'ldi — inglizcha "mana!" degan so'z. Bir soatdan keyin to'liq ulanish ishladi.</li>
+          <li><strong>1969-yil dekabr</strong> — tarmoqda 4 ta tugun bor edi: UCLA, SRI, Santa-Barbara (UCSB) va Yuta universiteti.</li>
+        </ul>
+        <div class="photo-row">
+          <figure class="photo"><img src="media/history/4-bob/rasm-02.jpg" alt="Leonard Kleynrok birinchi IMP yonida"><figcaption>Professor Leonard Kleynrok va birinchi IMP — UCLA, Boelter Hall, 3420-xona.</figcaption></figure>
+          <figure class="photo"><img src="media/history/4-bob/rasm-03.jpg" alt="ARPANET xaritalari: 1969, 1970, 1972 va 1977-yillar"><figcaption>ARPANET qanday o'sgan: 1969-yilda atigi 4 ta kompyuter, 1977-yilga kelib esa butun AQSh bo'ylab o'nlab tugunlar va hatto Londongacha sun'iy yo'ldosh aloqasi.</figcaption></figure>
+        </div>
+        <p>Tarmoq tez o'sdi. <strong>1971-yilda</strong> muhandis Rey Tomlinson tarmoq orqali xat yuboradigan dastur yozdi va foydalanuvchi nomini kompyuter nomidan ajratish uchun klaviaturadagi kam ishlatiladigan belgi — <code class="inline">@</code> ni tanladi. Shunday qilib, elektron pochta tug'ildi va tez orada tarmoqdagi eng sevimli xizmatga aylandi.</p>
+        <div class="mentor"><img class="im im-l" data-im="envelope" alt=""><div><b>Vint eslaydi</b>Rafiqam Zigrid eshitmas edi. Telefon u uchun deyarli foydasiz edi. Elektron pochta esa unga va men kabi yaxshi eshitmaydigan millionlab odamga istalgan kishi bilan teng huquqli muloqot qilish imkonini berdi. Texnologiya ba'zan kutilmagan odamlarga eng ko'p yordam beradi.</div></div>
+      </section>
+
+      <!-- TCP/IP -->
+      <section class="chapter" id="i-tcp">
+        <p class="year">1973 → 1983 · TCP/IP</p>
+        <h3>Tarmoqlar tarmog'i</h3>
+        <p>1970-yillarning boshida bitta emas, bir nechta paketli tarmoq paydo bo'ldi: simli ARPANET, San-Fransisko atrofidagi <strong>radio</strong> tarmog'i (PRNET) va okean ortiga <strong>sun'iy yo'ldosh</strong> orqali ulangan SATNET. Har birining o'z qoidalari bor edi va ular bir-biri bilan gaplasha olmasdi — 1960-yillardagi orollar muammosi endi tarmoqlar darajasida qaytdi.</p>
+        <p>1973-yilda ARPA'da ishlayotgan <strong>Bob Kan</strong> menga savol bilan keldi: "Turli tarmoqlarni ularning ichini o'zgartirmasdan qanday ulash mumkin?" Biz bir necha oy ishlab, javobni topdik. Asosiy g'oyalarimiz to'rtta edi:</p>
+        <ol class="howto">
+          <li><strong>Tarmoqlar orasida "darvoza".</strong> Ikki tarmoq chegarasida maxsus kompyuter — <em>gateway</em> (bugun — router) turadi va paketlarni biridan ikkinchisiga o'tkazadi.</li>
+          <li><strong>Umumiy "konvert".</strong> Har bir paket qaysi tarmoqdan o'tishidan qat'i nazar, bir xil formatdagi konvertga solinadi: kimdan, kimga, nechanchi bo'lak.</li>
+          <li><strong>Ishonchlilik — chetda.</strong> Tarmoq paketni yo'qotishi mumkin — mayli. Paketlarni sanash, yetib kelganini tasdiqlash va yo'qolganini qayta yuborish — ikki chetdagi kompyuterlarning ishi.</li>
+          <li><strong>Markaz yo'q.</strong> Hech kim butun internetni boshqarmaydi. Qoidalarga amal qilgan har qanday tarmoq qo'shila oladi.</li>
+        </ol>
+        <p>1974-yil may oyida Bob bilan birga bu g'oyalarni maqola qilib chop etdik. O'sha yili dekabrda hamkasblarim bilan yozgan hujjatda (RFC 675) "internetworking" — "tarmoqlararo aloqa" so'zining qisqa shakli sifatida <strong>internet</strong> so'zi ishlatildi. 1978-yilda protokolni ikkiga bo'ldik: <strong>IP</strong> — paketni manzilga yetkazadi, <strong>TCP</strong> — paketlarning hammasi to'g'ri tartibda kelganini kafolatlaydi.</p>
+        <div class="photo-row">
+          <figure class="photo"><img src="media/history/4-bob/rasm-04.jpg" alt="Vint Serf va Bob Kan"><figcaption>Men (chapda) va Bob Kan. Biz 2004-yilda Tyuring mukofotini birga oldik.</figcaption></figure>
+          <figure class="photo"><img src="media/history/4-bob/rasm-05.jpg" alt="SRI paket-radio furgoni va harbiylar"><figcaption>SRI furgoni — 1977-yilgi tarixiy tajriba shu mashinadan boshlangan.</figcaption></figure>
+        </div>
+        <ul class="tl-facts">
+          <li><strong>1977-yil 22-noyabr</strong> — birinchi uch tarmoqli tajriba. San-Fransisko yaqinidagi avtomagistralda ketayotgan furgondan yuborilgan paketlar radio tarmog'idan ARPANET'ga, undan sun'iy yo'ldosh orqali Norvegiya va Londonga, so'ng yana Kaliforniyaga qaytib keldi. Bitta xabar uch xil tarmoqdan o'tdi va bitta bit ham yo'qolmadi.</li>
+          <li><strong>1983-yil 1-yanvar</strong> — "bayroq kuni" (flag day). ARPANET'dagi barcha kompyuterlar bir kunda eski protokoldan TCP/IP'ga o'tdi. Ko'pchilik bu sanani internetning tug'ilgan kuni deb hisoblaydi.</li>
+        </ul>
+      </section>
+
+      <!-- LAB -->
+      <section class="chapter" id="i-lab">
+        <p class="year">Paket laboratoriyasi</p>
+        <h3>Xabaringizni o'zingiz yuboring</h3>
+        <p>Xabar yozing va "Yuborish" ni bosing. U 4 harfli paketlarga bo'linadi, har bir paket yo'lini o'zi tanlaydi va manzilga istalgan tartibda kelishi mumkin. Keyin ikkala sinovni yoqib ko'ring: bitta marshrutizatorni o'chiring va bitta paketni "yo'qoting".</p>
+        <div class="pkt-lab" id="pkt-lab">
+          <div class="check-row"><input id="pkt-msg" type="text" maxlength="24" value="SALOM DUNYO" spellcheck="false" autocomplete="off" aria-label="Yuboriladigan xabar"><button type="button" class="btn btn-primary" id="pkt-send">Yuborish</button></div>
+          <div class="pkt-opts">
+            <label><input type="checkbox" id="pkt-break"> R3 marshrutizatorini o'chirish</label>
+            <label><input type="checkbox" id="pkt-lose"> Bitta paket yo'lda yo'qolsin</label>
+          </div>
+          <div class="scroll-x">
+            <svg viewBox="0 0 640 300" class="pkt-net" id="pkt-net" role="img" aria-label="Siz va server orasida to'rtta marshrutizatordan iborat tarmoq">
+              <g class="pkt-links">
+                <line data-l="S-R1" x1="78" y1="150" x2="215" y2="65"/>
+                <line data-l="S-R2" x1="78" y1="150" x2="215" y2="235"/>
+                <line data-l="R1-R2" x1="215" y1="65" x2="215" y2="235"/>
+                <line data-l="R1-R3" x1="215" y1="65" x2="420" y2="65"/>
+                <line data-l="R1-R4" x1="215" y1="65" x2="420" y2="235"/>
+                <line data-l="R2-R4" x1="215" y1="235" x2="420" y2="235"/>
+                <line data-l="R3-R4" x1="420" y1="65" x2="420" y2="235"/>
+                <line data-l="R3-D" x1="420" y1="65" x2="562" y2="150"/>
+                <line data-l="R4-D" x1="420" y1="235" x2="562" y2="150"/>
+              </g>
+              <g class="pkt-node end"><rect x="30" y="122" width="96" height="56" rx="12"/><text x="78" y="146" class="mid">Siz</text><text x="78" y="166" class="sub mid">203.0.113.5</text></g>
+              <g class="pkt-node end"><rect x="514" y="122" width="96" height="56" rx="12"/><text x="562" y="146" class="mid">Server</text><text x="562" y="166" class="sub mid">198.51.100.7</text></g>
+              <g class="pkt-node" data-n="R1"><circle cx="215" cy="65" r="24"/><text x="215" y="70" class="mid">R1</text></g>
+              <g class="pkt-node" data-n="R2"><circle cx="215" cy="235" r="24"/><text x="215" y="240" class="mid">R2</text></g>
+              <g class="pkt-node" data-n="R3"><circle cx="420" cy="65" r="24"/><text x="420" y="70" class="mid">R3</text></g>
+              <g class="pkt-node" data-n="R4"><circle cx="420" cy="235" r="24"/><text x="420" y="240" class="mid">R4</text></g>
+              <g id="pkt-layer"></g>
+            </svg >
+          </div>
+          <div class="pkt-panels">
+            <div><p class="cpu-h">Yuborilgan paketlar</p><div class="pkt-list" id="pkt-sent"></div></div>
+            <div><p class="cpu-h">Serverga kelish tartibi</p><div class="pkt-list" id="pkt-arr"></div></div>
+          </div>
+          <p class="cpu-log" id="pkt-log" aria-live="polite">Xabarni yozing va "Yuborish" ni bosing.</p>
+        </div>
+        <p>Kuzatganingizni tushuntiramiz: <strong>IP</strong> har bir paketga manzil yozdi va marshrutizatorlar uni bo'sh yo'ldan uzatdi — shuning uchun paketlar har xil tartibda keldi. <strong>TCP</strong> esa server tomonida raqamlarni tekshirdi: yo'qolgan bo'lakni qayta so'radi va hammasini to'g'ri tartibda yig'di. Bitta marshrutizator o'chsa ham, xabar boshqa yo'ldan yetib keldi — Baranning taqsimlangan tarmog'i aynan shu.</p>
+      </section>
+
+      <!-- IP va DNS -->
+      <section class="chapter" id="i-ip">
+        <p class="year">IP manzil va DNS</p>
+        <h3>Har bir kompyuterning uy manzili va telefon kitobi</h3>
+        <p>Internetga ulangan har bir qurilmaning <strong>IP manzili</strong> bor — xuddi uy manzili kabi. Klassik IP manzil (IPv4) to'rtta sondan iborat: <code class="inline">203.0.113.5</code>. Har bir son 0 dan 255 gacha. Tanish raqamlarmi? Ha — har bir son bitta <strong>bayt</strong> (1-bob!). Demak, manzil 4 bayt, ya'ni 32 bit.</p>
+        <div class="stats">
+          <div class="stat"><b>32 bit</b><span>IPv4 manzil uzunligi (1977-yilda tanlangan)</span></div>
+          <div class="stat"><b>~4,3 mlrd</b><span>mumkin bo'lgan IPv4 manzillar (2³²)</span></div>
+          <div class="stat"><b>2011</b><span>bo'sh IPv4 manzillar zaxirasi tugagan yil</span></div>
+          <div class="stat"><b>128 bit</b><span>yangi IPv6 manzil uzunligi</span></div>
+        </div>
+        <p>Tan olaman: 32 bitni men tanlaganman. 1977-yilda bu shunchaki tajriba edi va 4 milliard manzil cheksizdek tuyulardi. Kim o'ylabdi deysiz, har bir odamning cho'ntagida internetga ulangan kompyuter bo'ladi deb! Shuning uchun yangi versiya — <strong>IPv6</strong> yaratildi. Uning manzillari shunchalik ko'pki, Yerdagi har bir qum donasiga milliardlab manzil yetadi.</p>
+        <p>Lekin odamlar raqamlarni yomon eslaydi. Siz <code class="inline">google.com</code> deb yozasiz, raqam emas. Nomni raqamga o'giradigan tizim — <strong>DNS</strong> (Domain Name System) — internetning telefon kitobi. 2-bobdagi telefon kontaktlari misolini eslang: odam nomni, mashina raqamni eslaydi.</p>
+        <ul class="tl-facts">
+          <li><strong>1983-yilgacha</strong> — barcha kompyuterlarning nomi va manzili bitta matn faylida (HOSTS.TXT) saqlanardi. Uni SRI'dagi Elizabet Faynler jamoasi yuritardi va hamma vaqti-vaqti bilan yangi nusxasini yuklab olardi. Tarmoq o'sgani sari bu imkonsiz bo'lib qoldi.</li>
+          <li><strong>1983</strong> — Pol Mokapetris DNS'ni yaratdi: nomlar kitobi minglab serverlarga bo'lib tarqatildi.</li>
+          <li><strong>1985-yil 15-mart</strong> — birinchi <code class="inline">.com</code> domeni ro'yxatdan o'tdi: symbolics.com.</li>
+        </ul>
+        <p>Domen nomi o'ngdan chapga, katta joydan kichigiga qarab o'qiladi — xuddi xatdagi manzil kabi: <code class="inline">info.cern.ch</code> — "Shveytsariya (<code class="inline">ch</code>) → CERN → info degan kompyuter".</p>
+      </section>
+
+      <!-- QATLAMLAR -->
+      <section class="chapter" id="i-qatlam">
+        <p class="year">Qatlamlar (Layers)</p>
+        <h3>Xat, konvert, qop va yuk mashinasi</h3>
+        <p>4-darsda forma yasadingiz. "Yuborish" ni bosganingizda nima bo'ladi? Ma'lumot pastga, bir qatlamdan ikkinchisiga tushadi. Har bir qatlam faqat o'z ishini biladi:</p>
+        <div class="layers net-layers">
+          <div class="layer"><span class="layer-name">Ilova: HTTP, email</span><span class="layer-desc">Xatni yozadi: "mana forma ma'lumotlari"</span></div>
+          <div class="layer-arrow"><b>↓</b> xat bo'laklarga bo'linadi</div>
+          <div class="layer os"><span class="layer-name">TCP</span><span class="layer-desc">Bo'laklarni raqamlaydi, yetib kelganini tekshiradi</span></div>
+          <div class="layer-arrow"><b>↓</b> har bir bo'lak konvertga solinadi</div>
+          <div class="layer os"><span class="layer-name">IP</span><span class="layer-desc">Konvertga manzil yozadi, yo'lni marshrutizatorlar tanlaydi</span></div>
+          <div class="layer-arrow"><b>↓</b> konvert yo'lga chiqadi</div>
+          <div class="layer"><span class="layer-name">Fizik: kabel, Wi‑Fi, optik tola</span><span class="layer-desc">Bitlarni tok, radio to'lqin yoki yorug'lik bilan uzatadi</span></div>
+        </div>
+        <p>Qatlamlarning kuchi — mustaqilligida. HTTP sizning Wi‑Fi yoki kabel orqali ulanganingizni bilmaydi va bilishi ham shart emas. Shuning uchun 1970-yillarda yozilgan TCP/IP bugun 5G va optik tolada ham o'zgarmay ishlaydi.</p>
+        <p><strong>Fizik qatlam qayerda?</strong> Toshkentdan Amerikadagi saytni ochganingizda, ma'lumot sun'iy yo'ldosh orqali emas, ko'pincha okean tubida yotgan <strong>suv osti kabellari</strong> orqali, optik tolada yorug'lik bo'lib yuradi. Bugun dunyo bo'ylab yuzlab shunday kabel yotqizilgan va qit'alararo ma'lumotlarning deyarli hammasi ular orqali o'tadi.</p>
+        <figure class="photo"><img src="media/history/4-bob/rasm-06.jpg" alt="Dunyo suv osti internet kabellari xaritasi, 2026"><figcaption>Okean tubidagi internet kabellari xaritasi (TeleGeography, 2026). Qit'alar orasidagi ma'lumotning deyarli hammasi shu kabellardan o'tadi.</figcaption></figure>
+        <div class="versus">
+          <div class="hl"><span class="vt">Internet</span><span>Yo'llar tarmog'i: kabellar, marshrutizatorlar va TCP/IP qoidalari.</span><span class="vs">1983-yildan ishlaydi.</span></div>
+          <div><span class="vt">Veb (World Wide Web)</span><span>Shu yo'llar bo'ylab qurilgan kutubxona: sahifalar va havolalar.</span><span class="vs">1991-yilda e'lon qilingan. Email, video qo'ng'iroqlar, o'yinlar ham internetda, lekin ular veb emas.</span></div>
+        </div>
+      </section>
+
+      <!-- BUGUN -->
+      <section class="chapter">
+        <p class="year">Bugun</p>
+        <h3>Yerdan Marsgacha</h3>
+        <p>2004-yilda Bob Kan va men Tyuring mukofotiga, 2005-yilda esa AQSh Prezidentining Ozodlik medaliga sazovor bo'ldik. 2005-yildan Google kompaniyasida ishlayman. Lavozimimning nomi qiziq: "Internetning bosh targ'ibotchisi" (Chief Internet Evangelist).</p>
+        <p>Bugun men NASA bilan <strong>sayyoralararo internet</strong> ustida ishlayman. Yer va Mars orasida signal sayyoralarning joylashuviga qarab 3 daqiqadan 22 daqiqagacha yuradi. TCP esa javobni bir necha soniyada kutadi — u yerda ishlamaydi. Shuning uchun biz paketlarni yo'lda saqlab, imkoniyat paydo bo'lganda uzatadigan yangi qoidalar yaratdik.</p>
+        <div class="stats">
+          <div class="stat"><b>4 → 5 mlrd+</b><span>1969-yilda 4 ta kompyuter, bugun 5 milliarddan ortiq foydalanuvchi</span></div>
+          <div class="stat"><b>0</b><span>internetni boshqaradigan yagona markaz</span></div>
+          <div class="stat"><b>9000+</b><span>RFC hujjatlari — 1969-yildagi birinchisidan buyon</span></div>
+        </div>
+      </section>
+
+      <!-- KO'PRIK -->
+      <section class="chapter" id="i-kopruk">
+        <p class="year">Keyingi bobga ko'prik</p>
+        <h3>Yo'llar tayyor. Ulardan kim foydalana oladi?</h3>
+        <p>1980-yillarga kelib internet universitetlar va laboratoriyalarni bog'lab bo'lgan edi. Lekin undan foydalanish oson emas edi: kompyuter bilan faqat maxsus buyruqlar yozib gaplashilardi. Bu yo'llarda faqat mutaxassislar yura olardi.</p>
+        <p>Vaholanki, kompyuterni har bir odam uchun tushunarli qilish g'oyasi allaqachon bor edi. 1969-yilda ARPANET'ga ulangan ikkinchi kompyuter Kaliforniyadagi SRI institutida turardi. O'sha laboratoriyada bir yil oldin dunyo birinchi marta sichqoncha, havolalar va bo'lingan ekranni ko'rgan edi. Uni yaratgan odamning ismi Daglas Engelbart edi.</p>
+        <p class="big-idea">Keyingi bob: <strong>Sichqoncha va oynalar</strong> — kompyuter qanday qilib hammaga tushunarli bo'ldi.</p>
+        <div><button type="button" class="btn btn-primary" data-goto="e">5-bobni o'qish: Sichqoncha va oynalar</button></div>
+      </section>
+
+      <section class="quote">
+        <p class="quote-text">"Biz internetni hech kim egalik qilmaydigan qilib qurdik: har kim qo'shila oladi va buning uchun hech kimdan ruxsat so'ramaydi. Sizning sahifangiz ham shu ochiq yo'llar orqali dunyoga chiqadi."</p>
+      </section>
+
+      <section class="chapter">
+        <p class="year">Mashq</p>
+        <h3>10 ta yangi so'z</h3>
+        <p>Kartani bosing — so'z ovoz chiqarib o'qiladi.</p>
+        <div class="word-grid" data-words="internet"></div>
+      </section>
+
+      <section class="chapter">
+        <p class="year">Tekshiruv</p>
+        <h3>Bobni qanchalik tushundingiz?</h3>
+        <div class="quiz" data-pass="5">
+          <div class="qitem"><p class="q">1. Paket kommutatsiyasining asosiy g'oyasi nima?</p><div class="opts" data-correct="1"><button type="button">Butun suhbat uchun bitta yo'l band qilinadi</button><button type="button">Xabar raqamlangan bo'laklarga bo'linadi va har biri o'z yo'lidan ketadi</button><button type="button">Xabar sun'iy yo'ldosh orqali yuboriladi</button></div><p class="explain" hidden>Bitta yo'l band qilish — telefonning usuli (kanal kommutatsiyasi).</p></div>
+          <div class="qitem"><p class="q">2. Tarmoq orqali yuborilgan birinchi xabar qanday bo'lgan?</p><div class="opts" data-correct="2"><button type="button">HELLO</button><button type="button">@</button><button type="button">LO</button></div><p class="explain" hidden>LOGIN yozilayotganda tizim ikkinchi harfdan keyin qotib qoldi. 1969-yil 29-oktabr.</p></div>
+          <div class="qitem"><p class="q">3. TCP ning vazifasi nima?</p><div class="opts" data-correct="0"><button type="button">Paketlarni raqamlash, yo'qolganini qayta so'rash va tartib bilan yig'ish</button><button type="button">Saytning rangini tanlash</button><button type="button">Kompyuterni yoqish</button></div><p class="explain" hidden>IP — manzil va yo'l, TCP — ishonchlilik va tartib.</p></div>
+          <div class="qitem"><p class="q">4. IPv4 manzil necha baytdan iborat?</p><div class="opts" data-correct="1"><button type="button">1</button><button type="button">4</button><button type="button">16</button></div><p class="explain" hidden>To'rtta son, har biri 0–255, ya'ni 4 bayt = 32 bit.</p></div>
+          <div class="qitem"><p class="q">5. DNS nimaga o'xshaydi?</p><div class="opts" data-correct="2"><button type="button">Pochtachiga</button><button type="button">Kabelga</button><button type="button">Telefon kitobiga: nomni raqamga o'giradi</button></div><p class="explain" hidden>google.com kabi nomni IP manzilga aylantiradi.</p></div>
+          <div class="qitem"><p class="q">6. Internet va veb bir narsami?</p><div class="opts" data-correct="0"><button type="button">Yo'q: internet — yo'llar, veb — shu yo'llar bo'ylab qurilgan sahifalar to'ri</button><button type="button">Ha, bir narsaning ikki nomi</button><button type="button">Veb internetdan oldin paydo bo'lgan</button></div><p class="explain" hidden>Internet 1983-yildan, veb 1991-yildan. Email ham internetda, lekin u veb emas.</p></div>
+          <div class="qitem"><p class="q">7. Nega 1983-yil 1-yanvarni ko'pchilik internetning tug'ilgan kuni deydi?</p><div class="opts" data-correct="1"><button type="button">Birinchi email yuborilgan</button><button type="button">ARPANET butunlay TCP/IP'ga o'tgan</button><button type="button">Birinchi sayt ochilgan</button></div><p class="explain" hidden>"Bayroq kuni" — barcha kompyuterlar bir kunda yangi qoidalarga o'tdi.</p></div>
+          <div class="quiz-foot"><span class="quiz-score"></span><button type="button" class="btn quiz-reset">Qaytadan</button></div>
+        </div>
+      </section>
+
+      <!-- RASMLAR RO'YXATI -->
+      <section class="chapter wanted">
+        <p class="year">Muallif uchun</p>
+        <h3>📸 Kitob uchun kerakli rasmlar ro'yxati</h3>
+        <p>Bob ichida kulrang ramkali joylar rasm kutyapti. Har biriga inglizcha qidiruv iborasi berilgan — uni bosib nusxa oling va Wikimedia Commons yoki Google Images'da qidiring. Topilgan rasmni raqami bilan nomlang (masalan, <code class="inline">I1.jpg</code>).</p>
+        <ol class="wanted-list"></ol>
+        <p class="save-hint">Mualliflik huquqi uchun: iloji bo'lsa Wikimedia Commons, Computer History Museum yoki universitet arxivlaridagi erkin rasmlarni tanlang.</p>
+      </section>
+
+    </div>
+  </div>
+
+  

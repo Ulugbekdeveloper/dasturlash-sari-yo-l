@@ -1,0 +1,478 @@
+<!-- ============ 5-DARS ============ -->
+  <div class="panel" id="panel-5" data-lesson="5" role="tabpanel" aria-labelledby="tab-5" hidden>
+
+    <section class="lesson">
+      <div class="lesson-head">
+        <p class="eyebrow">5-dars</p>
+        <h2>CSS: sahifangizga rang va shakl berish</h2>
+        <div class="meta">
+          <span class="chip">16 qadam</span>
+          <span class="chip">12 ta CSS xususiyati</span>
+          <span class="chip">5 ta CSS tarixi</span>
+          <span class="chip">10 ta rasmli so'z</span>
+        </div>
+        <p class="lesson-note">Sahifangiz endi gapiradi va tinglaydi, lekin hamon oq qog'ozga qora harf bilan yozilgandek ko'rinadi. Bugun unga rang, shrift va shakl beramiz. Buning uchun yangi til o'rganamiz — CSS.</p>
+        <div class="progress-track"><div class="progress-bar" id="l5-bar"></div></div>
+        <p class="progress-label" id="l5-label">0 / 16 qadam bajarildi</p>
+      </div>
+
+      <p class="disclaimer">"CSS tarixi" bloklari CSS muallifi Hokon Vium Li tilidan tasavvur qilib yozilgan. Sanalar, ismlar va voqealar haqiqiy, lekin gaplar Hokonning o'z so'zlari emas.</p>
+
+      <!-- ===== 1-QISM ===== -->
+      <div class="part-head">
+        <p class="eyebrow">1-qism</p>
+        <h3>Kechagidan bugunga</h3>
+        <p>4-darsni eslaymiz, keyin HTML va CSS ning farqini ko'ramiz.</p>
+      </div>
+
+      <!-- 1 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l5-step1"><span class="step-title"><span class="step-num">01</span> Kechagini eslaylik</span></label>
+        <div class="step-body">
+          <p>Avval o'zingiz javob bering, keyin tekshiring.</p>
+          <div class="review-list">
+            <div class="review">
+              <p class="q">Jadvalda <code class="inline">tr</code>, <code class="inline">td</code> va <code class="inline">th</code> nimani bildiradi?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a"><code class="inline">tr</code> — qator, <code class="inline">td</code> — oddiy katak, <code class="inline">th</code> — sarlavha katagi. Kataklar doim qator ichida turadi.</p></details>
+            </div>
+            <div class="review">
+              <p class="q">Qaysi atributsiz maydon serverga yuborilmaydi?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a"><code class="inline">name</code>. Forma har bir maydonni <code class="inline">name=qiymat</code> juftligi qilib yuboradi.</p></details>
+            </div>
+            <div class="review">
+              <p class="q"><code class="inline">required</code> nima qiladi?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Maydonni majburiy qiladi: u bo'sh bo'lsa, brauzer formani yubormaydi.</p></details>
+            </div>
+            <div class="review">
+              <p class="q">Nega sahifani ikki ustunga bo'lish uchun jadval ishlatilmaydi?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Jadval faqat jadvalli ma'lumot uchun. Ko'rinish va joylashuvni CSS boshqaradi. Bugun aynan shu CSS bilan tanishamiz.</p></details>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l5-step2"><span class="step-title"><span class="step-num">02</span> HTML — skelet, CSS — kiyim</span></label>
+        <div class="step-body">
+          <p><strong>CSS</strong> — <em>Cascading Style Sheets</em>, "kaskadli uslublar jadvali". U sahifaning <strong>ko'rinishini</strong> boshqaradi: rang, shrift, o'lcham, bo'shliq, joylashuv. HTML esa sahifada <strong>nima</strong> borligini aytadi: sarlavha, matn, rasm, forma.</p>
+          <div class="versus">
+            <div><span class="vt">HTML</span><span>"Bu — sarlavha. Bu — paragraf. Bu — tugma."</span><span class="vs">Ma'no va tuzilish.</span></div>
+            <div class="hl"><span class="vt">CSS</span><span>"Sarlavha to'q sariq va katta bo'lsin. Tugmaning burchaklari yumaloq bo'lsin."</span><span class="vs">Ko'rinish.</span></div>
+          </div>
+          <p><strong>Sinab ko'ring:</strong> pastdagi sahifaning HTML kodi o'zgarmaydi. Tugma faqat CSS'ni yoqadi yoki o'chiradi.</p>
+          <div class="l5-onoff" id="l5-onoff">
+            <div class="l5-mini" id="l5-mini">
+              <h4>Choyxona "Do'stlar"</h4>
+              <p>Har kuni soat 8:00 dan 22:00 gacha. Osh, somsa va ko'k choy.</p>
+              <p class="l5-mini-price">Osh — 35 000 so'm</p>
+              <span class="l5-mini-btn">Joy band qilish</span>
+            </div>
+            <div class="cpu-ctl"><button type="button" class="btn btn-primary" id="l5-onoff-btn">CSS'ni yoqish</button><span class="lab-status" id="l5-onoff-st">Hozir: faqat HTML</span></div>
+          </div>
+          <p>Kod bir xil, ma'lumot bir xil — faqat "kiyim" almashdi. Bir HTML sahifaga istagancha turli CSS kiydirish mumkin.</p>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>CSS tarixi · Hokon hikoya qiladi</b>Salom, men Hokon Vium Li, Norvegiyadanman. 1994-yilda CERN'da Tim Berners-Li bilan bir binoda ishlardim. O'sha paytda veb tez o'sardi, dizaynerlar esa sahifa ko'rinishini boshqarishni juda xohlardi. Brauzer kompaniyalari ularga yoqish uchun HTML'ga o'z teglarini qo'sha boshladi: Netscape <code class="inline">&lt;center&gt;</code> va <code class="inline">&lt;font&gt;</code> teglarini chiqardi. Natijada HTML ma'no tilidan "bezak" tiliga aylanib bormoqda edi. Men buni to'xtatishni xohladim: ma'no — HTML'da, ko'rinish — alohida tilda bo'lsin.</div></div>
+        </div>
+      </div>
+
+      <!-- ===== 2-QISM ===== -->
+      <div class="part-head">
+        <p class="eyebrow">2-qism</p>
+        <h3>CSS qanday yoziladi</h3>
+        <p>Qoida, uni sahifaga ulash va kerakli elementni tanlash.</p>
+      </div>
+
+      <!-- 3 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l5-step3"><span class="step-title"><span class="step-num">03</span> Birinchi qoida: selektor, xususiyat, qiymat</span></label>
+        <div class="step-body">
+          <p>CSS <strong>qoidalardan</strong> (rule) iborat. Har bir qoida ikki qismdan tuziladi: <strong>kimga</strong> va <strong>nima</strong>.</p>
+<pre class="code"><span class="t">h1</span> {
+  color: orange;
+  font-size: 40px;
+}</pre>
+          <div class="css-anat" aria-label="CSS qoidasining qismlari">
+            <div class="ca-row"><code class="ca-sel">h1</code><span><b>Selektor</b> (selector) — qoida <strong>kimga</strong> tegishli. Bu yerda: sahifadagi hamma <code class="inline">h1</code> larga.</span></div>
+            <div class="ca-row"><code class="ca-prop">color</code><span><b>Xususiyat</b> (property) — <strong>nimani</strong> o'zgartiramiz: rangni.</span></div>
+            <div class="ca-row"><code class="ca-val">orange</code><span><b>Qiymat</b> (value) — <strong>qanday</strong> qilamiz: to'q sariq.</span></div>
+          </div>
+          <p>Yozilish qoidalari juda qat'iy, ularni yodlab oling:</p>
+          <ul class="plain">
+            <li>Xususiyatlar jingalak qavslar <code class="inline">{ }</code> ichida yoziladi.</li>
+            <li>Xususiyat va qiymat orasida — ikki nuqta <code class="inline">:</code>.</li>
+            <li>Har bir qatordan keyin — nuqtali vergul <code class="inline">;</code>.</li>
+            <li>Izoh: <code class="inline">/* bu izoh */</code>. Brauzer uni o'qimaydi, xuddi HTML'dagi <code class="inline">&lt;!-- --&gt;</code> kabi.</li>
+          </ul>
+          <div class="mentor"><img class="im im-l" data-im="warning" alt=""><div><b>Eng ko'p uchraydigan xato</b>Bitta <code class="inline">;</code> yoki <code class="inline">}</code> tushib qolsa, brauzer xato bermaydi — u shunchaki o'sha qoidani (ba'zan keyingisini ham) <strong>jimgina</strong> e'tiborsiz qoldiradi. "CSS ishlamayapti" desangiz, avval tinish belgilarini tekshiring.</div></div>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>CSS tarixi · Hokon hikoya qiladi</b>1994-yil 10-oktabrda men "Cascading HTML style sheets" degan qisqa taklifni e'lon qildim. Uslub g'oyasi yangi emas edi — Timning birinchi brauzerida ham oddiy uslublar bor edi. Lekin men shunday til xohladim: sodda, odam o'qiy oladigan va bitta sahifaga bir nechta manbadan uslub kelishiga ruxsat beradigan. Tez orada Gollandiyalik <strong>Bert Bos</strong> menga qo'shildi. U o'zining Argo brauzeri uchun uslub tili yozayotgan edi. Biz kuchlarni birlashtirdik va CSS'ning bugungi sintaksisi shu hamkorlikdan chiqdi.</div></div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l5-step4"><span class="step-title"><span class="step-num">04</span> CSS'ni sahifaga ulashning uch yo'li</span></label>
+        <div class="step-body">
+          <p><strong>Birinchi yo'l — <code class="inline">style</code> atributi.</strong> Uslub to'g'ridan-to'g'ri tegning ichiga yoziladi. Faqat shu bitta elementga ta'sir qiladi.</p>
+<pre class="code"><span class="t">&lt;p</span> style="color: green;"<span class="t">&gt;</span>Yashil matn<span class="t">&lt;/p&gt;</span></pre>
+          <p><strong>Ikkinchi yo'l — <code class="inline">&lt;style&gt;</code> tegi.</strong> Qoidalar sahifaning <code class="inline">&lt;head&gt;</code> qismiga yoziladi. Butun sahifaga ta'sir qiladi.</p>
+<pre class="code"><span class="t">&lt;head&gt;</span>
+  <span class="t">&lt;style&gt;</span>
+    p { color: green; }
+  <span class="t">&lt;/style&gt;</span>
+<span class="t">&lt;/head&gt;</span></pre>
+          <p><strong>Uchinchi yo'l — alohida fayl.</strong> Qoidalar <code class="inline">style.css</code> faylida turadi, sahifa esa unga <code class="inline">&lt;link&gt;</code> tegi bilan ulanadi.</p>
+<pre class="code"><span class="t">&lt;head&gt;</span>
+  <span class="t">&lt;link</span> rel="stylesheet" href="style.css"<span class="t">&gt;</span>
+<span class="t">&lt;/head&gt;</span></pre>
+          <div class="versus">
+            <div><span class="vt">style atributi</span><span>Tez sinab ko'rish uchun qulay.</span><span class="vs">Lekin 50 ta sahifada 50 marta yozasiz.</span></div>
+            <div class="hl"><span class="vt">style.css fayli</span><span>Bitta fayl — hamma sahifalar uchun.</span><span class="vs">Rangni bir joyda o'zgartirsangiz, butun sayt o'zgaradi.</span></div>
+          </div>
+          <div class="mentor"><img class="im im-l" data-im="light_bulb" alt=""><div><b>Ustoz maslahati</b>Haqiqiy loyihalarda deyarli doim uchinchi yo'l ishlatiladi. Brauzer <code class="inline">style.css</code> ni bir marta yuklab, eslab qoladi (keshlaydi) va keyingi sahifalarda qayta yuklamaydi — sayt tezroq ochiladi.</div></div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l5-step5"><span class="step-title"><span class="step-num">05</span> Selektorlar: teg, .class va #id</span></label>
+        <div class="step-body">
+          <p>Selektor qoida kimga tegishli ekanini aytadi. Eng ko'p ishlatiladigan uch turi:</p>
+<pre class="code"><span class="t">p</span> { color: gray; }          /* hamma paragraflar */
+<span class="t">.narx</span> { color: green; }     /* class="narx" bo'lganlar */
+<span class="t">#asosiy</span> { color: red; }     /* id="asosiy" bo'lgan bitta element */</pre>
+<pre class="code"><span class="t">&lt;p&gt;</span>Oddiy paragraf<span class="t">&lt;/p&gt;</span>
+<span class="t">&lt;p</span> class="narx"<span class="t">&gt;</span>35 000 so'm<span class="t">&lt;/p&gt;</span>
+<span class="t">&lt;p</span> class="narx"<span class="t">&gt;</span>12 000 so'm<span class="t">&lt;/p&gt;</span>
+<span class="t">&lt;p</span> id="asosiy"<span class="t">&gt;</span>Bugungi taklif!<span class="t">&lt;/p&gt;</span></pre>
+          <ul class="plain">
+            <li><strong>Teg selektori</strong> — <code class="inline">p</code>: sahifadagi barcha shunday teglar.</li>
+            <li><strong>Class selektori</strong> — oldida nuqta: <code class="inline">.narx</code>. Bitta class'ni istalgancha elementga berish mumkin.</li>
+            <li><strong>Id selektori</strong> — oldida panjara: <code class="inline">#asosiy</code>. 4-darsdan eslang: id sahifada yagona bo'ladi.</li>
+          </ul>
+          <p>Class — familiyaga o'xshaydi: bir oilada ko'p odam bir xil familiyada. Id esa pasport raqami: faqat bitta odamda.</p>
+          <p><strong>Ikki yangi teg.</strong> Ba'zan bir nechta elementni bitta "quti"ga solib, unga uslub berish kerak. Buning uchun ma'nosi yo'q, faqat guruhlash uchun mo'ljallangan ikki teg bor:</p>
+          <ul class="plain">
+            <li><code class="inline">&lt;div&gt;</code> — katta quti, yangi qatordan boshlanadi. Masalan, mahsulot kartochkasi.</li>
+            <li><code class="inline">&lt;span&gt;</code> — matn ichidagi kichik bo'lak. Masalan, gapdagi bitta so'zni bo'yash.</li>
+          </ul>
+<pre class="code"><span class="t">&lt;div</span> class="karta"<span class="t">&gt;</span>
+  <span class="t">&lt;h3&gt;</span>Osh<span class="t">&lt;/h3&gt;</span>
+  <span class="t">&lt;p&gt;</span>Narxi: <span class="t">&lt;span</span> class="narx"<span class="t">&gt;</span>35 000 so'm<span class="t">&lt;/span&gt;&lt;/p&gt;</span>
+<span class="t">&lt;/div&gt;</span></pre>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l5-step6"><span class="step-title"><span class="step-num">06</span> Kaskad: ikki qoida to'qnashsa, qaysi biri yutadi?</span></label>
+        <div class="step-body">
+          <p>Bitta elementga bir nechta qoida tegishli bo'lishi mumkin. Masalan, paragraf ham <code class="inline">p</code>, ham <code class="inline">.narx</code>. Ular turli rang aytsa, brauzer bitta qarorga keladi. Bu tartib <strong>kaskad</strong> (cascade — "sharshara") deyiladi.</p>
+          <ul class="plain">
+            <li><strong>Aniqroq selektor yutadi.</strong> <code class="inline">#id</code> kuchliroq <code class="inline">.class</code> dan, u esa kuchliroq teg selektoridan.</li>
+            <li><strong>Kuchi teng bo'lsa — keyin yozilgani yutadi.</strong> Pastdagi qoida yuqoridagini "bosib" ketadi.</li>
+            <li><strong><code class="inline">style</code> atributi</strong> ularning hammasidan kuchli.</li>
+          </ul>
+<pre class="code"><span class="t">p</span> { color: gray; }
+<span class="t">.narx</span> { color: green; }
+<span class="t">p</span> { color: blue; }
+
+<span class="t">&lt;p</span> class="narx"<span class="t">&gt;</span>35 000 so'm<span class="t">&lt;/p&gt;</span></pre>
+          <details class="reveal"><summary>Matn qaysi rangda chiqadi?</summary><p class="a">Yashil. Ikkinchi <code class="inline">p</code> qoidasi birinchisini bosib ketdi (ko'k), lekin <code class="inline">.narx</code> teg selektoridan aniqroq, shuning uchun u yutadi.</p></details>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>CSS tarixi · Hokon hikoya qiladi</b>Nomimizdagi eng muhim so'z — "kaskad". Men shunday dunyoni xohlardim: sahifaga muallif ham, brauzer ham, hatto <strong>o'quvchining o'zi</strong> ham uslub bera olsin. Masalan, ko'zi zaif odam brauzerida "hamma matn katta bo'lsin" deb yozib qo'yadi va bu har bir saytda ishlaydi. Uslublar sharshara kabi bir-birining ustiga tushadi, aniq qoidalar esa kimning so'zi o'tishini hal qiladi. CSS1 1996-yil dekabrda rasmiy standart bo'ldi. Uni birinchi qo'llab-quvvatlagan tijoriy brauzer o'sha yili chiqqan <strong>Internet Explorer 3</strong> edi.</div></div>
+        </div>
+      </div>
+
+      <!-- ===== 3-QISM ===== -->
+      <div class="part-head">
+        <p class="eyebrow">3-qism</p>
+        <h3>Rang, matn va quti</h3>
+        <p>Har kuni ishlatiladigan xususiyatlar.</p>
+      </div>
+
+      <!-- 7 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l5-step7"><span class="step-title"><span class="step-num">07</span> Ranglar: color va background-color</span></label>
+        <div class="step-body">
+          <ul class="plain">
+            <li><code class="inline">color</code> — matn rangi.</li>
+            <li><code class="inline">background-color</code> — fon rangi.</li>
+          </ul>
+          <p>Rangni uch xil yozish mumkin:</p>
+          <ul class="plain">
+            <li><strong>Nomi bilan:</strong> <code class="inline">red</code>, <code class="inline">orange</code>, <code class="inline">navy</code>. Brauzer 140 dan ortiq inglizcha rang nomini biladi.</li>
+            <li><strong>Hex kod bilan:</strong> <code class="inline">#F0B429</code>. Panjaradan keyin uch juft belgi: qizil, yashil, ko'k.</li>
+            <li><strong>rgb() bilan:</strong> <code class="inline">rgb(240, 180, 41)</code> — o'sha uch rang, oddiy sonlarda.</li>
+          </ul>
+          <p>Har bir rang qismi 0 dan 255 gacha. Tanish sonmi? Bu — <strong>bir bayt</strong>, 1-bobdagi sakkizta kalit! Ekrandagi har bir nuqta uch bayt: qancha qizil, qancha yashil, qancha ko'k chiroq yonishini aytadi.</p>
+          <div class="color-lab" id="l5-color">
+            <div class="cl-ctl">
+              <label>Matn rangi <input type="color" id="l5-c-fg" value="#1c2333"></label>
+              <label>Fon rangi <input type="color" id="l5-c-bg" value="#fcebc8"></label>
+            </div>
+            <div class="cl-sample" id="l5-c-sample"><b>Salom, dunyo!</b><span>Bu matn siz tanlagan ranglarda.</span></div>
+            <pre class="code" id="l5-c-code" data-no-i18n></pre>
+            <p class="lab-status" id="l5-c-note" aria-live="polite"></p>
+          </div>
+          <div class="mentor"><img class="im im-l" data-im="warning" alt=""><div><b>O'qilishi muhim</b>Och sariq fonga oq matn yozsangiz, chiroyli bo'lishi mumkin, lekin uni hech kim o'qiy olmaydi. Matn va fon orasida kuchli <strong>kontrast</strong> bo'lsin. Laboratoriya buni sizga avtomatik aytib turadi.</div></div>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>CSS tarixi · Hokon hikoya qiladi</b>Rang nomlari orasida bitta g'amgin hikoya bor. 2014-yilda CSS ishlab chiquvchilardan biri Erik Meyerning olti yoshli qizi Rebekka vafot etdi. Uning sevimli rangi binafsha edi. Hamjamiyat uning xotirasiga rasmiy ro'yxatga yangi nom qo'shdi: <code class="inline">rebeccapurple</code> — <code class="inline">#663399</code>. Bu rang hozir dunyodagi har bir brauzerda bor.</div></div>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l5-step8"><span class="step-title"><span class="step-num">08</span> Matn: shrift, o'lcham va tekislash</span></label>
+        <div class="step-body">
+<pre class="code"><span class="t">body</span> {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+<span class="t">h1</span> {
+  font-weight: bold;
+  text-align: center;
+}</pre>
+          <ul class="plain">
+            <li><code class="inline">font-family</code> — shrift. Bir nechtasi vergul bilan yoziladi: birinchisi bo'lmasa, brauzer keyingisini oladi. Oxirida doim umumiy oila turadi: <code class="inline">sans-serif</code> (oyoqchasiz) yoki <code class="inline">serif</code> (oyoqchali).</li>
+            <li><code class="inline">font-size</code> — harf o'lchami. <code class="inline">px</code> — piksel, ekrandagi nuqta.</li>
+            <li><code class="inline">font-weight</code> — qalinlik: <code class="inline">normal</code> yoki <code class="inline">bold</code>.</li>
+            <li><code class="inline">text-align</code> — tekislash: <code class="inline">left</code>, <code class="inline">center</code>, <code class="inline">right</code>.</li>
+            <li><code class="inline">line-height</code> — qatorlar orasidagi masofa. <code class="inline">1.5</code>–<code class="inline">1.7</code> atrofida matn eng oson o'qiladi.</li>
+          </ul>
+          <div class="versus">
+            <div><span class="vt">serif</span><span class="l5-serif">Kitob va gazetalardagi shrift.</span><span class="vs">Harflarning uchida kichik "oyoqcha" bor.</span></div>
+            <div class="hl"><span class="vt">sans-serif</span><span class="l5-sans">Ekran va ilovalardagi shrift.</span><span class="vs">"Sans" — fransuzcha "siz", oyoqchasiz.</span></div>
+          </div>
+          <p class="save-hint"><code class="inline">body</code> ga berilgan shrift uning ichidagi barcha elementlarga "meros" bo'lib o'tadi. Shuning uchun shriftni har bir tegga alohida yozmaysiz.</p>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l5-step9"><span class="step-title"><span class="step-num">09</span> Quti modeli: padding, border, margin</span></label>
+        <div class="step-body">
+          <p>CSS uchun sahifadagi <strong>har bir element — to'rtburchak quti</strong>. Hatto yumaloq tugma ham. Har bir quti to'rt qatlamdan iborat, xuddi sovg'a qutisi kabi:</p>
+          <ul class="plain">
+            <li><strong>Mazmun</strong> (content) — matn yoki rasmning o'zi. Uning eni — <code class="inline">width</code>.</li>
+            <li><code class="inline">padding</code> — <strong>ichki bo'shliq</strong>: mazmun va chegara orasidagi joy. Qutidagi qog'oz to'ldirgich.</li>
+            <li><code class="inline">border</code> — <strong>chegara</strong>, qutining devori. Masalan: <code class="inline">border: 2px solid orange;</code> — qalinligi, turi, rangi.</li>
+            <li><code class="inline">margin</code> — <strong>tashqi bo'shliq</strong>: qutidan qo'shni qutilargacha bo'lgan masofa.</li>
+          </ul>
+          <p>Slayderlarni suring va har bir qatlam qanday o'zgarishini ko'ring:</p>
+          <div class="box-lab" id="l5-box">
+            <div class="bl-ctl">
+              <label><span>padding</span><input type="range" min="0" max="40" value="16" data-p="pad"><b data-v="pad">16px</b></label>
+              <label><span>border</span><input type="range" min="0" max="12" value="4" data-p="bor"><b data-v="bor">4px</b></label>
+              <label><span>margin</span><input type="range" min="0" max="40" value="20" data-p="mar"><b data-v="mar">20px</b></label>
+              <label><span>border-radius</span><input type="range" min="0" max="40" value="10" data-p="rad"><b data-v="rad">10px</b></label>
+            </div>
+            <div class="bl-stage" aria-hidden="true">
+              <div class="bl-margin"><span class="bl-tag">margin</span><div class="bl-box"><span class="bl-tag">padding</span><div class="bl-content">Mazmun</div></div></div>
+              <div class="bl-neighbor">Qo'shni quti</div>
+            </div>
+            <pre class="code" id="l5-box-code" data-no-i18n></pre>
+          </div>
+          <p><code class="inline">border-radius</code> — burchaklarni yumaloqlaydi. Uni katta qilsangiz, kvadrat doiraga aylanadi. Zamonaviy saytlardagi yumaloq tugma va kartochkalarning hammasi shu bitta xususiyat.</p>
+          <div class="mentor"><img class="im im-l" data-im="brain" alt=""><div><b>Yodda saqlash usuli</b>Ko'chadagi uylarni tasavvur qiling. <strong>padding</strong> — uyning ichidagi xona va devor orasidagi joy. <strong>border</strong> — devorning o'zi. <strong>margin</strong> — qo'shni uy bilan oradagi hovli.</div></div>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l5-step10"><span class="step-title"><span class="step-num">10</span> Inspect: istalgan saytning CSS'ini ko'rish</span></label>
+        <div class="step-body">
+          <p>3-darsda Inspect orqali sahifaning HTML'ini ko'rgansiz. Xuddi shu oynada CSS ham bor — va uni <strong>jonli o'zgartirish</strong> mumkin.</p>
+          <ul class="plain">
+            <li>Istalgan saytda biror sarlavhani o'ng tugma bilan bosing va <strong>Inspect</strong> ni tanlang.</li>
+            <li>O'ng tomonda <strong>Styles</strong> bo'limini toping. U yerda shu elementga tegishli barcha qoidalar turibdi.</li>
+            <li><code class="inline">color</code> qiymatini bosing va boshqa rang yozing. Sarlavha darhol o'zgaradi.</li>
+            <li>Ustiga chizilgan qoidalarni ko'ring — ular kaskadda "yutqazgan" qoidalar.</li>
+            <li>Pastroqda rangli to'rtburchaklar sxemasi bor — bu o'sha elementning quti modeli: margin, border, padding.</li>
+          </ul>
+          <p class="save-hint">Qo'rqmang: o'zgarishlar faqat sizning ekraningizda. Sahifani yangilasangiz, hammasi joyiga qaytadi. Saytning o'zi o'zgarmaydi.</p>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>CSS tarixi · Hokon hikoya qiladi</b>CSS'ning dastlabki yillari og'ir o'tdi. Brauzerlar standartni har xil tushunardi: bitta sahifa Netscape'da bir xil, Internet Explorer'da boshqacha ko'rinardi. Dizaynerlar kunlarini xatolarni aylanib o'tish bilan o'tkazardi. 2005-yilda biz brauzerlar uchun <strong>Acid2</strong> degan sinov sahifasini taklif qildik: to'g'ri ishlaydigan brauzerda u kulib turgan yuzni ko'rsatardi, xato brauzerda esa yuz "buzilib" chiqardi. Kompaniyalar bir-biri bilan musobaqalashib, o'z brauzerini tuzata boshladi. Bugun siz Inspect'da ko'rgan qoidalar barcha brauzerlarda deyarli bir xil ishlaydi.</div></div>
+        </div>
+      </div>
+
+      <!-- ===== 4-QISM ===== -->
+      <div class="part-head">
+        <p class="eyebrow">4-qism</p>
+        <h3>Amaliyot</h3>
+        <p>O'z sahifangizga "kiyim" tikamiz.</p>
+      </div>
+
+      <!-- 11 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l5-step11"><span class="step-title"><span class="step-num">11</span> Mashq maydoni</span></label>
+        <div class="step-body">
+          <p>Chapga HTML va <code class="inline">&lt;style&gt;</code> ichidagi CSS'ni yozing, natija darhol o'ngda chiqadi. Natija alohida "oyna"da ko'rsatiladi, shuning uchun bu kitobning o'z dizayniga hech narsa qilmaydi.</p>
+          <div class="play">
+            <textarea id="l5-play" spellcheck="false" aria-label="HTML va CSS kod yozish joyi"></textarea>
+            <div class="browser" aria-label="Natija">
+              <div class="browser-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="address">index.html</span></div>
+              <iframe class="css-frame" id="l5-frame" sandbox="" title="Natija"></iframe>
+            </div>
+          </div>
+          <div class="play-actions"><button class="btn" type="button" id="l5-reset">Boshidan boshlash</button></div>
+          <p><strong>To'rtta tajriba:</strong></p>
+          <ul class="plain">
+            <li><code class="inline">h1</code> ning rangini o'zingizga yoqqan hex kodga almashtiring.</li>
+            <li><code class="inline">.karta</code> dagi <code class="inline">border-radius</code> ni <code class="inline">40px</code> qiling.</li>
+            <li><code class="inline">#muhim</code> qoidasidagi <code class="inline">;</code> ni o'chiring. Nima bo'ldi?</li>
+            <li>Ikkinchi paragrafga ham <code class="inline">class="karta"</code> bering.</li>
+          </ul>
+          <details class="reveal"><summary>Nima bo'lganini tushuntirish</summary>
+            <p class="a">Nuqtali vergulsiz brauzer ikki qatorni bitta xato qiymat deb o'qiydi va ikkalasini ham tashlab yuboradi — ogohlantirishsiz. Class esa istalgan elementga berilishi mumkin: bir qoida bilan bir nechta element bir xil ko'rinishga ega bo'ladi.</p>
+          </details>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l5-step12"><span class="step-title"><span class="step-num">12</span> Loyiha: "Mening sahifam"ga style.css</span></label>
+        <div class="step-body">
+          <p>VS Code'da <code class="inline">frontend</code> papkasida yangi fayl yarating: <code class="inline">style.css</code>. Keyin <code class="inline">index.html</code> va <code class="inline">aloqa.html</code> ning <code class="inline">&lt;head&gt;</code> qismiga uni ulang:</p>
+<pre class="code"><span class="t">&lt;head&gt;</span>
+  <span class="t">&lt;meta</span> charset="UTF-8"<span class="t">&gt;</span>
+  <span class="t">&lt;title&gt;</span>Mening sahifam<span class="t">&lt;/title&gt;</span>
+  <span class="t">&lt;link</span> rel="stylesheet" href="style.css"<span class="t">&gt;</span>
+<span class="t">&lt;/head&gt;</span></pre>
+          <p><code class="inline">style.css</code> uchun namuna:</p>
+<pre class="code">/* Butun sahifa */
+<span class="t">body</span> {
+  font-family: Arial, sans-serif;
+  background-color: #F7F8FA;
+  color: #1C2333;
+  line-height: 1.6;
+  margin: 24px;
+}
+
+/* Sarlavhalar */
+<span class="t">h1</span>, <span class="t">h2</span> {
+  color: #B4650A;
+}
+
+/* Havolalar */
+<span class="t">a</span> {
+  color: #1F7A4D;
+}
+
+/* Kartochka */
+<span class="t">.karta</span> {
+  background-color: white;
+  border: 1px solid #E2E5EA;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}</pre>
+          <p class="save-hint"><code class="inline">h1, h2</code> — vergul bilan yozilgan selektor: "h1 ga ham, h2 ga ham". Bir xil qoidani ikki marta yozmaslik uchun.</p>
+          <ul class="checklist" data-step="l5-step12">
+            <li><label><input type="checkbox" id="l5-p1" data-sub="p1"><span><code class="inline">style.css</code> yaratdim va uni ikkala sahifaga <code class="inline">&lt;link&gt;</code> bilan uladim.</span></label></li>
+            <li><label><input type="checkbox" id="l5-p2" data-sub="p2"><span><code class="inline">body</code> ga shrift, fon rangi va <code class="inline">line-height</code> berdim.</span></label></li>
+            <li><label><input type="checkbox" id="l5-p3" data-sub="p3"><span>Kamida bitta <code class="inline">div class="karta"</code> yasadim va unga padding, border va border-radius berdim.</span></label></li>
+            <li><label><input type="checkbox" id="l5-p4" data-sub="p4"><span>Rangni <code class="inline">style.css</code> da o'zgartirdim va ikkala sahifa birga o'zgarganini ko'rdim.</span></label></li>
+            <li><label><input type="checkbox" id="l5-p5" data-sub="p5"><span>Inspect'da o'z sahifamning quti modelini topdim.</span></label></li>
+          </ul>
+          <p class="win">Sahifangiz endi "kiyingan". Bitta faylni o'zgartirib, butun saytingizning ko'rinishini boshqarasiz.</p>
+        </div>
+      </div>
+
+      <!-- 13 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l5-step13"><span class="step-title"><span class="step-num">13</span> Bugungi 10 ta yangi so'z</span></label>
+        <div class="step-body">
+          <p>Kartani bosing — so'z ovoz chiqarib o'qiladi. Bularning ko'pchiligini endi har kuni CSS fayllarida ko'rasiz.</p>
+          <div class="word-grid" data-words="lesson5"></div>
+        </div>
+      </div>
+
+      <!-- 14 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l5-step14"><span class="step-title"><span class="step-num">14</span> Xatoni toping va test</span></label>
+        <div class="step-body">
+          <div class="review-list">
+            <div class="review">
+              <p class="q">Sarlavha rangi o'zgarmayapti. Nega?</p>
+<pre class="code"><span class="t">h1</span> {
+  color orange;
+}</pre>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Ikki nuqta tushib qolgan: <code class="inline">color: orange;</code>.</p></details>
+            </div>
+            <div class="review">
+              <p class="q">Narxlar yashil bo'lishi kerak edi, lekin hech narsa o'zgarmadi.</p>
+<pre class="code"><span class="t">narx</span> { color: green; }
+
+<span class="t">&lt;p</span> class="narx"<span class="t">&gt;</span>35 000 so'm<span class="t">&lt;/p&gt;</span></pre>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Class selektori oldida nuqta yo'q. <code class="inline">narx</code> — "narx" degan tegni qidiradi. To'g'risi: <code class="inline">.narx</code>.</p></details>
+            </div>
+            <div class="review">
+              <p class="q">style.css umuman ishlamayapti. Fayl bor, qoidalar to'g'ri.</p>
+<pre class="code"><span class="t">&lt;link</span> rel="stylesheet" href="styles.css"<span class="t">&gt;</span></pre>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Fayl nomi har xil: <code class="inline">style.css</code> va <code class="inline">styles.css</code>. Brauzer bitta harfni ham kechirmaydi.</p></details>
+            </div>
+          </div>
+          <div class="quiz" data-step="l5-step14" data-pass="5">
+            <div class="qitem"><p class="q">CSS nimani boshqaradi?</p><div class="opts" data-correct="1"><button type="button">Sahifada qanday ma'lumot borligini</button><button type="button">Sahifaning ko'rinishini: rang, shrift, o'lcham, joylashuv</button><button type="button">Formaning serverga yuborilishini</button></div><p class="explain" hidden>HTML — ma'no va tuzilish, CSS — ko'rinish.</p></div>
+            <div class="qitem"><p class="q">class="karta" bo'lgan elementlarni qaysi selektor tanlaydi?</p><div class="opts" data-correct="2"><button type="button">karta</button><button type="button">#karta</button><button type="button">.karta</button></div><p class="explain" hidden>Nuqta — class, panjara — id.</p></div>
+            <div class="qitem"><p class="q">Ikki qoida bir xil kuchda bo'lsa, qaysi biri yutadi?</p><div class="opts" data-correct="0"><button type="button">Keyin yozilgani</button><button type="button">Oldin yozilgani</button><button type="button">Qisqarog'i</button></div><p class="explain" hidden>Kaskad: pastdagi qoida yuqoridagini bosib ketadi.</p></div>
+            <div class="qitem"><p class="q">Mazmun va chegara orasidagi bo'shliq qanday ataladi?</p><div class="opts" data-correct="1"><button type="button">margin</button><button type="button">padding</button><button type="button">border</button></div><p class="explain" hidden>padding — ichki, margin — tashqi bo'shliq.</p></div>
+            <div class="qitem"><p class="q">#FF0000 qaysi rang?</p><div class="opts" data-correct="0"><button type="button">Qizil</button><button type="button">Yashil</button><button type="button">Ko'k</button></div><p class="explain" hidden>Birinchi juft — qizil, FF = 255, ya'ni to'liq. Yashil va ko'k esa 00.</p></div>
+            <div class="qitem"><p class="q">Nega haqiqiy saytlarda CSS alohida faylga yoziladi?</p><div class="opts" data-correct="2"><button type="button">Chunki boshqacha ishlamaydi</button><button type="button">Chunki fayl chiroyliroq</button><button type="button">Bitta fayl hamma sahifaga xizmat qiladi va brauzer uni eslab qoladi</button></div><p class="explain" hidden>Bir joyda o'zgartirasiz — butun sayt o'zgaradi.</p></div>
+            <div class="quiz-foot"><span class="quiz-score"></span><button type="button" class="btn quiz-reset">Qaytadan</button></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== STARTUP USTOZI ===== -->
+      <div class="part-head su">
+        <p class="eyebrow">Startup ustozi</p>
+        <h3>Birinchi taassurot</h3>
+        <p>Kutish ro'yxati sahifangiz bor. Endi uni odamlar bir qarashda tushunadigan va ishonadigan qilamiz.</p>
+      </div>
+
+      <!-- 15 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l5-step15"><span class="step-title"><span class="step-num">15</span> Ikki rang, bitta shrift va 5 soniya testi</span></label>
+        <div class="step-body">
+          <p>Odam yangi saytga kirganda bir necha soniya ichida qaror qiladi: qolamanmi yoki yopamanmi? Bu vaqtda u matnni o'qimaydi — u <strong>ko'rinishga</strong> qaraydi. Tartibsiz, o'nta rangli sahifa "bu jiddiy emas" deydi.</p>
+          <p>Boshlovchi uchun eng xavfsiz qoida — kam narsa:</p>
+          <ul class="plain">
+            <li><strong>Bitta asosiy rang</strong> — tugma va muhim joylar uchun.</li>
+            <li><strong>Bitta neytral rang</strong> — matn uchun (qora yoki to'q kulrang) va och fon.</li>
+            <li><strong>Bitta shrift</strong> — butun sayt uchun. Sarlavhani qalinligi va o'lchami bilan ajrating, boshqa shrift bilan emas.</li>
+          </ul>
+          <div class="mentor"><img class="im im-l" data-im="rocket" alt=""><div><b>5 soniya testi</b>Sahifangizni tanishingizga atigi 5 soniya ko'rsating va yoping. Keyin so'rang: "Bu sayt nima haqida edi? Nima qilish kerak edi?" Javob bera olmasa, muammo uning e'tiborida emas — sahifada. Bu usulni dizaynerlar haqiqatan ishlatadi.</div></div>
+          <textarea id="l5-brand" placeholder="Asosiy rang (hex): #...&#10;Matn rangi: #...&#10;Fon rangi: #...&#10;Shrift: ...&#10;5 soniya testi: kimga ko'rsatdim va u nima dedi" aria-label="Brend ranglari va test natijalari"></textarea>
+          <ul class="checklist" data-step="l5-step15">
+            <li><label><input type="checkbox" id="l5-s1" data-sub="s1"><span>Kutish ro'yxati sahifamga 2 rang va 1 shriftdan iborat <code class="inline">style.css</code> uladim.</span></label></li>
+            <li><label><input type="checkbox" id="l5-s2" data-sub="s2"><span>3 kishi bilan 5 soniya testini o'tkazdim va javoblarini yozdim.</span></label></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 16 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l5-step16"><span class="step-title"><span class="step-num">16</span> Uyga vazifa</span></label>
+        <div class="step-body">
+          <ul class="checklist" data-step="l5-step16">
+            <li><label><input type="checkbox" id="l5-h1" data-sub="h1"><span>4-darsdagi jadvalimni CSS bilan bezadim: <code class="inline">border</code>, <code class="inline">padding</code> va sarlavha qatoriga fon rangi.</span></label></li>
+            <li><label><input type="checkbox" id="l5-h2" data-sub="h2"><span>Sevimli saytimda Inspect orqali 3 ta rangni topib, ularning hex kodini yozib oldim.</span></label></li>
+            <li><label><input type="checkbox" id="l5-h3" data-sub="h3"><span>Sahifamdagi tugmaga yumaloq burchak va ko'zga tashlanadigan rang berdim.</span></label></li>
+            <li><label><input type="checkbox" id="l5-h4" data-sub="h4"><span>"CSS Zen Garden" saytini ochib, bir HTML'ning kamida 3 xil dizaynini ko'rdim.</span></label></li>
+            <li><label><input type="checkbox" id="l5-h5" data-sub="h5"><span>Bugungi 10 ta so'zdan eng qiyin 3 tasini daftarga yozib, 3 marta ovoz chiqarib aytdim.</span></label></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote">
+      <p class="quote-text">"HTML sahifaga nima deyishni o'rgatdi, CSS esa qanday ko'rinishni. Ikkalasi alohida — shuning uchun ikkalasi ham kuchli."</p>
+    </section>
+
+    <section class="next-up">
+      <p class="eyebrow">Keyingi dars</p>
+      <p class="desc">Elementlarni joylashtiramiz: sahifani qator va ustunlarga bo'lamiz va uni telefonga moslaymiz. Tarix qismida esa sichqoncha va oynalar qanday tug'ilganini Daglas Engelbartning o'zidan eshiting.</p>
+      <button class="btn btn-primary" type="button" data-goto="e">Sichqoncha tarixini o'qish</button>
+    </section>
+  </div>
+
+  

@@ -1,0 +1,27 @@
+/* lessons/4-dars.html uchun uslublar */
+.tbl-anat{background:var(--surface-2);border-radius:14px;padding:14px;overflow-x:auto;}
+.ta-table{position:relative;border:2px solid var(--accent);border-radius:12px;padding:30px 12px 12px;display:flex;flex-direction:column;gap:8px;min-width:300px;}
+.ta-row{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:8px;border:2px dashed var(--text-muted);border-radius:10px;padding:24px 8px 8px;}
+.ta-tag{position:absolute;top:4px;left:10px;font-family:'JetBrains Mono',monospace;font-size:13.4px;font-weight:700;color:var(--accent);}
+.ta-row > .ta-tag{color:var(--text-muted);}
+.ta-cell{display:flex;flex-direction:column;gap:2px;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:6px 10px;font-size:16.2px;color:var(--text);}
+.ta-cell i{font-style:normal;font-family:'JetBrains Mono',monospace;font-size:12.3px;font-weight:700;color:var(--good);}
+.inp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;}
+.inp-card{background:var(--surface-2);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:8px;font-size:15.1px;color:var(--text-muted);}
+.inp-card code{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;color:var(--accent);}
+.inp-row{display:flex;flex-wrap:wrap;gap:6px 14px;color:var(--text);}
+.inp-row label{display:inline-flex;align-items:center;gap:6px;cursor:pointer;}
+.inp-card input[type="text"],.inp-card input[type="email"],.inp-card input[type="password"],.inp-card input[type="number"],.inp-card select,
+  .form-demo input[type="text"],.form-demo input[type="email"],.form-demo select,.form-demo textarea{font:inherit;font-size:16.2px;width:100%;padding:8px 10px;border-radius:9px;border:1px solid var(--border);background:var(--bg);color:var(--text);}
+.inp-card input:focus,.inp-card select:focus,.form-demo input:focus,.form-demo select:focus,.form-demo textarea:focus{outline:2px solid var(--accent-fill);outline-offset:1px;}
+.inp-card input[type="checkbox"],.inp-card input[type="radio"]{width:18px;height:18px;accent-color:var(--accent-fill);}
+.form-demo{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:10px 14px;align-items:center;background:var(--surface-2);border-radius:14px;padding:14px;}
+.form-demo label{font-weight:700;color:var(--text);font-size:calc(var(--fs) - 3px);cursor:pointer;}
+.form-demo textarea{min-height:76px;}
+.form-demo > div{grid-column:2;}
+@media (max-width:560px){
+  .form-demo{grid-template-columns:1fr;gap:6px;}
+  .form-demo > div{grid-column:1;}
+  .form-demo label{margin-top:6px;}
+}
+.sent-h{font-family:'JetBrains Mono',monospace;font-size:12.9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-muted);}

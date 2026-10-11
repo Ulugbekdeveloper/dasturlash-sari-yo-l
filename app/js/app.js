@@ -188,6 +188,30 @@
       ['compile','kəmpayl','kompilyatsiya qilish','gear'],
       ['library','laybrəri','kutubxona','bookmark_tabs'],
       ['portable','portəbl',"ko'chirib bo'ladigan",'package']
+    ],
+    lesson7: [
+      ['repository','ripozitori','repozitoriy, loyiha ombori','file_cabinet'],
+      ['commit','kəmit','saqlash nuqtasi, commit','check_mark_button'],
+      ['stage','steyj','tayyorlash, sahna','inbox_tray'],
+      ['push','push','itarish, yuborish','outbox_tray'],
+      ['pull','pul','tortish, olish','right_arrow_curving_left'],
+      ['branch','brench','tarmoq, shox','seedling'],
+      ['deploy','diploy','internetga chiqarish','rocket'],
+      ['track','trek','kuzatish','footprints'],
+      ['history','histəri','tarix','scroll'],
+      ['message','mesij','xabar, izoh','speech_balloon']
+    ],
+    linux: [
+      ['open source','oupən sors','ochiq kod','open_file_folder'],
+      ['license','laysəns','litsenziya, ruxsatnoma','memo'],
+      ['contribute','kəntribyut','hissa qo\'shish','wrapped_gift'],
+      ['community','kəmyunəti','hamjamiyat','busts_in_silhouette'],
+      ['patch','pech','tuzatish, yamoq','package'],
+      ['review','rivyu','ko\'rib chiqish','magnifying_glass_tilted_left'],
+      ['maintainer','meynteynər','loyiha qo\'riqchisi, mas\'ul','technologist'],
+      ['release','riliyz','chiqarish, yangi versiya','rocket'],
+      ['hobby','hobi','hobbi, qiziqish','video_game'],
+      ['penguin','pengvin','pingvin','hatching_chick']
     ]
   };
 
@@ -229,7 +253,8 @@
     { n: 3, steps: 16, key: 'frontendga-sari-lesson3' },
     { n: 4, steps: 16, key: 'frontendga-sari-lesson4' },
     { n: 5, steps: 16, key: 'frontendga-sari-lesson5' },
-    { n: 6, steps: 16, key: 'frontendga-sari-lesson6' }
+    { n: 6, steps: 16, key: 'frontendga-sari-lesson6' },
+    { n: 7, steps: 16, key: 'frontendga-sari-lesson7' }
   ];
   var states = {}, keys = {};
   LESSONS.forEach(function(L){
@@ -278,7 +303,7 @@
   var old1 = load('frontendga-sari-lesson1');
   if (!states[1].taskText && old1.taskText) { states[1].taskText = old1.taskText; store(keys[1], states[1]); }
 
-  [['l1-task', 1, 'taskText'], ['l1-devices', 1, 'devicesText'], ['l1-problems', 1, 'problemsText'], ['l2-interviews', 2, 'interviewsText'], ['l3-insights', 3, 'insightsText'], ['l4-waitlist', 4, 'waitlistText'], ['l5-brand', 5, 'brandText'], ['l6-landing', 6, 'landingText']].forEach(function(t){
+  [['l1-task', 1, 'taskText'], ['l1-devices', 1, 'devicesText'], ['l1-problems', 1, 'problemsText'], ['l2-interviews', 2, 'interviewsText'], ['l3-insights', 3, 'insightsText'], ['l4-waitlist', 4, 'waitlistText'], ['l5-brand', 5, 'brandText'], ['l6-landing', 6, 'landingText'], ['l7-public', 7, 'publicText']].forEach(function(t){
     var el = $(t[0]);
     if (!el) return;
     var s = states[t[1]];
@@ -1098,11 +1123,144 @@
     layout();
   })();
 
+  // ---------- Lesson 7: Git simulyatori ----------
+  (function(){
+    var inp = $('l7-git-in');
+    if (!inp) return;
+    var out = $('l7-git-out'), log = $('l7-git-log'), tasksEl = $('l7-git-tasks');
+    var CONTENT = {
+      'index.html': ['<h1>Salom</h1>', '<h1>Salom, dunyo!</h1>', '<h1>Salom, dunyo!</h1>\n<p>Men dasturchi bo\'laman.</p>', '<h1>Salom, dunyo!</h1>\n<p>Men frontend dasturchi bo\'laman.</p>'],
+      'style.css': ['h1 { color: black; }', 'h1 { color: orange; }', 'h1 { color: orange; }\nbody { font-family: Arial; }', 'h1 { color: #B4650A; }\nbody { font-family: Arial; }']
+    };
+    var NAMES = Object.keys(CONTENT);
+    var S = { init: false, ver: { 'index.html': 0, 'style.css': 0 }, saved: {}, staged: {}, commits: [] };
+    var done = {}, hist = [], hi = 0;
+    function print(t, cls){ out.innerHTML += (cls ? '<span class="' + cls + '">' + esc(t) + '</span>' : esc(t)) + '\n'; out.scrollTop = out.scrollHeight; }
+    function hash(){ var h = ''; for (var i = 0; i < 7; i++) h += '0123456789abcdef'[Math.floor(Math.random() * 16)]; return h; }
+    function state(f){
+      if (S.staged[f] === S.ver[f]) return 'staged';
+      if (!(f in S.saved)) return 'new';
+      return S.saved[f] === S.ver[f] ? 'ok' : 'mod';
+    }
+    function render(){
+      var LBL = { 'new': l4Lang('yangi', 'new'), mod: l4Lang("o'zgargan", 'modified'), ok: l4Lang("o'zgarishsiz", 'unchanged'), staged: l4Lang('tayyor', 'staged') };
+      $('l7-git-work').innerHTML = NAMES.map(function(f){ var st = state(f); return '<div class="gs-file ' + (st === 'staged' ? 'ok' : st) + '"><span>' + esc(f) + '</span><em>' + esc(st === 'staged' ? LBL.ok : LBL[st]) + '</em></div>'; }).join('');
+      var staged = NAMES.filter(function(f){ return f in S.staged; });
+      $('l7-git-stage').innerHTML = staged.length ? staged.map(function(f){ return '<div class="gs-file ok"><span>' + esc(f) + '</span><em>' + esc(LBL.staged) + '</em></div>'; }).join('') : '<span class="gs-empty">' + esc(l4Lang("bo'sh", 'empty')) + '</span>';
+      $('l7-git-repo').innerHTML = !S.init ? '<span class="gs-empty">' + esc(l4Lang("Git hali yoqilmagan", 'Git is not initialized yet')) + '</span>'
+        : S.commits.length ? S.commits.slice().reverse().map(function(c){ return '<div class="gs-commit"><b>' + c.hash + '</b>' + esc(c.msg) + '</div>'; }).join('') : '<span class="gs-empty">' + esc(l4Lang("hali commit yo'q", 'no commits yet')) + '</span>';
+      tasksEl.querySelectorAll('[data-task]').forEach(function(cb){ var ok = !!done[cb.getAttribute('data-task')]; cb.checked = ok; cb.closest('label').classList.toggle('ok', ok); });
+      var n = Object.keys(done).length;
+      if (n === 4) { log.textContent = l4Lang("Barakalla! Siz Git'ning asosiy siklini o'tdingiz: tahrirlash → add → commit → log. Endi xuddi shuni haqiqiy terminalda qiling.", 'Well done! You went through the core Git cycle: edit → add → commit → log. Now do the same in a real terminal.'); partDone('l7-step11'); }
+      else if (n) log.textContent = l4Lang('Bajarildi: ' + n + ' / 4 topshiriq.', 'Done: ' + n + ' / 4 tasks.');
+    }
+    var GIT = {
+      '--version': function(){ return 'git version 2.46.0'; },
+      init: function(){
+        if (S.init) return 'Reinitialized existing Git repository in /home/talaba/frontend/.git/';
+        S.init = true; done.init = true;
+        return 'Initialized empty Git repository in /home/talaba/frontend/.git/';
+      },
+      status: function(){
+        var lines = ['On branch main'], staged = NAMES.filter(function(f){ return f in S.staged; });
+        var mod = NAMES.filter(function(f){ return state(f) === 'mod'; }), nw = NAMES.filter(function(f){ return state(f) === 'new'; });
+        if (!S.commits.length) lines.push('', 'No commits yet');
+        if (staged.length) { lines.push('', 'Changes to be committed:'); staged.forEach(function(f){ lines.push('\t' + ((f in S.saved) ? 'modified:   ' : 'new file:   ') + f); }); }
+        if (mod.length) { lines.push('', 'Changes not staged for commit:'); mod.forEach(function(f){ lines.push('\tmodified:   ' + f); }); }
+        if (nw.length) { lines.push('', 'Untracked files:'); nw.forEach(function(f){ lines.push('\t' + f); }); }
+        if (!staged.length && !mod.length && !nw.length) lines.push('nothing to commit, working tree clean');
+        return lines.join('\n');
+      },
+      add: function(a){
+        if (!a.length) throw 'Nothing specified, nothing added.';
+        var list = (a[0] === '.' || a[0] === '-A' || a[0] === '--all') ? NAMES : a;
+        list.forEach(function(f){ if (NAMES.indexOf(f) < 0) throw "fatal: pathspec '" + f + "' did not match any files"; });
+        list.forEach(function(f){ if (state(f) === 'new' || state(f) === 'mod') S.staged[f] = S.ver[f]; });
+        return '';
+      },
+      commit: function(a, line){
+        var m = line.match(/-m\s+(["'])(.*?)\1/) || line.match(/-m\s+(\S+)/);
+        var msg = m ? (m[2] !== undefined ? m[2] : m[1]) : '';
+        var staged = NAMES.filter(function(f){ return f in S.staged; });
+        if (!staged.length) {
+          var dirty = NAMES.some(function(f){ return state(f) !== 'ok'; });
+          return dirty ? 'nothing added to commit but untracked or modified files present (use "git add" to track)' : 'nothing to commit, working tree clean';
+        }
+        if (!msg.trim()) throw l4Lang('Izoh kerak: git commit -m "Nima qildim"', 'A message is needed: git commit -m "What I did"');
+        var c = { hash: hash(), msg: msg, files: staged };
+        staged.forEach(function(f){ S.saved[f] = S.staged[f]; });
+        S.staged = {};
+        S.commits.push(c);
+        if (S.commits.length === 1 && staged.length === NAMES.length) done.first = true;
+        if (S.commits.length > 1 && staged.length === 1 && staged[0] === 'index.html') done.second = true;
+        return '[main' + (S.commits.length === 1 ? ' (root-commit)' : '') + ' ' + c.hash + '] ' + msg + '\n ' + staged.length + ' file' + (staged.length > 1 ? 's' : '') + ' changed';
+      },
+      log: function(a){
+        if (!S.commits.length) throw "fatal: your current branch 'main' does not have any commits yet";
+        if (S.commits.length >= 2) done.log = true;
+        var one = a.indexOf('--oneline') !== -1;
+        return S.commits.slice().reverse().map(function(c, i){
+          return one ? c.hash + (i === 0 ? ' (HEAD -> main) ' : ' ') + c.msg : 'commit ' + c.hash + (i === 0 ? ' (HEAD -> main)' : '') + '\nAuthor: Ali Valiyev <ali@mail.uz>\n\n    ' + c.msg + '\n';
+        }).join('\n');
+      },
+      diff: function(){
+        var parts = NAMES.filter(function(f){ return state(f) === 'mod'; }).map(function(f){
+          var a = CONTENT[f][S.saved[f]].split('\n'), b = CONTENT[f][S.ver[f]].split('\n');
+          return 'diff --git a/' + f + ' b/' + f + '\n' + a.filter(function(x){ return b.indexOf(x) < 0; }).map(function(x){ return '- ' + x; }).concat(b.filter(function(x){ return a.indexOf(x) < 0; }).map(function(x){ return '+ ' + x; })).join('\n');
+        });
+        return parts.join('\n');
+      },
+      push: function(){ throw 'fatal: No configured push destination.\n' + l4Lang("(Haqiqiy loyihada avval GitHub'da repozitoriy ochib, git remote add origin ... qilasiz.)", '(In a real project you first create a repository on GitHub and run git remote add origin ...)'); }
+    };
+    function run(line){
+      var p = line.split(/\s+/), c = p.shift();
+      if (c === 'help') return l4Lang("Buyruqlar:\n  ls, pwd, clear\n  git --version\n  git init\n  git status\n  git add index.html | git add .\n  git commit -m \"izoh\"\n  git log | git log --oneline\n  git diff\nFaylni o'zgartirish uchun pastdagi tugmalarni bosing.", 'Commands:\n  ls, pwd, clear\n  git --version\n  git init\n  git status\n  git add index.html | git add .\n  git commit -m "message"\n  git log | git log --oneline\n  git diff\nUse the buttons below to edit a file.');
+      if (c === 'clear') { out.innerHTML = ''; return null; }
+      if (c === 'ls') return NAMES.join('  ');
+      if (c === 'pwd') return '/home/talaba/frontend';
+      if (c !== 'git') throw c + ': command not found';
+      var sub = p.shift();
+      if (!sub) return 'usage: git <command> [<args>]';
+      if (!GIT[sub]) throw "git: '" + sub + "' is not a git command. See 'git help'.";
+      if (sub !== 'init' && sub !== '--version' && !S.init) throw 'fatal: not a git repository (or any of the parent directories): .git';
+      return GIT[sub](p, line);
+    }
+    print(l4Lang("Bu — o'quv terminali. Boshlash uchun: git init  (yordam: help)", 'This is a practice terminal. To start: git init  (help: help)'), 'ok');
+    inp.addEventListener('keydown', function(e){
+      if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+        if (!hist.length) return;
+        e.preventDefault();
+        hi = Math.max(0, Math.min(hist.length, hi + (e.key === 'ArrowUp' ? -1 : 1)));
+        inp.value = hist[hi] || '';
+        return;
+      }
+      if (e.key !== 'Enter') return;
+      e.preventDefault();
+      var line = inp.value.trim(); inp.value = '';
+      if (!line) return;
+      hist.push(line); hi = hist.length;
+      print('$ ' + line, 'cmd');
+      try { var r = run(line); if (r) print(r); } catch (err) { print(String(err), 'err'); }
+      render();
+    });
+    $('l7-git').querySelectorAll('[data-edit]').forEach(function(b){
+      b.addEventListener('click', function(){
+        var f = b.getAttribute('data-edit');
+        if (S.ver[f] < CONTENT[f].length - 1) S.ver[f]++;
+        print(l4Lang('# ' + f + ' tahrirlandi va saqlandi (cmd + S)', '# ' + f + ' was edited and saved (cmd + S)'), 'ok');
+        render();
+        inp.focus();
+      });
+    });
+    document.addEventListener('i18n:change', render);
+    render();
+  })();
+
   // ---------- Tabs ----------
   (function(){
     var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
     var panels = Array.prototype.slice.call(document.querySelectorAll('.panel'));
-    var HASH = { h: '#tarix-html', k: '#tarix-kompyuter', a: '#tarix-assembler', c: '#tarix-kompilyator', i: '#tarix-internet', e: '#tarix-sichqoncha', u: '#tarix-unix' };
+    var HASH = { h: '#tarix-html', k: '#tarix-kompyuter', a: '#tarix-assembler', c: '#tarix-kompilyator', i: '#tarix-internet', e: '#tarix-sichqoncha', u: '#tarix-unix', l: '#tarix-linux' };
     function show(n){
       n = String(n);
       tabs.forEach(function(t){

@@ -1,0 +1,215 @@
+<!-- ============ TARIX · 7-BOB: LINUX ============ -->
+  <div class="panel" id="panel-l" data-lesson="l" role="tabpanel" aria-labelledby="tab-l" hidden>
+    <div class="story">
+
+      <section class="hero-card">
+        <img src="media/history/7-bob/rasm-01.jpg" alt="Linus Torvalds, 1990-yillar">
+        <div>
+          <p class="eyebrow">7-bob · Linux va ochiq kod: hamma birga quradigan dastur</p>
+          <h2>Salom, men Linus Torvalds</h2>
+          <p>Men 21 yoshimda o'z kompyuterim uchun kichik bir dastur yozishni boshladim. "Shunchaki qiziqish uchun, katta narsa bo'lmaydi", degandim. Bugun u sizning Android telefoningizda, siz kiradigan deyarli har bir saytning serverida va dunyodagi eng kuchli superkompyuterlarda ishlaydi. Bu bobda bunga qanday erishganimizni aytib beraman. "Erishganimiz" deyapman, chunki men buni yolg'iz qilmaganman.</p>
+        </div>
+      </section>
+      <p class="disclaimer">Bu bob Linus Torvalds tilidan tasavvur qilib yozilgan. Sanalar, ismlar va texnik tafsilotlar haqiqiy, lekin gaplar uning o'z so'zlari emas.</p>
+
+      <nav class="tl-chips" aria-label="Bob bo'limlari">
+        <button type="button" data-jump="l-bolalik">Bolalik</button>
+        <button type="button" data-jump="l-muammo">Muammo</button>
+        <button type="button" data-jump="l-1991">1991-yil</button>
+        <button type="button" data-jump="l-ochiq">Ochiq kod</button>
+        <button type="button" data-jump="l-qanday">Ming kishi bitta kodda</button>
+        <button type="button" data-jump="l-git">Git</button>
+        <button type="button" data-jump="l-lab">Vaqt mashinasi</button>
+        <button type="button" data-jump="l-bugun">Bugun</button>
+        <button type="button" data-jump="l-kopruk">Keyingi bobga</button>
+      </nav>
+
+      <!-- BOLALIK -->
+      <section class="chapter" id="l-bolalik">
+        <p class="year">1969–1990 · Xelsinki</p>
+        <h3>Bobomning kompyuteri</h3>
+        <p>Men 1969-yil dekabrda Finlyandiya poytaxti Xelsinkida tug'ilganman. Oilamiz shved tilida gaplashardi. Bobom universitetda statistika professori edi va 1980-yillarning boshida <strong>Commodore VIC-20</strong> uy kompyuterini sotib oldi. U menga sonlarni kiritishda yordam berishimni so'rardi. Tez orada men kompyuterda bobomdan ko'ra ko'proq vaqt o'tkaza boshladim.</p>
+        <p>Avval BASIC tilida, keyin <strong>assemblerda</strong> dastur yozdim — 2-bobda Ketlin But aytib bergan o'sha tilda. Kompyuter qanday ishlashini eng pastki qavatigacha tushunish menga juda yoqardi. 1988-yilda Xelsinki universitetiga kompyuter fanlarini o'qishga kirdim.</p>
+        <figure class="photo"><img src="media/history/7-bob/rasm-02.jpg" alt="Commodore VIC-20 uy kompyuteri"><figcaption>Commodore VIC-20 — mening birinchi kompyuterim. Aniqrog'i, bobomniki.</figcaption></figure>
+      </section>
+
+      <!-- MUAMMO -->
+      <section class="chapter" id="l-muammo">
+        <p class="year">1980-yillar · Muammo</p>
+        <h3>Unix bor, lekin talabaga emas</h3>
+        <p>6-bobda Dennis Ritchi aytib berdi: Unix universitetlarda juda mashhur bo'ldi. Universitetimizda ham Unix ishlaydigan kuchli kompyuterlar bor edi. Men ularni yaxshi ko'rardim: sodda buyruqlar, quvurlar, hamma narsa matn.</p>
+        <p>Lekin 1980-yillarda AT&T Unix'ni sotishni boshladi va u juda qimmatlashdi. Kodini ko'rish, o'zgartirish yoki do'stingizga berish esa taqiqlangan edi. Talaba o'z uyidagi kompyuterga Unix o'rnata olmasdi. Uyda esa men kabi minglab yoshlar oddiy shaxsiy kompyuterlar oldida o'tirardi.</p>
+        <div class="versus">
+          <div><span class="vt">Universitetda</span><span>Kuchli Unix kompyuterlari. Navbat bilan, ma'lum soatlarda.</span><span class="vs">Bepul, lekin sizniki emas.</span></div>
+          <div class="hl"><span class="vt">Uyda</span><span>Oddiy shaxsiy kompyuter va oddiy tizim.</span><span class="vs">Sizniki, lekin Unix emas.</span></div>
+        </div>
+        <div class="mentor"><img class="im im-l" data-im="brain" alt=""><div><b>Linus o'ylaydi</b>Dasturchi uchun eng yaxshi muammo — o'zi har kuni duch keladigan muammo. Men boshqalar uchun tizim yozmoqchi emasdim. Men faqat o'zimning kompyuterimda Unix'ga o'xshash narsa ishlashini xohlardim.</div></div>
+      </section>
+
+      <!-- 1991 -->
+      <section class="chapter" id="l-1991">
+        <p class="year">1991 · Xelsinki</p>
+        <h3>"Shunchaki hobbi, katta narsa bo'lmaydi"</h3>
+        <p>1991-yil yanvarda men yangi kompyuter sotib oldim — Intel <strong>386</strong> protsessorli shaxsiy kompyuter. Pulini bo'lib-bo'lib to'ladim. Unga <strong>MINIX</strong> o'rnatdim. MINIX'ni Gollandiyalik professor Endryu Tanenbaum talabalarga Unix qanday ishlashini o'rgatish uchun yozgan edi. Lekin u o'quv tizimi edi: imkoniyatlari cheklangan, kodini o'zgartirib tarqatish ham cheklangan edi.</p>
+        <p>Men kichik narsadan boshladim: modem orqali universitet kompyuteriga ulanadigan terminal dasturi. Keyin unga disk bilan ishlashni qo'shdim, keyin fayllarni... Bir kuni o'zimga qarab tushundim: men butun operatsion tizim <strong>yadrosini</strong> yozyapman — 6-bobda Dennis "restoran boshqaruvchisi" deb atagan o'sha qismni.</p>
+        <p>1991-yil 25-avgustda men MINIX foydalanuvchilari internet guruhiga xabar yozdim. Mazmuni taxminan shunday edi: "Men 386 kompyuterlar uchun bepul operatsion tizim yozyapman. Bu shunchaki hobbi, katta va professional narsa bo'lmaydi. Sizga MINIX'da nima yoqadi va nima yoqmaydi — yozing." Mana shu oxirgi gap hammasini o'zgartirdi.</p>
+        <ul class="tl-facts">
+          <li><strong>1991-yil 17-sentabr</strong> — 0.01 versiya: taxminan 10 ming qator kod universitet serveriga yuklandi.</li>
+          <li><strong>Nomi:</strong> men uni "Freax" deb atamoqchi edim. Lekin serverni boshqargan do'stim Ari Lemmke papkani o'zicha <strong>"linux"</strong> deb nomlagan edi — Linusning Unix'i. Nom qolib ketdi.</li>
+          <li><strong>1992-yil yanvar</strong> — professor Tanenbaum guruhda "Linux eskirgan" degan xabar yozdi. Biz qizg'in bahslashdik. Bugun bu bahs kompyuter tarixidagi eng mashhur yozishmalardan biri.</li>
+          <li><strong>1994-yil mart</strong> — Linux 1.0. Unga yuzlab odam hissa qo'shgan edi.</li>
+        </ul>
+        <figure class="usenet">
+          <div class="un-msg" data-no-i18n>
+            <div class="un-head"><span>From:</span> torvalds@klaava.Helsinki.FI (Linus Benedict Torvalds)<br><span>Newsgroups:</span> comp.os.minix<br><span>Subject:</span> What would you like to see most in minix?<br><span>Date:</span> 25 Aug 91 20:57:08 GMT</div>
+            <div class="un-body">Hello everybody out there using minix -<br><br>I'm doing a (free) operating system (just a hobby, won't be big and professional like gnu) for 386(486) AT clones. &hellip;</div>
+          </div>
+          <figcaption>O'sha xabarning boshi. Uni yozganimda bu kitobda tilga olinishini xayolimga ham keltirmagandim.</figcaption>
+        </figure>
+      </section>
+
+      <!-- OCHIQ KOD -->
+      <section class="chapter" id="l-ochiq">
+        <p class="year">1983–1998 · Erkin va ochiq dastur</p>
+        <h3>Kodni yashirmaslik — eng kuchli qaror</h3>
+        <p>Mendan oldin ham bu yo'lni boshlagan odam bor edi. 1983-yilda MIT dasturchisi <strong>Richard Stallman</strong> <strong>GNU</strong> loyihasini e'lon qildi. Uning maqsadi — to'liq erkin, Unix'ga o'xshash tizim yaratish edi. 1980-yillarning oxiriga kelib GNU'ning kompilyatori, buyruq qatori va boshqa ko'plab dasturlari tayyor edi. Faqat bitta narsa yetishmasdi — yadro.</p>
+        <p>Mening yadrom aynan shu bo'shliqni to'ldirdi. GNU dasturlari va Linux yadrosi birlashib, to'liq ishlaydigan, hammaga bepul tizim paydo bo'ldi.</p>
+        <p>1992-yilda men Linux'ni Stallman yozgan <strong>GPL</strong> litsenziyasiga o'tkazdim. Uning qoidasi oddiy va aqlli:</p>
+        <ul class="plain">
+          <li>Dasturni istalgan maqsadda <strong>ishlatishingiz</strong> mumkin.</li>
+          <li>Kodini <strong>o'qib, o'zgartirishingiz</strong> mumkin.</li>
+          <li>Uni boshqalarga <strong>tarqatishingiz</strong> mumkin.</li>
+          <li>Lekin o'zgartirilgan versiyani tarqatsangiz, uning kodini ham <strong>ochiq</strong> qilishingiz shart.</li>
+        </ul>
+        <p>Oxirgi qoida tufayli hech kim Linux'ni olib, yopiq qilib, o'zlashtira olmaydi. Kimdir uni yaxshilasa, yaxshilanish hammaga qaytadi.</p>
+        <div class="versus">
+          <div><span class="vt">Yopiq kod</span><span>Dasturni bitta kompaniya yozadi va kodini sir saqlaydi. Xatoni faqat u tuzata oladi.</span><span class="vs">Windows, macOS, ko'p o'yinlar.</span></div>
+          <div class="hl"><span class="vt">Ochiq kod</span><span>Kod hammaga ochiq. Dunyoning istalgan joyidagi dasturchi xatoni topib, tuzatishni taklif qila oladi.</span><span class="vs">Linux, Firefox, Python, Git.</span></div>
+        </div>
+        <p>1998-yilda bunday dasturlar uchun yangi nom paydo bo'ldi: <strong>open source</strong> — "ochiq kod". O'sha yili Netscape kompaniyasi o'z brauzerining kodini ochdi. Undan keyinchalik <strong>Firefox</strong> brauzeri o'sib chiqdi.</p>
+        <figure class="photo"><img src="media/history/7-bob/rasm-03.png" alt="Tux — Linux pingvini"><figcaption>Tux — Linux'ning ramzi. 1996-yilda Larri Yuing chizgan. Aytishlaricha, men bir marta hayvonot bog'ida pingvin tishlab olganidan keyin pingvinlarni yaxshi ko'rib qolganman.</figcaption></figure>
+      </section>
+
+      <!-- QANDAY ISHLAYDI -->
+      <section class="chapter" id="l-qanday">
+        <p class="year">Ochiq kod qanday ishlaydi</p>
+        <h3>Ming kishi, bitta kod va bitta qoida</h3>
+        <p>Odamlar so'rashadi: rahbari, maoshi va ofisi bo'lmasa, qanday qilib minglab notanish odam bitta loyihada birga ishlaydi? Javob — oddiy jarayon:</p>
+        <ul class="plain">
+          <li><strong>Xato yoki g'oya.</strong> Kimdir xatoni topadi yoki yaxshilashni o'ylaydi.</li>
+          <li><strong>Tuzatish (patch).</strong> U kodni o'zgartirib, o'zgarishni boshqalarga yuboradi. Bugun buni ko'pincha "pull request" deyishadi.</li>
+          <li><strong>Ko'rib chiqish (review).</strong> O'sha qism uchun mas'ul tajribali dasturchilar — <strong>maintainer</strong>lar — o'zgarishni o'qiydi, savol beradi, tuzatishni so'raydi.</li>
+          <li><strong>Qabul qilish.</strong> Hamma rozi bo'lsa, o'zgarish asosiy kodga qo'shiladi. Mening ishim bugun aynan shu: men kam kod yozaman, ko'p kod o'qiyman.</li>
+        </ul>
+        <div class="mentor"><img class="im im-l" data-im="busts_in_silhouette" alt=""><div><b>Linus o'ylaydi</b>Ochiq kodning sirli kuchini dasturchi va yozuvchi Erik Reymond bir gapga jamlagan: ko'z ko'p bo'lsa, har qanday xato yuzaga chiqadi. Men yolg'iz o'zim yuzta xatoni topishim uchun bir yil kerak bo'lardi. Ming kishi esa ularni bir haftada topadi.</div></div>
+        <p>Sizning ham birinchi qadamingiz shu bo'lishi mumkin: GitHub'da sevimli loyihangizni toping, README'dagi xatoni tuzating va o'zgarishni taklif qiling. Ko'p mashhur dasturchilar ochiq kodga birinchi hissasini aynan shunday — bitta harf xatosini tuzatish bilan qo'shgan.</p>
+      </section>
+
+      <!-- GIT -->
+      <section class="chapter" id="l-git">
+        <p class="year">2005 · Git</p>
+        <h3>O'n kunda yozilgan, hamma ishlatadigan dastur</h3>
+        <p>Linux o'sgani sari yangi muammo paydo bo'ldi. Dunyoning turli burchaklaridagi minglab odam bir vaqtda bitta kod ustida ishlaydi. Kim, qachon, nimani o'zgartirdi? Ikki kishi bitta faylni bir vaqtda o'zgartirsa nima bo'ladi? Xato qo'shilsa, kechagi holatga qanday qaytamiz?</p>
+        <p>Biz bir necha yil BitKeeper degan pullik dasturdan bepul foydalanib keldik. 2005-yil aprelda bu ruxsat bekor qilindi. Men yangi dastur qidirdim, menga yoqadigani topilmadi. Shunda o'zim yozishga qaror qildim. Taxminan o'n kun ichida birinchi versiya o'zini o'zi saqlay boshladi. Men uni <strong>Git</strong> deb atadim.</p>
+        <p>7-darsda siz Git bilan ishlashni o'rgandingiz. Uning asosiy g'oyalari men uchun Linux tajribasidan kelgan:</p>
+        <ul class="plain">
+          <li><strong>Har kimda to'liq nusxa.</strong> Markaziy server buzilsa ham, butun tarix har bir dasturchining kompyuterida saqlanib qoladi.</li>
+          <li><strong>Tezlik.</strong> Commit, tarix va farqni ko'rish internetsiz, bir zumda ishlaydi.</li>
+          <li><strong>Ishonch.</strong> Har bir commit o'z mazmunidan hisoblangan maxsus "barmoq izi" (hash) bilan belgilanadi. Tarixni sezdirmasdan o'zgartirib bo'lmaydi.</li>
+        </ul>
+        <p>2008-yilda boshqa odamlar Git ustiga <strong>GitHub</strong> saytini qurishdi. Bugun GitHub'da yuz milliondan ortiq dasturchi bor. Bu kitobning o'zi ham Git'da saqlanadi va GitHub orqali internetga chiqadi.</p>
+        <figure class="photo"><img src="media/history/7-bob/rasm-04.jpg" alt="Linus Torvalds sahnada so'zlamoqda"><figcaption>Bugun men ko'proq kod yozmayman — boshqalar yozgan kodni o'qib, qabul qilaman yoki qaytaraman.</figcaption></figure>
+      </section>
+
+      <!-- LAB -->
+      <section class="chapter" id="l-lab">
+        <p class="year">Laboratoriya · Vaqt mashinasi</p>
+        <h3>Tarixni ko'ring va kechagi kunga qayting</h3>
+        <p>Pastda kichik fayl bor. Uni o'zgartiring, qisqa izoh yozing va <strong>"Commit"</strong> ni bosing. Har bir commit tarixga tushadi va o'zining "barmoq izi"ni oladi. Tarixdagi istalgan commitni bossangiz, o'shanda nima o'zgarganini ko'rasiz va o'sha versiyaga qaytishingiz mumkin.</p>
+        <div class="tm-lab" id="l-git-lab">
+          <div class="tm-grid">
+            <div class="tm-col">
+              <p class="cpu-h">salom.txt</p>
+              <textarea id="l-git-file" spellcheck="false" aria-label="Fayl matni" data-no-i18n></textarea>
+              <div class="check-row"><input id="l-git-msg" type="text" maxlength="60" placeholder="Nima o'zgardi? Masalan: Ism qo'shdim" autocomplete="off" aria-label="Commit izohi"><button type="button" class="btn btn-primary" id="l-git-commit">Commit</button></div>
+            </div>
+            <div class="tm-col">
+              <p class="cpu-h">Tarix (git log)</p>
+              <div class="tm-log" id="l-git-log" data-no-i18n></div>
+            </div>
+          </div>
+          <pre class="code tm-diff" id="l-git-diff" data-no-i18n></pre>
+          <p class="cpu-log" id="l-git-status" aria-live="polite">Faylni o'zgartirib, izoh yozing va "Commit" ni bosing.</p>
+        </div>
+        <p>Haqiqiy Git'da xuddi shu ishlar shunday buyruqlar bilan bajariladi:</p>
+<pre class="code">git log --oneline        <span class="t"># tarix: har bir commitning qisqa barmoq izi va izohi</span>
+git show 3f2a1c9         <span class="t"># shu commitda nima o'zgargan</span>
+git restore --source 3f2a1c9 salom.txt   <span class="t"># faylni o'sha holatga qaytarish</span></pre>
+      </section>
+
+      <!-- BUGUN -->
+      <section class="chapter" id="l-bugun">
+        <p class="year">Bugun</p>
+        <h3>Ko'rinmas, lekin hamma joyda</h3>
+        <p>Siz Linux'ni ko'rmasligingiz mumkin, lekin har kuni ishlatasiz:</p>
+        <ul class="tl-facts">
+          <li><strong>Telefon</strong> — Android'ning yadrosi Linux. Dunyodagi milliardlab telefon.</li>
+          <li><strong>Internet</strong> — Google, Amazon va Meta serverlarining katta qismi, bulutli xizmatlar va siz kiradigan saytlarning ko'pchiligi Linux'da ishlaydi. 7-darsda saytingizni joylagan Vercel serverlari ham.</li>
+          <li><strong>Superkompyuterlar</strong> — 2017-yildan beri dunyodagi eng kuchli 500 ta superkompyuterning hammasi Linux'da.</li>
+          <li><strong>Kosmos</strong> — 2021-yilda Marsda uchgan Ingenuity vertolyoti ham Linux'da ishlagan.</li>
+          <li><strong>Uyda</strong> — televizorlar, Wi-Fi routerlar, aqlli soatlar va avtomobillar.</li>
+        </ul>
+        <p>Linux yadrosi bugun o'nlab million qatordan iborat. Har bir yangi versiyasiga mingdan ortiq dasturchi hissa qo'shadi. Ularning ko'pchiligi Intel, Google, Red Hat, Microsoft kabi kompaniyalarda ishlaydi — ha, bir paytlar ochiq kodga qarshi bo'lgan Microsoft ham. 2018-yilda u GitHub'ni sotib oldi.</p>
+        <figure class="photo"><img src="media/history/7-bob/rasm-05.jpg" alt="Server markazi: qator-qator serverlar"><figcaption>Server markazi. Bu yerdagi kompyuterlarning deyarli hammasida Linux ishlaydi.</figcaption></figure>
+        <div class="stats">
+          <div class="stat"><b>1991</b><span>0.01 versiya, ~10 ming qator</span></div>
+          <div class="stat"><b>2005</b><span>Git — o'n kunda</span></div>
+          <div class="stat"><b>500 / 500</b><span>eng kuchli superkompyuterlar Linux'da</span></div>
+        </div>
+      </section>
+
+      <!-- KO'PRIK -->
+      <section class="chapter" id="l-kopruk">
+        <p class="year">Keyingi bobga ko'prik</p>
+        <h3>Sahifalar jonlanishni kutmoqda</h3>
+        <p>1990-yillarning o'rtasiga kelib internet va veb butun dunyoga tarqaldi. Serverlar Linux'da ishlay boshladi, odamlar uyidan brauzer orqali saytlarga kirardi. Lekin sahifalar hali "jonsiz" edi: matn, rasm va havolalar, xolos. Tugmani bossangiz, butun sahifa qaytadan yuklanardi.</p>
+        <p>1995-yilda Netscape kompaniyasida bir dasturchiga topshiriq berildi: brauzerning ichida ishlaydigan, oddiy odam ham yoza oladigan dasturlash tili yaratish. Unga atigi o'n kun berildi. Uning ismi Brendan Ayk edi, yaratgan tili esa bugun dunyodagi eng ommabop tilga aylandi.</p>
+        <p class="big-idea">Keyingi bob: <strong>JavaScript</strong> — sahifalarga jon bergan til. Tez orada.</p>
+      </section>
+
+      <section class="quote">
+        <p class="quote-text">"Gapirish arzon. Menga kodni ko'rsating. Siz ham bugundan boshlab yozgan har bir sahifangizni dunyoga ochiq qo'ying — kimdir undan o'rganadi, kimdir uni yaxshilaydi."</p>
+      </section>
+
+      <section class="chapter">
+        <p class="year">Mashq</p>
+        <h3>10 ta yangi so'z</h3>
+        <p>Kartani bosing — so'z ovoz chiqarib o'qiladi.</p>
+        <div class="word-grid" data-words="linux"></div>
+      </section>
+
+      <section class="chapter">
+        <p class="year">Tekshiruv</p>
+        <h3>Bobni qanchalik tushundingiz?</h3>
+        <div class="quiz" data-pass="5">
+          <div class="qitem"><p class="q">Linus nega o'z tizimini yoza boshladi?</p><div class="opts" data-correct="1"><button type="button">Kompaniya buyurtma bergani uchun</button><button type="button">Uyidagi kompyuterida Unix'ga o'xshash tizim bo'lishini xohlagani uchun</button><button type="button">MINIX'ni yo'q qilish uchun</button></div><p class="explain" hidden>Eng yaxshi loyihalar ko'pincha o'z muammosini hal qilishdan boshlanadi.</p></div>
+          <div class="qitem"><p class="q">"Linux" nomini kim qo'ygan?</p><div class="opts" data-correct="2"><button type="button">Linusning o'zi</button><button type="button">Richard Stallman</button><button type="button">Serverni boshqargan do'sti Ari Lemmke</button></div><p class="explain" hidden>Linus uni "Freax" deb atamoqchi edi.</p></div>
+          <div class="qitem"><p class="q">GPL litsenziyasining asosiy shartlaridan biri qaysi?</p><div class="opts" data-correct="0"><button type="button">O'zgartirilgan versiyani tarqatsangiz, uning kodini ham ochiq qilishingiz kerak</button><button type="button">Dasturni faqat uyda ishlatish mumkin</button><button type="button">Dastur uchun pul to'lash shart</button></div><p class="explain" hidden>Shu qoida tufayli yaxshilanishlar doim hammaga qaytadi.</p></div>
+          <div class="qitem"><p class="q">Ochiq kod loyihasida maintainer nima qiladi?</p><div class="opts" data-correct="1"><button type="button">Faqat reklama qiladi</button><button type="button">Boshqalar yuborgan o'zgarishlarni ko'rib chiqadi va qabul qiladi yoki qaytaradi</button><button type="button">Kodni sotadi</button></div><p class="explain" hidden>Linusning bugungi asosiy ishi aynan shu.</p></div>
+          <div class="qitem"><p class="q">Git nima uchun yaratilgan?</p><div class="opts" data-correct="0"><button type="button">Minglab dasturchi bitta Linux kodi ustida birga ishlashi uchun</button><button type="button">Saytlarni chiroyli qilish uchun</button><button type="button">O'yin yozish uchun</button></div><p class="explain" hidden>2005-yil, BitKeeper'dan foydalanish imkoni yopilgandan keyin.</p></div>
+          <div class="qitem"><p class="q">Android telefonlarining yadrosi qaysi?</p><div class="opts" data-correct="2"><button type="button">Windows</button><button type="button">MINIX</button><button type="button">Linux</button></div><p class="explain" hidden>Milliardlab Android qurilma Linux yadrosida ishlaydi.</p></div>
+          <div class="quiz-foot"><span class="quiz-score"></span><button type="button" class="btn quiz-reset">Qaytadan</button></div>
+        </div>
+      </section>
+
+      <!-- RASMLAR RO'YXATI -->
+      <section class="chapter wanted">
+        <p class="year">Muallif uchun</p>
+        <h3>📸 Kitob uchun kerakli rasmlar ro'yxati</h3>
+        <p>Bob ichida kulrang ramkali joylar rasm kutyapti. Har biriga inglizcha qidiruv iborasi berilgan — uni bosib nusxa oling va Wikimedia Commons yoki Google Images'da qidiring. Topilgan rasmni raqami bilan nomlang (masalan, <code class="inline">L1.jpg</code>).</p>
+        <ul class="wanted-list"></ul>
+        <p class="save-hint">Mualliflik huquqi uchun: iloji bo'lsa Wikimedia Commons'dagi erkin rasmlarni tanlang.</p>
+      </section>
+
+    </div>
+  </div>

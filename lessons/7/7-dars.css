@@ -1,0 +1,35 @@
+/* lessons/7/7-dars.html uchun uslublar */
+.git-places{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;}
+.gp-box{flex:1 1 150px;display:flex;flex-direction:column;gap:4px;background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:12px;font-size:calc(var(--fs) - 4px);line-height:1.45;color:var(--text);}
+.gp-box b{font-size:calc(var(--fs) - 2px);}
+.gp-box code{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--text-muted);}
+.gp-repo{background:var(--good-soft);border-color:var(--good);}
+.gp-arrow{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-weight:800;color:var(--accent);}
+.gp-arrow code{font-family:'JetBrains Mono',monospace;font-size:12.5px;background:var(--accent-soft);padding:2px 6px;border-radius:6px;white-space:nowrap;}
+.gp-arrow span{font-size:20px;line-height:1;}
+.git-flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;background:var(--surface-2);border-radius:12px;padding:12px;font-family:'JetBrains Mono',monospace;font-size:13.4px;}
+.git-flow span{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:4px 8px;color:var(--text);}
+.git-flow i{font-style:normal;color:var(--accent);font-weight:800;}
+.git-sim{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:12px;align-items:start;}
+.gs-left{display:flex;flex-direction:column;gap:8px;min-width:0;}
+.gs-term{min-height:250px;}
+.gs-term .cli-out{max-height:300px;}
+.gs-edit{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:14.6px;color:var(--text-muted);}
+.gs-edit .btn{font-family:'JetBrains Mono',monospace;font-size:13.4px;padding:6px 10px;}
+.gs-zones{display:flex;flex-direction:column;gap:8px;}
+.gs-zone{background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:6px;min-height:72px;}
+.gs-zone.gs-repo{background:var(--good-soft);border-color:var(--good);}
+.gs-list{display:flex;flex-direction:column;gap:4px;font-family:'JetBrains Mono',monospace;font-size:13.4px;}
+.gs-file{display:flex;justify-content:space-between;gap:8px;background:var(--surface);border-radius:7px;padding:4px 8px;color:var(--text);}
+.gs-file em{font-style:normal;font-size:12px;color:var(--text-muted);}
+.gs-file.new em{color:var(--accent);}
+.gs-file.mod em{color:var(--bad);}
+.gs-file.ok em{color:var(--good);}
+.gs-commit{background:var(--surface);border-radius:7px;padding:4px 8px;color:var(--text);overflow-wrap:anywhere;}
+.gs-commit b{color:var(--accent);margin-right:6px;}
+.gs-empty{font-size:13px;color:var(--text-muted);}
+.gs-tasks{display:flex;flex-direction:column;gap:6px;}
+.gs-tasks label{display:flex;gap:8px;align-items:flex-start;font-size:calc(var(--fs) - 3px);line-height:1.5;color:var(--text);}
+.gs-tasks input{margin-top:5px;width:18px;height:18px;accent-color:var(--good);flex:none;}
+.gs-tasks label.ok{color:var(--good);font-weight:700;}
+@media (max-width:640px){.git-sim{grid-template-columns:1fr;}.gp-arrow{flex-direction:row;width:100%;}.gp-arrow span{transform:rotate(90deg);}}

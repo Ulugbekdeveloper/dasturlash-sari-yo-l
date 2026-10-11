@@ -1,0 +1,408 @@
+<!-- ============ 7-DARS ============ -->
+  <div class="panel" id="panel-7" data-lesson="7" role="tabpanel" aria-labelledby="tab-7" hidden>
+
+    <section class="lesson">
+      <div class="lesson-head">
+        <p class="eyebrow">7-dars</p>
+        <h2>Git, GitHub va Vercel: saytingiz internetda</h2>
+        <div class="meta">
+          <span class="chip">16 qadam</span>
+          <span class="chip">12 ta Git buyrug'i</span>
+          <span class="chip">2 ta Git tarixi</span>
+          <span class="chip">10 ta rasmli so'z</span>
+        </div>
+        <p class="lesson-note">Sahifangiz chiroyli, telefonda ham ishlaydi — lekin u faqat sizning kompyuteringizda. Bugun ikki ish qilamiz: kodingizning har bir versiyasini Git bilan saqlashni o'rganamiz va saytingizni hamma ocha oladigan haqiqiy manzilga chiqaramiz.</p>
+        <div class="progress-track"><div class="progress-bar" id="l7-bar"></div></div>
+        <p class="progress-label" id="l7-label">0 / 16 qadam bajarildi</p>
+      </div>
+
+      <p class="disclaimer">"Git tarixi" bloklari Git muallifi Linus Torvalds tilidan tasavvur qilib yozilgan. Sanalar, ismlar va voqealar haqiqiy, lekin gaplar Linusning o'z so'zlari emas.</p>
+
+      <!-- ===== 1-QISM ===== -->
+      <div class="part-head">
+        <p class="eyebrow">1-qism</p>
+        <h3>Kechagidan bugunga</h3>
+        <p>Flexbox'ni eslaymiz va fayllarni "saqlash"ning yangi usuliga nega ehtiyoj borligini ko'ramiz.</p>
+      </div>
+
+      <!-- 1 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l7-step1"><span class="step-title"><span class="step-num">01</span> Kechagini eslaylik</span></label>
+        <div class="step-body">
+          <p>Avval o'zingiz javob bering, keyin tekshiring.</p>
+          <div class="review-list">
+            <div class="review">
+              <p class="q"><code class="inline">display: flex</code> qayerga yoziladi: ota elementgami yoki bolalarigami?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Ota elementga — konteynerga. U o'z bolalarini qatorga teradi.</p></details>
+            </div>
+            <div class="review">
+              <p class="q">Elementni gorizontal va vertikal o'rtaga qo'yadigan uch qator qaysi?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a"><code class="inline">display: flex; justify-content: center; align-items: center;</code></p></details>
+            </div>
+            <div class="review">
+              <p class="q">Telefonda sahifa mayda chiqyapti. Nima yetishmayapti?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Viewport meta tegi: <code class="inline">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code>.</p></details>
+            </div>
+            <div class="review">
+              <p class="q">6-bobdagi Unix terminalida fayllar ro'yxatini qaysi buyruq ko'rsatardi?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a"><code class="inline">ls</code>. Bugun haqiqiy terminalda yana uchrashamiz.</p></details>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l7-step2"><span class="step-title"><span class="step-num">02</span> "sahifa_final_OXIRGI_2.html" muammosi</span></label>
+        <div class="step-body">
+          <p>Tanish manzaramı? Ish papkangizda shunday fayllar to'planib qoladi:</p>
+<pre class="code">index.html
+index_eski.html
+index_final.html
+index_final_2.html
+index_ENG_OXIRGI.html
+index_ENG_OXIRGI_tuzatilgan.html</pre>
+          <p>Qaysi biri haqiqiy? Kechagi versiyada nima boshqacha edi? Ikki hafta oldin ishlagan narsani qanday qaytarasiz? Agar do'stingiz bilan birga ishlasangiz-chi — ikkalangiz bitta faylni o'zgartirsangiz?</p>
+          <p>Dasturchilar bu muammoni <strong>versiyalarni boshqarish tizimi</strong> (version control) bilan hal qiladi. Eng mashhuri — <strong>Git</strong>. Dunyodagi deyarli barcha dasturchilar, jumladan Google, Meta, Amazon va Netflix'dagilar ham uni har kuni ishlatadi.</p>
+          <div class="versus">
+            <div><span class="vt">Gitsiz</span><span>O'nlab nusxa fayl, qaysi biri to'g'ri ekanini hech kim bilmaydi.</span><span class="vs">Xato qilsangiz — qaytish qiyin.</span></div>
+            <div class="hl"><span class="vt">Git bilan</span><span>Bitta <code class="inline">index.html</code>, lekin uning har bir saqlangan holati tarixda turadi.</span><span class="vs">Istalgan kunga bir buyruq bilan qaytasiz.</span></div>
+          </div>
+          <div class="mentor"><img class="im im-l" data-im="video_game" alt=""><div><b>O'yindagi kabi</b>Kompyuter o'yinlaridagi "saqlash nuqtasi"ni eslang. Qiyin joydan oldin o'yinni saqlaysiz — yutqazsangiz, o'sha nuqtadan qayta boshlaysiz. Git'dagi har bir <strong>commit</strong> — loyihangizning saqlash nuqtasi.</div></div>
+        </div>
+      </div>
+
+      <!-- ===== 2-QISM ===== -->
+      <div class="part-head">
+        <p class="eyebrow">2-qism</p>
+        <h3>Git</h3>
+        <p>Terminal, uch joy va birinchi commit.</p>
+      </div>
+
+      <!-- 3 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l7-step3"><span class="step-title"><span class="step-num">03</span> Terminal: kompyuter bilan matn orqali gaplashish</span></label>
+        <div class="step-body">
+          <p>Git asosan <strong>terminal</strong>da ishlatiladi — 5-bobda Engelbart aytib bergan buyruq qatorida. Uni ochishning eng qulay yo'li — VS Code'ning ichida:</p>
+          <ul class="plain">
+            <li>VS Code'da <code class="inline">frontend</code> papkangizni oching.</li>
+            <li>Yuqori menyudan <strong>Terminal → New Terminal</strong> ni tanlang (yoki <code class="inline">ctrl + `</code>). Pastda qora oyna ochiladi.</li>
+            <li>Windows'da terminal turi sifatida <strong>Git Bash</strong> ni tanlang — u Git bilan birga o'rnatiladi va Mac'dagi buyruqlarni tushunadi.</li>
+          </ul>
+          <p>Uchta buyruqni yozib ko'ring. 6-bobdagi Unix terminalidan ularni taniysiz:</p>
+<pre class="code">pwd        <span class="t"># hozir qaysi papkadaman?</span>
+ls         <span class="t"># bu papkada nima bor?</span>
+cd ..      <span class="t"># bir papka yuqoriga chiqish</span>
+cd frontend  <span class="t"># frontend papkasiga kirish</span></pre>
+          <div class="mentor"><img class="im im-l" data-im="light_bulb" alt=""><div><b>Ustoz maslahati</b>Terminaldan qo'rqmang. U siz yozgan buyruqni bajaradi, xolos. Buyruqni oxirigacha yozish shart emas: bir necha harf yozib <strong>tab</strong> tugmasini bossangiz, terminal fayl yoki papka nomini o'zi to'ldiradi. Oldingi buyruqni qaytarish uchun — yuqori strelka.</div></div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l7-step4"><span class="step-title"><span class="step-num">04</span> Git'ni o'rnatish va tanishtirish</span></label>
+        <div class="step-body">
+          <p>Avval Git kompyuteringizda bormi, tekshiring:</p>
+<pre class="code">git --version</pre>
+          <ul class="plain">
+            <li><strong>Mac:</strong> agar <code class="inline">git version 2.x</code> chiqsa — tayyor. Chiqmasa, Mac o'zi "Command Line Tools'ni o'rnatasizmi?" deb so'raydi — rozi bo'ling.</li>
+            <li><strong>Windows:</strong> <code class="inline">git-scm.com</code> saytidan yuklab o'rnating. O'rnatishda hamma savollarga standart javobni qoldirsangiz bo'ladi.</li>
+          </ul>
+          <p>Keyin Git'ga o'zingizni tanishtiring. Har bir commit'ga shu ism va email yoziladi — kim nimani o'zgartirganini bilish uchun:</p>
+<pre class="code">git config --global user.name "Ali Valiyev"
+git config --global user.email "ali@mail.uz"</pre>
+          <p class="save-hint">Bu buyruqlarni faqat bir marta yozasiz. <code class="inline">--global</code> — "shu kompyuterdagi barcha loyihalar uchun" degani. Emailni keyinroq GitHub'da ochadigan akkauntingiz bilan bir xil qiling.</p>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l7-step5"><span class="step-title"><span class="step-num">05</span> Git'dagi uch joy</span></label>
+        <div class="step-body">
+          <p>Git'ni tushunishning kaliti — fayl uch joydan birida turishini bilish:</p>
+          <div class="git-places" aria-label="Git'dagi uch joy: ishchi papka, tayyorlov maydoni va repozitoriy">
+            <div class="gp-box"><b>Ishchi papka</b><span>Siz VS Code'da tahrirlayotgan fayllar.</span><code>index.html (o'zgardi)</code></div>
+            <div class="gp-arrow"><code>git add</code><span>→</span></div>
+            <div class="gp-box"><b>Tayyorlov maydoni</b><span>Keyingi "suratga" kiradigan o'zgarishlar.</span><code>staging area</code></div>
+            <div class="gp-arrow"><code>git commit</code><span>→</span></div>
+            <div class="gp-box gp-repo"><b>Repozitoriy</b><span>Barcha saqlangan "suratlar" — loyiha tarixi.</span><code>.git papkasi</code></div>
+          </div>
+          <p>Nega o'rtada tayyorlov maydoni bor? Tasavvur qiling, siz bir vaqtda ikki ish qildingiz: sarlavha rangini o'zgartirdingiz va formaga yangi maydon qo'shdingiz. Ularni ikki <strong>alohida</strong> commit qilish yaxshiroq — keyin har birini alohida topish va kerak bo'lsa bekor qilish oson. <code class="inline">git add</code> bilan nimani "suratga" kiritishni o'zingiz tanlaysiz.</p>
+          <div class="mentor"><img class="im im-l" data-im="package" alt=""><div><b>Pochta misoli</b>Ishchi papka — stolingizdagi narsalar. Tayyorlov maydoni — yuborishga tayyorlanayotgan quti: unga faqat kerakli narsalarni solasiz. Commit — qutini yopib, ustiga "nima bor va nima uchun" deb yozib, javonga qo'yish.</div></div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l7-step6"><span class="step-title"><span class="step-num">06</span> Birinchi commit</span></label>
+        <div class="step-body">
+          <p>Terminalda <code class="inline">frontend</code> papkangizda turib, ketma-ket yozing:</p>
+<pre class="code">git init                          <span class="t"># bu papkada Git'ni yoqish (bir marta)</span>
+git status                        <span class="t"># qaysi fayllar o'zgardi?</span>
+git add .                         <span class="t"># hamma o'zgarishlarni tayyorlov maydoniga</span>
+git commit -m "Birinchi versiya"  <span class="t"># surat olish</span>
+git log --oneline                 <span class="t"># tarixni ko'rish</span></pre>
+          <ul class="plain">
+            <li><code class="inline">git init</code> papkaning ichida yashirin <code class="inline">.git</code> papkasini yaratadi. Butun tarix shu yerda saqlanadi. Uni qo'lda o'chirmang!</li>
+            <li><code class="inline">git add .</code> — nuqta "hamma narsa" degani. Bitta faylni qo'shish uchun: <code class="inline">git add index.html</code>.</li>
+            <li><code class="inline">-m</code> — "message", izoh. Qo'shtirnoq ichida nima qilganingizni yozasiz.</li>
+          </ul>
+          <p>Keyin <code class="inline">index.html</code> da biror narsani o'zgartiring va yana <code class="inline">git status</code> yozing. Git o'zgargan faylni darhol ko'radi. Qaytadan <code class="inline">add</code> va <code class="inline">commit</code> — va tarixda ikkinchi surat paydo bo'ladi.</p>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>Git tarixi · Linus hikoya qiladi</b>Men Git'ni 2005-yil aprelda yozdim. Linux yadrosi ustida dunyo bo'ylab minglab odam ishlardi va biz bir necha yil BitKeeper degan pullik dasturdan bepul foydalanib kelgandik. Bu ruxsat bekor qilinganda, menga yoqadigan boshqa dastur topilmadi. Shunda o'zim yozdim. Taxminan o'n kundan keyin Git o'zining kodini o'zida saqlay boshladi, bir necha haftadan keyin esa Linux kodi ham unga ko'chdi. Nomi haqida hazil qilib aytganman: "git" — inglizcha so'kish so'zi, taxminan "ahmoq" degani. Men barcha loyihalarimni o'zimga o'xshatib nomlayman: avval Linux, endi Git.</div></div>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l7-step7"><span class="step-title"><span class="step-num">07</span> Yaxshi commit, .gitignore va git diff</span></label>
+        <div class="step-body">
+          <p><strong>Commit xabari</strong> — kelajakdagi o'zingizga xat. Bir oydan keyin tarixni o'qiyotganingizda nima qilganingizni darhol tushunishingiz kerak.</p>
+          <div class="versus">
+            <div><span class="vt">Yomon</span><pre class="code">o'zgarish
+tuzatdim
+asdfgh
+yana</pre><span class="vs">Hech narsa tushunarli emas.</span></div>
+            <div class="hl"><span class="vt">Yaxshi</span><pre class="code">Bog'lanish formasini qo'shdim
+Telefonda menyu sig'may qolganini tuzatdim
+Kartalarni Flexbox bilan terdim</pre><span class="vs">Nima va nima uchun — bitta gapda.</span></div>
+          </div>
+          <p><strong>.gitignore</strong> — Git e'tibor bermasligi kerak bo'lgan fayllar ro'yxati. Masalan, Mac har bir papkaga yashirin <code class="inline">.DS_Store</code> faylini qo'yadi, u loyihaga kerak emas. Papkangizda <code class="inline">.gitignore</code> nomli fayl yarating va ichiga yozing:</p>
+<pre class="code">.DS_Store
+.vercel</pre>
+          <p><strong>git diff</strong> — commit qilishdan oldin aynan nima o'zgarganini ko'rsatadi: o'chirilgan qatorlar qizil (<code class="inline">-</code>), qo'shilganlar yashil (<code class="inline">+</code>).</p>
+<pre class="code">git diff
+<span class="t">-</span>  &lt;h1&gt;Salom&lt;/h1&gt;
+<span class="t">+</span>  &lt;h1&gt;Salom, dunyo!&lt;/h1&gt;</pre>
+          <div class="mentor"><img class="im im-l" data-im="light_bulb" alt=""><div><b>Ustoz maslahati</b>VS Code'ning chap panelidagi <strong>Source Control</strong> belgisi (uch nuqta va chiziqlar) — Git uchun tugmali oyna. Unda o'zgargan fayllar, diff va "Commit" tugmasi bor. Terminalni tushunib olgach, ikkalasidan qaysi biri qulay bo'lsa, shuni ishlating.</div></div>
+        </div>
+      </div>
+
+      <!-- ===== 3-QISM ===== -->
+      <div class="part-head">
+        <p class="eyebrow">3-qism</p>
+        <h3>GitHub va Vercel</h3>
+        <p>Kodingizni bulutga qo'yamiz va saytni internetga chiqaramiz.</p>
+      </div>
+
+      <!-- 8 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l7-step8"><span class="step-title"><span class="step-num">08</span> GitHub: kodingiz bulutda</span></label>
+        <div class="step-body">
+          <p><strong>Git</strong> — kompyuteringizdagi dastur. <strong>GitHub</strong> — Git repozitoriylari saqlanadigan sayt. U kodingizning internetdagi zaxira nusxasi, birga ishlash joyi va dasturchining ochiq portfoliosi.</p>
+          <ul class="plain">
+            <li><code class="inline">github.com</code> da bepul akkaunt oching. Foydalanuvchi nomini jiddiy tanlang — u rezyumengizda turadi.</li>
+            <li><strong>New repository</strong> tugmasini bosing, nom bering (masalan, <code class="inline">mening-sahifam</code>), <strong>Public</strong> ni qoldiring va <strong>Create</strong> ni bosing.</li>
+          </ul>
+          <p><strong>Eng oson yo'l — VS Code orqali.</strong> Source Control panelida <strong>Publish to GitHub</strong> tugmasi bor. Uni bossangiz, VS Code GitHub'ga kirishni so'raydi, repozitoriy yaratadi va kodingizni yuklaydi. Parolni siz brauzerda, GitHub'ning o'z sahifasida kiritasiz.</p>
+          <p><strong>Terminal orqali</strong> — GitHub repozitoriy sahifasida ko'rsatadigan buyruqlar:</p>
+<pre class="code">git remote add origin https://github.com/ali/mening-sahifam.git
+git branch -M main
+git push -u origin main</pre>
+          <ul class="plain">
+            <li><code class="inline">remote</code> — "uzoqdagi" nusxa. <code class="inline">origin</code> — unga beriladigan odatiy nom.</li>
+            <li><code class="inline">main</code> — asosiy tarmoq (branch) nomi. Tarmoqlar haqida keyinroq gaplashamiz.</li>
+            <li><code class="inline">push</code> — commitlaringizni GitHub'ga "itarish". Keyingi safar shunchaki <code class="inline">git push</code> yetarli.</li>
+            <li><code class="inline">git pull</code> — teskarisi: GitHub'dagi yangi o'zgarishlarni kompyuteringizga tortib olish.</li>
+          </ul>
+          <div class="mentor"><img class="im im-l" data-im="locked_with_key" alt=""><div><b>Xavfsizlik</b>Repozitoriy <strong>ochiq</strong> — uni hamma ko'radi. Unga hech qachon parol, karta raqami yoki maxfiy kalit yozilgan fayl qo'ymang. GitHub'ga kirishda ikki bosqichli himoyani (2FA) yoqing.</div></div>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l7-step9"><span class="step-title"><span class="step-num">09</span> README.md: loyihangizning muqovasi</span></label>
+        <div class="step-body">
+          <p>GitHub repozitoriyni ochgan odamga birinchi bo'lib <code class="inline">README.md</code> faylini ko'rsatadi. U <strong>Markdown</strong> tilida yoziladi — HTML'ning juda soddalashtirilgan ko'rinishi:</p>
+          <div class="versus">
+            <div><span class="vt">README.md</span><pre class="code"># Mening sahifam
+
+Frontend o'rganish yo'lidagi
+**birinchi** saytim.
+
+## Nimalar bor
+- Bosh sahifa
+- Bog'lanish formasi
+
+[Saytni ochish](https://mening-sahifam.vercel.app)</pre></div>
+            <div class="hl"><span class="vt">HTML'da xuddi shu</span><pre class="code">&lt;h1&gt;Mening sahifam&lt;/h1&gt;
+&lt;p&gt;... &lt;strong&gt;birinchi&lt;/strong&gt; ...&lt;/p&gt;
+&lt;h2&gt;Nimalar bor&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Bosh sahifa&lt;/li&gt;
+  &lt;li&gt;Bog'lanish formasi&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a href="..."&gt;Saytni ochish&lt;/a&gt;</pre></div>
+          </div>
+          <ul class="plain">
+            <li><code class="inline">#</code> — sarlavha (<code class="inline">h1</code>), <code class="inline">##</code> — kichikroq (<code class="inline">h2</code>).</li>
+            <li><code class="inline">**so'z**</code> — qalin, <code class="inline">-</code> — ro'yxat bandi.</li>
+            <li><code class="inline">[matn](manzil)</code> — havola.</li>
+          </ul>
+          <p class="save-hint">Markdown juda keng tarqalgan: GitHub, Telegram, ko'p eslatma ilovalari va hatto suhbat sun'iy intellektlari ham uni tushunadi.</p>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l7-step10"><span class="step-title"><span class="step-num">10</span> Vercel: bir bosishda internetga</span></label>
+        <div class="step-body">
+          <p>GitHub kodni saqlaydi. Uni hamma ochadigan <strong>sayt</strong>ga aylantirish uchun <strong>hosting</strong> kerak — sahifalaringizni kecha-kunduz tarqatib turadigan server. 2-darsdagi brauzer → server sayohatini eslang: endi o'sha serverni o'zingiz ulaysiz.</p>
+          <ul class="plain">
+            <li><code class="inline">vercel.com</code> ga kiring va <strong>Continue with GitHub</strong> ni tanlang.</li>
+            <li><strong>Add New → Project</strong> ni bosing va ro'yxatdan <code class="inline">mening-sahifam</code> repozitoriysini tanlang.</li>
+            <li>Sozlamalarga tegmang — oddiy HTML/CSS sayt uchun hammasi tayyor. <strong>Deploy</strong> ni bosing.</li>
+            <li>Bir necha soniyadan keyin sizga manzil beriladi: <code class="inline">mening-sahifam.vercel.app</code>. Uni telefoningizda oching!</li>
+          </ul>
+          <p>Eng yoqimli joyi: bundan keyin har safar <code class="inline">git push</code> qilganingizda Vercel buni ko'radi va saytni <strong>o'zi yangilaydi</strong>. Kod yozasiz → commit → push → bir daqiqada yangi versiya internetda.</p>
+          <div class="git-flow" aria-label="Kod yozishdan saytgacha bo'lgan yo'l">
+            <span>VS Code</span><i>→</i><span>git commit</span><i>→</i><span>git push</span><i>→</i><span>GitHub</span><i>→</i><span>Vercel</span><i>→</i><span>sayt.vercel.app</span>
+          </div>
+          <p class="save-hint">Vercel o'rniga <strong>GitHub Pages</strong> yoki <strong>Netlify</strong> ham bepul va xuddi shunday ishlaydi. Muhimi — bitta tanlab, odat qilish.</p>
+          <div class="tim-note"><img class="im im-l" data-im="scroll" alt=""><div><b>Git tarixi · Linus hikoya qiladi</b>Men Git'ni Linux uchun yozgandim, ommaviy bo'lishini kutmagandim. 2008-yilda bir guruh dasturchilar Git ustiga <strong>GitHub</strong> saytini qurishdi va hammasi o'zgardi: kod saqlash, birga ishlash va boshqalarning loyihasiga yordam berish bir necha bosishga aylandi. 2018-yilda Microsoft GitHub'ni 7,5 milliard dollarga sotib oldi. Bugun GitHub'da yuz milliondan ortiq dasturchi bor.</div></div>
+        </div>
+      </div>
+
+      <!-- ===== 4-QISM ===== -->
+      <div class="part-head">
+        <p class="eyebrow">4-qism</p>
+        <h3>Amaliyot</h3>
+        <p>Git'ni xavfsiz joyda sinab ko'ramiz, keyin saytingizni internetga chiqaramiz.</p>
+      </div>
+
+      <!-- 11 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l7-step11"><span class="step-title"><span class="step-num">11</span> Git simulyatori</span></label>
+        <div class="step-body">
+          <p>Bu terminal haqiqiy emas — bu yerda hech narsani buzib qo'ymaysiz. Buyruq yozing va o'ng tomonda fayllar uch joy bo'ylab qanday yurishini kuzating. <code class="inline">help</code> deb yozsangiz, buyruqlar ro'yxati chiqadi.</p>
+          <div class="git-sim" id="l7-git">
+            <div class="gs-left">
+              <div class="cli-term gs-term" data-no-i18n><div class="cli-out" id="l7-git-out"></div><label class="cli-line"><span>$</span><input type="text" id="l7-git-in" spellcheck="false" autocomplete="off" autocapitalize="off" aria-label="Git buyrug'ini yozing"></label></div>
+              <div class="gs-edit"><span>Faylni tahrirlash:</span><button type="button" class="btn" data-edit="index.html">index.html</button><button type="button" class="btn" data-edit="style.css">style.css</button></div>
+            </div>
+            <div class="gs-zones" data-no-i18n>
+              <div class="gs-zone"><p class="cpu-h">Ishchi papka</p><div class="gs-list" id="l7-git-work"></div></div>
+              <div class="gs-zone"><p class="cpu-h">Tayyorlov maydoni</p><div class="gs-list" id="l7-git-stage"></div></div>
+              <div class="gs-zone gs-repo"><p class="cpu-h">Repozitoriy</p><div class="gs-list" id="l7-git-repo"></div></div>
+            </div>
+          </div>
+          <div class="gs-tasks" id="l7-git-tasks">
+            <p class="cpu-h">Topshiriqlar</p>
+            <label><input type="checkbox" disabled data-task="init"> Papkada Git'ni yoqing.</label>
+            <label><input type="checkbox" disabled data-task="first"> Ikkala faylni qo'shib, birinchi commit qiling.</label>
+            <label><input type="checkbox" disabled data-task="second"> <code class="inline">index.html</code> ni tahrirlang va faqat uni ikkinchi commit qiling.</label>
+            <label><input type="checkbox" disabled data-task="log"> Tarixni ko'ring: ikkala commit ham joyidami?</label>
+          </div>
+          <p class="cpu-log" id="l7-git-log" aria-live="polite">Boshlash uchun: <code class="inline">git init</code></p>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l7-step12"><span class="step-title"><span class="step-num">12</span> Loyiha: "Mening sahifam" internetda</span></label>
+        <div class="step-body">
+          <p>Endi haqiqiy ish. 2–6-darslarda qurgan <code class="inline">frontend</code> papkangizni internetga chiqaring:</p>
+          <ul class="checklist" data-step="l7-step12">
+            <li><label><input type="checkbox" id="l7-p1" data-sub="p1"><span>Terminalda <code class="inline">git --version</code> ishladi va ism-emailimni <code class="inline">git config</code> bilan kiritdim.</span></label></li>
+            <li><label><input type="checkbox" id="l7-p2" data-sub="p2"><span><code class="inline">frontend</code> papkasida <code class="inline">git init</code> qildim, <code class="inline">.gitignore</code> qo'shdim va birinchi commit qildim.</span></label></li>
+            <li><label><input type="checkbox" id="l7-p3" data-sub="p3"><span>GitHub'da akkaunt ochdim va kodimni <code class="inline">push</code> qildim (VS Code tugmasi yoki terminal orqali).</span></label></li>
+            <li><label><input type="checkbox" id="l7-p4" data-sub="p4"><span>Repozitoriyga <code class="inline">README.md</code> qo'shdim: loyiha nomi, qisqa tavsif va sayt havolasi.</span></label></li>
+            <li><label><input type="checkbox" id="l7-p5" data-sub="p5"><span>Vercel'da loyihani ulab, <code class="inline">.vercel.app</code> manzilini telefonimda ochdim. Keyin bitta o'zgarishni push qilib, sayt o'zi yangilanganini ko'rdim.</span></label></li>
+          </ul>
+          <p class="win">Tabriklaymiz — siz internetda saytingiz bor dasturchisiz. Uning havolasini istalgan odamga yuborishingiz mumkin.</p>
+        </div>
+      </div>
+
+      <!-- 13 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l7-step13"><span class="step-title"><span class="step-num">13</span> Bugungi 10 ta yangi so'z</span></label>
+        <div class="step-body">
+          <p>Kartani bosing — so'z ovoz chiqarib o'qiladi. Bular Git buyruqlarining o'zi: ma'nosini bilsangiz, buyruqlarni yodlash oson.</p>
+          <div class="word-grid" data-words="lesson7"></div>
+        </div>
+      </div>
+
+      <!-- 14 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l7-step14"><span class="step-title"><span class="step-num">14</span> Xatoni toping va test</span></label>
+        <div class="step-body">
+          <div class="review-list">
+            <div class="review">
+              <p class="q">Faylni o'zgartirdim va commit qildim, lekin tarixda o'zgarish yo'q. Nega?</p>
+<pre class="code">git commit -m "Sarlavhani o'zgartirdim"
+<span class="t">nothing added to commit</span></pre>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a"><code class="inline">git add</code> unutilgan. O'zgarish ishchi papkada qoldi, tayyorlov maydoniga o'tmadi. Avval <code class="inline">git add index.html</code>, keyin commit.</p></details>
+            </div>
+            <div class="review">
+              <p class="q">Kompyuterda commit qildim, lekin Vercel'dagi sayt eskicha. Nima yetishmayapti?</p>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a"><code class="inline">git push</code>. Commit faqat sizning kompyuteringizda. Vercel GitHub'ga qaraydi — o'zgarish u yerga yetib borishi kerak.</p></details>
+            </div>
+            <div class="review">
+              <p class="q">Terminal shunday deyapti. Nima bo'ldi?</p>
+<pre class="code">git status
+<span class="t">fatal: not a git repository</span></pre>
+              <details class="reveal"><summary>Javobni ko'rish</summary><p class="a">Siz Git yoqilmagan papkadasiz. Yo <code class="inline">cd</code> bilan to'g'ri papkaga o'ting, yo shu papkada <code class="inline">git init</code> qiling.</p></details>
+            </div>
+          </div>
+          <div class="quiz" data-step="l7-step14" data-pass="5">
+            <div class="qitem"><p class="q">Git nima?</p><div class="opts" data-correct="1"><button type="button">Sayt yaratadigan dastur</button><button type="button">Fayllarning har bir versiyasini saqlaydigan versiyalarni boshqarish tizimi</button><button type="button">Brauzer</button></div><p class="explain" hidden>Git tarixni saqlaydi. Sayt yaratish — HTML/CSS, internetga chiqarish — hosting.</p></div>
+            <div class="qitem"><p class="q">git add nima qiladi?</p><div class="opts" data-correct="0"><button type="button">O'zgarishni tayyorlov maydoniga qo'yadi</button><button type="button">Kodni GitHub'ga yuboradi</button><button type="button">Yangi fayl yaratadi</button></div><p class="explain" hidden>add — tayyorlash, commit — surat olish, push — yuborish.</p></div>
+            <div class="qitem"><p class="q">Git va GitHub farqi nima?</p><div class="opts" data-correct="2"><button type="button">Hech qanday farqi yo'q</button><button type="button">GitHub — eski Git</button><button type="button">Git — kompyuterdagi dastur, GitHub — repozitoriylar saqlanadigan sayt</button></div><p class="explain" hidden>Git'ni GitHub'siz ham ishlatish mumkin. GitHub uning ustiga qurilgan xizmat.</p></div>
+            <div class="qitem"><p class="q">Qaysi commit xabari yaxshiroq?</p><div class="opts" data-correct="1"><button type="button">tuzatdim</button><button type="button">Telefonda menyu sig'may qolganini tuzatdim</button><button type="button">asdf</button></div><p class="explain" hidden>Nima va nima uchun — bir gapda.</p></div>
+            <div class="qitem"><p class="q">Kompyuterdagi commitlarni GitHub'ga qaysi buyruq yuboradi?</p><div class="opts" data-correct="0"><button type="button">git push</button><button type="button">git pull</button><button type="button">git init</button></div><p class="explain" hidden>push — itarish (yuborish), pull — tortish (olish).</p></div>
+            <div class="qitem"><p class="q">Ochiq GitHub repozitoriysiga nima qo'yish mumkin emas?</p><div class="opts" data-correct="2"><button type="button">README.md</button><button type="button">style.css</button><button type="button">Parol yoki maxfiy kalit yozilgan fayl</button></div><p class="explain" hidden>Ochiq repozitoriyni hamma o'qiydi, jumladan yomon niyatli odamlar ham.</p></div>
+            <div class="quiz-foot"><span class="quiz-score"></span><button type="button" class="btn quiz-reset">Qaytadan</button></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== STARTUP USTOZI ===== -->
+      <div class="part-head su">
+        <p class="eyebrow">Startup ustozi</p>
+        <h3>Ochiq qurish</h3>
+        <p>Endi sizda haqiqiy havola bor. Uni ishlatish vaqti keldi.</p>
+      </div>
+
+      <!-- 15 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l7-step15"><span class="step-title"><span class="step-num">15</span> Haftalik "nima qurdim" xabari</span></label>
+        <div class="step-body">
+          <p>Ko'p muvaffaqiyatli asoschilar mahsulotini yashirin qurmaydi — <strong>ochiq quradi</strong> (build in public). Har hafta qisqa xabar yozishadi: nima qildim, nima o'rgandim, keyingi qadam nima. Bunda uch narsa yutasiz:</p>
+          <ul class="plain">
+            <li><strong>Mas'uliyat.</strong> Hamma kutayotganini bilsangiz, ishni tashlab qo'yish qiyinroq.</li>
+            <li><strong>Erta fikr.</strong> Odamlar g'oyangizni mahsulot tayyor bo'lishidan oldin baholaydi.</li>
+            <li><strong>Birinchi foydalanuvchilar.</strong> Sizni kuzatganlar mahsulot chiqqanda birinchi bo'lib sinab ko'radi.</li>
+          </ul>
+          <div class="mentor"><img class="im im-l" data-im="rocket" alt=""><div><b>GitHub — jonli rezyume</b>Profilingizdagi yashil kvadratchalar — har kuni qilgan commitlaringiz. Ish beruvchi rezyumedagi "tirishqoqman" degan so'zdan ko'ra, bir yillik yashil to'rga ko'proq ishonadi. Kichik bo'lsa ham, har kuni commit qiling.</div></div>
+          <textarea id="l7-public" placeholder="Bu hafta nima qurdim: ...&#10;Nima o'rgandim: ...&#10;Qiyin bo'lgan narsa: ...&#10;Keyingi hafta: ...&#10;Sayt havolasi: https://...vercel.app" aria-label="Haftalik xabar qoralamasi"></textarea>
+          <ul class="checklist" data-step="l7-step15">
+            <li><label><input type="checkbox" id="l7-s1" data-sub="s1"><span>Kutish ro'yxati sahifamni ham Vercel'ga chiqardim va havolasini 10 kishiga yubordim.</span></label></li>
+            <li><label><input type="checkbox" id="l7-s2" data-sub="s2"><span>Birinchi "bu hafta nima qurdim" xabarimni Telegram yoki LinkedIn'da e'lon qildim.</span></label></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 16 -->
+      <div class="step">
+        <label class="step-head"><input type="checkbox" id="l7-step16"><span class="step-title"><span class="step-num">16</span> Uyga vazifa</span></label>
+        <div class="step-body">
+          <ul class="checklist" data-step="l7-step16">
+            <li><label><input type="checkbox" id="l7-h1" data-sub="h1"><span>Bir hafta davomida har kuni kamida bitta ma'noli commit qildim.</span></label></li>
+            <li><label><input type="checkbox" id="l7-h2" data-sub="h2"><span>Eski commitlardan biriga <code class="inline">git log --oneline</code> orqali qarab, o'sha kuni nima qilganimni esladim.</span></label></li>
+            <li><label><input type="checkbox" id="l7-h3" data-sub="h3"><span>GitHub profilimga rasm, qisqa tavsif va sayt havolasini qo'shdim.</span></label></li>
+            <li><label><input type="checkbox" id="l7-h4" data-sub="h4"><span>GitHub'da menga yoqqan bitta ochiq loyihani topib, uning README faylini o'qib chiqdim va unga yulduzcha (star) qo'ydim.</span></label></li>
+            <li><label><input type="checkbox" id="l7-h5" data-sub="h5"><span>Bugungi 10 ta so'zdan eng qiyin 3 tasini daftarga yozib, 3 marta ovoz chiqarib aytdim.</span></label></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote">
+      <p class="quote-text">"Kod faqat sizning kompyuteringizda tursa — bu mashq. Internetda tursa va odamlar ochsa — bu mahsulot."</p>
+    </section>
+
+    <section class="next-up">
+      <p class="eyebrow">Keyingi qadam</p>
+      <p class="desc">Git'ni yozgan odam aslida undan ham kattaroq narsani — dunyodagi eng ko'p ishlatiladigan operatsion tizim yadrosini yaratgan. Tarix qismida Linus Torvaldsning o'zidan eshiting.</p>
+      <button class="btn btn-primary" type="button" data-goto="l">Linux tarixini o'qish</button>
+    </section>
+  </div>

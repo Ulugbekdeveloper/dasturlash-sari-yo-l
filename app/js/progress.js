@@ -52,7 +52,7 @@
   onScroll();
 
   // ---------- Umumiy progress ----------
-  var ALL = [['frontendga-sari-lesson1-v2', 23], ['frontendga-sari-lesson2', 9], ['frontendga-sari-lesson3', 16], ['frontendga-sari-lesson4', 16], ['frontendga-sari-lesson5', 16], ['frontendga-sari-lesson6', 16]];
+  var ALL = [['frontendga-sari-lesson1-v2', 23], ['frontendga-sari-lesson2', 9], ['frontendga-sari-lesson3', 16], ['frontendga-sari-lesson4', 16], ['frontendga-sari-lesson5', 16], ['frontendga-sari-lesson6', 16], ['frontendga-sari-lesson7', 16]];
   function overall(){
     var done = 0, total = 0;
     ALL.forEach(function(L, idx){

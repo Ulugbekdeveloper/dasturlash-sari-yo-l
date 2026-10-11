@@ -19,12 +19,14 @@
 <link rel="stylesheet" href="lessons/4/4-dars.css">
 <link rel="stylesheet" href="lessons/5/5-dars.css">
 <link rel="stylesheet" href="lessons/6/6-dars.css">
+<link rel="stylesheet" href="lessons/7/7-dars.css">
 <link rel="stylesheet" href="history/1-bob/1-bob.css">
 <link rel="stylesheet" href="history/2-bob/2-bob.css">
 <link rel="stylesheet" href="history/3-bob/3-bob.css">
 <link rel="stylesheet" href="history/4-bob/4-bob.css">
 <link rel="stylesheet" href="history/5-bob/5-bob.css">
 <link rel="stylesheet" href="history/6-bob/6-bob.css">
+<link rel="stylesheet" href="history/7-bob/7-bob.css">
 <link rel="stylesheet" href="history/html-bob.css">
 </head>
 
@@ -54,7 +56,7 @@
     <button type="button" class="drawer-close" id="drawer-close" aria-label="Mundarijani yopish"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
   </div>
   <div class="drawer-body">
-    <div class="dr-progress"><div class="dr-prog-top"><span>Umumiy yo'l</span><b id="dr-done">0 / 96</b></div><div class="progress-track"><div class="progress-bar" id="dr-bar"></div></div></div>
+    <div class="dr-progress"><div class="dr-prog-top"><span>Umumiy yo'l</span><b id="dr-done">0 / 112</b></div><div class="progress-track"><div class="progress-bar" id="dr-bar"></div></div></div>
     <div class="book-nav" id="tabs">
       <div class="book-part">
         <p class="part-label"><span>1-qism</span>Darslar</p>
@@ -65,6 +67,7 @@
           <button class="tab" role="tab" id="tab-4" data-lesson="4" aria-controls="panel-4" aria-selected="false"><span class="tab-ico">4</span><span class="tab-main"><span class="tab-name">4-dars</span><small>Jadvallar va formalar</small><span class="tab-bar"><i data-fill="4"></i></span></span><span class="tab-count" id="tab-4-count">0/16</span></button>
           <button class="tab" role="tab" id="tab-5" data-lesson="5" aria-controls="panel-5" aria-selected="false"><span class="tab-ico">5</span><span class="tab-main"><span class="tab-name">5-dars</span><small>CSS: rang va shakl</small><span class="tab-bar"><i data-fill="5"></i></span></span><span class="tab-count" id="tab-5-count">0/16</span></button>
           <button class="tab" role="tab" id="tab-6" data-lesson="6" aria-controls="panel-6" aria-selected="false"><span class="tab-ico">6</span><span class="tab-main"><span class="tab-name">6-dars</span><small>Joylashuv: Flexbox va telefon</small><span class="tab-bar"><i data-fill="6"></i></span></span><span class="tab-count" id="tab-6-count">0/16</span></button>
+          <button class="tab" role="tab" id="tab-7" data-lesson="7" aria-controls="panel-7" aria-selected="false"><span class="tab-ico">7</span><span class="tab-main"><span class="tab-name">7-dars</span><small>Git, GitHub va Vercel</small><span class="tab-bar"><i data-fill="7"></i></span></span><span class="tab-count" id="tab-7-count">0/16</span></button>
         </div>
       </div>
       <div class="book-part">
@@ -76,6 +79,7 @@
           <button class="tab" role="tab" id="tab-i" data-lesson="i" aria-controls="panel-i" aria-selected="false"><span class="tab-ico" data-av="i">I</span><span class="tab-main"><span class="tab-name">4-bob · Internet</span><small>Vint Serf hikoya qiladi</small></span></button>
           <button class="tab" role="tab" id="tab-e" data-lesson="e" aria-controls="panel-e" aria-selected="false"><span class="tab-ico" data-av="e">E</span><span class="tab-main"><span class="tab-name">5-bob · Sichqoncha va oynalar</span><small>Daglas Engelbart hikoya qiladi</small></span></button>
           <button class="tab" role="tab" id="tab-u" data-lesson="u" aria-controls="panel-u" aria-selected="false"><span class="tab-ico" data-av="u">U</span><span class="tab-main"><span class="tab-name">6-bob · Unix va C</span><small>Dennis Ritchi hikoya qiladi</small></span></button>
+          <button class="tab" role="tab" id="tab-l" data-lesson="l" aria-controls="panel-l" aria-selected="false"><span class="tab-ico" data-av="l">L</span><span class="tab-main"><span class="tab-name">7-bob · Linux va ochiq kod</span><small>Linus Torvalds hikoya qiladi</small></span></button>
           <button class="tab" role="tab" id="tab-h" data-lesson="h" aria-controls="panel-h" aria-selected="false"><span class="tab-ico" data-av="h">H</span><span class="tab-main"><span class="tab-name">HTML</span><small>Tim Berners-Li hikoya qiladi</small></span></button>
         </div>
       </div>
@@ -107,9 +111,9 @@
     <h1>FAANG va muvaffaqiyatli startup sari yo'l</h1>
     <p class="lede">Har kuni bir qadam, har gal kechagidan biroz ko'proq. Kitob ikki qismdan iborat: amaliy darslar va har bir texnologiyaning yaratilish tarixi — uni yaratgan insonning o'z tilidan.</p>
     <div class="hero-stats">
-      <div><b>6</b><span>dars</span></div>
-      <div><b>7</b><span>tarix bobi</span></div>
-      <div class="hs-prog"><b id="all-done">0 / 96</b><span>qadam bajarildi</span><div class="progress-track"><div class="progress-bar" id="all-bar"></div></div></div>
+      <div><b>7</b><span>dars</span></div>
+      <div><b>8</b><span>tarix bobi</span></div>
+      <div class="hs-prog"><b id="all-done">0 / 112</b><span>qadam bajarildi</span><div class="progress-track"><div class="progress-bar" id="all-bar"></div></div></div>
     </div>
     <div class="hero-actions">
       <button type="button" class="btn btn-primary" id="hero-continue">Davom ettirish: <span id="hero-continue-label">1-dars</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
@@ -130,8 +134,8 @@
 <script>
 // Darslar va boblar alohida fayllardan yuklanadi, keyin skriptlar ishga tushadi.
 (function(){
-  var PARTS = ["lessons/1/1-dars.html", "lessons/2/2-dars.html", "lessons/3/3-dars.html", "lessons/4/4-dars.html", "lessons/5/5-dars.html", "lessons/6/6-dars.html", "history/1-bob/1-bob.html", "history/2-bob/2-bob.html", "history/3-bob/3-bob.html", "history/4-bob/4-bob.html", "history/5-bob/5-bob.html", "history/6-bob/6-bob.html", "history/html-bob.html"];
-  var SCRIPTS = ["app/js/app.js", "app/js/ui.js", "app/js/kompyuter-lab.js", "app/js/progress.js", "app/js/drawer.js", "app/js/tts.js", "app/js/tarix-lab.js", "app/js/sichqoncha-unix-lab.js", "app/js/i18n.js"];
+  var PARTS = ["lessons/1/1-dars.html", "lessons/2/2-dars.html", "lessons/3/3-dars.html", "lessons/4/4-dars.html", "lessons/5/5-dars.html", "lessons/6/6-dars.html", "lessons/7/7-dars.html", "history/1-bob/1-bob.html", "history/2-bob/2-bob.html", "history/3-bob/3-bob.html", "history/4-bob/4-bob.html", "history/5-bob/5-bob.html", "history/6-bob/6-bob.html", "history/7-bob/7-bob.html", "history/html-bob.html"];
+  var SCRIPTS = ["app/js/app.js", "app/js/ui.js", "app/js/kompyuter-lab.js", "app/js/progress.js", "app/js/drawer.js", "app/js/tts.js", "app/js/tarix-lab.js", "app/js/sichqoncha-unix-lab.js", "app/js/linux-lab.js", "app/js/i18n.js"];
   function text(url){ return fetch(url).then(function(r){ if (!r.ok) throw new Error(url + ': ' + r.status); return r.text(); }); }
   function load(src){ return new Promise(function(ok, fail){ var el = document.createElement('script'); el.src = src; el.onload = ok; el.onerror = function(){ fail(new Error(src)); }; document.body.appendChild(el); }); }
   // Eslatma: VS Code Live Server HTML qismlardagi har bir </svg> oldiga o'z skriptini qo'shadi va faylni kesib qo'yadi.

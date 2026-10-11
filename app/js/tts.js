@@ -81,7 +81,7 @@
   }
 
   // ---------- Matnni bo'laklarga ajratish ----------
-  var SKIP = '.l5-onoff,.css-anat,.color-lab,.box-lab,.flow-demo,.page-map,.flex-lab,.seg-btns,.frame-fit,.mouse-lab,.cli-lab,.unix-lab,#asm-lab,#kmp-lab,#pkt-lab,.form-demo,.sent-box,.tbl-anat,.inp-grid,pre,svg,button,input,textarea,select,script,style,.word-grid,.quiz,.play,.cpu-sim,.gate-lab,.gates,.adder,.bin-lab,.arch,.slot-box,.tl-chips,.net,.trip,.typer,.demo-grid,.game,.kb-wrap,.kgame,.lab,.drag-zone,.typing,.og,.wgame,.sorter,.progress-track,.progress-label,.meta,.step-num,.isa,.hier,.old-web,.mac,.check-row,.anatomy,.tiles,.acts,.flow,.cmp,.mem,.ipo,.layers,.tree,.crumbs,.play-actions,.quiz-foot,[aria-hidden="true"],[hidden]';
+  var SKIP = '.un-msg,.git-sim,.git-places,.git-flow,.tm-lab,.l5-onoff,.css-anat,.color-lab,.box-lab,.flow-demo,.page-map,.flex-lab,.seg-btns,.frame-fit,.mouse-lab,.cli-lab,.unix-lab,#asm-lab,#kmp-lab,#pkt-lab,.form-demo,.sent-box,.tbl-anat,.inp-grid,pre,svg,button,input,textarea,select,script,style,.word-grid,.quiz,.play,.cpu-sim,.gate-lab,.gates,.adder,.bin-lab,.arch,.slot-box,.tl-chips,.net,.trip,.typer,.demo-grid,.game,.kb-wrap,.kgame,.lab,.drag-zone,.typing,.og,.wgame,.sorter,.progress-track,.progress-label,.meta,.step-num,.isa,.hier,.old-web,.mac,.check-row,.anatomy,.tiles,.acts,.flow,.cmp,.mem,.ipo,.layers,.tree,.crumbs,.play-actions,.quiz-foot,[aria-hidden="true"],[hidden]';
   var BLOCKS = '.hero-card,.chapter,.lesson-head,.part-head,.step,.disclaimer,.quote-inline,.quote,.next-up';
   var dispCache = new WeakMap();
   function disp(el){ var d = dispCache.get(el); if (!d) { d = getComputedStyle(el).display; dispCache.set(el, d); } return d; }
